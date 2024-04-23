@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+<PropertyGroup>
+    <OutputType>Exe</OutputType>
+	<TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <UserSecretsId>7080215b-63dd-4eb7-b305-3dd608d0aad7</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+    <DockerComposeProjectPath>..\..\..\docker-compose.dcproj</DockerComposeProjectPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+      <PackageReference Include="Confluent.Kafka" Version="2.3.0" />
+      <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Beter.TestingTools.Common\Beter.TestingTools.Common.csproj" />
+    <ProjectReference Include="..\..\Common\Beter.TestingTools.Hosting\Beter.TestingTools.Hosting.csproj" />
+  </ItemGroup>
+
+</Project>

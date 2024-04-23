@@ -1,0 +1,37 @@
+version: '3.4'
+
+services:
+  beter.testingtool.generator:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - FeedEmulator__ApiBaseUrl=http://beter.testing-tool.emulator
+      - Publisher__BootstrapServers=kafka:29092
+      - Publisher__Topic=testing-tool-generator-local
+      - Publisher__SecurityProtocol=0
+      - Publisher__AllowAutoCreateTopics=true
+      - Heartbeat__IntervalInSeconds=5
+    ports:
+       - 51857:80
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro 
+
+  beter.testingtool.emulator:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80,
+      - Messaging__ConsumerConfig__BootstrapServers=kafka:29092
+      - Messaging__ConsumerConfig__SecurityProtocol=0
+      - Messaging__ConsumerConfig__AllowAutoCreateTopics=true
+      - Messaging__ConsumerConfig__AutoOffsetReset=Earliest
+      - Messaging__ConsumerConfig__GroupId=feed-emulator:test
+      - Messaging__Topics__TestingTools=testing-tool-generator-local
+      - SignalR__FeedTimeTableEndpoint=/time_table
+      - SignalR__FeedTradingEndpoint=/trading
+      - SignalR__FeedScoreboardEndpoint=/scoreboard
+      - SignalR__FeedIncidentEndpoint=/incident
+      - SignalR__TtlForHeartbetRecord=00:00:05
+    ports:
+       - 51859:80
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro 

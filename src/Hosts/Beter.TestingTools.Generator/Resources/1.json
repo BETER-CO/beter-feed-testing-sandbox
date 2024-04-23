@@ -1,0 +1,410 @@
+{
+  "Version": "3.5",
+  "Description": "All kind of messages.",
+  "Messages": [
+    {
+      "Value": [
+        {
+          "Id": "895f29ba-0bbb-4d12-8601-3cad1a1017be",
+          "EventType": 1,
+          "EventValue": 1
+        }
+      ],
+      "ScheduledAt": 1704379133136,
+      "Channel": "incident",
+      "MessageType": "system_event"
+    },
+    {
+      "Value": [
+        {
+          "Id": "895f29ba-0bbb-4d12-8601-3cad1a1017be",
+          "EventType": 1,
+          "EventValue": 2
+        }
+      ],
+      "ScheduledAt": 1704379133136,
+      "Channel": "incident",
+      "MessageType": "system_event"
+    },
+    {
+      "Value": {
+        "CommandType": 1
+      },
+      "ScheduledAt": 1704379133137,
+      "MessageType": "steering_command"
+    },
+    {
+      "Value": {
+        "CommandType": 2
+      },
+      "ScheduledAt": 1704379133137,
+      "MessageType": "steering_command"
+    },
+    {
+      "Value": {
+        "Ids": [ "895f29ba-0bbb-4d12-8601-3cad1a1017be" ]
+      },
+      "ScheduledAt": 1704379133138,
+      "Channel": "incident",
+      "MessageType": "subscriptions_removed"
+    },
+    {
+      "Value": [
+        {
+          "Id": "895f29ba-0bbb-4d12-8601-3cad1a1017be",
+          "Stage": 1,
+          "Scores": [
+            {
+              "Interval": 1,
+              "Result": 1,
+              "Score": "0-0",
+              "SubInterval": null
+            }
+          ],
+          "Timer": {
+            "TimeStamp": 1704837170753,
+            "TimerValue": 180000,
+            "AccelerationFactor": 1.0,
+            "Enabled": false,
+            "Direction": 1
+          },
+          "FirstServer": null,
+          "Server": null,
+          "Comment": {},
+          "Regulations": null,
+          "Timestamp": 1704837170754,
+          "MsgType": 1,
+          "Offset": 8797613
+        }
+      ],
+      "ScheduledAt": 1704379133136,
+      "Channel": "scoreboard",
+      "MessageType": "scoreboard"
+    },
+    {
+      "Value": [
+        {
+          "Id": "895f29ba-0bbb-4d12-8601-3cad1a1017be",
+          "Stage": 1,
+          "Scores": [
+            {
+              "Interval": 1,
+              "Result": 1,
+              "Score": "0-0",
+              "SubInterval": null
+            }
+          ],
+          "Timer": {
+            "TimeStamp": 1704837170753,
+            "TimerValue": 180000,
+            "AccelerationFactor": 1.0,
+            "Enabled": false,
+            "Direction": 1
+          },
+          "FirstServer": null,
+          "Server": null,
+          "Comment": {},
+          "Regulations": null,
+          "Timestamp": 1704837170754,
+          "MsgType": 1,
+          "Offset": 8797613
+        }
+      ],
+      "ScheduledAt": 1704379133136,
+      "Channel": "scoreboard",
+      "MessageType": "scoreboard"
+    },
+    {
+      "Value": [
+        {
+          "Id": "895f29ba-0bbb-4d12-8601-3cad1a1017be",
+          "Stage": 1,
+          "Scores": [
+            {
+              "Interval": 1,
+              "Result": 1,
+              "Score": "0-0",
+              "SubInterval": null
+            }
+          ],
+          "Timer": {
+            "TimeStamp": 1704837170753,
+            "TimerValue": 180000,
+            "AccelerationFactor": 1.0,
+            "Enabled": false,
+            "Direction": 1
+          },
+          "FirstServer": null,
+          "Server": null,
+          "Comment": {},
+          "Regulations": null,
+          "Timestamp": 1704837170754,
+          "MsgType": 3,
+          "Offset": 8797613
+        }
+      ],
+      "ScheduledAt": 1704379133136,
+      "Channel": "scoreboard",
+      "MessageType": "scoreboard"
+    },
+    {
+      "Value": [
+        {
+          "Id": "895f29ba-0bbb-4d12-8601-3cad1a1017be",
+          "Stage": 1,
+          "Scores": [
+            {
+              "Interval": 1,
+              "Result": 1,
+              "Score": "0-0",
+              "SubInterval": null
+            }
+          ],
+          "Timer": {
+            "TimeStamp": 1704837170753,
+            "TimerValue": 180000,
+            "AccelerationFactor": 1.0,
+            "Enabled": false,
+            "Direction": 1
+          },
+          "FirstServer": null,
+          "Server": null,
+          "Comment": {},
+          "Regulations": null,
+          "Timestamp": 1704837170754,
+          "MsgType": 2,
+          "Offset": 8797613
+        },
+        {
+          "Id": "895f29ba-0bbb-4d12-8601-3cad1a1017b8",
+          "Stage": 1,
+          "Scores": [
+            {
+              "Interval": 1,
+              "Result": 1,
+              "Score": "0-0",
+              "SubInterval": null
+            }
+          ],
+          "Timer": {
+            "TimeStamp": 1704837170753,
+            "TimerValue": 180000,
+            "AccelerationFactor": 1.0,
+            "Enabled": false,
+            "Direction": 1
+          },
+          "FirstServer": null,
+          "Server": null,
+          "Comment": {},
+          "Regulations": null,
+          "Timestamp": 1704837170754,
+          "MsgType": 2,
+          "Offset": 8797613
+        }
+      ],
+      "ScheduledAt": 1704379133136,
+      "Channel": "scoreboard",
+      "MessageType": "scoreboard"
+    },
+    {
+      "Value": [
+        {
+          "Sport": "Fifa",
+          "StartDate": "2024-03-20T12:59:50Z",
+          "Status": 5,
+          "Country": {
+            "Id": "2dcda443-ad5e-4ed4-855f-3a0819cfe7af",
+            "Name": {
+              "en": "Ukraine",
+              "ru": "\u0423\u043A\u0440\u0430\u0438\u043D\u0430"
+            }
+          },
+          "Category": {
+            "Id": "6aec34b2-17d3-4678-86ca-a45d01ee86bf",
+            "Name": {
+              "en": "Ukraine",
+              "ru": "\u0423\u043A\u0440\u0430\u0438\u043D\u0430"
+            }
+          },
+          "League": {
+            "CompetitorType": 0,
+            "Brand": {
+              "Id": null,
+              "Name": {
+                "en": "ESportsBattle",
+                "ru": "ESportsBattle"
+              }
+            },
+            "Id": "981db793-6965-47bd-bf14-eabecf7d5511",
+            "Name": {
+              "en": "Volta Premier League",
+              "ru": "\u0412\u043E\u043B\u044C\u0442\u0430 \u041F\u0440\u0435\u043C\u044C\u0435\u0440 \u043B\u0438\u0433\u0430"
+            }
+          },
+          "Tournament": {
+            "Id": "8fa5e58a-f2dd-4493-a79d-88b2c8361f91",
+            "Name": {
+              "en": "Volta Premier League 2024-01-09",
+              "ru": "\u0412\u043E\u043B\u044C\u0442\u0430 \u041F\u0440\u0435\u043C\u044C\u0435\u0440 \u043B\u0438\u0433\u0430 2024-01-09"
+            }
+          },
+          "Venue": {
+            "Console": "console-6",
+            "Id": "d6d98f44-9cf2-498a-8378-0acb395c0b9d",
+            "Name": {
+              "en": "Emirates Stadium",
+              "ru": "Emirates Stadium"
+            }
+          },
+          "Participants": [
+            {
+              "Team": {
+                "Id": "70f0dd24-e1e1-4f31-9ab7-0a2bd1e6018a",
+                "Name": {
+                  "en": "Tottenham Hotspur",
+                  "ru": "\u0422\u043E\u0442\u0442\u0435\u043D\u0445\u044D\u043C"
+                }
+              },
+              "Color": null,
+              "Id": "b53aafdc-f5f4-48ae-aa74-27738fdd7bbd",
+              "Name": {
+                "en": "BlackStar98",
+                "ru": "BlackStar98"
+              }
+            },
+            {
+              "Team": {
+                "Id": "d3cbedf2-e0d8-4459-a26a-1adf9ce36e7b",
+                "Name": {
+                  "en": "Manchester City",
+                  "ru": "\u041C\u0430\u043D\u0447\u0435\u0441\u0442\u0435\u0440 \u0421\u0438\u0442\u0438"
+                }
+              },
+              "Color": null,
+              "Id": "585650d5-3c06-488e-a2ce-43cf0ca29696",
+              "Name": {
+                "en": "BoBovieri",
+                "ru": "BoBovieri"
+              }
+            }
+          ],
+          "BroadcastUrl": null,
+          "Deleted": "2024-01-09T21:53:23.0985708Z",
+          "Timestamp": 1710939570000,
+          "WillBeLive": false,
+          "WillBePrematch": false,
+          "MsgType": 1,
+          "Offset": 8797629,
+          "Id": "895f29ba-0bbb-4d12-8601-3cad1a1017b8",
+          "Name": {
+            "en": "Tottenham Hotspur (BlackStar98) - Manchester City (BoBovieri)",
+            "ru": "\u0422\u043E\u0442\u0442\u0435\u043D\u0445\u044D\u043C (BlackStar98) - \u041C\u0430\u043D\u0447\u0435\u0441\u0442\u0435\u0440 \u0421\u0438\u0442\u0438 (BoBovieri)"
+          }
+        }
+      ],
+      "ScheduledAt": 1704379133136,
+      "Channel": "time_table",
+      "MessageType": "time_table"
+    },
+    {
+      "Value": [
+        {
+          "Sport": "Fifa",
+          "StartDate": "2024-03-20T12:59:50Z",
+          "Status": 5,
+          "Country": {
+            "Id": "2dcda443-ad5e-4ed4-855f-3a0819cfe7af",
+            "Name": {
+              "en": "Ukraine",
+              "ru": "\u0423\u043A\u0440\u0430\u0438\u043D\u0430"
+            }
+          },
+          "Category": {
+            "Id": "6aec34b2-17d3-4678-86ca-a45d01ee86bf",
+            "Name": {
+              "en": "Ukraine",
+              "ru": "\u0423\u043A\u0440\u0430\u0438\u043D\u0430"
+            }
+          },
+          "League": {
+            "CompetitorType": 0,
+            "Brand": {
+              "Id": null,
+              "Name": {
+                "en": "ESportsBattle",
+                "ru": "ESportsBattle"
+              }
+            },
+            "Id": "981db793-6965-47bd-bf14-eabecf7d5511",
+            "Name": {
+              "en": "Volta Premier League",
+              "ru": "\u0412\u043E\u043B\u044C\u0442\u0430 \u041F\u0440\u0435\u043C\u044C\u0435\u0440 \u043B\u0438\u0433\u0430"
+            }
+          },
+          "Tournament": {
+            "Id": "8fa5e58a-f2dd-4493-a79d-88b2c8361f91",
+            "Name": {
+              "en": "Volta Premier League 2024-01-09",
+              "ru": "\u0412\u043E\u043B\u044C\u0442\u0430 \u041F\u0440\u0435\u043C\u044C\u0435\u0440 \u043B\u0438\u0433\u0430 2024-01-09"
+            }
+          },
+          "Venue": {
+            "Console": "console-6",
+            "Id": "d6d98f44-9cf2-498a-8378-0acb395c0b9d",
+            "Name": {
+              "en": "Emirates Stadium",
+              "ru": "Emirates Stadium"
+            }
+          },
+          "Participants": [
+            {
+              "Team": {
+                "Id": "70f0dd24-e1e1-4f31-9ab7-0a2bd1e6018a",
+                "Name": {
+                  "en": "Tottenham Hotspur",
+                  "ru": "\u0422\u043E\u0442\u0442\u0435\u043D\u0445\u044D\u043C"
+                }
+              },
+              "Color": null,
+              "Id": "b53aafdc-f5f4-48ae-aa74-27738fdd7bbd",
+              "Name": {
+                "en": "BlackStar98",
+                "ru": "BlackStar98"
+              }
+            },
+            {
+              "Team": {
+                "Id": "d3cbedf2-e0d8-4459-a26a-1adf9ce36e7b",
+                "Name": {
+                  "en": "Manchester City",
+                  "ru": "\u041C\u0430\u043D\u0447\u0435\u0441\u0442\u0435\u0440 \u0421\u0438\u0442\u0438"
+                }
+              },
+              "Color": null,
+              "Id": "585650d5-3c06-488e-a2ce-43cf0ca29696",
+              "Name": {
+                "en": "BoBovieri",
+                "ru": "BoBovieri"
+              }
+            }
+          ],
+          "BroadcastUrl": null,
+          "Deleted": "2024-01-09T21:53:23.0985708Z",
+          "Timestamp": 1710939570000,
+          "WillBeLive": false,
+          "WillBePrematch": false,
+          "MsgType": 1,
+          "Offset": 8797629,
+          "Id": "895f29ba-0bbb-4d12-8601-3cad1a1017be",
+          "Name": {
+            "en": "Tottenham Hotspur (BlackStar98) - Manchester City (BoBovieri)",
+            "ru": "\u0422\u043E\u0442\u0442\u0435\u043D\u0445\u044D\u043C (BlackStar98) - \u041C\u0430\u043D\u0447\u0435\u0441\u0442\u0435\u0440 \u0421\u0438\u0442\u0438 (BoBovieri)"
+          }
+        }
+      ],
+      "ScheduledAt": 1704379133136,
+      "Channel": "time_table",
+      "MessageType": "time_table"
+    }
+  ]
+}

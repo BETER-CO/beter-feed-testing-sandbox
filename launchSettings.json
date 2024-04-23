@@ -1,0 +1,17 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "composeLaunchAction": "LaunchBrowser",
+      "composeLaunchServiceName": "beter.testingtool.generator",
+      "composeLaunchUrl": "{Scheme}://localhost:{ServicePort}/swagger",
+      "serviceActions": {
+        "beter.testingtool.emulator": "StartDebugging",
+        "beter.testingtool.generator": "StartDebugging",
+        "kafka": "StartWithoutDebugging",
+        "kafka-ui": "StartWithoutDebugging"
+      }
+    }
+  }
+}
