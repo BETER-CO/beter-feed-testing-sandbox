@@ -1,5 +1,4 @@
-﻿using Beter.TestingTool.Generator.Application.Mappers;
-using Beter.TestingTool.Generator.Application.Contracts.TestScenarios;
+﻿using Beter.TestingTool.Generator.Application.Contracts.TestScenarios;
 using Beter.TestingTool.Generator.Contracts.Playbacks;
 using Beter.TestingTool.Generator.Host.Common.ApplicationConfiguration.Interfaces;
 using Beter.TestingTool.Generator.Host.Common.Constants;

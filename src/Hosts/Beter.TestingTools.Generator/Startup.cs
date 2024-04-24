@@ -4,6 +4,7 @@ using Beter.TestingTool.Generator.Host.Common.ApplicationConfiguration.Extension
 using Beter.TestingTool.Generator.Host.Extensions;
 using Beter.TestingTool.Generator.Host.Middlewares;
 using Beter.TestingTool.Generator.Infrastructure.Extensions;
+using Beter.TestingTools.Generator.Host.Middlewares;
 
 namespace Beter.TestingTool.Generator;
 
@@ -33,10 +34,11 @@ public class Startup
             app.UseDeveloperExceptionPage();
         }
 
+        app.UseMiddleware<ExceptionMiddleware>();
+        app.UseMiddleware<RequestLoggingMiddleware>();
+
         app.UseRouting();
         app.UseGeneratorSwagger();
-
-        app.UseMiddleware<RequestLoggingMiddleware>();
         app.UseEndpoints<Program>();
         app.AddHealthCheckEndpoint();
         app.ConfigureMaxRequestBodySize();

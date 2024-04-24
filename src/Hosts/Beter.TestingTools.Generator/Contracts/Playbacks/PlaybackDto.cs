@@ -2,7 +2,7 @@
 
 public sealed record PlaybackDto
 {
-    public string Id { get; set; }
+    public string PlaybackId { get; set; }
     public int CaseId { get; set; }
     public string Version { get; set; }
     public string Description { get; set; }

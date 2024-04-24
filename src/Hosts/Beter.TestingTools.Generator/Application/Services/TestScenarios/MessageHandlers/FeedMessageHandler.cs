@@ -66,11 +66,11 @@ public class FeedMessageHandler : BaseTestScenarioMessageHandler
         var newOffset = _sequenceNumberProvider.GetNext();
 
         _offsetStorage.AddOrUpdate(matchId,
-            (key) => new Dictionary<HubKind, int> { { hubKind, newOffset } },
-            (key, existingValue) =>
+            (matchId) => new Dictionary<HubKind, int> { { hubKind, newOffset } },
+            (matchId, offsetByHubs) =>
             {
-                existingValue[hubKind] = newOffset;
-                return existingValue;
+                offsetByHubs[hubKind] = newOffset;
+                return offsetByHubs;
             });
 
         messageToModification.Offset = newOffset;
@@ -78,12 +78,18 @@ public class FeedMessageHandler : BaseTestScenarioMessageHandler
 
     private void UpdateOffsetForNonUpdateMessage(FeedMessageWrapper messageToModification, string matchId, HubKind hubKind)
     {
-        var offsetByHubs = _offsetStorage.GetOrAdd(
+        var offsetByHubs = _offsetStorage.AddOrUpdate(
             matchId,
-            matchId => new Dictionary<HubKind, int> { { hubKind, _sequenceNumberProvider.GetNext() } });
+            (matchId) => new Dictionary<HubKind, int> { { hubKind, _sequenceNumberProvider.GetNext() } },
+            (matchId, offsetByHubs) =>
+            {
+                if (!offsetByHubs.TryGetValue(hubKind, out var offset))
+                    offsetByHubs[hubKind] = _sequenceNumberProvider.GetNext();
+
+                return offsetByHubs;
+            });
 
         messageToModification.Offset = offsetByHubs[hubKind];
-
     }
 }
 

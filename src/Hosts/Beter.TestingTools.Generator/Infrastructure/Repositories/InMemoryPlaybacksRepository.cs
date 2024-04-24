@@ -1,6 +1,7 @@
 ﻿using Beter.TestingTool.Generator.Application.Contracts;
 using Beter.TestingTool.Generator.Application.Contracts.Playbacks;
 using Beter.TestingTool.Generator.Domain.Playbacks;
+using Beter.TestingTools.Generator.Application.Common;
 using System.Collections.Concurrent;
 
 namespace Beter.TestingTool.Generator.Infrastructure.Repositories;
@@ -24,7 +25,7 @@ public sealed class InMemoryPlaybacksRepository : IPlaybackRepository
             throw new ArgumentNullException(nameof(playback));
 
         if (_playbacks.ContainsKey(playback.Id))
-            throw new ArgumentException($"Playback with ID {playback.Id} already exists.");
+            throw new DuplicateEntityException($"The playback with with given ID: '{playback.Id}' already exists.");
 
         _playbacks[playback.Id] = playback;
 
@@ -37,7 +38,7 @@ public sealed class InMemoryPlaybacksRepository : IPlaybackRepository
             throw new ArgumentNullException(nameof(playbackId));
 
         if (!_playbacks.TryRemove(playbackId, out var playback))
-            throw new KeyNotFoundException($"Playback with ID {playbackId} does not exist.");
+            throw new RequiredEntityNotFoundException($"The playback with the specified ID: '{playbackId}' does not exist.");
 
         return playback;
     }
@@ -87,7 +88,7 @@ public sealed class InMemoryPlaybacksRepository : IPlaybackRepository
             throw new ArgumentNullException(nameof(playback));
 
         if (!_playbacks.ContainsKey(playback.Id))
-            throw new KeyNotFoundException($"Playback with ID {playback.Id} does not exist.");
+            throw new RequiredEntityNotFoundException($"The playback with the specified ID: '{playback.Id}' does not exist.");
 
         _playbacks[playback.Id] = playback;
     }
