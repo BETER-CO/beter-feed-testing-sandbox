@@ -6,6 +6,6 @@ public interface ITestScenariosRepository
 {
     IReadOnlyDictionary<int, TestScenario> GetAll();
     TestScenario Requre(int caseId);
-    void Add(TestScenario scenario);
-    void AddRange(IEnumerable<TestScenario> scenarios);
+    void AddOrUpdate(TestScenario scenario);
+    void AddOrUpdateRange(IEnumerable<TestScenario> scenarios);
 }

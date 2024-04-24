@@ -10,7 +10,7 @@ public static class PlaybackMapper
     {
         return new PlaybackDto
         {
-            Id = source.Id,
+            PlaybackId = source.Id,
             CaseId = source.CaseId,
             Description = source.Description,
             Version = source.Version.ToString(),

@@ -29,7 +29,7 @@ public sealed class LoadTestScenario : IEndpointProvider
 
             //TODO: Add file content validation
             var testScenario = await factory.Create(caseId, stream);
-            repository.Add(testScenario);
+            repository.AddOrUpdate(testScenario);
 
             return Results.Ok(TestScenarioMapper.MapToDto(testScenario));
         }

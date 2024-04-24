@@ -1,5 +1,6 @@
 ﻿using Beter.TestingTool.Generator.Application.Contracts.TestScenarios;
 using Beter.TestingTool.Generator.Domain.TestScenarios;
+using Beter.TestingTools.Generator.Application.Common;
 using System.Collections.Concurrent;
 
 namespace Beter.TestingTool.Generator.Infrastructure.Repositories;
@@ -17,25 +18,22 @@ public sealed class InMemoryTestScenariosRepository : ITestScenariosRepository
         _testScenarios = new ConcurrentDictionary<int, TestScenario>(items);
     }
 
-    public void Add(TestScenario scenario)
+    public void AddOrUpdate(TestScenario scenario)
     {
         if (scenario == null)
             throw new ArgumentNullException(nameof(scenario));
 
-        if (_testScenarios.ContainsKey(scenario.CaseId))
-            throw new ArgumentException($"Test scenario with case ID {scenario.CaseId} already exists.");
-
         _testScenarios[scenario.CaseId] = scenario;
     }
 
-    public void AddRange(IEnumerable<TestScenario> scenarios)
+    public void AddOrUpdateRange(IEnumerable<TestScenario> scenarios)
     {
         if (scenarios == null)
             throw new ArgumentNullException(nameof(scenarios));
 
         foreach (var scenario in scenarios)
         {
-            Add(scenario);
+            AddOrUpdate(scenario);
         }
     }
 
@@ -47,9 +45,7 @@ public sealed class InMemoryTestScenariosRepository : ITestScenariosRepository
     public TestScenario Requre(int caseId)
     {
         if (!_testScenarios.TryGetValue(caseId, out var scenario))
-        {
-            throw new InvalidOperationException($"Test scenario with case ID '{caseId}' does not exist.");
-        }
+            throw new RequiredEntityNotFoundException($"Required test scenario with case ID: '{caseId}' does not exist.");
 
         return scenario;
     }
