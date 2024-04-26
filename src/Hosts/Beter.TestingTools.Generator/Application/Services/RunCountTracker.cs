@@ -1,6 +1,6 @@
-﻿using Beter.TestingTool.Generator.Application.Contracts;
+﻿using Beter.TestingTools.Generator.Application.Contracts;
 
-namespace Beter.TestingTool.Generator.Application.Services;
+namespace Beter.TestingTools.Generator.Application.Services;
 
 public sealed class RunCountTracker : IRunCountTracker
 {

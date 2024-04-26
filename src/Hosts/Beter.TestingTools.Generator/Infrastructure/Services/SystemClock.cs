@@ -1,6 +1,6 @@
-﻿using Beter.TestingTool.Generator.Application.Contracts;
+﻿using Beter.TestingTools.Generator.Application.Contracts;
 
-namespace Beter.TestingTool.Generator.Infrastructure.Services;
+namespace Beter.TestingTools.Generator.Infrastructure.Services;
 
 public class SystemClock : ISystemClock
 {

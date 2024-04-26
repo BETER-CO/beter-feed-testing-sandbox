@@ -1,11 +1,11 @@
 ﻿using Beter.TestingTools.Common.Constants;
-using Beter.TestingTool.Generator.Application.Contracts.Heartbeats;
-using Beter.TestingTool.Generator.Application.Contracts.TestScenarios;
-using Beter.TestingTool.Generator.Application.Services.Heartbeats;
-using Beter.TestingTool.Generator.Domain;
-using Beter.TestingTool.Generator.Domain.TestScenarios;
+using Beter.TestingTools.Generator.Application.Contracts.TestScenarios;
+using Beter.TestingTools.Generator.Application.Services.Heartbeats;
+using Beter.TestingTools.Generator.Domain;
+using Beter.TestingTools.Generator.Domain.TestScenarios;
+using Beter.TestingTools.Generator.Application.Contracts.Heartbeats;
 
-namespace Beter.TestingTool.Generator.Application.Services.TestScenarios.MessageHandlers;
+namespace Beter.TestingTools.Generator.Application.Services.TestScenarios.MessageHandlers;
 
 public class SteeringCommandMessageHandler : ITestScenarioMessageHandler
 {

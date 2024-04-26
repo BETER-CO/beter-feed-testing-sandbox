@@ -1,12 +1,12 @@
 ﻿using Beter.TestingTools.Models;
-using Beter.TestingTool.Generator.Application.Contracts;
-using Beter.TestingTool.Generator.Application.Contracts.Heartbeats;
-using Beter.TestingTool.Generator.Application.Extensions;
-using Beter.TestingTool.Generator.Application.Services.Heartbeats;
-using Beter.TestingTool.Generator.Host.Options;
 using Microsoft.Extensions.Options;
+using Beter.TestingTools.Generator.Application.Contracts;
+using Beter.TestingTools.Generator.Host.Options;
+using Beter.TestingTools.Generator.Application.Services.Heartbeats;
+using Beter.TestingTools.Generator.Application.Extensions;
+using Beter.TestingTools.Generator.Application.Contracts.Heartbeats;
 
-namespace Beter.TestingTool.Generator.Host.HostedServices;
+namespace Beter.TestingTools.Generator.Host.HostedServices;
 
 public class HeartbeatRunnerHostedService : BackgroundService
 {

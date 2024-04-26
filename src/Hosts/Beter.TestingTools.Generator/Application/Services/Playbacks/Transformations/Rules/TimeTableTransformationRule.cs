@@ -1,9 +1,8 @@
-﻿using Beter.TestingTool.Generator.Application.Extensions;
-using Beter.TestingTools.Common.Constants;
+﻿using Beter.TestingTools.Common.Constants;
 using Beter.TestingTools.Models.TimeTableItems;
-using Beter.TestingTool.Generator.Domain.TestScenarios;
+using Beter.TestingTools.Generator.Domain.TestScenarios;
 
-namespace Beter.TestingTool.Generator.Application.Services.Playbacks.Transformations.Rules;
+namespace Beter.TestingTools.Generator.Application.Services.Playbacks.Transformations.Rules;
 
 public class TimeTableTransformationRule : ITransformationRule
 {
@@ -17,52 +16,35 @@ public class TimeTableTransformationRule : ITransformationRule
 
     private static void UpdateModel(IEnumerable<TimeTableItemModel> models, TestScenarioMessage message, MessagesTransformationContext context)
     {
-        var newStartDate = CalculateNewStartDateForEachMatchId(context);
-
         foreach (var model in models)
         {
-            UpdateStartDate(model, context, newStartDate);
+            UpdateStartDate(model, context);
             TransformationsExt.UpdateModelId(model, context);
             TransformationsExt.UpdateScheduledAt(model, message, context);
             TransformationsExt.UpdateTimestampAndDate(
                 model,
                 context,
-                model => model.Timestamp.ToUtcDateTime(),
-                (model, dateTime) => model.Timestamp = dateTime.ToUnixTimeMilliseconds());
+                model => model.Timestamp,
+                (model, timestamp) => model.Timestamp = timestamp);
         }
     }
 
-    private static void UpdateStartDate(TimeTableItemModel model, MessagesTransformationContext context, Dictionary<string, DateTime> newStartDate)
+    private static void UpdateStartDate(TimeTableItemModel model, MessagesTransformationContext context)
     {
         var matchId = model.Id;
         var profile = context.GetMatchProfile(matchId);
 
         if (model.StartDate != profile.OldStartDate)
         {
-            newStartDate[matchId] = RescheduledStartDate(newStartDate[matchId], model.StartDate.Value, profile.OldStartDate, context.AccelerationFactor).UtcDateTime;
+            profile.NewStartDate = RescheduledStartDate(profile.NewStartDate, model.StartDate.Value, profile.OldStartDate, context.AccelerationFactor).UtcDateTime;
             profile.OldStartDate = model.StartDate.Value;
         }
 
-        model.StartDate = newStartDate[matchId];
+        model.StartDate = profile.NewStartDate;
     }
 
     private static DateTimeOffset RescheduledStartDate(DateTimeOffset currentStartDate, DateTime rescheduledStartDate, DateTimeOffset oldStartDate, double accelerationFactor)
     {
         return currentStartDate + (rescheduledStartDate - oldStartDate) / accelerationFactor;
-    }
-
-    private static Dictionary<string, DateTime> CalculateNewStartDateForEachMatchId(MessagesTransformationContext context)
-    {
-        return context.Matches.ToDictionary(
-             kv => kv.Key,
-             kv => CalculateNewStartDate(context, context.GetMatchProfile(kv.Key).OldStartDate));
-    }
-
-    private static DateTime CalculateNewStartDate(MessagesTransformationContext context, DateTime oldStartDate)
-    {
-        return oldStartDate
-            + (context.NewFirstMessageScheduledAt - oldStartDate)
-            + (oldStartDate - context.OldFirstMessageScheduledAt) / context.AccelerationFactor
-            + context.TimeOffsetAfterFirstTimetableMessageInSecounds;
     }
 }

@@ -1,6 +1,6 @@
-﻿using Beter.TestingTool.Generator.Application.Common;
+﻿using Beter.TestingTools.Generator.Application.Common;
 
-namespace Beter.TestingTool.Generator.Application.Services.Heartbeats;
+namespace Beter.TestingTools.Generator.Application.Services.Heartbeats;
 
 public class HeartbeatCommand(int id, string name) : EnumerationItem(id, name)
 {

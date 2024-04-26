@@ -1,7 +1,7 @@
 ﻿using Beter.TestingTools.Common.Constants;
-using Beter.TestingTool.Generator.Application.Contracts;
+using Beter.TestingTools.Generator.Application.Contracts;
 
-namespace Beter.TestingTool.Generator.Application.Services.TestScenarios.MessageHandlers;
+namespace Beter.TestingTools.Generator.Application.Services.TestScenarios.MessageHandlers;
 
 public class DefaultMessageHandler(IPublisher publisher) : BaseTestScenarioMessageHandler(publisher)
 {

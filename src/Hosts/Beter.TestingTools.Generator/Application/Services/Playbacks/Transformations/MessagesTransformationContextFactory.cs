@@ -1,16 +1,16 @@
-﻿using Beter.TestingTool.Generator.Application.Extensions;
-using Beter.TestingTools.Common.Constants;
+﻿using Beter.TestingTools.Common.Constants;
 using Beter.TestingTools.Models;
 using Beter.TestingTools.Models.Incidents;
 using Beter.TestingTools.Models.Scoreboards;
 using Beter.TestingTools.Models.TimeTableItems;
 using Beter.TestingTools.Models.TradingInfos;
-using Beter.TestingTool.Generator.Application.Contracts;
-using Beter.TestingTool.Generator.Application.Contracts.Playbacks;
-using Beter.TestingTool.Generator.Domain.TestScenarios;
-using static Beter.TestingTool.Generator.Application.Services.Playbacks.Transformations.MessagesTransformationContext;
+using static Beter.TestingTools.Generator.Application.Services.Playbacks.Transformations.MessagesTransformationContext;
+using Beter.TestingTools.Generator.Application.Contracts;
+using Beter.TestingTools.Generator.Application.Contracts.Playbacks;
+using Beter.TestingTools.Generator.Domain.TestScenarios;
+using Beter.TestingTools.Generator.Application.Extensions;
 
-namespace Beter.TestingTool.Generator.Application.Services.Playbacks.Transformations;
+namespace Beter.TestingTools.Generator.Application.Services.Playbacks.Transformations;
 
 public interface IMessagesTransformationContextFactory
 {
@@ -43,9 +43,16 @@ public class MessagesTransformationContextFactory : IMessagesTransformationConte
         var runCount = _runCountTracker.GetNext();
         var testCaseStart = _systemClock.UtcNow.Add(offset).UtcDateTime;
         var oldFirstMessageScheduledAt = GetOldFirstMessageScheduledAt(messages);
-        var newFirstMessageScheduledAt = testCaseStart;
+        var newFirstMessageScheduledAt = testCaseStart.ToUnixTimeMilliseconds();
 
-        var matches = CreateMatches(messages, testCaseId, runCount);
+        var matches = CreateMatches(
+            messages,
+            testCaseId,
+            runCount,
+            oldFirstMessageScheduledAt,
+            newFirstMessageScheduledAt,
+            timeOffsetAfterFirstTimetableMessageInSecounds,
+            accelerationFactor);
 
         return new MessagesTransformationContext
         {
@@ -69,19 +76,26 @@ public class MessagesTransformationContextFactory : IMessagesTransformationConte
         }
     }
 
-    private static DateTime GetOldFirstMessageScheduledAt(IEnumerable<TestScenarioMessage> messages)
+    private static long GetOldFirstMessageScheduledAt(IEnumerable<TestScenarioMessage> messages)
     {
-        return DateTimeOffset.FromUnixTimeMilliseconds(messages.First().ScheduledAt).UtcDateTime;
+        return messages.First().ScheduledAt;
     }
 
-    private Dictionary<string, MatchIdProfile> CreateMatches(IEnumerable<TestScenarioMessage> messages, int testCaseId, int runCount)
+    private Dictionary<string, MatchIdProfile> CreateMatches(
+        IEnumerable<TestScenarioMessage> messages,
+        int testCaseId,
+        int runCount,
+        long oldFirstMessageScheduledAt,
+        long newFirstMessageScheduledAt,
+        TimeSpan timeOffsetAfterFirstTimetableMessageInSecounds,
+        double accelerationFactor)
     {
         static Dictionary<string, DateTime> GetOldStartDateForEachMatchId(IEnumerable<TestScenarioMessage> messages)
         {
             return messages.Where(x => x.IsMessageType(MessageTypes.Timetable))
                 .SelectMany(message => message.GetValue<IEnumerable<TimeTableItemModel>>())
                 .GroupBy(item => item.Id, item => item)
-                .ToDictionary(x => x.Key, x => x.Min(item => item.StartDate.Value));
+                .ToDictionary(x => x.Key, x => DateTime.SpecifyKind(x.Min(item => item.StartDate.Value), DateTimeKind.Utc));
         }
 
         MatchIdProfile CreateMatchProfile(string matchId, int testCaseId, int runCount, DateTime oldStartDate, Dictionary<string, DateTime> oldFirstTimestamp)
@@ -91,10 +105,23 @@ public class MessagesTransformationContextFactory : IMessagesTransformationConte
                 Id = matchId,
                 NewId = _matchIdGenerator.Generate(testCaseId, runCount),
                 OldStartDate = oldStartDate,
+                NewStartDate = CalculateNewStartDate(oldStartDate),
                 OldFirstTimestampByEachMessageType = oldFirstTimestamp
             };
 
             return profile;
+        }
+
+        DateTime CalculateNewStartDate(DateTime oldStartDate)
+        {
+            var newFirstMessageScheduledAtDate = DateTimeOffset.FromUnixTimeMilliseconds(newFirstMessageScheduledAt).UtcDateTime;
+            var oldFirstMessageScheduledAtDate = DateTimeOffset.FromUnixTimeMilliseconds(oldFirstMessageScheduledAt).UtcDateTime;
+
+            return oldStartDate
+                + newFirstMessageScheduledAtDate.Subtract(oldStartDate)
+                + oldStartDate.Subtract(oldFirstMessageScheduledAtDate) / accelerationFactor
+                + timeOffsetAfterFirstTimetableMessageInSecounds;
+
         }
 
         var oldStartDate = GetOldStartDateForEachMatchId(messages);
@@ -128,7 +155,7 @@ public class MessagesTransformationContextFactory : IMessagesTransformationConte
             AddMessageType<TimeTableItemModel>(messages, MessageTypes.Timetable, matchId, messageTypes, x => x.Timestamp.ToUtcDateTime());
             AddMessageType<ScoreBoardModel>(messages, MessageTypes.Scoreboard, matchId, messageTypes, x => x.Timestamp.ToUtcDateTime());
             AddMessageType<TradingInfoModel>(messages, MessageTypes.Trading, matchId, messageTypes, x => x.Timestamp.ToUtcDateTime());
-            AddMessageType<IncidentModel>(messages, MessageTypes.Incident, matchId, messageTypes, x => x.Date);
+            AddMessageType<IncidentModel>(messages, MessageTypes.Incident, matchId, messageTypes, x => DateTime.SpecifyKind(x.Date, DateTimeKind.Utc));
 
             return messageTypes;
         }

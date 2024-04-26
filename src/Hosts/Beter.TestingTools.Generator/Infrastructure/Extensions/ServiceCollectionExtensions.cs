@@ -1,14 +1,16 @@
-﻿using Beter.TestingTool.Generator.Application.Contracts;
-using Beter.TestingTool.Generator.Application.Contracts.FeedConnections;
-using Beter.TestingTool.Generator.Application.Services;
-using Beter.TestingTool.Generator.Infrastructure.Options;
-using Beter.TestingTool.Generator.Infrastructure.Services;
-using Beter.TestingTool.Generator.Infrastructure.Services.FeedConnections;
+﻿using Beter.TestingTools.Generator.Application.Contracts;
+using Beter.TestingTools.Generator.Application.Contracts.FeedConnections;
+using Beter.TestingTools.Generator.Application.Services;
+using Beter.TestingTools.Generator.Infrastructure.Options;
+using Beter.TestingTools.Generator.Infrastructure.Services;
+using Beter.TestingTools.Generator.Infrastructure.Services.FeedConnections;
 using Polly;
 using Polly.Extensions.Http;
+using System.Diagnostics.CodeAnalysis;
 
-namespace Beter.TestingTool.Generator.Infrastructure.Extensions;
+namespace Beter.TestingTools.Generator.Infrastructure.Extensions;
 
+[ExcludeFromCodeCoverage]
 static internal class ServiceCollectionExtensions
 {
     public static IServiceCollection AddInfrastructure(

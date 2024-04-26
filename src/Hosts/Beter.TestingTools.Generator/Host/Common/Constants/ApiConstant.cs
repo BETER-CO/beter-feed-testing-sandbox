@@ -1,4 +1,4 @@
-﻿namespace Beter.TestingTool.Generator.Host.Common.Constants;
+﻿namespace Beter.TestingTools.Generator.Host.Common.Constants;
 
 public class ApiConstant
 {

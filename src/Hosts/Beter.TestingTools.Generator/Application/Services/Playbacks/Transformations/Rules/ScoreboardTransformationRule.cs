@@ -1,8 +1,8 @@
 ﻿using Beter.TestingTools.Common.Constants;
 using Beter.TestingTools.Models.Scoreboards;
-using Beter.TestingTool.Generator.Domain.TestScenarios;
+using Beter.TestingTools.Generator.Domain.TestScenarios;
 
-namespace Beter.TestingTool.Generator.Application.Services.Playbacks.Transformations.Rules;
+namespace Beter.TestingTools.Generator.Application.Services.Playbacks.Transformations.Rules;
 
 public class ScoreboardTransformationRule : ITransformationRule
 {

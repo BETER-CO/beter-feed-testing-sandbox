@@ -1,6 +1,6 @@
 ﻿using Beter.TestingTools.Common.Models;
 
-namespace Beter.TestingTool.Generator.Application.Contracts.FeedConnections;
+namespace Beter.TestingTools.Generator.Application.Contracts.FeedConnections;
 
 public interface IFeedConnectionService
 {

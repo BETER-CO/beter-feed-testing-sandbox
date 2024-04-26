@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace Beter.TestingTool.Generator.Infrastructure.Services.FeedConnections;
+namespace Beter.TestingTools.Generator.Infrastructure.Services.FeedConnections;
 
 public class JsonContentDeserializer : IContentDeserializer
 {

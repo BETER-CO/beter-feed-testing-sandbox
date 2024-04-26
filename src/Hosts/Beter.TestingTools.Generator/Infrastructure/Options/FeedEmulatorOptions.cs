@@ -1,4 +1,4 @@
-﻿namespace Beter.TestingTool.Generator.Infrastructure.Options;
+﻿namespace Beter.TestingTools.Generator.Infrastructure.Options;
 
 public class FeedEmulatorOptions
 {

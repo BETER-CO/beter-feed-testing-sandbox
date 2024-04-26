@@ -1,6 +1,6 @@
-﻿using Beter.TestingTool.Generator.Domain.TestScenarios;
+﻿using Beter.TestingTools.Generator.Domain.TestScenarios;
 
-namespace Beter.TestingTool.Generator.Domain.Playbacks;
+namespace Beter.TestingTools.Generator.Domain.Playbacks;
 
 public sealed record PlaybackItem
 {

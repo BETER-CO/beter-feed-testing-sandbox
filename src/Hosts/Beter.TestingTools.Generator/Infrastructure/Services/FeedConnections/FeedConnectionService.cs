@@ -1,7 +1,7 @@
 ﻿using Beter.TestingTools.Common.Models;
-using Beter.TestingTool.Generator.Application.Contracts.FeedConnections;
+using Beter.TestingTools.Generator.Application.Contracts.FeedConnections;
 
-namespace Beter.TestingTool.Generator.Infrastructure.Services.FeedConnections;
+namespace Beter.TestingTools.Generator.Infrastructure.Services.FeedConnections;
 
 public sealed class FeedConnectionService : IFeedConnectionService
 {

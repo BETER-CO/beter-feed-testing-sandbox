@@ -1,10 +1,10 @@
-﻿using Beter.TestingTool.Generator.Application.Contracts.TestScenarios;
-using Beter.TestingTool.Generator.Domain.TestScenarios;
+﻿using Beter.TestingTools.Generator.Application.Contracts.TestScenarios;
+using Beter.TestingTools.Generator.Domain.TestScenarios;
 using System.ComponentModel.DataAnnotations;
 using System.Reflection;
 using System.Text.Json;
 
-namespace Beter.TestingTool.Generator.Application.Services.TestScenarios;
+namespace Beter.TestingTools.Generator.Application.Services.TestScenarios;
 
 public sealed class TestScenarioFactory : ITestScenarioFactory
 {
@@ -28,8 +28,10 @@ public sealed class TestScenarioFactory : ITestScenarioFactory
         }
     }
 
-    public IEnumerable<TestScenario> Create(string testScenarioPath) =>
-        ReadTestScenarioFromAssembly(testScenarioPath);
+    public IEnumerable<TestScenario> Create(string testScenarioPath)
+    {
+        return ReadTestScenarioFromAssembly(testScenarioPath);
+    }
 
     private IEnumerable<TestScenario> ReadTestScenarioFromAssembly(string testScenarioPath)
     {
@@ -42,10 +44,13 @@ public sealed class TestScenarioFactory : ITestScenarioFactory
             throw new DirectoryNotFoundException($"The directory {testScenarioPath} was not found in the assembly.");
         }
 
+        var result = new List<TestScenario>();
         foreach (var scenario in Directory.GetFiles(directoryPath))
         {
-            yield return CreateTestScenario(scenario);
+            result.Add(CreateTestScenario(scenario));
         }
+
+        return result;
     }
 
     //TODO Add validator for json content

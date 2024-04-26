@@ -1,4 +1,4 @@
-﻿namespace Beter.TestingTool.Generator.Application.Contracts;
+﻿namespace Beter.TestingTools.Generator.Application.Contracts;
 
 public interface IRunCountTracker
 {

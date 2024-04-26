@@ -1,8 +1,7 @@
-﻿using Beter.TestingTool.Generator.Infrastructure.Options;
+﻿using Beter.TestingTools.Generator.Infrastructure.Options;
 using Microsoft.Extensions.Options;
 
-namespace Beter.TestingTool.Generator.Infrastructure.Services.FeedConnections;
-
+namespace Beter.TestingTools.Generator.Infrastructure.Services.FeedConnections;
 
 public sealed class FeedEmulatorUrlProvider : IFeedEmulatorUrlProvider
 {

@@ -1,4 +1,4 @@
-﻿namespace Beter.TestingTool.Generator.Host.Middlewares;
+﻿namespace Beter.TestingTools.Generator.Host.Middlewares;
 
 public class RequestLoggingMiddleware
 {

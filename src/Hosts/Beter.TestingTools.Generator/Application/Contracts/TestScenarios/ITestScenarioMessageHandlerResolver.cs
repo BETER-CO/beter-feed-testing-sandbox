@@ -1,4 +1,4 @@
-﻿namespace Beter.TestingTool.Generator.Application.Contracts.TestScenarios;
+﻿namespace Beter.TestingTools.Generator.Application.Contracts.TestScenarios;
 
 public interface ITestScenarioMessageHandlerResolver
 {

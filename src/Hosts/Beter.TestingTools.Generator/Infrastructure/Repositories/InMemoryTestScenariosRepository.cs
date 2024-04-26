@@ -1,9 +1,9 @@
-﻿using Beter.TestingTool.Generator.Application.Contracts.TestScenarios;
-using Beter.TestingTool.Generator.Domain.TestScenarios;
-using Beter.TestingTools.Generator.Application.Common;
+﻿using Beter.TestingTools.Generator.Application.Common;
+using Beter.TestingTools.Generator.Application.Contracts.TestScenarios;
+using Beter.TestingTools.Generator.Domain.TestScenarios;
 using System.Collections.Concurrent;
 
-namespace Beter.TestingTool.Generator.Infrastructure.Repositories;
+namespace Beter.TestingTools.Generator.Infrastructure.Repositories;
 
 public sealed class InMemoryTestScenariosRepository : ITestScenariosRepository
 {

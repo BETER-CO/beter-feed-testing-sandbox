@@ -1,6 +1,6 @@
-﻿using Beter.TestingTool.Generator.Application.Contracts.Playbacks;
+﻿using Beter.TestingTools.Generator.Application.Contracts.Playbacks;
 
-namespace Beter.TestingTool.Generator.Application.Services.Playbacks.Transformations;
+namespace Beter.TestingTools.Generator.Application.Services.Playbacks.Transformations;
 
 public sealed class MessagesTransformationContext
 {
@@ -9,6 +9,7 @@ public sealed class MessagesTransformationContext
         public string Id { get; set; }
         public string NewId { get; set; }
         public DateTime OldStartDate { get; set; }
+        public DateTime NewStartDate { get; set; }
         public Dictionary<string, DateTime> OldFirstTimestampByEachMessageType { get; set; } = [];
         public bool WasFirstTimeTableMessage { get; set; }
         public bool IsFirstTimeTableMessageDelayProcessed { get; set; }
@@ -20,8 +21,8 @@ public sealed class MessagesTransformationContext
     public DateTime TestCaseStart { get; set; }
     public TimeSpan TimeOffsetAfterFirstTimetableMessageInSecounds { get; set; }
     public double AccelerationFactor { get; set; }
-    public DateTime OldFirstMessageScheduledAt { get; set; }
-    public DateTime NewFirstMessageScheduledAt { get; set; }
+    public long OldFirstMessageScheduledAt { get; set; }
+    public long NewFirstMessageScheduledAt { get; set; }
     public Dictionary<string, MatchIdProfile> Matches { get; set; }
 
     public MatchIdProfile GetMatchProfile(string matchId)

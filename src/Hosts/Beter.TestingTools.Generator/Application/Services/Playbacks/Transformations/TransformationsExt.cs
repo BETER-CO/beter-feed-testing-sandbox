@@ -1,10 +1,10 @@
 ﻿using Beter.TestingTools.Common;
 using Beter.TestingTools.Models;
-using Beter.TestingTool.Generator.Application.Contracts.Playbacks;
-using Beter.TestingTool.Generator.Application.Extensions;
-using Beter.TestingTool.Generator.Domain.TestScenarios;
+using Beter.TestingTools.Generator.Application.Contracts.Playbacks;
+using Beter.TestingTools.Generator.Domain.TestScenarios;
+using Beter.TestingTools.Generator.Application.Extensions;
 
-namespace Beter.TestingTool.Generator.Application.Services.Playbacks.Transformations;
+namespace Beter.TestingTools.Generator.Application.Services.Playbacks.Transformations;
 
 public static class TransformationsExt
 {
@@ -33,9 +33,9 @@ public static class TransformationsExt
     {
         if (context.ReplyMode == ReplyMode.HistoricalTimeline)
         {
-            var diffScheduledAtBetweenMessages = DateTimeOffset.FromUnixTimeMilliseconds(message.ScheduledAt).UtcDateTime.Subtract(context.OldFirstMessageScheduledAt);
-            var currentScheduledAt = context.NewFirstMessageScheduledAt.Add(diffScheduledAtBetweenMessages);
-            message.ScheduledAt = currentScheduledAt.ToUnixTimeMilliseconds();
+            var diffScheduledAtBetweenMessages = message.ScheduledAt - context.OldFirstMessageScheduledAt;
+            var currentScheduledAt = context.NewFirstMessageScheduledAt + diffScheduledAtBetweenMessages;
+            message.ScheduledAt = currentScheduledAt;
         }
         else
         {

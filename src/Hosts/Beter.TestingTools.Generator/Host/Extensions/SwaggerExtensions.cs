@@ -1,7 +1,7 @@
 ﻿using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace Beter.TestingTool.Generator.Host.Extensions;
+namespace Beter.TestingTools.Generator.Host.Extensions;
 
 public static class SwaggerExtensions
 {

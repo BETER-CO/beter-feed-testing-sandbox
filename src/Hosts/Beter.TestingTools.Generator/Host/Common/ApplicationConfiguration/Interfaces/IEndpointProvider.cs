@@ -1,4 +1,4 @@
-﻿namespace Beter.TestingTool.Generator.Host.Common.ApplicationConfiguration.Interfaces;
+﻿namespace Beter.TestingTools.Generator.Host.Common.ApplicationConfiguration.Interfaces;
 
 public interface IEndpointProvider
 {
