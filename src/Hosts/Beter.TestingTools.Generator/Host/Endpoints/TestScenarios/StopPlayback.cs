@@ -1,11 +1,11 @@
-﻿using Beter.TestingTool.Generator.Application.Contracts.TestScenarios;
-using Beter.TestingTool.Generator.Contracts.Requests;
-using Beter.TestingTool.Generator.Contracts.Responses;
-using Beter.TestingTool.Generator.Host.Common.ApplicationConfiguration.Interfaces;
-using Beter.TestingTool.Generator.Host.Common.Constants;
+﻿using Beter.TestingTools.Generator.Application.Contracts.TestScenarios;
+using Beter.TestingTools.Generator.Contracts.Requests;
+using Beter.TestingTools.Generator.Contracts.Responses;
+using Beter.TestingTools.Generator.Host.Common.ApplicationConfiguration.Interfaces;
+using Beter.TestingTools.Generator.Host.Common.Constants;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Beter.TestingTool.Generator.Host.Endpoints.TestScenarios;
+namespace Beter.TestingTools.Generator.Host.Endpoints.TestScenarios;
 
 public class StopPlayback : IEndpointProvider
 {

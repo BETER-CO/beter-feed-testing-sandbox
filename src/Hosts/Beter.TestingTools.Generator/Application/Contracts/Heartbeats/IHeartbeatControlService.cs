@@ -1,6 +1,6 @@
-﻿using Beter.TestingTool.Generator.Application.Services.Heartbeats;
+﻿using Beter.TestingTools.Generator.Application.Services.Heartbeats;
 
-namespace Beter.TestingTool.Generator.Application.Contracts.Heartbeats;
+namespace Beter.TestingTools.Generator.Application.Contracts.Heartbeats;
 
 public interface IHeartbeatControlService
 {

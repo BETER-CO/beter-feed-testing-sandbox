@@ -1,4 +1,4 @@
-﻿namespace Beter.TestingTool.Generator.Host.Options;
+﻿namespace Beter.TestingTools.Generator.Host.Options;
 
 public class HeartbeatOptions
 {

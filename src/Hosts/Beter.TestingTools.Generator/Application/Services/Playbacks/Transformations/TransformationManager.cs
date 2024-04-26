@@ -1,7 +1,7 @@
-﻿using Beter.TestingTool.Generator.Application.Services.Playbacks.Transformations.Rules;
-using Beter.TestingTool.Generator.Domain.TestScenarios;
+﻿using Beter.TestingTools.Generator.Application.Services.Playbacks.Transformations.Rules;
+using Beter.TestingTools.Generator.Domain.TestScenarios;
 
-namespace Beter.TestingTool.Generator.Application.Services.Playbacks.Transformations;
+namespace Beter.TestingTools.Generator.Application.Services.Playbacks.Transformations;
 
 public interface ITransformationManager
 {

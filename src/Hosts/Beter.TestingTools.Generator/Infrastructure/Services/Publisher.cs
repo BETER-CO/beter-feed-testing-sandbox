@@ -1,14 +1,14 @@
 ﻿using Beter.TestingTools.Common.Constants;
 using Beter.TestingTools.Models;
-using Beter.TestingTool.Generator.Application.Contracts;
-using Beter.TestingTool.Generator.Domain.TestScenarios;
-using Beter.TestingTool.Generator.Infrastructure.Options;
 using Confluent.Kafka;
 using Microsoft.Extensions.Options;
 using System.Text;
 using System.Text.Json;
+using Beter.TestingTools.Generator.Application.Contracts;
+using Beter.TestingTools.Generator.Infrastructure.Options;
+using Beter.TestingTools.Generator.Domain.TestScenarios;
 
-namespace Beter.TestingTool.Generator.Infrastructure.Services;
+namespace Beter.TestingTools.Generator.Infrastructure.Services;
 
 public class Publisher : IPublisher
 {
@@ -37,10 +37,12 @@ public class Publisher : IPublisher
             .SetLogHandler(HandleLog)
             .Build();
     }
+
     private void HandleLog(IProducer<string, string> producer, LogMessage e)
     {
         _logger.LogDebug($"{e.Level}|{e.Name}|{e.Facility} - {e.Message}");
     }
+
     private void HandleError(IProducer<string, string> producer, Error e)
     {
         _logger.LogError($"Producer error. Reason={e.Reason}, Code={e.Code}, IsBrokerError={e.IsBrokerError}, IsLocalError={e.IsLocalError}");

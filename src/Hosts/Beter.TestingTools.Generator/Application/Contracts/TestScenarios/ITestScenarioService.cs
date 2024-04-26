@@ -1,9 +1,9 @@
-﻿using Beter.TestingTool.Generator.Contracts.Playbacks;
-using Beter.TestingTool.Generator.Contracts.Requests;
-using Beter.TestingTool.Generator.Contracts.Responses;
-using Beter.TestingTool.Generator.Contracts.TestScenarios;
+﻿using Beter.TestingTools.Generator.Contracts.Playbacks;
+using Beter.TestingTools.Generator.Contracts.Requests;
+using Beter.TestingTools.Generator.Contracts.Responses;
+using Beter.TestingTools.Generator.Contracts.TestScenarios;
 
-namespace Beter.TestingTool.Generator.Application.Contracts.TestScenarios;
+namespace Beter.TestingTools.Generator.Application.Contracts.TestScenarios;
 
 public interface ITestScenarioService
 {

@@ -1,4 +1,4 @@
-﻿namespace Beter.TestingTool.Generator.Domain;
+﻿namespace Beter.TestingTools.Generator.Domain;
 
 public static class VersionFactory
 {

@@ -1,8 +1,8 @@
-﻿using Beter.TestingTool.Generator.Contracts.Playbacks;
-using Beter.TestingTool.Generator.Contracts.Responses;
-using Beter.TestingTool.Generator.Domain.Playbacks;
+﻿using Beter.TestingTools.Generator.Contracts.Playbacks;
+using Beter.TestingTools.Generator.Contracts.Responses;
+using Beter.TestingTools.Generator.Domain.Playbacks;
 
-namespace Beter.TestingTool.Generator.Application.Mappers;
+namespace Beter.TestingTools.Generator.Application.Mappers;
 
 public static class PlaybackMapper
 {

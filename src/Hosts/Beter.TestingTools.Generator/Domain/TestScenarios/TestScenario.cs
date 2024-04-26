@@ -1,4 +1,4 @@
-﻿namespace Beter.TestingTool.Generator.Domain.TestScenarios;
+﻿namespace Beter.TestingTools.Generator.Domain.TestScenarios;
 
 public sealed record TestScenario
 {

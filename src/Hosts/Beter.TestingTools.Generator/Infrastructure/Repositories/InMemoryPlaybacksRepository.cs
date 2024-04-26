@@ -1,10 +1,10 @@
-﻿using Beter.TestingTool.Generator.Application.Contracts;
-using Beter.TestingTool.Generator.Application.Contracts.Playbacks;
-using Beter.TestingTool.Generator.Domain.Playbacks;
-using Beter.TestingTools.Generator.Application.Common;
+﻿using Beter.TestingTools.Generator.Application.Common;
+using Beter.TestingTools.Generator.Application.Contracts;
+using Beter.TestingTools.Generator.Application.Contracts.Playbacks;
+using Beter.TestingTools.Generator.Domain.Playbacks;
 using System.Collections.Concurrent;
 
-namespace Beter.TestingTool.Generator.Infrastructure.Repositories;
+namespace Beter.TestingTools.Generator.Infrastructure.Repositories;
 
 public sealed class InMemoryPlaybacksRepository : IPlaybackRepository
 {
@@ -45,10 +45,13 @@ public sealed class InMemoryPlaybacksRepository : IPlaybackRepository
 
     public IEnumerable<Playback> RemoveAll()
     {
+        var result = new List<Playback>();
         foreach (var playback in _playbacks)
         {
-            yield return Remove(playback.Key);
+            result.Add(Remove(playback.Key));
         }
+
+        return result;
     }
 
     public Playback Get(string playbackId)
@@ -73,7 +76,6 @@ public sealed class InMemoryPlaybacksRepository : IPlaybackRepository
         playback = playback with
         {
             LastMessageSentAt = messageToRemove.Message.ScheduledAt,
-            ActiveMessagesCount = playback.ActiveMessagesCount - 1,
             Messages = RemoveMessages(
                [messageToRemove.InternalId],
                playback.Messages)

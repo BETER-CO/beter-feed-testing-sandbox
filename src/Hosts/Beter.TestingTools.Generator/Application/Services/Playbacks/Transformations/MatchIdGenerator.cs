@@ -1,4 +1,4 @@
-﻿namespace Beter.TestingTool.Generator.Application.Services.Playbacks.Transformations;
+﻿namespace Beter.TestingTools.Generator.Application.Services.Playbacks.Transformations;
 
 public interface IMatchIdGenerator
 {

@@ -1,6 +1,6 @@
-﻿using Beter.TestingTool.Generator.Domain.Playbacks;
+﻿using Beter.TestingTools.Generator.Domain.Playbacks;
 
-namespace Beter.TestingTool.Generator.Application.Contracts.Playbacks;
+namespace Beter.TestingTools.Generator.Application.Contracts.Playbacks;
 
 public interface IPlaybackFactory
 {

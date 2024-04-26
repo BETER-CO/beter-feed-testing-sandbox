@@ -1,4 +1,4 @@
-﻿namespace Beter.TestingTool.Generator.Application.Extensions;
+﻿namespace Beter.TestingTools.Generator.Application.Extensions;
 
 public static class DateTimeExtensions
 {

@@ -1,8 +1,8 @@
-﻿using Beter.TestingTool.Generator.Application.Services.Playbacks.Transformations.Helpers;
+﻿using Beter.TestingTools.Generator.Application.Services.Playbacks.Transformations.Helpers;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 
-namespace Beter.TestingTool.Generator.Domain.TestScenarios;
+namespace Beter.TestingTools.Generator.Domain.TestScenarios;
 
 public class TestScenarioMessage<TValue>
 {

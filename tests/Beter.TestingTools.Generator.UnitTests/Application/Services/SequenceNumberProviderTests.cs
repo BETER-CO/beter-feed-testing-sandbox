@@ -1,4 +1,4 @@
-﻿using Beter.TestingTool.Generator.Application.Services;
+﻿using Beter.TestingTools.Generator.Application.Services;
 using System.Collections.Concurrent;
 
 namespace Beter.TestingTools.Generator.UnitTests.Application.Services

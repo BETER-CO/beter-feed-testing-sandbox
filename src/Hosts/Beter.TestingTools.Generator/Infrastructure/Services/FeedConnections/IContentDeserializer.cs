@@ -1,4 +1,4 @@
-﻿namespace Beter.TestingTool.Generator.Infrastructure.Services.FeedConnections;
+﻿namespace Beter.TestingTools.Generator.Infrastructure.Services.FeedConnections;
 
 public interface IContentDeserializer
 {

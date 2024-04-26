@@ -1,7 +1,7 @@
 ﻿using Beter.TestingTools.Models;
-using Beter.TestingTool.Generator.Domain.TestScenarios;
+using Beter.TestingTools.Generator.Domain.TestScenarios;
 
-namespace Beter.TestingTool.Generator.Application.Contracts;
+namespace Beter.TestingTools.Generator.Application.Contracts;
 
 public interface IPublisher
 {

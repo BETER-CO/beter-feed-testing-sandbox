@@ -1,6 +1,6 @@
-﻿using Beter.TestingTool.Generator.Contracts.Requests;
+﻿using Beter.TestingTools.Generator.Contracts.Requests;
 
-namespace Beter.TestingTool.Generator.Contracts.Responses;
+namespace Beter.TestingTools.Generator.Contracts.Responses;
 
 public sealed class StopPlaybackResponse
 {

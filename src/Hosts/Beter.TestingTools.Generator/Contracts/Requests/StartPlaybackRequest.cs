@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Beter.TestingTool.Generator.Contracts.Requests;
+namespace Beter.TestingTools.Generator.Contracts.Requests;
 
 public record StartPlaybackRequest
 {

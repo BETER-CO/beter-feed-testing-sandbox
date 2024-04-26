@@ -1,12 +1,12 @@
-﻿using Beter.TestingTool.Generator.Application.Contracts;
-using Beter.TestingTool.Generator.Application.Contracts.Playbacks;
-using Beter.TestingTool.Generator.Application.Contracts.TestScenarios;
-using Beter.TestingTool.Generator.Domain.Playbacks;
+﻿using Beter.TestingTools.Generator.Application.Contracts;
+using Beter.TestingTools.Generator.Application.Contracts.Playbacks;
+using Beter.TestingTools.Generator.Application.Contracts.TestScenarios;
+using Beter.TestingTools.Generator.Domain.Playbacks;
 using Microsoft.Extensions.Logging.Abstractions;
 using System.Collections.Concurrent;
 using System.Threading.Tasks.Dataflow;
 
-namespace Beter.TestingTool.Generator.Application.Services.Playbacks;
+namespace Beter.TestingTools.Generator.Application.Services.Playbacks;
 
 public class PlaybackScheduler : IPlaybackScheduler
 {

@@ -1,22 +1,19 @@
 ﻿using Beter.TestingTools.Common.Constants;
 using Beter.TestingTools.Common.Enums;
 using Beter.TestingTools.Common.Extensions;
-using Beter.TestingTool.Generator.Application.Contracts;
-using Beter.TestingTool.Generator.Application.Services.Playbacks.Transformations.Helpers;
-using Beter.TestingTool.Generator.Domain.TestScenarios;
-using System.Collections.Concurrent;
+using Beter.TestingTools.Generator.Application.Services.Playbacks.Transformations.Helpers;
+using Beter.TestingTools.Generator.Application.Contracts;
+using Beter.TestingTools.Generator.Domain.TestScenarios;
 
-namespace Beter.TestingTool.Generator.Application.Services.TestScenarios.MessageHandlers;
+namespace Beter.TestingTools.Generator.Application.Services.TestScenarios.MessageHandlers;
 
 public class FeedMessageHandler : BaseTestScenarioMessageHandler
 {
-    private readonly ISequenceNumberProvider _sequenceNumberProvider;
-    private readonly ConcurrentDictionary<string, Dictionary<HubKind, int>> _offsetStorage;
+    private readonly IOffsetStorage _offsetStorage;
 
-    public FeedMessageHandler(IPublisher publisher, ISequenceNumberProvider sequenceNumberProvider) : base(publisher)
+    public FeedMessageHandler(IPublisher publisher, IOffsetStorage offsetStorage) : base(publisher)
     {
-        _offsetStorage = new ConcurrentDictionary<string, Dictionary<HubKind, int>>();
-        _sequenceNumberProvider = sequenceNumberProvider ?? throw new ArgumentNullException(nameof(sequenceNumberProvider));
+        _offsetStorage = offsetStorage ?? throw new ArgumentNullException(nameof(offsetStorage));
     }
 
     public override bool IsApplicable(string messageType)
@@ -52,44 +49,13 @@ public class FeedMessageHandler : BaseTestScenarioMessageHandler
 
             if (msgType == (int)MessageType.Update)
             {
-                UpdateOffsetForUpdateMessage(messageToModification, matchId, hubKind);
+                messageToModification.Offset = _offsetStorage.GetOffsetForUpdateMessage(matchId, hubKind);
             }
             else
             {
-                UpdateOffsetForNonUpdateMessage(messageToModification, matchId, hubKind);
+                messageToModification.Offset = _offsetStorage.GetOffsetForNonUpdateMessage(matchId, hubKind);
             }
         }
-    }
-
-    private void UpdateOffsetForUpdateMessage(FeedMessageWrapper messageToModification, string matchId, HubKind hubKind)
-    {
-        var newOffset = _sequenceNumberProvider.GetNext();
-
-        _offsetStorage.AddOrUpdate(matchId,
-            (matchId) => new Dictionary<HubKind, int> { { hubKind, newOffset } },
-            (matchId, offsetByHubs) =>
-            {
-                offsetByHubs[hubKind] = newOffset;
-                return offsetByHubs;
-            });
-
-        messageToModification.Offset = newOffset;
-    }
-
-    private void UpdateOffsetForNonUpdateMessage(FeedMessageWrapper messageToModification, string matchId, HubKind hubKind)
-    {
-        var offsetByHubs = _offsetStorage.AddOrUpdate(
-            matchId,
-            (matchId) => new Dictionary<HubKind, int> { { hubKind, _sequenceNumberProvider.GetNext() } },
-            (matchId, offsetByHubs) =>
-            {
-                if (!offsetByHubs.TryGetValue(hubKind, out var offset))
-                    offsetByHubs[hubKind] = _sequenceNumberProvider.GetNext();
-
-                return offsetByHubs;
-            });
-
-        messageToModification.Offset = offsetByHubs[hubKind];
     }
 }
 

@@ -1,4 +1,4 @@
-﻿namespace Beter.TestingTool.Generator.Application.Common;
+﻿namespace Beter.TestingTools.Generator.Application.Common;
 
 public abstract class EnumerationItem
 {

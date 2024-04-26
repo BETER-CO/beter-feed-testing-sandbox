@@ -1,9 +1,9 @@
 ﻿using Beter.TestingTools.Common.Constants;
 using Beter.TestingTools.Models;
-using Beter.TestingTool.Generator.Application.Extensions;
-using Beter.TestingTool.Generator.Domain.TestScenarios;
+using Beter.TestingTools.Generator.Domain.TestScenarios;
+using Beter.TestingTools.Generator.Application.Extensions;
 
-namespace Beter.TestingTool.Generator.Application.Services.Playbacks.Transformations.Rules;
+namespace Beter.TestingTools.Generator.Application.Services.Playbacks.Transformations.Rules;
 
 public class SubscriptionsRemovedTransformationRule : ITransformationRule
 {

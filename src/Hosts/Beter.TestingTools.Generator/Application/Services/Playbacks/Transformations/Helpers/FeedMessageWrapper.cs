@@ -2,7 +2,7 @@
 using Beter.TestingTools.Models;
 using System.Text.Json.Nodes;
 
-namespace Beter.TestingTool.Generator.Application.Services.Playbacks.Transformations.Helpers;
+namespace Beter.TestingTools.Generator.Application.Services.Playbacks.Transformations.Helpers;
 
 public record FeedMessageWrapper : IFeedMessage, IIdentityModel
 {

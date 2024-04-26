@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http.Features;
 
-namespace Beter.TestingTool.Generator.Host.Extensions;
+namespace Beter.TestingTools.Generator.Host.Extensions;
 
 public static class ApplicationBuilderExtensions
 {

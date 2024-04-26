@@ -1,6 +1,6 @@
-﻿using Beter.TestingTool.Generator.Application.Contracts.TestScenarios;
+﻿using Beter.TestingTools.Generator.Application.Contracts.TestScenarios;
 
-namespace Beter.TestingTool.Generator.Application.Services.TestScenarios.MessageHandlers;
+namespace Beter.TestingTools.Generator.Application.Services.TestScenarios.MessageHandlers;
 
 public sealed class TestScenarioMessageHandlerResolver : ITestScenarioMessageHandlerResolver
 {
