@@ -1,11 +1,11 @@
 ﻿using AutoFixture;
 using Beter.TestingTools.Generator.Domain.TestScenarios;
-using Beter.TestingTools.Generator.Application.Common;
 using Beter.TestingTools.Generator.Application.Contracts;
 using Beter.TestingTools.Generator.Domain.Playbacks;
 using Beter.TestingTools.Generator.Infrastructure.Repositories;
 using Beter.TestingTools.Generator.UnitTests.Fixtures;
 using Moq;
+using Beter.TestingTools.Generator.Application.Exceptions;
 
 namespace Beter.TestingTools.Generator.UnitTests.Infrastructure.Repositories
 {

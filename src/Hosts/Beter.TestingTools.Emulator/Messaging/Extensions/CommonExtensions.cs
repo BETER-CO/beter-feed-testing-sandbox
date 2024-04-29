@@ -1,5 +1,4 @@
-﻿using Confluent.Kafka;
-using System.Text;
+﻿using System.Text;
 
 namespace Beter.TestingTools.Emulator.Messaging.Extensions;
 

@@ -11,7 +11,7 @@ public class ScoreboardMessageHandler : MessageHandlerBase<ScoreBoardModel[]>
 
     public ScoreboardMessageHandler(IMessagePublisher<ScoreBoardModel> messagePublisher)
     {
-        _messagePublisher = messagePublisher;
+        _messagePublisher = messagePublisher ?? throw new ArgumentNullException(nameof(messagePublisher));
     }
 
     public override Task HandleAsync(ScoreBoardModel[] messages, ConsumeMessageContext context, CancellationToken cancellationToken = default)

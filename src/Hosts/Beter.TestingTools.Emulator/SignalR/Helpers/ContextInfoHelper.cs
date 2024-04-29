@@ -18,18 +18,15 @@ public static class ContextInfoHelper
         return result;
     }
 
-
     private static string GetParamImpl(HubCallerContext hubCallerContext, string parameterKey)
     {
         var mvcContext = hubCallerContext?.GetHttpContext();
-
         if (mvcContext == null)
         {
             throw new ArgumentException(nameof(hubCallerContext));
         }
 
         string param = mvcContext.Request.Headers[parameterKey];
-
         if (string.IsNullOrEmpty(param))
         {
             param = mvcContext.Request.Query[parameterKey].FirstOrDefault();
@@ -47,7 +44,6 @@ public static class ContextInfoHelper
     public static string GetIp(this HubCallerContext hubCallerContext)
     {
         var mvcContext = hubCallerContext?.GetHttpContext();
-
         if (mvcContext == null)
         {
             throw new ArgumentException(nameof(hubCallerContext));

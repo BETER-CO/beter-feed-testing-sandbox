@@ -1,6 +1,6 @@
-﻿using Beter.TestingTools.Generator.Application.Common;
-using Beter.TestingTools.Generator.Application.Contracts;
+﻿using Beter.TestingTools.Generator.Application.Contracts;
 using Beter.TestingTools.Generator.Application.Contracts.Playbacks;
+using Beter.TestingTools.Generator.Application.Exceptions;
 using Beter.TestingTools.Generator.Domain.Playbacks;
 using System.Collections.Concurrent;
 
