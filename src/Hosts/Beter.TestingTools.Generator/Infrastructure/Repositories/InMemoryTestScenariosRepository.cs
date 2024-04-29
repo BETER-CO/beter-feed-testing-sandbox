@@ -1,5 +1,5 @@
-﻿using Beter.TestingTools.Generator.Application.Common;
-using Beter.TestingTools.Generator.Application.Contracts.TestScenarios;
+﻿using Beter.TestingTools.Generator.Application.Contracts.TestScenarios;
+using Beter.TestingTools.Generator.Application.Exceptions;
 using Beter.TestingTools.Generator.Domain.TestScenarios;
 using System.Collections.Concurrent;
 

@@ -10,7 +10,6 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace Beter.TestingTools.Generator.Infrastructure.Extensions;
 
-[ExcludeFromCodeCoverage]
 static internal class ServiceCollectionExtensions
 {
     public static IServiceCollection AddInfrastructure(

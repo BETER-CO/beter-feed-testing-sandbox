@@ -1,4 +1,4 @@
-﻿namespace Beter.TestingTools.Generator.Application.Common
+﻿namespace Beter.TestingTools.Generator.Application.Exceptions
 {
     public class DuplicateEntityException : DomainException
     {

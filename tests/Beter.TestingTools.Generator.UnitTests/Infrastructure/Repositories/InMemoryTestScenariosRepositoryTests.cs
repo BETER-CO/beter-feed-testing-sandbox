@@ -1,4 +1,4 @@
-﻿using Beter.TestingTools.Generator.Application.Common;
+﻿using Beter.TestingTools.Generator.Application.Exceptions;
 using Beter.TestingTools.Generator.Domain.TestScenarios;
 using Beter.TestingTools.Generator.Infrastructure.Repositories;
 

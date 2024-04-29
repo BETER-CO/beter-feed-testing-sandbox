@@ -11,7 +11,7 @@ public class TimeTableMessageHandler : MessageHandlerBase<TimeTableItemModel[]>
 
     public TimeTableMessageHandler(IMessagePublisher<TimeTableItemModel> messagePublisher)
     {
-        _messagePublisher = messagePublisher;
+        _messagePublisher = messagePublisher ?? throw new ArgumentNullException(nameof(messagePublisher));
     }
 
     public override Task HandleAsync(TimeTableItemModel[] messages, ConsumeMessageContext context, CancellationToken cancellationToken = default)

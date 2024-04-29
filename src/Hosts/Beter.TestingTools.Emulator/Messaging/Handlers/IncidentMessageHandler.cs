@@ -11,7 +11,7 @@ public class IncidentMessageHandler : MessageHandlerBase<IncidentModel[]>
 
     public IncidentMessageHandler(IMessagePublisher<IncidentModel> messagePublisher)
     {
-        _messagePublisher = messagePublisher;
+        _messagePublisher = messagePublisher ?? throw new ArgumentNullException(nameof(messagePublisher));
     }
 
     public override Task HandleAsync(IncidentModel[] messages, ConsumeMessageContext context, CancellationToken cancellationToken = default)

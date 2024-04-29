@@ -11,7 +11,7 @@ public class TradingMessageHandler : MessageHandlerBase<TradingInfoModel[]>
 
     public TradingMessageHandler(IMessagePublisher<TradingInfoModel> messagePublisher)
     {
-        _messagePublisher = messagePublisher;
+        _messagePublisher = messagePublisher ?? throw new ArgumentNullException(nameof(messagePublisher));
     }
 
     public override Task HandleAsync(TradingInfoModel[] messages, ConsumeMessageContext context, CancellationToken cancellationToken = default)

@@ -16,12 +16,13 @@ public class BaseHub<T, THubInterface> : Hub<THubInterface>, IHubIdentity where 
     private readonly IConnectionManager _connectionManager;
     private readonly ILogger<BaseHub<T, THubInterface>> _logger;
     private readonly HubKind _hubKind;
-    protected BaseHub(IMessagePublisher<T> publisher, IConnectionManager connectionManager, ILogger<BaseHub<T, THubInterface>> logger)
+
+    public BaseHub(IMessagePublisher<T> publisher, IConnectionManager connectionManager, ILogger<BaseHub<T, THubInterface>> logger)
     {
         _hubKind = HubHelper.ToHub<T>();
         _publisher = publisher ?? throw new ArgumentNullException(nameof(publisher));
         _connectionManager = connectionManager ?? throw new ArgumentNullException(nameof(connectionManager));
-        _logger = logger;
+        _logger = logger ?? throw new ArgumentNullException(nameof(logger));
     }
 
     public HubKind Hub => HubHelper.ToHub<T>();
@@ -89,7 +90,6 @@ public class BaseHub<T, THubInterface> : Hub<THubInterface>, IHubIdentity where 
 
             heartbeat.OnHeartbeat(async state =>
             {
-
                 var (context, connectionId, apiKey) = ((HubCallerContext, string, Guid))state;
 
                 await OnHeartbeatAsync(context, connectionId, apiKey);

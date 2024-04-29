@@ -17,7 +17,6 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace Beter.TestingTools.Generator.Application.Extensions;
 
-[ExcludeFromCodeCoverage]
 static internal class ServiceCollectionExtensions
 {
     public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration configuration)
