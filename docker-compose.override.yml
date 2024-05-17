@@ -1,13 +1,13 @@
 version: '3.4'
 
 services:
-  beter.testingtool.generator:
+  beter.feed.testingsandbox.generator:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
-      - FeedEmulator__ApiBaseUrl=http://beter.testing-tool.emulator
+      - FeedEmulator__ApiBaseUrl=http://beter.feed.testing-sandbox.emulator
       - Publisher__BootstrapServers=kafka:29092
-      - Publisher__Topic=testing-tool-generator-local
+      - Publisher__Topic=feed-testing-sandbox-generator
       - Publisher__SecurityProtocol=0
       - Publisher__AllowAutoCreateTopics=true
       - Heartbeat__IntervalInSeconds=5
@@ -16,7 +16,7 @@ services:
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro 
 
-  beter.testingtool.emulator:
+  beter.feed.testingsandbox.emulator:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80,
@@ -25,12 +25,32 @@ services:
       - Messaging__ConsumerConfig__AllowAutoCreateTopics=true
       - Messaging__ConsumerConfig__AutoOffsetReset=Earliest
       - Messaging__ConsumerConfig__GroupId=feed-emulator:test
-      - Messaging__Topics__TestingTools=testing-tool-generator-local
+      - Messaging__Topics__TestingTools=feed-testing-sandbox-generator
       - SignalR__FeedTimeTableEndpoint=/time_table
       - SignalR__FeedTradingEndpoint=/trading
       - SignalR__FeedScoreboardEndpoint=/scoreboard
       - SignalR__FeedIncidentEndpoint=/incident
       - SignalR__TtlForHeartbetRecord=00:00:05
+    ports:
+       - 51858:80
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro 
+
+  beter.feed.testingsandbox.consumer:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - FeatureManagement__ConsumeByTemplate=false
+      - Publisher__BootstrapServers=kafka:29092
+      - Publisher__SecurityProtocol=0
+      - Publisher__AllowAutoCreateTopics=true
+      - FeedService__ApiKey=58cebf38-cec6-4e73-8e9e-bfed1b29a517
+      - FeedService__Host=http://beter.feed.testing-sandbox.emulator
+      - FeedService__SkipNegotiation=false
+      - FeedService__Offset=0
+      - FeedService__SnapshotBatchSize=0
+      - FeedService__ReconnectionWaitSeconds=0.5
+      - FeedService__DestinationTopicName=feed-testing-sandbox-consumer
     ports:
        - 51859:80
     volumes:

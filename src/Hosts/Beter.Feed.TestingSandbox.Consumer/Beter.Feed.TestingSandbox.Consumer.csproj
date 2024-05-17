@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<OutputType>Exe</OutputType>
+	<TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+    <UserSecretsId>62d320f9-e409-40be-9f0f-14e38e2618b1</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CompareNETObjects" Version="4.83.0" />
+    <PackageReference Include="Microsoft.FeatureManagement" Version="3.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client.Core" Version="7.0.13" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="7.0.13" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Protocols.MessagePack" Version="7.0.13" />
+	<PackageReference Include="Confluent.Kafka" Version="2.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="configs\appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Beter.Feed.TestingSandbox.Common\Beter.Feed.TestingSandbox.Common.csproj" />
+    <ProjectReference Include="..\..\Common\Beter.Feed.TestingSandbox.Hosting\Beter.Feed.TestingSandbox.Hosting.csproj" />
+  </ItemGroup>
+
+</Project>

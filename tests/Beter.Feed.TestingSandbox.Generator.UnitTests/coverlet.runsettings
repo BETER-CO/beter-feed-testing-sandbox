@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RunSettings>
+	<DataCollectionRunSettings>
+		<DataCollectors>
+			<DataCollector friendlyName="XPlat code coverage">
+				<Configuration>
+					<Format>cobertura</Format>
+					<Include>
+						[Beter.TestingTools.Generator*]*
+					</Include>
+					<Exclude>
+						[Beter.TestingTools.Generator]Beter.TestingTools.Generator.Application.Services.Playbacks.PlaybackScheduler,
+						[Beter.TestingTools.Generator]Beter.TestingTools.Generator.Application.Exceptions*,
+						[Beter.TestingTools.Generator]Beter.TestingTools.Generator.Application.Extensions.ServiceCollectionExtensions,
+						[Beter.TestingTools.Generator]Beter.TestingTools.Generator.Contracts*,
+						[Beter.TestingTools.Generator]Beter.TestingTools.Generator.Host*,
+						[Beter.TestingTools.Generator]Beter.TestingTools.Generator.Infrastructure.Extensions*,
+						[Beter.TestingTools.Generator]Beter.TestingTools.Generator.Startup,
+						[Beter.TestingTools.Generator]Beter.TestingTools.Generator.Program,
+						[Beter.TestingTools.Generator]Beter.TestingTools.Generator.Scripts.TranformToFeedSerializationFormatScript
+					</Exclude>
+				</Configuration>
+			</DataCollector>
+		</DataCollectors>
+	</DataCollectionRunSettings>
+</RunSettings>

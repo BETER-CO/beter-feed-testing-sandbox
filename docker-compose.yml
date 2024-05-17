@@ -6,7 +6,7 @@ services:
     hostname: kafka
     container_name: kafka
     networks: 
-      - testing-tools
+      - feed-testing-sandbox
     ports:
       - "9092:9092"
       - "9101:9101"
@@ -27,6 +27,12 @@ services:
       KAFKA_CONTROLLER_LISTENER_NAMES: 'CONTROLLER'
       KAFKA_LOG_DIRS: '/var/lib/kafka/data'
       CLUSTER_ID: 'MkU3OEVBNTcwNTJENDM2Qc'
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z kafka 9092"]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+      start_period: 5s
     volumes:
       - "kafka-broker-data:/var/lib/kafka/data"
 
@@ -35,9 +41,10 @@ services:
     hostname: init-kafka
     container_name: init-kafka
     depends_on:
-      - kafka
+        kafka:
+            condition: service_healthy
     networks: 
-      - testing-tools
+      - feed-testing-sandbox
     entrypoint: [ '/bin/sh', '-c' ]
     command: |
       "
@@ -45,7 +52,8 @@ services:
       kafka-topics --bootstrap-server kafka:29092 --list
 
       echo -e 'Creating kafka topics'
-      kafka-topics --bootstrap-server kafka:29092 --create --if-not-exists --topic testing-tool-generator-local --replication-factor 1 --partitions 1
+      kafka-topics --bootstrap-server kafka:29092 --create --if-not-exists --topic feed-testing-sandbox-generator --replication-factor 1 --partitions 1
+      kafka-topics --bootstrap-server kafka:29092 --create --if-not-exists --topic feed-testing-sandbox-consumer --replication-factor 1 --partitions 1
 
       echo -e 'Successfully created the following topics:'
       kafka-topics --bootstrap-server kafka:29092 --list
@@ -56,11 +64,12 @@ services:
     container_name: kafka-ui
     hostname: kafka-ui
     networks: 
-      - testing-tools
+      - feed-testing-sandbox
     ports:
-      - "${KAFKA_UI_PORT:-8080}:8080"
+      - "8080:8080"
     depends_on:
-      - kafka
+        kafka:
+            condition: service_healthy
     environment:
       KAFKA_CLUSTERS_0_NAME: feed_testing_tools
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:29092
@@ -69,30 +78,67 @@ services:
       KAFKA_CLUSTERS_0_AUDIT_TOPICAUDITENABLED: 'true'
       KAFKA_CLUSTERS_0_AUDIT_CONSOLEAUDITENABLED: 'true'
 
-  beter.testingtool.generator:
+  beter.feed.testingsandbox.generator:
     build:
       context: .
-      dockerfile: src/Hosts/Beter.TestingTools.Generator/Dockerfile
-    container_name: beter.testing-tool.generator
+      dockerfile: src/Hosts/Beter.Feed.TestingSandbox.Generator/Dockerfile
+    container_name: beter.feed.testing-sandbox.generator
     networks: 
-      - testing-tools
+      - feed-testing-sandbox
+    healthcheck:
+      test: curl --fail http://localhost:80/health
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
     depends_on:
-      - kafka
-      - init-kafka
+        kafka:
+            condition: service_healthy
+        init-kafka:
+            condition: service_completed_successfully
 
-  beter.testingtool.emulator:
+  beter.feed.testingsandbox.emulator:
     build:
       context: .
-      dockerfile: src/Hosts/Beter.TestingTools.Emulator/Dockerfile
-    container_name: beter.testing-tool.emulator
+      dockerfile: src/Hosts/Beter.Feed.TestingSandbox.Emulator/Dockerfile
+    container_name: beter.feed.testing-sandbox.emulator
     networks: 
-      - testing-tools
+      - feed-testing-sandbox
+    healthcheck:
+      test: curl --fail http://localhost:80/health
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
     depends_on:
-      - kafka
-      - init-kafka
+        kafka:
+            condition: service_healthy
+        init-kafka:
+            condition: service_completed_successfully
+
+  beter.feed.testingsandbox.consumer:
+    build:
+      context: .
+      dockerfile: src/Hosts/Beter.Feed.TestingSandbox.Consumer/Dockerfile
+    container_name: beter.feed.testing-sandbox.consumer
+    networks: 
+      - feed-testing-sandbox
+    healthcheck:
+      test: curl --fail http://localhost:80/health
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    depends_on:
+        kafka:
+            condition: service_healthy
+        beter.feed.testingsandbox.emulator:
+            condition: service_started
+        init-kafka:
+            condition: service_completed_successfully
 
 networks: 
-  testing-tools:
+  feed-testing-sandbox:
     driver: bridge  
 
 volumes:
