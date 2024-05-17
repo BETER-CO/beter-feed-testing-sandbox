@@ -1,0 +1,5807 @@
+{
+  "caseId": 1006,
+  "version": "1.0",
+  "description": "FIFA_canceled_match_with_markets",
+  "messages": [
+    {
+      "value": [
+        {
+          "id": "eb427d95-0e04-4a50-87e2-2ef2ac47fb51",
+          "sportId": 6,
+          "stage": 1,
+          "scores": [
+            {
+              "interval": 1,
+              "result": 1,
+              "score": "0-0"
+            },
+            {
+              "interval": 18,
+              "result": 1,
+              "score": "0-0"
+            }
+          ],
+          "timer": {
+            "timeStamp": 1714384988552,
+            "timerValue": 0,
+            "accelerationFactor": 11.25,
+            "enabled": false,
+            "direction": 0
+          },
+          "comment": {},
+          "timestamp": 1714384988595,
+          "msgType": 3,
+          "offset": 12860150
+        }
+      ],
+      "channel": "scoreboard",
+      "messageType": "scoreboard",
+      "scheduledAt": 1714385335496
+    },
+    {
+      "value": [
+        {
+          "sport": "Fifa",
+          "sportId": 6,
+          "startDate": "2024-04-29T10:04:00Z",
+          "status": 1,
+          "country": {
+            "id": "54dee6c1-fbe7-421e-b717-29f3bb0eca66",
+            "name": {
+              "en": "Ukraine",
+              "ru": "Украина"
+            }
+          },
+          "category": {
+            "id": "659ce81f-999b-451c-9787-8f19c9d860ca",
+            "name": {
+              "en": "Ukraine",
+              "ru": "Украина"
+            }
+          },
+          "league": {
+            "competitorType": 0,
+            "brand": {
+              "name": {
+                "en": "ESportsBattle",
+                "ru": "ESportsBattle"
+              }
+            },
+            "id": "3fc669a6-8eb0-4894-9e0c-0a5e352bdc7e",
+            "name": {
+              "en": "Premier League",
+              "ru": "Премьер лига"
+            }
+          },
+          "tournament": {
+            "id": "38273657-8d80-4b34-a2df-eea89378a75e",
+            "name": {
+              "en": "Premier League 2024-04-29",
+              "ru": "Премьер лига 2024-04-29"
+            }
+          },
+          "venue": {
+            "console": "console-3",
+            "id": "ff7d3d3f-68cd-4344-bff4-132349373140",
+            "name": {
+              "en": "Wembley",
+              "ru": "Wembley"
+            }
+          },
+          "participants": [
+            {
+              "team": {
+                "id": "ca3f8fc0-626c-4a3a-9d09-f0ee069c4162",
+                "name": {
+                  "en": "Liverpool",
+                  "ru": "Ливерпуль"
+                }
+              },
+              "id": "54f530db-8dfe-4b57-8e0e-81e935fe729c",
+              "name": {
+                "en": "33Brut",
+                "ru": "33Brut"
+              }
+            },
+            {
+              "team": {
+                "id": "ff498fff-9dfc-433b-ae57-cf40ffec0b0f",
+                "name": {
+                  "en": "Manchester City",
+                  "ru": "Манчестер Сити"
+                }
+              },
+              "id": "e98ac9b5-ffaf-40cd-906c-7e71f5e15f3b",
+              "name": {
+                "en": "Arcos",
+                "ru": "Arcos"
+              }
+            }
+          ],
+          "timestamp": 1714384988543,
+          "willBeLive": true,
+          "willBePrematch": false,
+          "msgType": 3,
+          "offset": 12860215,
+          "id": "eb427d95-0e04-4a50-87e2-2ef2ac47fb51",
+          "name": {
+            "en": "Liverpool (33Brut) - Manchester City (Arcos)",
+            "ru": "Ливерпуль (33Brut) - Манчестер Сити (Arcos)"
+          }
+        }
+      ],
+      "channel": "time_table",
+      "messageType": "time_table",
+      "scheduledAt": 1714385335500
+    },
+    {
+      "value": [
+        {
+          "id": "eb427d95-0e04-4a50-87e2-2ef2ac47fb51",
+          "sportId": 6,
+          "tradingStatus": 2,
+          "lineType": 1,
+          "markets": [
+            {
+              "id": "[8,1,1,0,[]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 8,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 2.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.5,
+                    "fractional": "3/2",
+                    "malaysian": -0.67
+                  }
+                },
+                {
+                  "id": "[2,[]]",
+                  "outcomeType": 2,
+                  "outcomeValue": "",
+                  "price": 3.3,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.3,
+                    "fractional": "23/10",
+                    "malaysian": -0.43
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 2.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.5,
+                    "fractional": "3/2",
+                    "malaysian": -0.67
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[3,1,1,0,[0]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 3,
+              "marketValue": "0",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[3,1,1,0,[1]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 3,
+              "marketValue": "1",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.17,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.17,
+                    "fractional": "17/100",
+                    "malaysian": 0.17
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 4.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 4.5,
+                    "fractional": "7/2",
+                    "malaysian": -0.29
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[3,1,1,0,[-1]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 3,
+              "marketValue": "-1",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 4.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 4.5,
+                    "fractional": "7/2",
+                    "malaysian": -0.29
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.17,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.17,
+                    "fractional": "17/100",
+                    "malaysian": 0.17
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[17,1,1,0,[0.25]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 17,
+              "marketValue": "0.25",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.6,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.6,
+                    "fractional": "3/5",
+                    "malaysian": 0.6
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 2.2,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.2,
+                    "fractional": "6/5",
+                    "malaysian": -0.83
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[17,1,1,0,[-0.25]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 17,
+              "marketValue": "-0.25",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 2.2,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.2,
+                    "fractional": "6/5",
+                    "malaysian": -0.83
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.6,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.6,
+                    "fractional": "3/5",
+                    "malaysian": 0.6
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[17,1,1,0,[0.75]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 17,
+              "marketValue": "0.75",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.32,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.32,
+                    "fractional": "8/25",
+                    "malaysian": 0.32
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 3.1,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.1,
+                    "fractional": "21/10",
+                    "malaysian": -0.48
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[2,1,1,0,[2.5]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 2,
+              "marketValue": "2.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.7,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.7,
+                    "fractional": "7/10",
+                    "malaysian": 0.7
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 2.05,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.05,
+                    "fractional": "21/20",
+                    "malaysian": -0.95
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[2,1,1,0,[1.5]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 2,
+              "marketValue": "1.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 3.1,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.1,
+                    "fractional": "21/10",
+                    "malaysian": -0.48
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.32,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.32,
+                    "fractional": "8/25",
+                    "malaysian": 0.32
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[2,1,1,0,[3.5]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 2,
+              "marketValue": "3.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.23,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.23,
+                    "fractional": "23/100",
+                    "malaysian": 0.23
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 3.7,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.7,
+                    "fractional": "27/10",
+                    "malaysian": -0.37
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[18,1,1,0,[2.25]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 18,
+              "marketValue": "2.25",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.93,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.93,
+                    "fractional": "93/100",
+                    "malaysian": 0.93
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.77,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.77,
+                    "fractional": "77/100",
+                    "malaysian": 0.77
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[18,1,1,0,[2.75]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 18,
+              "marketValue": "2.75",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.53,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.53,
+                    "fractional": "53/100",
+                    "malaysian": 0.53
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 2.35,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.35,
+                    "fractional": "27/20",
+                    "malaysian": -0.74
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[18,1,1,0,[2]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 18,
+              "marketValue": "2",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 2.35,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.35,
+                    "fractional": "27/20",
+                    "malaysian": -0.74
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.53,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.53,
+                    "fractional": "53/100",
+                    "malaysian": 0.53
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[12,1,1,0,[]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 12,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[9,[]]",
+                  "outcomeType": 9,
+                  "outcomeValue": "",
+                  "price": 1.47,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.47,
+                    "fractional": "47/100",
+                    "malaysian": 0.47
+                  }
+                },
+                {
+                  "id": "[10,[]]",
+                  "outcomeType": 10,
+                  "outcomeValue": "",
+                  "price": 1.28,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.28,
+                    "fractional": "7/25",
+                    "malaysian": 0.28
+                  }
+                },
+                {
+                  "id": "[11,[]]",
+                  "outcomeType": 11,
+                  "outcomeValue": "",
+                  "price": 1.47,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.47,
+                    "fractional": "47/100",
+                    "malaysian": 0.47
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[10,1,1,0,[1.5]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 10,
+              "marketValue": "1.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.45,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.45,
+                    "fractional": "9/20",
+                    "malaysian": 0.45
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 2.55,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.55,
+                    "fractional": "31/20",
+                    "malaysian": -0.65
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[11,1,1,0,[1.5]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 11,
+              "marketValue": "1.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.45,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.45,
+                    "fractional": "9/20",
+                    "malaysian": 0.45
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 2.55,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.55,
+                    "fractional": "31/20",
+                    "malaysian": -0.65
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[13,1,1,0,[]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 13,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[12,[]]",
+                  "outcomeType": 12,
+                  "outcomeValue": "",
+                  "price": 1.82,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.82,
+                    "fractional": "41/50",
+                    "malaysian": 0.82
+                  }
+                },
+                {
+                  "id": "[13,[]]",
+                  "outcomeType": 13,
+                  "outcomeValue": "",
+                  "price": 1.88,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.88,
+                    "fractional": "22/25",
+                    "malaysian": 0.88
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[14,1,1,0,[1]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 14,
+              "marketValue": "1",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 2,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2,
+                    "fractional": "1/1",
+                    "malaysian": -1
+                  }
+                },
+                {
+                  "id": "[14,[]]",
+                  "outcomeType": 14,
+                  "outcomeValue": "",
+                  "price": 9.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 9.5,
+                    "fractional": "17/2",
+                    "malaysian": -0.12
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 2,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2,
+                    "fractional": "1/1",
+                    "malaysian": -1
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[8,1,18,0,[]]",
+              "interval": 18,
+              "resultType": 1,
+              "marketType": 8,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 3.05,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.05,
+                    "fractional": "41/20",
+                    "malaysian": -0.49
+                  }
+                },
+                {
+                  "id": "[2,[]]",
+                  "outcomeType": 2,
+                  "outcomeValue": "",
+                  "price": 2.2,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.2,
+                    "fractional": "6/5",
+                    "malaysian": -0.83
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 3.05,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.05,
+                    "fractional": "41/20",
+                    "malaysian": -0.49
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[3,1,18,0,[0]]",
+              "interval": 18,
+              "resultType": 1,
+              "marketType": 3,
+              "marketValue": "0",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[17,1,18,0,[-0.25]]",
+              "interval": 18,
+              "resultType": 1,
+              "marketType": 17,
+              "marketValue": "-0.25",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 2.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.5,
+                    "fractional": "3/2",
+                    "malaysian": -0.67
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.47,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.47,
+                    "fractional": "47/100",
+                    "malaysian": 0.47
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[2,1,18,0,[1.5]]",
+              "interval": 18,
+              "resultType": 1,
+              "marketType": 2,
+              "marketValue": "1.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.45,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.45,
+                    "fractional": "9/20",
+                    "malaysian": 0.45
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 2.55,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.55,
+                    "fractional": "31/20",
+                    "malaysian": -0.65
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[18,1,18,0,[1]]",
+              "interval": 18,
+              "resultType": 1,
+              "marketType": 18,
+              "marketValue": "1",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 2.08,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.08,
+                    "fractional": "27/25",
+                    "malaysian": -0.93
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.67,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.67,
+                    "fractional": "67/100",
+                    "malaysian": 0.67
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[12,1,18,0,[]]",
+              "interval": 18,
+              "resultType": 1,
+              "marketType": 12,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[9,[]]",
+                  "outcomeType": 9,
+                  "outcomeValue": "",
+                  "price": 1.33,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.33,
+                    "fractional": "33/100",
+                    "malaysian": 0.33
+                  }
+                },
+                {
+                  "id": "[10,[]]",
+                  "outcomeType": 10,
+                  "outcomeValue": "",
+                  "price": 1.6,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.6,
+                    "fractional": "3/5",
+                    "malaysian": 0.6
+                  }
+                },
+                {
+                  "id": "[11,[]]",
+                  "outcomeType": 11,
+                  "outcomeValue": "",
+                  "price": 1.33,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.33,
+                    "fractional": "33/100",
+                    "malaysian": 0.33
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[10,1,1,0,[0.5]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 10,
+              "marketValue": "0.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 3.25,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.25,
+                    "fractional": "9/4",
+                    "malaysian": -0.44
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.3,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.3,
+                    "fractional": "3/10",
+                    "malaysian": 0.3
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[11,1,1,0,[0.5]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 11,
+              "marketValue": "0.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 3.25,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.25,
+                    "fractional": "9/4",
+                    "malaysian": -0.44
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.3,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.3,
+                    "fractional": "3/10",
+                    "malaysian": 0.3
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[6,1,1,0,[]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 6,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[6,[]]",
+                  "outcomeType": 6,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                },
+                {
+                  "id": "[7,[]]",
+                  "outcomeType": 7,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[15,1,1,0,[]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 15,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[15,[]]",
+                  "outcomeType": 15,
+                  "outcomeValue": "",
+                  "price": 3.8,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.8,
+                    "fractional": "14/5",
+                    "malaysian": -0.36
+                  }
+                },
+                {
+                  "id": "[16,[]]",
+                  "outcomeType": 16,
+                  "outcomeValue": "",
+                  "price": 14,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 14,
+                    "fractional": "13/1",
+                    "malaysian": -0.08
+                  }
+                },
+                {
+                  "id": "[17,[]]",
+                  "outcomeType": 17,
+                  "outcomeValue": "",
+                  "price": 27,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 27,
+                    "fractional": "26/1",
+                    "malaysian": -0.04
+                  }
+                },
+                {
+                  "id": "[18,[]]",
+                  "outcomeType": 18,
+                  "outcomeValue": "",
+                  "price": 6.8,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 6.8,
+                    "fractional": "29/5",
+                    "malaysian": -0.17
+                  }
+                },
+                {
+                  "id": "[19,[]]",
+                  "outcomeType": 19,
+                  "outcomeValue": "",
+                  "price": 5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 5,
+                    "fractional": "4/1",
+                    "malaysian": -0.25
+                  }
+                },
+                {
+                  "id": "[20,[]]",
+                  "outcomeType": 20,
+                  "outcomeValue": "",
+                  "price": 6.8,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 6.8,
+                    "fractional": "29/5",
+                    "malaysian": -0.17
+                  }
+                },
+                {
+                  "id": "[21,[]]",
+                  "outcomeType": 21,
+                  "outcomeValue": "",
+                  "price": 27,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 27,
+                    "fractional": "26/1",
+                    "malaysian": -0.04
+                  }
+                },
+                {
+                  "id": "[22,[]]",
+                  "outcomeType": 22,
+                  "outcomeValue": "",
+                  "price": 14,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 14,
+                    "fractional": "13/1",
+                    "malaysian": -0.08
+                  }
+                },
+                {
+                  "id": "[23,[]]",
+                  "outcomeType": 23,
+                  "outcomeValue": "",
+                  "price": 3.8,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.8,
+                    "fractional": "14/5",
+                    "malaysian": -0.36
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[4,1,1,0,[]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 4,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[8,[1-1]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "1-1",
+                  "price": 8,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 8,
+                    "fractional": "7/1",
+                    "malaysian": -0.14
+                  }
+                },
+                {
+                  "id": "[8,[0-1]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "0-1",
+                  "price": 9.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 9.5,
+                    "fractional": "17/2",
+                    "malaysian": -0.12
+                  }
+                },
+                {
+                  "id": "[8,[1-0]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "1-0",
+                  "price": 9.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 9.5,
+                    "fractional": "17/2",
+                    "malaysian": -0.12
+                  }
+                },
+                {
+                  "id": "[8,[0-0]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "0-0",
+                  "price": 9.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 9.5,
+                    "fractional": "17/2",
+                    "malaysian": -0.12
+                  }
+                },
+                {
+                  "id": "[8,[1-2]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "1-2",
+                  "price": 12,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 12,
+                    "fractional": "11/1",
+                    "malaysian": -0.09
+                  }
+                },
+                {
+                  "id": "[8,[2-1]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "2-1",
+                  "price": 12,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 12,
+                    "fractional": "11/1",
+                    "malaysian": -0.09
+                  }
+                },
+                {
+                  "id": "[8,[0-2]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "0-2",
+                  "price": 14,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 14,
+                    "fractional": "13/1",
+                    "malaysian": -0.08
+                  }
+                },
+                {
+                  "id": "[8,[2-0]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "2-0",
+                  "price": 14,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 14,
+                    "fractional": "13/1",
+                    "malaysian": -0.08
+                  }
+                },
+                {
+                  "id": "[8,[2-2]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "2-2",
+                  "price": 17,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 17,
+                    "fractional": "16/1",
+                    "malaysian": -0.06
+                  }
+                },
+                {
+                  "id": "[8,[1-3]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "1-3",
+                  "price": 23,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 23,
+                    "fractional": "22/1",
+                    "malaysian": -0.05
+                  }
+                },
+                {
+                  "id": "[8,[3-1]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "3-1",
+                  "price": 23,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 23,
+                    "fractional": "22/1",
+                    "malaysian": -0.05
+                  }
+                },
+                {
+                  "id": "[8,[0-3]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "0-3",
+                  "price": 27,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 27,
+                    "fractional": "26/1",
+                    "malaysian": -0.04
+                  }
+                },
+                {
+                  "id": "[8,[3-0]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "3-0",
+                  "price": 27,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 27,
+                    "fractional": "26/1",
+                    "malaysian": -0.04
+                  }
+                },
+                {
+                  "id": "[8,[2-3]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "2-3",
+                  "price": 30,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 30,
+                    "fractional": "29/1",
+                    "malaysian": -0.03
+                  }
+                },
+                {
+                  "id": "[8,[3-2]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "3-2",
+                  "price": 30,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 30,
+                    "fractional": "29/1",
+                    "malaysian": -0.03
+                  }
+                },
+                {
+                  "id": "[8,[1-4]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "1-4",
+                  "price": 41,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 41,
+                    "fractional": "40/1",
+                    "malaysian": -0.02
+                  }
+                },
+                {
+                  "id": "[8,[4-1]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "4-1",
+                  "price": 41,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 41,
+                    "fractional": "40/1",
+                    "malaysian": -0.02
+                  }
+                },
+                {
+                  "id": "[8,[3-3]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "3-3",
+                  "price": 45,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 45,
+                    "fractional": "44/1",
+                    "malaysian": -0.02
+                  }
+                },
+                {
+                  "id": "[8,[0-4]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "0-4",
+                  "price": 45,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 45,
+                    "fractional": "44/1",
+                    "malaysian": -0.02
+                  }
+                },
+                {
+                  "id": "[8,[4-0]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "4-0",
+                  "price": 45,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 45,
+                    "fractional": "44/1",
+                    "malaysian": -0.02
+                  }
+                },
+                {
+                  "id": "[8,[2-4]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "2-4",
+                  "price": 48,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 48,
+                    "fractional": "47/1",
+                    "malaysian": -0.02
+                  }
+                },
+                {
+                  "id": "[8,[4-2]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "4-2",
+                  "price": 48,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 48,
+                    "fractional": "47/1",
+                    "malaysian": -0.02
+                  }
+                },
+                {
+                  "id": "[8,[3-4]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "3-4",
+                  "price": 61,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 61,
+                    "fractional": "60/1",
+                    "malaysian": -0.02
+                  }
+                },
+                {
+                  "id": "[8,[4-3]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "4-3",
+                  "price": 61,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 61,
+                    "fractional": "60/1",
+                    "malaysian": -0.02
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[37,1,1,0,[]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 37,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[56,[]]",
+                  "outcomeType": 56,
+                  "outcomeValue": "",
+                  "price": 5.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 5.5,
+                    "fractional": "9/2",
+                    "malaysian": -0.22
+                  }
+                },
+                {
+                  "id": "[57,[]]",
+                  "outcomeType": 57,
+                  "outcomeValue": "",
+                  "price": 4.4,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 4.4,
+                    "fractional": "17/5",
+                    "malaysian": -0.29
+                  }
+                },
+                {
+                  "id": "[60,[]]",
+                  "outcomeType": 60,
+                  "outcomeValue": "",
+                  "price": 4.7,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 4.7,
+                    "fractional": "37/10",
+                    "malaysian": -0.27
+                  }
+                },
+                {
+                  "id": "[61,[]]",
+                  "outcomeType": 61,
+                  "outcomeValue": "",
+                  "price": 9.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 9.5,
+                    "fractional": "17/2",
+                    "malaysian": -0.12
+                  }
+                },
+                {
+                  "id": "[58,[]]",
+                  "outcomeType": 58,
+                  "outcomeValue": "",
+                  "price": 5.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 5.5,
+                    "fractional": "9/2",
+                    "malaysian": -0.22
+                  }
+                },
+                {
+                  "id": "[59,[]]",
+                  "outcomeType": 59,
+                  "outcomeValue": "",
+                  "price": 4.4,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 4.4,
+                    "fractional": "17/5",
+                    "malaysian": -0.29
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[26,1,1,0,[0,0-0]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 26,
+              "marketValue": "0,0-0",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[26,1,1,0,[0.25,0-0]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 26,
+              "marketValue": "0.25,0-0",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.6,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.6,
+                    "fractional": "3/5",
+                    "malaysian": 0.6
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 2.2,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.2,
+                    "fractional": "6/5",
+                    "malaysian": -0.83
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[26,1,18,0,[0,0-0]]",
+              "interval": 18,
+              "resultType": 1,
+              "marketType": 26,
+              "marketValue": "0,0-0",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[26,1,18,0,[-0.25,0-0]]",
+              "interval": 18,
+              "resultType": 1,
+              "marketType": 26,
+              "marketValue": "-0.25,0-0",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 2.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.5,
+                    "fractional": "3/2",
+                    "malaysian": -0.67
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.47,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.47,
+                    "fractional": "47/100",
+                    "malaysian": 0.47
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[27,1,1,0,[2.25]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 27,
+              "marketValue": "2.25",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.93,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.93,
+                    "fractional": "93/100",
+                    "malaysian": 0.93
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.77,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.77,
+                    "fractional": "77/100",
+                    "malaysian": 0.77
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[27,1,1,0,[2.5]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 27,
+              "marketValue": "2.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.7,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.7,
+                    "fractional": "7/10",
+                    "malaysian": 0.7
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 2.05,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.05,
+                    "fractional": "21/20",
+                    "malaysian": -0.95
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[27,1,18,0,[1.5]]",
+              "interval": 18,
+              "resultType": 1,
+              "marketType": 27,
+              "marketValue": "1.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.45,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.45,
+                    "fractional": "9/20",
+                    "malaysian": 0.45
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 2.55,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.55,
+                    "fractional": "31/20",
+                    "malaysian": -0.65
+                  }
+                }
+              ]
+            }
+          ],
+          "timestamp": 1714385366032,
+          "willBeLive": true,
+          "willBePrematch": false,
+          "msgType": 1,
+          "offset": 12860245
+        }
+      ],
+      "channel": "trading",
+      "messageType": "trading",
+      "scheduledAt": 1714385365416
+    },
+    {
+      "value": [
+        {
+          "sport": "Fifa",
+          "sportId": 6,
+          "startDate": "2024-04-29T10:04:00Z",
+          "status": 5,
+          "country": {
+            "id": "54dee6c1-fbe7-421e-b717-29f3bb0eca66",
+            "name": {
+              "en": "Ukraine",
+              "ru": "Украина"
+            }
+          },
+          "category": {
+            "id": "659ce81f-999b-451c-9787-8f19c9d860ca",
+            "name": {
+              "en": "Ukraine",
+              "ru": "Украина"
+            }
+          },
+          "league": {
+            "competitorType": 0,
+            "brand": {
+              "name": {
+                "en": "ESportsBattle",
+                "ru": "ESportsBattle"
+              }
+            },
+            "id": "3fc669a6-8eb0-4894-9e0c-0a5e352bdc7e",
+            "name": {
+              "en": "Premier League",
+              "ru": "Премьер лига"
+            }
+          },
+          "tournament": {
+            "id": "38273657-8d80-4b34-a2df-eea89378a75e",
+            "name": {
+              "en": "Premier League 2024-04-29",
+              "ru": "Премьер лига 2024-04-29"
+            }
+          },
+          "venue": {
+            "console": "console-3",
+            "id": "ff7d3d3f-68cd-4344-bff4-132349373140",
+            "name": {
+              "en": "Wembley",
+              "ru": "Wembley"
+            }
+          },
+          "participants": [
+            {
+              "team": {
+                "id": "ca3f8fc0-626c-4a3a-9d09-f0ee069c4162",
+                "name": {
+                  "en": "Liverpool",
+                  "ru": "Ливерпуль"
+                }
+              },
+              "id": "54f530db-8dfe-4b57-8e0e-81e935fe729c",
+              "name": {
+                "en": "33Brut",
+                "ru": "33Brut"
+              }
+            },
+            {
+              "team": {
+                "id": "ff498fff-9dfc-433b-ae57-cf40ffec0b0f",
+                "name": {
+                  "en": "Manchester City",
+                  "ru": "Манчестер Сити"
+                }
+              },
+              "id": "e98ac9b5-ffaf-40cd-906c-7e71f5e15f3b",
+              "name": {
+                "en": "Arcos",
+                "ru": "Arcos"
+              }
+            }
+          ],
+          "timestamp": 1714385492901,
+          "willBeLive": true,
+          "willBePrematch": false,
+          "msgType": 1,
+          "offset": 12860265,
+          "id": "eb427d95-0e04-4a50-87e2-2ef2ac47fb51",
+          "name": {
+            "en": "Liverpool (33Brut) - Manchester City (Arcos)",
+            "ru": "Ливерпуль (33Brut) - Манчестер Сити (Arcos)"
+          }
+        }
+      ],
+      "channel": "time_table",
+      "messageType": "time_table",
+      "scheduledAt": 1714385492193
+    },
+    {
+      "value": [
+        {
+          "id": "eb427d95-0e04-4a50-87e2-2ef2ac47fb51",
+          "sportId": 6,
+          "stage": 1,
+          "scores": [
+            {
+              "interval": 1,
+              "result": 1,
+              "score": "0-0"
+            },
+            {
+              "interval": 18,
+              "result": 1,
+              "score": "0-0"
+            }
+          ],
+          "timer": {
+            "timeStamp": 1714384988552,
+            "timerValue": 0,
+            "accelerationFactor": 11.25,
+            "enabled": false,
+            "direction": 0
+          },
+          "comment": {},
+          "timestamp": 1714385492933,
+          "msgType": 1,
+          "offset": 12860267
+        }
+      ],
+      "channel": "scoreboard",
+      "messageType": "scoreboard",
+      "scheduledAt": 1714385492218
+    },
+    {
+      "value": [
+        {
+          "id": "eb427d95-0e04-4a50-87e2-2ef2ac47fb51",
+          "sportId": 6,
+          "tradingStatus": 2,
+          "lineType": 1,
+          "markets": [
+            {
+              "id": "[8,1,1,0,[]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 8,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 2.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.5,
+                    "fractional": "3/2",
+                    "malaysian": -0.67
+                  }
+                },
+                {
+                  "id": "[2,[]]",
+                  "outcomeType": 2,
+                  "outcomeValue": "",
+                  "price": 3.3,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.3,
+                    "fractional": "23/10",
+                    "malaysian": -0.43
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 2.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.5,
+                    "fractional": "3/2",
+                    "malaysian": -0.67
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[3,1,1,0,[0]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 3,
+              "marketValue": "0",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[3,1,1,0,[1]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 3,
+              "marketValue": "1",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.17,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.17,
+                    "fractional": "17/100",
+                    "malaysian": 0.17
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 4.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 4.5,
+                    "fractional": "7/2",
+                    "malaysian": -0.29
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[3,1,1,0,[-1]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 3,
+              "marketValue": "-1",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 4.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 4.5,
+                    "fractional": "7/2",
+                    "malaysian": -0.29
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.17,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.17,
+                    "fractional": "17/100",
+                    "malaysian": 0.17
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[17,1,1,0,[0.25]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 17,
+              "marketValue": "0.25",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.6,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.6,
+                    "fractional": "3/5",
+                    "malaysian": 0.6
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 2.2,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.2,
+                    "fractional": "6/5",
+                    "malaysian": -0.83
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[17,1,1,0,[-0.25]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 17,
+              "marketValue": "-0.25",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 2.2,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.2,
+                    "fractional": "6/5",
+                    "malaysian": -0.83
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.6,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.6,
+                    "fractional": "3/5",
+                    "malaysian": 0.6
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[17,1,1,0,[0.75]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 17,
+              "marketValue": "0.75",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.32,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.32,
+                    "fractional": "8/25",
+                    "malaysian": 0.32
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 3.1,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.1,
+                    "fractional": "21/10",
+                    "malaysian": -0.48
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[2,1,1,0,[2.5]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 2,
+              "marketValue": "2.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.7,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.7,
+                    "fractional": "7/10",
+                    "malaysian": 0.7
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 2.05,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.05,
+                    "fractional": "21/20",
+                    "malaysian": -0.95
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[2,1,1,0,[1.5]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 2,
+              "marketValue": "1.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 3.1,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.1,
+                    "fractional": "21/10",
+                    "malaysian": -0.48
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.32,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.32,
+                    "fractional": "8/25",
+                    "malaysian": 0.32
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[2,1,1,0,[3.5]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 2,
+              "marketValue": "3.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.23,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.23,
+                    "fractional": "23/100",
+                    "malaysian": 0.23
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 3.7,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.7,
+                    "fractional": "27/10",
+                    "malaysian": -0.37
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[18,1,1,0,[2.25]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 18,
+              "marketValue": "2.25",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.93,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.93,
+                    "fractional": "93/100",
+                    "malaysian": 0.93
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.77,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.77,
+                    "fractional": "77/100",
+                    "malaysian": 0.77
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[18,1,1,0,[2.75]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 18,
+              "marketValue": "2.75",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.53,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.53,
+                    "fractional": "53/100",
+                    "malaysian": 0.53
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 2.35,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.35,
+                    "fractional": "27/20",
+                    "malaysian": -0.74
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[18,1,1,0,[2]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 18,
+              "marketValue": "2",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 2.35,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.35,
+                    "fractional": "27/20",
+                    "malaysian": -0.74
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.53,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.53,
+                    "fractional": "53/100",
+                    "malaysian": 0.53
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[12,1,1,0,[]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 12,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[9,[]]",
+                  "outcomeType": 9,
+                  "outcomeValue": "",
+                  "price": 1.47,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.47,
+                    "fractional": "47/100",
+                    "malaysian": 0.47
+                  }
+                },
+                {
+                  "id": "[10,[]]",
+                  "outcomeType": 10,
+                  "outcomeValue": "",
+                  "price": 1.28,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.28,
+                    "fractional": "7/25",
+                    "malaysian": 0.28
+                  }
+                },
+                {
+                  "id": "[11,[]]",
+                  "outcomeType": 11,
+                  "outcomeValue": "",
+                  "price": 1.47,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.47,
+                    "fractional": "47/100",
+                    "malaysian": 0.47
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[10,1,1,0,[1.5]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 10,
+              "marketValue": "1.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.45,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.45,
+                    "fractional": "9/20",
+                    "malaysian": 0.45
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 2.55,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.55,
+                    "fractional": "31/20",
+                    "malaysian": -0.65
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[11,1,1,0,[1.5]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 11,
+              "marketValue": "1.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.45,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.45,
+                    "fractional": "9/20",
+                    "malaysian": 0.45
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 2.55,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.55,
+                    "fractional": "31/20",
+                    "malaysian": -0.65
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[13,1,1,0,[]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 13,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[12,[]]",
+                  "outcomeType": 12,
+                  "outcomeValue": "",
+                  "price": 1.82,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.82,
+                    "fractional": "41/50",
+                    "malaysian": 0.82
+                  }
+                },
+                {
+                  "id": "[13,[]]",
+                  "outcomeType": 13,
+                  "outcomeValue": "",
+                  "price": 1.88,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.88,
+                    "fractional": "22/25",
+                    "malaysian": 0.88
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[14,1,1,0,[1]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 14,
+              "marketValue": "1",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 2,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2,
+                    "fractional": "1/1",
+                    "malaysian": -1
+                  }
+                },
+                {
+                  "id": "[14,[]]",
+                  "outcomeType": 14,
+                  "outcomeValue": "",
+                  "price": 9.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 9.5,
+                    "fractional": "17/2",
+                    "malaysian": -0.12
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 2,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2,
+                    "fractional": "1/1",
+                    "malaysian": -1
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[8,1,18,0,[]]",
+              "interval": 18,
+              "resultType": 1,
+              "marketType": 8,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 3.05,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.05,
+                    "fractional": "41/20",
+                    "malaysian": -0.49
+                  }
+                },
+                {
+                  "id": "[2,[]]",
+                  "outcomeType": 2,
+                  "outcomeValue": "",
+                  "price": 2.2,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.2,
+                    "fractional": "6/5",
+                    "malaysian": -0.83
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 3.05,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.05,
+                    "fractional": "41/20",
+                    "malaysian": -0.49
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[3,1,18,0,[0]]",
+              "interval": 18,
+              "resultType": 1,
+              "marketType": 3,
+              "marketValue": "0",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[17,1,18,0,[-0.25]]",
+              "interval": 18,
+              "resultType": 1,
+              "marketType": 17,
+              "marketValue": "-0.25",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 2.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.5,
+                    "fractional": "3/2",
+                    "malaysian": -0.67
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.47,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.47,
+                    "fractional": "47/100",
+                    "malaysian": 0.47
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[2,1,18,0,[1.5]]",
+              "interval": 18,
+              "resultType": 1,
+              "marketType": 2,
+              "marketValue": "1.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.45,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.45,
+                    "fractional": "9/20",
+                    "malaysian": 0.45
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 2.55,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.55,
+                    "fractional": "31/20",
+                    "malaysian": -0.65
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[18,1,18,0,[1]]",
+              "interval": 18,
+              "resultType": 1,
+              "marketType": 18,
+              "marketValue": "1",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 2.08,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.08,
+                    "fractional": "27/25",
+                    "malaysian": -0.93
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.67,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.67,
+                    "fractional": "67/100",
+                    "malaysian": 0.67
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[12,1,18,0,[]]",
+              "interval": 18,
+              "resultType": 1,
+              "marketType": 12,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[9,[]]",
+                  "outcomeType": 9,
+                  "outcomeValue": "",
+                  "price": 1.33,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.33,
+                    "fractional": "33/100",
+                    "malaysian": 0.33
+                  }
+                },
+                {
+                  "id": "[10,[]]",
+                  "outcomeType": 10,
+                  "outcomeValue": "",
+                  "price": 1.6,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.6,
+                    "fractional": "3/5",
+                    "malaysian": 0.6
+                  }
+                },
+                {
+                  "id": "[11,[]]",
+                  "outcomeType": 11,
+                  "outcomeValue": "",
+                  "price": 1.33,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.33,
+                    "fractional": "33/100",
+                    "malaysian": 0.33
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[10,1,1,0,[0.5]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 10,
+              "marketValue": "0.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 3.25,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.25,
+                    "fractional": "9/4",
+                    "malaysian": -0.44
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.3,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.3,
+                    "fractional": "3/10",
+                    "malaysian": 0.3
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[11,1,1,0,[0.5]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 11,
+              "marketValue": "0.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 3.25,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.25,
+                    "fractional": "9/4",
+                    "malaysian": -0.44
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.3,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.3,
+                    "fractional": "3/10",
+                    "malaysian": 0.3
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[6,1,1,0,[]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 6,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[6,[]]",
+                  "outcomeType": 6,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                },
+                {
+                  "id": "[7,[]]",
+                  "outcomeType": 7,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[15,1,1,0,[]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 15,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[15,[]]",
+                  "outcomeType": 15,
+                  "outcomeValue": "",
+                  "price": 3.8,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.8,
+                    "fractional": "14/5",
+                    "malaysian": -0.36
+                  }
+                },
+                {
+                  "id": "[16,[]]",
+                  "outcomeType": 16,
+                  "outcomeValue": "",
+                  "price": 14,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 14,
+                    "fractional": "13/1",
+                    "malaysian": -0.08
+                  }
+                },
+                {
+                  "id": "[17,[]]",
+                  "outcomeType": 17,
+                  "outcomeValue": "",
+                  "price": 27,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 27,
+                    "fractional": "26/1",
+                    "malaysian": -0.04
+                  }
+                },
+                {
+                  "id": "[18,[]]",
+                  "outcomeType": 18,
+                  "outcomeValue": "",
+                  "price": 6.8,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 6.8,
+                    "fractional": "29/5",
+                    "malaysian": -0.17
+                  }
+                },
+                {
+                  "id": "[19,[]]",
+                  "outcomeType": 19,
+                  "outcomeValue": "",
+                  "price": 5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 5,
+                    "fractional": "4/1",
+                    "malaysian": -0.25
+                  }
+                },
+                {
+                  "id": "[20,[]]",
+                  "outcomeType": 20,
+                  "outcomeValue": "",
+                  "price": 6.8,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 6.8,
+                    "fractional": "29/5",
+                    "malaysian": -0.17
+                  }
+                },
+                {
+                  "id": "[21,[]]",
+                  "outcomeType": 21,
+                  "outcomeValue": "",
+                  "price": 27,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 27,
+                    "fractional": "26/1",
+                    "malaysian": -0.04
+                  }
+                },
+                {
+                  "id": "[22,[]]",
+                  "outcomeType": 22,
+                  "outcomeValue": "",
+                  "price": 14,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 14,
+                    "fractional": "13/1",
+                    "malaysian": -0.08
+                  }
+                },
+                {
+                  "id": "[23,[]]",
+                  "outcomeType": 23,
+                  "outcomeValue": "",
+                  "price": 3.8,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.8,
+                    "fractional": "14/5",
+                    "malaysian": -0.36
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[4,1,1,0,[]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 4,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[8,[1-1]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "1-1",
+                  "price": 8,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 8,
+                    "fractional": "7/1",
+                    "malaysian": -0.14
+                  }
+                },
+                {
+                  "id": "[8,[0-1]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "0-1",
+                  "price": 9.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 9.5,
+                    "fractional": "17/2",
+                    "malaysian": -0.12
+                  }
+                },
+                {
+                  "id": "[8,[1-0]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "1-0",
+                  "price": 9.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 9.5,
+                    "fractional": "17/2",
+                    "malaysian": -0.12
+                  }
+                },
+                {
+                  "id": "[8,[0-0]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "0-0",
+                  "price": 9.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 9.5,
+                    "fractional": "17/2",
+                    "malaysian": -0.12
+                  }
+                },
+                {
+                  "id": "[8,[1-2]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "1-2",
+                  "price": 12,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 12,
+                    "fractional": "11/1",
+                    "malaysian": -0.09
+                  }
+                },
+                {
+                  "id": "[8,[2-1]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "2-1",
+                  "price": 12,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 12,
+                    "fractional": "11/1",
+                    "malaysian": -0.09
+                  }
+                },
+                {
+                  "id": "[8,[0-2]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "0-2",
+                  "price": 14,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 14,
+                    "fractional": "13/1",
+                    "malaysian": -0.08
+                  }
+                },
+                {
+                  "id": "[8,[2-0]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "2-0",
+                  "price": 14,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 14,
+                    "fractional": "13/1",
+                    "malaysian": -0.08
+                  }
+                },
+                {
+                  "id": "[8,[2-2]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "2-2",
+                  "price": 17,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 17,
+                    "fractional": "16/1",
+                    "malaysian": -0.06
+                  }
+                },
+                {
+                  "id": "[8,[1-3]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "1-3",
+                  "price": 23,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 23,
+                    "fractional": "22/1",
+                    "malaysian": -0.05
+                  }
+                },
+                {
+                  "id": "[8,[3-1]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "3-1",
+                  "price": 23,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 23,
+                    "fractional": "22/1",
+                    "malaysian": -0.05
+                  }
+                },
+                {
+                  "id": "[8,[0-3]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "0-3",
+                  "price": 27,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 27,
+                    "fractional": "26/1",
+                    "malaysian": -0.04
+                  }
+                },
+                {
+                  "id": "[8,[3-0]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "3-0",
+                  "price": 27,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 27,
+                    "fractional": "26/1",
+                    "malaysian": -0.04
+                  }
+                },
+                {
+                  "id": "[8,[2-3]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "2-3",
+                  "price": 30,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 30,
+                    "fractional": "29/1",
+                    "malaysian": -0.03
+                  }
+                },
+                {
+                  "id": "[8,[3-2]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "3-2",
+                  "price": 30,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 30,
+                    "fractional": "29/1",
+                    "malaysian": -0.03
+                  }
+                },
+                {
+                  "id": "[8,[1-4]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "1-4",
+                  "price": 41,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 41,
+                    "fractional": "40/1",
+                    "malaysian": -0.02
+                  }
+                },
+                {
+                  "id": "[8,[4-1]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "4-1",
+                  "price": 41,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 41,
+                    "fractional": "40/1",
+                    "malaysian": -0.02
+                  }
+                },
+                {
+                  "id": "[8,[3-3]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "3-3",
+                  "price": 45,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 45,
+                    "fractional": "44/1",
+                    "malaysian": -0.02
+                  }
+                },
+                {
+                  "id": "[8,[0-4]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "0-4",
+                  "price": 45,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 45,
+                    "fractional": "44/1",
+                    "malaysian": -0.02
+                  }
+                },
+                {
+                  "id": "[8,[4-0]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "4-0",
+                  "price": 45,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 45,
+                    "fractional": "44/1",
+                    "malaysian": -0.02
+                  }
+                },
+                {
+                  "id": "[8,[2-4]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "2-4",
+                  "price": 48,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 48,
+                    "fractional": "47/1",
+                    "malaysian": -0.02
+                  }
+                },
+                {
+                  "id": "[8,[4-2]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "4-2",
+                  "price": 48,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 48,
+                    "fractional": "47/1",
+                    "malaysian": -0.02
+                  }
+                },
+                {
+                  "id": "[8,[3-4]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "3-4",
+                  "price": 61,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 61,
+                    "fractional": "60/1",
+                    "malaysian": -0.02
+                  }
+                },
+                {
+                  "id": "[8,[4-3]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "4-3",
+                  "price": 61,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 61,
+                    "fractional": "60/1",
+                    "malaysian": -0.02
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[37,1,1,0,[]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 37,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[56,[]]",
+                  "outcomeType": 56,
+                  "outcomeValue": "",
+                  "price": 5.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 5.5,
+                    "fractional": "9/2",
+                    "malaysian": -0.22
+                  }
+                },
+                {
+                  "id": "[57,[]]",
+                  "outcomeType": 57,
+                  "outcomeValue": "",
+                  "price": 4.4,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 4.4,
+                    "fractional": "17/5",
+                    "malaysian": -0.29
+                  }
+                },
+                {
+                  "id": "[60,[]]",
+                  "outcomeType": 60,
+                  "outcomeValue": "",
+                  "price": 4.7,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 4.7,
+                    "fractional": "37/10",
+                    "malaysian": -0.27
+                  }
+                },
+                {
+                  "id": "[61,[]]",
+                  "outcomeType": 61,
+                  "outcomeValue": "",
+                  "price": 9.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 9.5,
+                    "fractional": "17/2",
+                    "malaysian": -0.12
+                  }
+                },
+                {
+                  "id": "[58,[]]",
+                  "outcomeType": 58,
+                  "outcomeValue": "",
+                  "price": 5.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 5.5,
+                    "fractional": "9/2",
+                    "malaysian": -0.22
+                  }
+                },
+                {
+                  "id": "[59,[]]",
+                  "outcomeType": 59,
+                  "outcomeValue": "",
+                  "price": 4.4,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 4.4,
+                    "fractional": "17/5",
+                    "malaysian": -0.29
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[26,1,1,0,[0,0-0]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 26,
+              "marketValue": "0,0-0",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[26,1,1,0,[0.25,0-0]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 26,
+              "marketValue": "0.25,0-0",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.6,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.6,
+                    "fractional": "3/5",
+                    "malaysian": 0.6
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 2.2,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.2,
+                    "fractional": "6/5",
+                    "malaysian": -0.83
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[26,1,18,0,[0,0-0]]",
+              "interval": 18,
+              "resultType": 1,
+              "marketType": 26,
+              "marketValue": "0,0-0",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[26,1,18,0,[-0.25,0-0]]",
+              "interval": 18,
+              "resultType": 1,
+              "marketType": 26,
+              "marketValue": "-0.25,0-0",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 2.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.5,
+                    "fractional": "3/2",
+                    "malaysian": -0.67
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.47,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.47,
+                    "fractional": "47/100",
+                    "malaysian": 0.47
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[27,1,1,0,[2.25]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 27,
+              "marketValue": "2.25",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.93,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.93,
+                    "fractional": "93/100",
+                    "malaysian": 0.93
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.77,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.77,
+                    "fractional": "77/100",
+                    "malaysian": 0.77
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[27,1,1,0,[2.5]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 27,
+              "marketValue": "2.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.7,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.7,
+                    "fractional": "7/10",
+                    "malaysian": 0.7
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 2.05,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.05,
+                    "fractional": "21/20",
+                    "malaysian": -0.95
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[27,1,18,0,[1.5]]",
+              "interval": 18,
+              "resultType": 1,
+              "marketType": 27,
+              "marketValue": "1.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.45,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.45,
+                    "fractional": "9/20",
+                    "malaysian": 0.45
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 2.55,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.55,
+                    "fractional": "31/20",
+                    "malaysian": -0.65
+                  }
+                }
+              ]
+            }
+          ],
+          "timestamp": 1714385492917,
+          "willBeLive": true,
+          "willBePrematch": false,
+          "msgType": 1,
+          "offset": 12860266
+        }
+      ],
+      "channel": "trading",
+      "messageType": "trading",
+      "scheduledAt": 1714385492238
+    },
+    {
+      "value": [
+        {
+          "id": "eb427d95-0e04-4a50-87e2-2ef2ac47fb51",
+          "sportId": 6,
+          "tradingStatus": 2,
+          "lineType": 1,
+          "markets": [
+            {
+              "id": "[8,1,1,0,[]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 8,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 2.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.5,
+                    "fractional": "3/2",
+                    "malaysian": -0.67
+                  }
+                },
+                {
+                  "id": "[2,[]]",
+                  "outcomeType": 2,
+                  "outcomeValue": "",
+                  "price": 3.3,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.3,
+                    "fractional": "23/10",
+                    "malaysian": -0.43
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 2.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.5,
+                    "fractional": "3/2",
+                    "malaysian": -0.67
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[3,1,1,0,[0]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 3,
+              "marketValue": "0",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[3,1,1,0,[1]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 3,
+              "marketValue": "1",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.17,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.17,
+                    "fractional": "17/100",
+                    "malaysian": 0.17
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 4.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 4.5,
+                    "fractional": "7/2",
+                    "malaysian": -0.29
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[3,1,1,0,[-1]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 3,
+              "marketValue": "-1",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 4.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 4.5,
+                    "fractional": "7/2",
+                    "malaysian": -0.29
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.17,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.17,
+                    "fractional": "17/100",
+                    "malaysian": 0.17
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[17,1,1,0,[0.25]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 17,
+              "marketValue": "0.25",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.6,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.6,
+                    "fractional": "3/5",
+                    "malaysian": 0.6
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 2.2,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.2,
+                    "fractional": "6/5",
+                    "malaysian": -0.83
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[17,1,1,0,[-0.25]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 17,
+              "marketValue": "-0.25",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 2.2,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.2,
+                    "fractional": "6/5",
+                    "malaysian": -0.83
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.6,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.6,
+                    "fractional": "3/5",
+                    "malaysian": 0.6
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[17,1,1,0,[0.75]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 17,
+              "marketValue": "0.75",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.32,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.32,
+                    "fractional": "8/25",
+                    "malaysian": 0.32
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 3.1,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.1,
+                    "fractional": "21/10",
+                    "malaysian": -0.48
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[2,1,1,0,[2.5]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 2,
+              "marketValue": "2.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.7,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.7,
+                    "fractional": "7/10",
+                    "malaysian": 0.7
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 2.05,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.05,
+                    "fractional": "21/20",
+                    "malaysian": -0.95
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[2,1,1,0,[1.5]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 2,
+              "marketValue": "1.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 3.1,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.1,
+                    "fractional": "21/10",
+                    "malaysian": -0.48
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.32,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.32,
+                    "fractional": "8/25",
+                    "malaysian": 0.32
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[2,1,1,0,[3.5]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 2,
+              "marketValue": "3.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.23,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.23,
+                    "fractional": "23/100",
+                    "malaysian": 0.23
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 3.7,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.7,
+                    "fractional": "27/10",
+                    "malaysian": -0.37
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[18,1,1,0,[2.25]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 18,
+              "marketValue": "2.25",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.93,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.93,
+                    "fractional": "93/100",
+                    "malaysian": 0.93
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.77,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.77,
+                    "fractional": "77/100",
+                    "malaysian": 0.77
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[18,1,1,0,[2.75]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 18,
+              "marketValue": "2.75",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.53,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.53,
+                    "fractional": "53/100",
+                    "malaysian": 0.53
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 2.35,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.35,
+                    "fractional": "27/20",
+                    "malaysian": -0.74
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[18,1,1,0,[2]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 18,
+              "marketValue": "2",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 2.35,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.35,
+                    "fractional": "27/20",
+                    "malaysian": -0.74
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.53,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.53,
+                    "fractional": "53/100",
+                    "malaysian": 0.53
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[12,1,1,0,[]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 12,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[9,[]]",
+                  "outcomeType": 9,
+                  "outcomeValue": "",
+                  "price": 1.47,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.47,
+                    "fractional": "47/100",
+                    "malaysian": 0.47
+                  }
+                },
+                {
+                  "id": "[10,[]]",
+                  "outcomeType": 10,
+                  "outcomeValue": "",
+                  "price": 1.28,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.28,
+                    "fractional": "7/25",
+                    "malaysian": 0.28
+                  }
+                },
+                {
+                  "id": "[11,[]]",
+                  "outcomeType": 11,
+                  "outcomeValue": "",
+                  "price": 1.47,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.47,
+                    "fractional": "47/100",
+                    "malaysian": 0.47
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[10,1,1,0,[1.5]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 10,
+              "marketValue": "1.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.45,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.45,
+                    "fractional": "9/20",
+                    "malaysian": 0.45
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 2.55,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.55,
+                    "fractional": "31/20",
+                    "malaysian": -0.65
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[11,1,1,0,[1.5]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 11,
+              "marketValue": "1.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.45,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.45,
+                    "fractional": "9/20",
+                    "malaysian": 0.45
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 2.55,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.55,
+                    "fractional": "31/20",
+                    "malaysian": -0.65
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[13,1,1,0,[]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 13,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[12,[]]",
+                  "outcomeType": 12,
+                  "outcomeValue": "",
+                  "price": 1.82,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.82,
+                    "fractional": "41/50",
+                    "malaysian": 0.82
+                  }
+                },
+                {
+                  "id": "[13,[]]",
+                  "outcomeType": 13,
+                  "outcomeValue": "",
+                  "price": 1.88,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.88,
+                    "fractional": "22/25",
+                    "malaysian": 0.88
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[14,1,1,0,[1]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 14,
+              "marketValue": "1",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 2,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2,
+                    "fractional": "1/1",
+                    "malaysian": -1
+                  }
+                },
+                {
+                  "id": "[14,[]]",
+                  "outcomeType": 14,
+                  "outcomeValue": "",
+                  "price": 9.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 9.5,
+                    "fractional": "17/2",
+                    "malaysian": -0.12
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 2,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2,
+                    "fractional": "1/1",
+                    "malaysian": -1
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[8,1,18,0,[]]",
+              "interval": 18,
+              "resultType": 1,
+              "marketType": 8,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 3.05,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.05,
+                    "fractional": "41/20",
+                    "malaysian": -0.49
+                  }
+                },
+                {
+                  "id": "[2,[]]",
+                  "outcomeType": 2,
+                  "outcomeValue": "",
+                  "price": 2.2,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.2,
+                    "fractional": "6/5",
+                    "malaysian": -0.83
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 3.05,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.05,
+                    "fractional": "41/20",
+                    "malaysian": -0.49
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[3,1,18,0,[0]]",
+              "interval": 18,
+              "resultType": 1,
+              "marketType": 3,
+              "marketValue": "0",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[17,1,18,0,[-0.25]]",
+              "interval": 18,
+              "resultType": 1,
+              "marketType": 17,
+              "marketValue": "-0.25",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 2.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.5,
+                    "fractional": "3/2",
+                    "malaysian": -0.67
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.47,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.47,
+                    "fractional": "47/100",
+                    "malaysian": 0.47
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[2,1,18,0,[1.5]]",
+              "interval": 18,
+              "resultType": 1,
+              "marketType": 2,
+              "marketValue": "1.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.45,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.45,
+                    "fractional": "9/20",
+                    "malaysian": 0.45
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 2.55,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.55,
+                    "fractional": "31/20",
+                    "malaysian": -0.65
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[18,1,18,0,[1]]",
+              "interval": 18,
+              "resultType": 1,
+              "marketType": 18,
+              "marketValue": "1",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 2.08,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.08,
+                    "fractional": "27/25",
+                    "malaysian": -0.93
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.67,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.67,
+                    "fractional": "67/100",
+                    "malaysian": 0.67
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[12,1,18,0,[]]",
+              "interval": 18,
+              "resultType": 1,
+              "marketType": 12,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[9,[]]",
+                  "outcomeType": 9,
+                  "outcomeValue": "",
+                  "price": 1.33,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.33,
+                    "fractional": "33/100",
+                    "malaysian": 0.33
+                  }
+                },
+                {
+                  "id": "[10,[]]",
+                  "outcomeType": 10,
+                  "outcomeValue": "",
+                  "price": 1.6,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.6,
+                    "fractional": "3/5",
+                    "malaysian": 0.6
+                  }
+                },
+                {
+                  "id": "[11,[]]",
+                  "outcomeType": 11,
+                  "outcomeValue": "",
+                  "price": 1.33,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.33,
+                    "fractional": "33/100",
+                    "malaysian": 0.33
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[10,1,1,0,[0.5]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 10,
+              "marketValue": "0.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 3.25,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.25,
+                    "fractional": "9/4",
+                    "malaysian": -0.44
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.3,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.3,
+                    "fractional": "3/10",
+                    "malaysian": 0.3
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[11,1,1,0,[0.5]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 11,
+              "marketValue": "0.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 3.25,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.25,
+                    "fractional": "9/4",
+                    "malaysian": -0.44
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.3,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.3,
+                    "fractional": "3/10",
+                    "malaysian": 0.3
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[6,1,1,0,[]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 6,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[6,[]]",
+                  "outcomeType": 6,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                },
+                {
+                  "id": "[7,[]]",
+                  "outcomeType": 7,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[15,1,1,0,[]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 15,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[15,[]]",
+                  "outcomeType": 15,
+                  "outcomeValue": "",
+                  "price": 3.8,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.8,
+                    "fractional": "14/5",
+                    "malaysian": -0.36
+                  }
+                },
+                {
+                  "id": "[16,[]]",
+                  "outcomeType": 16,
+                  "outcomeValue": "",
+                  "price": 14,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 14,
+                    "fractional": "13/1",
+                    "malaysian": -0.08
+                  }
+                },
+                {
+                  "id": "[17,[]]",
+                  "outcomeType": 17,
+                  "outcomeValue": "",
+                  "price": 27,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 27,
+                    "fractional": "26/1",
+                    "malaysian": -0.04
+                  }
+                },
+                {
+                  "id": "[18,[]]",
+                  "outcomeType": 18,
+                  "outcomeValue": "",
+                  "price": 6.8,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 6.8,
+                    "fractional": "29/5",
+                    "malaysian": -0.17
+                  }
+                },
+                {
+                  "id": "[19,[]]",
+                  "outcomeType": 19,
+                  "outcomeValue": "",
+                  "price": 5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 5,
+                    "fractional": "4/1",
+                    "malaysian": -0.25
+                  }
+                },
+                {
+                  "id": "[20,[]]",
+                  "outcomeType": 20,
+                  "outcomeValue": "",
+                  "price": 6.8,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 6.8,
+                    "fractional": "29/5",
+                    "malaysian": -0.17
+                  }
+                },
+                {
+                  "id": "[21,[]]",
+                  "outcomeType": 21,
+                  "outcomeValue": "",
+                  "price": 27,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 27,
+                    "fractional": "26/1",
+                    "malaysian": -0.04
+                  }
+                },
+                {
+                  "id": "[22,[]]",
+                  "outcomeType": 22,
+                  "outcomeValue": "",
+                  "price": 14,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 14,
+                    "fractional": "13/1",
+                    "malaysian": -0.08
+                  }
+                },
+                {
+                  "id": "[23,[]]",
+                  "outcomeType": 23,
+                  "outcomeValue": "",
+                  "price": 3.8,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.8,
+                    "fractional": "14/5",
+                    "malaysian": -0.36
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[4,1,1,0,[]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 4,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[8,[1-1]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "1-1",
+                  "price": 8,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 8,
+                    "fractional": "7/1",
+                    "malaysian": -0.14
+                  }
+                },
+                {
+                  "id": "[8,[0-1]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "0-1",
+                  "price": 9.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 9.5,
+                    "fractional": "17/2",
+                    "malaysian": -0.12
+                  }
+                },
+                {
+                  "id": "[8,[1-0]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "1-0",
+                  "price": 9.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 9.5,
+                    "fractional": "17/2",
+                    "malaysian": -0.12
+                  }
+                },
+                {
+                  "id": "[8,[0-0]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "0-0",
+                  "price": 9.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 9.5,
+                    "fractional": "17/2",
+                    "malaysian": -0.12
+                  }
+                },
+                {
+                  "id": "[8,[1-2]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "1-2",
+                  "price": 12,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 12,
+                    "fractional": "11/1",
+                    "malaysian": -0.09
+                  }
+                },
+                {
+                  "id": "[8,[2-1]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "2-1",
+                  "price": 12,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 12,
+                    "fractional": "11/1",
+                    "malaysian": -0.09
+                  }
+                },
+                {
+                  "id": "[8,[0-2]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "0-2",
+                  "price": 14,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 14,
+                    "fractional": "13/1",
+                    "malaysian": -0.08
+                  }
+                },
+                {
+                  "id": "[8,[2-0]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "2-0",
+                  "price": 14,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 14,
+                    "fractional": "13/1",
+                    "malaysian": -0.08
+                  }
+                },
+                {
+                  "id": "[8,[2-2]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "2-2",
+                  "price": 17,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 17,
+                    "fractional": "16/1",
+                    "malaysian": -0.06
+                  }
+                },
+                {
+                  "id": "[8,[1-3]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "1-3",
+                  "price": 23,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 23,
+                    "fractional": "22/1",
+                    "malaysian": -0.05
+                  }
+                },
+                {
+                  "id": "[8,[3-1]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "3-1",
+                  "price": 23,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 23,
+                    "fractional": "22/1",
+                    "malaysian": -0.05
+                  }
+                },
+                {
+                  "id": "[8,[0-3]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "0-3",
+                  "price": 27,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 27,
+                    "fractional": "26/1",
+                    "malaysian": -0.04
+                  }
+                },
+                {
+                  "id": "[8,[3-0]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "3-0",
+                  "price": 27,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 27,
+                    "fractional": "26/1",
+                    "malaysian": -0.04
+                  }
+                },
+                {
+                  "id": "[8,[2-3]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "2-3",
+                  "price": 30,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 30,
+                    "fractional": "29/1",
+                    "malaysian": -0.03
+                  }
+                },
+                {
+                  "id": "[8,[3-2]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "3-2",
+                  "price": 30,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 30,
+                    "fractional": "29/1",
+                    "malaysian": -0.03
+                  }
+                },
+                {
+                  "id": "[8,[1-4]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "1-4",
+                  "price": 41,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 41,
+                    "fractional": "40/1",
+                    "malaysian": -0.02
+                  }
+                },
+                {
+                  "id": "[8,[4-1]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "4-1",
+                  "price": 41,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 41,
+                    "fractional": "40/1",
+                    "malaysian": -0.02
+                  }
+                },
+                {
+                  "id": "[8,[3-3]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "3-3",
+                  "price": 45,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 45,
+                    "fractional": "44/1",
+                    "malaysian": -0.02
+                  }
+                },
+                {
+                  "id": "[8,[0-4]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "0-4",
+                  "price": 45,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 45,
+                    "fractional": "44/1",
+                    "malaysian": -0.02
+                  }
+                },
+                {
+                  "id": "[8,[4-0]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "4-0",
+                  "price": 45,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 45,
+                    "fractional": "44/1",
+                    "malaysian": -0.02
+                  }
+                },
+                {
+                  "id": "[8,[2-4]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "2-4",
+                  "price": 48,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 48,
+                    "fractional": "47/1",
+                    "malaysian": -0.02
+                  }
+                },
+                {
+                  "id": "[8,[4-2]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "4-2",
+                  "price": 48,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 48,
+                    "fractional": "47/1",
+                    "malaysian": -0.02
+                  }
+                },
+                {
+                  "id": "[8,[3-4]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "3-4",
+                  "price": 61,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 61,
+                    "fractional": "60/1",
+                    "malaysian": -0.02
+                  }
+                },
+                {
+                  "id": "[8,[4-3]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "4-3",
+                  "price": 61,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 61,
+                    "fractional": "60/1",
+                    "malaysian": -0.02
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[37,1,1,0,[]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 37,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[56,[]]",
+                  "outcomeType": 56,
+                  "outcomeValue": "",
+                  "price": 5.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 5.5,
+                    "fractional": "9/2",
+                    "malaysian": -0.22
+                  }
+                },
+                {
+                  "id": "[57,[]]",
+                  "outcomeType": 57,
+                  "outcomeValue": "",
+                  "price": 4.4,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 4.4,
+                    "fractional": "17/5",
+                    "malaysian": -0.29
+                  }
+                },
+                {
+                  "id": "[60,[]]",
+                  "outcomeType": 60,
+                  "outcomeValue": "",
+                  "price": 4.7,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 4.7,
+                    "fractional": "37/10",
+                    "malaysian": -0.27
+                  }
+                },
+                {
+                  "id": "[61,[]]",
+                  "outcomeType": 61,
+                  "outcomeValue": "",
+                  "price": 9.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 9.5,
+                    "fractional": "17/2",
+                    "malaysian": -0.12
+                  }
+                },
+                {
+                  "id": "[58,[]]",
+                  "outcomeType": 58,
+                  "outcomeValue": "",
+                  "price": 5.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 5.5,
+                    "fractional": "9/2",
+                    "malaysian": -0.22
+                  }
+                },
+                {
+                  "id": "[59,[]]",
+                  "outcomeType": 59,
+                  "outcomeValue": "",
+                  "price": 4.4,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 4.4,
+                    "fractional": "17/5",
+                    "malaysian": -0.29
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[26,1,1,0,[0,0-0]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 26,
+              "marketValue": "0,0-0",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[26,1,1,0,[0.25,0-0]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 26,
+              "marketValue": "0.25,0-0",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.6,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.6,
+                    "fractional": "3/5",
+                    "malaysian": 0.6
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 2.2,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.2,
+                    "fractional": "6/5",
+                    "malaysian": -0.83
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[26,1,18,0,[0,0-0]]",
+              "interval": 18,
+              "resultType": 1,
+              "marketType": 26,
+              "marketValue": "0,0-0",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85,
+                    "fractional": "17/20",
+                    "malaysian": 0.85
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[26,1,18,0,[-0.25,0-0]]",
+              "interval": 18,
+              "resultType": 1,
+              "marketType": 26,
+              "marketValue": "-0.25,0-0",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 2.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.5,
+                    "fractional": "3/2",
+                    "malaysian": -0.67
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.47,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.47,
+                    "fractional": "47/100",
+                    "malaysian": 0.47
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[27,1,1,0,[2.25]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 27,
+              "marketValue": "2.25",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.93,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.93,
+                    "fractional": "93/100",
+                    "malaysian": 0.93
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.77,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.77,
+                    "fractional": "77/100",
+                    "malaysian": 0.77
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[27,1,1,0,[2.5]]",
+              "interval": 1,
+              "resultType": 1,
+              "marketType": 27,
+              "marketValue": "2.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.7,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.7,
+                    "fractional": "7/10",
+                    "malaysian": 0.7
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 2.05,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.05,
+                    "fractional": "21/20",
+                    "malaysian": -0.95
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[27,1,18,0,[1.5]]",
+              "interval": 18,
+              "resultType": 1,
+              "marketType": 27,
+              "marketValue": "1.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.45,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.45,
+                    "fractional": "9/20",
+                    "malaysian": 0.45
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 2.55,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.55,
+                    "fractional": "31/20",
+                    "malaysian": -0.65
+                  }
+                }
+              ]
+            }
+          ],
+          "timestamp": 1714385493103,
+          "willBeLive": true,
+          "willBePrematch": false,
+          "msgType": 1,
+          "offset": 12860268
+        }
+      ],
+      "channel": "trading",
+      "messageType": "trading",
+      "scheduledAt": 1714385492411
+    }
+  ]
+}

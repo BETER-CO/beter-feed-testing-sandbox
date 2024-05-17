@@ -1,0 +1,365 @@
+{
+  "caseId": 1005,
+  "version": "1.0",
+  "description": "FIFA_canceled_match_without_markets",
+  "messages": [
+    {
+      "value": [
+        {
+          "id": "046102f2-2110-48a9-a8b5-4005ffa49484",
+          "sportId": 6,
+          "stage": 1,
+          "scores": [
+            {
+              "interval": 1,
+              "result": 1,
+              "score": "0-0"
+            },
+            {
+              "interval": 18,
+              "result": 1,
+              "score": "0-0"
+            }
+          ],
+          "timer": {
+            "timeStamp": 1714384989067,
+            "timerValue": 0,
+            "accelerationFactor": 11.25,
+            "enabled": false,
+            "direction": 0
+          },
+          "comment": {},
+          "timestamp": 1714384989080,
+          "msgType": 3,
+          "offset": 12860168
+        }
+      ],
+      "channel": "scoreboard",
+      "messageType": "scoreboard",
+      "scheduledAt": 1714385335036
+    },
+    {
+      "value": [
+        {
+          "sport": "Fifa",
+          "sportId": 6,
+          "startDate": "2024-04-29T10:04:00Z",
+          "status": 1,
+          "country": {
+            "id": "54dee6c1-fbe7-421e-b717-29f3bb0eca66",
+            "name": {
+              "en": "Ukraine",
+              "ru": "Украина"
+            }
+          },
+          "category": {
+            "id": "659ce81f-999b-451c-9787-8f19c9d860ca",
+            "name": {
+              "en": "Ukraine",
+              "ru": "Украина"
+            }
+          },
+          "league": {
+            "competitorType": 0,
+            "brand": {
+              "name": {
+                "en": "ESportsBattle",
+                "ru": "ESportsBattle"
+              }
+            },
+            "id": "3fc669a6-8eb0-4894-9e0c-0a5e352bdc7e",
+            "name": {
+              "en": "Premier League",
+              "ru": "Премьер лига"
+            }
+          },
+          "tournament": {
+            "id": "38273657-8d80-4b34-a2df-eea89378a75e",
+            "name": {
+              "en": "Premier League 2024-04-29",
+              "ru": "Премьер лига 2024-04-29"
+            }
+          },
+          "venue": {
+            "console": "console-4",
+            "id": "ff7d3d3f-68cd-4344-bff4-132349373140",
+            "name": {
+              "en": "Wembley",
+              "ru": "Wembley"
+            }
+          },
+          "participants": [
+            {
+              "team": {
+                "id": "881a2f58-a190-412d-b52e-48f5a678f40b",
+                "name": {
+                  "en": "Tottenham Hotspur",
+                  "ru": "Тоттенхэм"
+                }
+              },
+              "id": "babf4e6c-6636-4a6f-95a9-2a7efb7a4180",
+              "name": {
+                "en": "Bane",
+                "ru": "Bane"
+              }
+            },
+            {
+              "team": {
+                "id": "609b11ef-8441-45e1-918e-b44822ffa001",
+                "name": {
+                  "en": "Arsenal",
+                  "ru": "Арсенал"
+                }
+              },
+              "id": "dd9b2fe4-078b-4de5-a93d-f5c2563eb440",
+              "name": {
+                "en": "Andrew",
+                "ru": "Andrew"
+              }
+            }
+          ],
+          "timestamp": 1714384989058,
+          "willBeLive": true,
+          "willBePrematch": false,
+          "msgType": 3,
+          "offset": 12860218,
+          "id": "046102f2-2110-48a9-a8b5-4005ffa49484",
+          "name": {
+            "en": "Tottenham Hotspur (Bane) - Arsenal (Andrew)",
+            "ru": "Тоттенхэм (Bane) - Арсенал (Andrew)"
+          }
+        }
+      ],
+      "channel": "time_table",
+      "messageType": "time_table",
+      "scheduledAt": 1714385335038
+    },
+    {
+      "value": [
+        {
+          "sport": "Fifa",
+          "sportId": 6,
+          "startDate": "2024-04-29T10:04:00Z",
+          "status": 5,
+          "country": {
+            "id": "54dee6c1-fbe7-421e-b717-29f3bb0eca66",
+            "name": {
+              "en": "Ukraine",
+              "ru": "Украина"
+            }
+          },
+          "category": {
+            "id": "659ce81f-999b-451c-9787-8f19c9d860ca",
+            "name": {
+              "en": "Ukraine",
+              "ru": "Украина"
+            }
+          },
+          "league": {
+            "competitorType": 0,
+            "brand": {
+              "name": {
+                "en": "ESportsBattle",
+                "ru": "ESportsBattle"
+              }
+            },
+            "id": "3fc669a6-8eb0-4894-9e0c-0a5e352bdc7e",
+            "name": {
+              "en": "Premier League",
+              "ru": "Премьер лига"
+            }
+          },
+          "tournament": {
+            "id": "38273657-8d80-4b34-a2df-eea89378a75e",
+            "name": {
+              "en": "Premier League 2024-04-29",
+              "ru": "Премьер лига 2024-04-29"
+            }
+          },
+          "venue": {
+            "console": "console-4",
+            "id": "ff7d3d3f-68cd-4344-bff4-132349373140",
+            "name": {
+              "en": "Wembley",
+              "ru": "Wembley"
+            }
+          },
+          "participants": [
+            {
+              "team": {
+                "id": "881a2f58-a190-412d-b52e-48f5a678f40b",
+                "name": {
+                  "en": "Tottenham Hotspur",
+                  "ru": "Тоттенхэм"
+                }
+              },
+              "id": "babf4e6c-6636-4a6f-95a9-2a7efb7a4180",
+              "name": {
+                "en": "Bane",
+                "ru": "Bane"
+              }
+            },
+            {
+              "team": {
+                "id": "609b11ef-8441-45e1-918e-b44822ffa001",
+                "name": {
+                  "en": "Arsenal",
+                  "ru": "Арсенал"
+                }
+              },
+              "id": "dd9b2fe4-078b-4de5-a93d-f5c2563eb440",
+              "name": {
+                "en": "Andrew",
+                "ru": "Andrew"
+              }
+            }
+          ],
+          "timestamp": 1714385472712,
+          "willBeLive": false,
+          "willBePrematch": false,
+          "msgType": 1,
+          "offset": 12860260,
+          "id": "046102f2-2110-48a9-a8b5-4005ffa49484",
+          "name": {
+            "en": "Tottenham Hotspur (Bane) - Arsenal (Andrew)",
+            "ru": "Тоттенхэм (Bane) - Арсенал (Andrew)"
+          }
+        }
+      ],
+      "channel": "time_table",
+      "messageType": "time_table",
+      "scheduledAt": 1714385471997
+    },
+    {
+      "value": [
+        {
+          "id": "046102f2-2110-48a9-a8b5-4005ffa49484",
+          "sportId": 6,
+          "stage": 1,
+          "scores": [
+            {
+              "interval": 1,
+              "result": 1,
+              "score": "0-0"
+            },
+            {
+              "interval": 18,
+              "result": 1,
+              "score": "0-0"
+            }
+          ],
+          "timer": {
+            "timeStamp": 1714384989067,
+            "timerValue": 0,
+            "accelerationFactor": 11.25,
+            "enabled": false,
+            "direction": 0
+          },
+          "comment": {},
+          "timestamp": 1714385472738,
+          "msgType": 1,
+          "offset": 12860262
+        }
+      ],
+      "channel": "scoreboard",
+      "messageType": "scoreboard",
+      "scheduledAt": 1714385472014
+    },
+    {
+      "value": [
+        {
+          "sport": "Fifa",
+          "sportId": 6,
+          "startDate": "2024-04-29T10:04:00Z",
+          "status": 5,
+          "country": {
+            "id": "54dee6c1-fbe7-421e-b717-29f3bb0eca66",
+            "name": {
+              "en": "Ukraine",
+              "ru": "Украина"
+            }
+          },
+          "category": {
+            "id": "659ce81f-999b-451c-9787-8f19c9d860ca",
+            "name": {
+              "en": "Ukraine",
+              "ru": "Украина"
+            }
+          },
+          "league": {
+            "competitorType": 0,
+            "brand": {
+              "name": {
+                "en": "ESportsBattle",
+                "ru": "ESportsBattle"
+              }
+            },
+            "id": "3fc669a6-8eb0-4894-9e0c-0a5e352bdc7e",
+            "name": {
+              "en": "Premier League",
+              "ru": "Премьер лига"
+            }
+          },
+          "tournament": {
+            "id": "38273657-8d80-4b34-a2df-eea89378a75e",
+            "name": {
+              "en": "Premier League 2024-04-29",
+              "ru": "Премьер лига 2024-04-29"
+            }
+          },
+          "venue": {
+            "console": "console-4",
+            "id": "ff7d3d3f-68cd-4344-bff4-132349373140",
+            "name": {
+              "en": "Wembley",
+              "ru": "Wembley"
+            }
+          },
+          "participants": [
+            {
+              "team": {
+                "id": "881a2f58-a190-412d-b52e-48f5a678f40b",
+                "name": {
+                  "en": "Tottenham Hotspur",
+                  "ru": "Тоттенхэм"
+                }
+              },
+              "id": "babf4e6c-6636-4a6f-95a9-2a7efb7a4180",
+              "name": {
+                "en": "Bane",
+                "ru": "Bane"
+              }
+            },
+            {
+              "team": {
+                "id": "609b11ef-8441-45e1-918e-b44822ffa001",
+                "name": {
+                  "en": "Arsenal",
+                  "ru": "Арсенал"
+                }
+              },
+              "id": "dd9b2fe4-078b-4de5-a93d-f5c2563eb440",
+              "name": {
+                "en": "Andrew",
+                "ru": "Andrew"
+              }
+            }
+          ],
+          "timestamp": 1714385472712,
+          "willBeLive": true,
+          "willBePrematch": false,
+          "msgType": 1,
+          "offset": 12860261,
+          "id": "046102f2-2110-48a9-a8b5-4005ffa49484",
+          "name": {
+            "en": "Tottenham Hotspur (Bane) - Arsenal (Andrew)",
+            "ru": "Тоттенхэм (Bane) - Арсенал (Andrew)"
+          }
+        }
+      ],
+      "channel": "time_table",
+      "messageType": "time_table",
+      "scheduledAt": 1714385472101
+    }
+  ]
+}
