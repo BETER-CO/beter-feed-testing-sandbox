@@ -1,4 +1,5 @@
 ﻿using Beter.Feed.TestingSandbox.Generator.Application.Contracts.Heartbeats;
+using Beter.Feed.TestingSandbox.Generator.Application.Services.Heartbeats;
 using Beter.Feed.TestingSandbox.Generator.Contracts.Requests;
 using Beter.Feed.TestingSandbox.Generator.Host.Common.ApplicationConfiguration.Interfaces;
 using Beter.Feed.TestingSandbox.Generator.Host.Common.Constants;
@@ -12,6 +13,7 @@ public class SetHeartbeatCommand : IEndpointProvider
         endpoints.MapPost($"{ApiConstant.ApiPrefix}/heartbeats", SetHeartbeatCommandHandler)
             .WithName("SetHeartbeatCommandAsync")
             .Accepts<SetHeartbeatCommandRequest>(ApiConstant.ContentType)
+            .Produces<HeartbeatCommand>()
             .WithTags(ApiConstant.HeartbeatTag);
     }
 

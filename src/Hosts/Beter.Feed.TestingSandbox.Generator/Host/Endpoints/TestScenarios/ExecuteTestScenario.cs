@@ -1,6 +1,6 @@
 ﻿using Beter.Feed.TestingSandbox.Generator.Application.Contracts.TestScenarios;
+using Beter.Feed.TestingSandbox.Generator.Contracts.Playbacks;
 using Beter.Feed.TestingSandbox.Generator.Contracts.Requests;
-using Beter.Feed.TestingSandbox.Generator.Domain.Playbacks;
 using Beter.Feed.TestingSandbox.Generator.Host.Common.ApplicationConfiguration.Interfaces;
 using Beter.Feed.TestingSandbox.Generator.Host.Common.Constants;
 
@@ -13,7 +13,7 @@ public class ExecuteTestScenario : IEndpointProvider
         endpoints.MapPost($"{ApiConstant.ApiPrefix}/test-scenarios/run", RunTestScenarioHandler)
             .WithName("StartTestScenario")
             .Accepts<StartPlaybackRequest>(ApiConstant.ContentType)
-            .Produces<Playback>()
+            .Produces<PlaybackDto>()
             .WithTags(ApiConstant.TestScenarioTag);
     }
 
