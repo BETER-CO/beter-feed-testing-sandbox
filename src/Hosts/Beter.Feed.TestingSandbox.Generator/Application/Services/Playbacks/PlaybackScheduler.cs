@@ -20,7 +20,7 @@ public class PlaybackScheduler : IPlaybackScheduler
     private readonly object _lock = new();
     private DateTimeOffset? _nextRunTime;
     private readonly ManualResetEventSlim _signalEvent = new(false);
-    private readonly ConcurrentDictionary<string, ActionBlock<(Playback, PlaybackItem)>> _actionBlocks = new();
+    private readonly ConcurrentDictionary<Guid, ActionBlock<(Playback, PlaybackItem)>> _actionBlocks = new();
 
     public PlaybackScheduler(ITestScenarioMessageHandlerResolver messageHandlerResolver, IPlaybackRepository playbacksRepository, ISystemClock systemClock, ILogger<PlaybackScheduler> logger, IPublisher publisher)
     {

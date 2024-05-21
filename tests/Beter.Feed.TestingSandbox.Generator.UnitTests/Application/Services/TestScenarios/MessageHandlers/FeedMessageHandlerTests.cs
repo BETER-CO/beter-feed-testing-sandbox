@@ -37,7 +37,7 @@ namespace Beter.Feed.TestingSandbox.Generator.UnitTests.Application.Services.Tes
         public async Task BeforePublish_ShouldCallTransformWithCorrectParameters()
         {
             // Arrange
-            var playbackId = Fixture.Create<string>();
+            var playbackId = Fixture.Create<Guid>();
             var additionalInfo = Fixture.Create<AdditionalInfo>();
             var message = new TestScenarioMessage
             {
@@ -61,7 +61,7 @@ namespace Beter.Feed.TestingSandbox.Generator.UnitTests.Application.Services.Tes
         public async Task AfterPublish_PublishesEmptyMessage_WhenMsgTypeIsConnectionSnapshot()
         {
             // Arrange
-            var playbackId = Fixture.Create<string>();
+            var playbackId = Fixture.Create<Guid>();
             var aditionalInfo = Fixture.Create<AdditionalInfo>();
             var message = new TestScenarioMessage
             {
@@ -81,7 +81,7 @@ namespace Beter.Feed.TestingSandbox.Generator.UnitTests.Application.Services.Tes
         public async Task AfterPublish_ShouldNotPublishEmptyAsync_WhenMessageTypeIsNotConnectionSnapshot()
         {
             // Arrange
-            var playbackId = Fixture.Create<string>();
+            var playbackId = Fixture.Create<Guid>();
             var aditionalInfo = Fixture.Create<AdditionalInfo>();
             var message = new TestScenarioMessage
             {
@@ -94,7 +94,7 @@ namespace Beter.Feed.TestingSandbox.Generator.UnitTests.Application.Services.Tes
             await _handler.AfterPublish(message, playbackId, aditionalInfo, CancellationToken.None);
 
             // Assert
-            _publisher.Verify(x => x.PublishEmptyAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<CancellationToken>()), Times.Never);
+            _publisher.Verify(x => x.PublishEmptyAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<Guid>(), It.IsAny<CancellationToken>()), Times.Never);
         }
 
         [Theory]

@@ -4,7 +4,7 @@ namespace Beter.Feed.TestingSandbox.Generator.Domain.Playbacks;
 
 public sealed record PlaybackItem
 {
-    public string PlaybackId { get; set; }
-    public string InternalId { get; set; }
+    public Guid PlaybackId { get; set; }
+    public Guid InternalId { get; set; }
     public TestScenarioMessage Message { get; set; }
 }

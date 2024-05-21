@@ -31,7 +31,7 @@ namespace Beter.Feed.TestingSandbox.Generator.UnitTests.Application.Services.Tes
         public async Task Handle_WithApplicableMessageType_CallsPublishMethods()
         {
             // Arrange
-            var playbackId = Fixture.Create<string>();
+            var playbackId = Fixture.Create<Guid>();
             var message = new TestScenarioMessage { MessageType = "ApplicableMessageType" };
             var additionInfo = Fixture.Create<AdditionalInfo>();
 
@@ -48,7 +48,7 @@ namespace Beter.Feed.TestingSandbox.Generator.UnitTests.Application.Services.Tes
         public async Task Handle_WithNonApplicableMessageType_DoesNotCallPublishMethods()
         {
             // Arrange
-            var playbackId = Fixture.Create<string>();
+            var playbackId = Fixture.Create<Guid>();
             var message = new TestScenarioMessage { MessageType = "NonApplicableMessageType" };
             var additionInfo = Fixture.Create<AdditionalInfo>();
 
@@ -75,13 +75,13 @@ namespace Beter.Feed.TestingSandbox.Generator.UnitTests.Application.Services.Tes
                 return messageType == "ApplicableMessageType";
             }
 
-            public override async Task BeforePublish(TestScenarioMessage message, string playbackId, AdditionalInfo additionInfo, CancellationToken cancellationToken)
+            public override async Task BeforePublish(TestScenarioMessage message, Guid playbackId, AdditionalInfo additionInfo, CancellationToken cancellationToken)
             {
                 BeforePublishCalled = true;
                 await base.BeforePublish(message, playbackId, additionInfo, cancellationToken);
             }
 
-            public override async Task AfterPublish(TestScenarioMessage message, string playbackId, AdditionalInfo additionInfo, CancellationToken cancellationToken)
+            public override async Task AfterPublish(TestScenarioMessage message, Guid playbackId, AdditionalInfo additionInfo, CancellationToken cancellationToken)
             {
                 AfterPublishCalled = true;
                 await base.AfterPublish(message, playbackId, additionInfo, cancellationToken);

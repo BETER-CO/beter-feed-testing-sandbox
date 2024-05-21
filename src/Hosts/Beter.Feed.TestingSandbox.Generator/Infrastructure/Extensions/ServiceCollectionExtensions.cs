@@ -1,9 +1,11 @@
 ﻿using Beter.Feed.TestingSandbox.Generator.Application.Contracts;
 using Beter.Feed.TestingSandbox.Generator.Application.Contracts.FeedConnections;
 using Beter.Feed.TestingSandbox.Generator.Application.Services;
+using Beter.Feed.TestingSandbox.Generator.Contracts.Requests;
 using Beter.Feed.TestingSandbox.Generator.Infrastructure.Options;
 using Beter.Feed.TestingSandbox.Generator.Infrastructure.Services;
 using Beter.Feed.TestingSandbox.Generator.Infrastructure.Services.FeedConnections;
+using FluentValidation;
 using Polly;
 using Polly.Extensions.Http;
 
@@ -20,6 +22,7 @@ static internal class ServiceCollectionExtensions
         services.AddSingleton<IPublisher, Publisher>();
         services.AddSingleton<ISequenceNumberProvider, SequenceNumberProvider>();
         services.AddSingleton<ISystemClock, SystemClock>();
+        services.AddValidatorsFromAssembly(typeof(StartPlaybackRequestValidator).Assembly);
 
         return services;
     }

@@ -6,12 +6,12 @@ public interface IPlaybackRepository
 {
     IEnumerable<PlaybackItem> GetMessagesToExecute();
     DateTimeOffset? GetNearestRunTime();
-    Playback Get(string playbackId);
+    Playback Get(Guid playbackId);
     IEnumerable<Playback> GetActive();
     void Add(Playback playback);
-    Playback Remove(string playbackId);
+    Playback Remove(Guid playbackId);
     IEnumerable<Playback> RemoveAll();
-    Playback RemoveMessageFromPlayback(string playbackId, PlaybackItem messageToRemove);
+    Playback RemoveMessageFromPlayback(Guid playbackId, PlaybackItem messageToRemove);
 
     event EventHandler<PlaybackEventArgs> PlaybackAdded;
 }

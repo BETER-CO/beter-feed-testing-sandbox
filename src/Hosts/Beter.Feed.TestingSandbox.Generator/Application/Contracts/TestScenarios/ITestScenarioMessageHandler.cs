@@ -6,5 +6,5 @@ namespace Beter.Feed.TestingSandbox.Generator.Application.Contracts.TestScenario
 public interface ITestScenarioMessageHandler
 {
     bool IsApplicable(string messageType);
-    Task Handle(TestScenarioMessage message, string playbackId, AdditionalInfo additionalInfo, CancellationToken cancellationToken);
+    Task Handle(TestScenarioMessage message, Guid playbackId, AdditionalInfo additionalInfo, CancellationToken cancellationToken);
 }

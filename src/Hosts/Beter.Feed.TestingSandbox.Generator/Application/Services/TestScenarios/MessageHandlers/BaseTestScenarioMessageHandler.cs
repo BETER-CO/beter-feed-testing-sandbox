@@ -14,7 +14,7 @@ public abstract class BaseTestScenarioMessageHandler : ITestScenarioMessageHandl
         _publisher = publisher ?? throw new ArgumentNullException(nameof(publisher));
     }
 
-    public async Task Handle(TestScenarioMessage message, string playbackId, AdditionalInfo additionalInfo, CancellationToken cancellationToken)
+    public async Task Handle(TestScenarioMessage message, Guid playbackId, AdditionalInfo additionalInfo, CancellationToken cancellationToken)
     {
         ArgumentNullException.ThrowIfNull(message, nameof(message));
 
@@ -29,6 +29,6 @@ public abstract class BaseTestScenarioMessageHandler : ITestScenarioMessageHandl
     }
 
     public abstract bool IsApplicable(string messageType);
-    public virtual Task BeforePublish(TestScenarioMessage message, string playbackId, AdditionalInfo additionalInfo, CancellationToken cancellationToken) => Task.CompletedTask;
-    public virtual Task AfterPublish(TestScenarioMessage message, string playbackId, AdditionalInfo additionalInfo, CancellationToken cancellationToken) => Task.CompletedTask;
+    public virtual Task BeforePublish(TestScenarioMessage message, Guid playbackId, AdditionalInfo additionalInfo, CancellationToken cancellationToken) => Task.CompletedTask;
+    public virtual Task AfterPublish(TestScenarioMessage message, Guid playbackId, AdditionalInfo additionalInfo, CancellationToken cancellationToken) => Task.CompletedTask;
 }

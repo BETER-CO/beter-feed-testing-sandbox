@@ -35,7 +35,7 @@ public sealed class PlaybackFactory : IPlaybackFactory
         double accelerationFactor)
     {
         var testScenario = _repository.Requre(caseId);
-        var playbackId = Guid.NewGuid().ToString();
+        var playbackId = Guid.NewGuid();
 
         var playbackItems = CreatePlaybackItems(
             caseId,
@@ -61,7 +61,7 @@ public sealed class PlaybackFactory : IPlaybackFactory
         return playback;
     }
 
-    private IReadOnlyCollection<PlaybackItem> CreatePlaybackItems(int caseId, string playbackId, ReplyMode replyMode, IEnumerable<TestScenarioMessage> messages, TimeSpan offset, TimeSpan timeOffsetAfterFirstTimetableMessageInSecounds, double accelerationFactor)
+    private IReadOnlyCollection<PlaybackItem> CreatePlaybackItems(int caseId, Guid playbackId, ReplyMode replyMode, IEnumerable<TestScenarioMessage> messages, TimeSpan offset, TimeSpan timeOffsetAfterFirstTimetableMessageInSecounds, double accelerationFactor)
     {
         ArgumentNullException.ThrowIfNull(messages, nameof(messages));
 
@@ -78,7 +78,7 @@ public sealed class PlaybackFactory : IPlaybackFactory
 
         var playbackItems = copyMessages.Select(message => new PlaybackItem
         {
-            InternalId = Guid.NewGuid().ToString(),
+            InternalId = Guid.NewGuid(),
             PlaybackId = playbackId,
             Message = message
         }).ToList();

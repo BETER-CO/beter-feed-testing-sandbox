@@ -62,14 +62,14 @@ namespace Beter.Feed.TestingSandbox.Generator.UnitTests.Infrastructure.Services
             var topic = Fixture.Create<string>();
             var messageType = Fixture.Create<string>();
             var channel = Fixture.Create<string>();
-            var playbackId = Fixture.Create<string>();
+            var playbackId = Fixture.Create<Guid>();
             var expectedMessage = new Message<string, string>()
             {
                 Headers = new Headers
                 {
                     { HeaderNames.MessageType, Encoding.UTF8.GetBytes(messageType) },
                     { HeaderNames.MessageChannel, Encoding.UTF8.GetBytes(channel) },
-                    { HeaderNames.PlaybackId, Encoding.UTF8.GetBytes(playbackId) }
+                    { HeaderNames.PlaybackId, Encoding.UTF8.GetBytes(playbackId.ToString()) }
                 },
                 Value = JsonSerializer.Serialize(Array.Empty<string>())
             };
@@ -94,14 +94,14 @@ namespace Beter.Feed.TestingSandbox.Generator.UnitTests.Infrastructure.Services
             // Arrange
             var topic = Fixture.Create<string>();
             var model = Fixture.Create<TestScenarioMessage>();
-            var playbackId = Fixture.Create<string>();
+            var playbackId = Fixture.Create<Guid>();
             var expectedMessage = new Message<string, string>()
             {
                 Headers = new Headers
                 {
                     { HeaderNames.MessageType, Encoding.UTF8.GetBytes(model.MessageType) },
                     { HeaderNames.MessageChannel, Encoding.UTF8.GetBytes(model.Channel) },
-                    { HeaderNames.PlaybackId, Encoding.UTF8.GetBytes(playbackId) }
+                    { HeaderNames.PlaybackId, Encoding.UTF8.GetBytes(playbackId.ToString()) }
                 },
                 Value = model.Value.ToJsonString()
             };

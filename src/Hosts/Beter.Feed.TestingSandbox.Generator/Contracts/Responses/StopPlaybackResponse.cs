@@ -11,7 +11,7 @@ public sealed class StopPlaybackResponse
 
 public sealed class StopPlaybackItemResponse
 {
-    public string PlaybackId { get; set; }
+    public Guid PlaybackId { get; set; }
 
     public int TestCaseId { get; init; }
 

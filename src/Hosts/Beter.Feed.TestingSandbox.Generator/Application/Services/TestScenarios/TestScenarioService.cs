@@ -75,13 +75,16 @@ public sealed class TestScenarioService : ITestScenarioService
     {
         IEnumerable<Playback> removedPlaybacks;
 
-        if (request.Command == StopPlaybackCommand.StopSingle)
+        switch (request.Command)
         {
-            removedPlaybacks = [_playbackRepository.Remove(request.PlaybackId)];
-        }
-        else
-        {
-            removedPlaybacks = _playbackRepository.RemoveAll();
+            case StopPlaybackCommand.StopSingle:
+                removedPlaybacks = new[] { _playbackRepository.Remove(request.PlaybackId) };
+                break;
+            case StopPlaybackCommand.StopAll:
+                removedPlaybacks = _playbackRepository.RemoveAll();
+                break;
+            default:
+                throw new ArgumentException($"Unsupported command: {request.Command}");
         }
 
         var response = new StopPlaybackResponse

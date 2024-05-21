@@ -27,7 +27,7 @@ namespace Beter.Feed.TestingSandbox.Generator.UnitTests.Application.Services.Tes
         public async Task Handle_SetsCommandToRun_WhenStartHeartbeatCommandReceived()
         {
             // Arrange
-            var playbackId = Fixture.Create<string>();
+            var playbackId = Fixture.Create<Guid>();
             var additionInfo = Fixture.Create<AdditionalInfo>();
             var message = new TestScenarioMessage
             {
@@ -47,7 +47,7 @@ namespace Beter.Feed.TestingSandbox.Generator.UnitTests.Application.Services.Tes
         public async Task Handle_SetsCommandToStop_WhenStopHeartbeatCommandReceived()
         {
             // Arrange
-            var playbackId = Fixture.Create<string>();
+            var playbackId = Fixture.Create<Guid>();
             var additionInfo = Fixture.Create<AdditionalInfo>();
             var message = new TestScenarioMessage
             {

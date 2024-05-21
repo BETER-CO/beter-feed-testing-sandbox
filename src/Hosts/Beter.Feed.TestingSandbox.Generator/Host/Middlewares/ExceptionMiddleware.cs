@@ -60,7 +60,7 @@ namespace Beter.Feed.TestingSandbox.Generator.Host.Middlewares
             httpContext.Response.Clear();
             httpContext.Response.StatusCode = (int)statusCode;
             httpContext.Response.ContentType = "application/json";
-            await httpContext.Response.WriteAsync(JsonSerializer.Serialize(new { Error = exception.Message }));
+            await httpContext.Response.WriteAsync(JsonSerializer.Serialize(new { error = exception.Message }));
         }
     }
 }

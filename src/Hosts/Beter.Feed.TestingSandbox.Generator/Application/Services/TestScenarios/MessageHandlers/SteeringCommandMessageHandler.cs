@@ -17,7 +17,7 @@ public class SteeringCommandMessageHandler : ITestScenarioMessageHandler
         _heartbeatControlService = heartbeatControlService ?? throw new ArgumentNullException(nameof(heartbeatControlService));
     }
 
-    public Task Handle(TestScenarioMessage message, string playbackId, AdditionalInfo additionalInfo, CancellationToken cancellationToken)
+    public Task Handle(TestScenarioMessage message, Guid playbackId, AdditionalInfo additionalInfo, CancellationToken cancellationToken)
     {
         var command = message.GetValue<SteeringCommand>();
 

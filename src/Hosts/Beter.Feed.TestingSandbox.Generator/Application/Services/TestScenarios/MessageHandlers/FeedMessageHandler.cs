@@ -23,7 +23,7 @@ public class FeedMessageHandler : BaseTestScenarioMessageHandler
         return new[] { MessageTypes.Scoreboard, MessageTypes.Trading, MessageTypes.Incident, MessageTypes.Timetable }.Contains(messageType);
     }
 
-    public override Task BeforePublish(TestScenarioMessage message, string playbackId, AdditionalInfo additionalInfo, CancellationToken cancellationToken)
+    public override Task BeforePublish(TestScenarioMessage message, Guid playbackId, AdditionalInfo additionalInfo, CancellationToken cancellationToken)
     {
         var channel = message.Channel;
         var hubKind = HubEnumHelper.ToHub(channel);
@@ -35,7 +35,7 @@ public class FeedMessageHandler : BaseTestScenarioMessageHandler
         return Task.CompletedTask;
     }
 
-    public async override Task AfterPublish(TestScenarioMessage message, string playbackId, AdditionalInfo additionalInfo, CancellationToken cancellationToken)
+    public async override Task AfterPublish(TestScenarioMessage message, Guid playbackId, AdditionalInfo additionalInfo, CancellationToken cancellationToken)
     {
         var msgType = new FeedMessageWrapper(message.Value.AsArray().First()).MsgType;
         if (msgType == (int)MessageType.ConnectionSnapshot)

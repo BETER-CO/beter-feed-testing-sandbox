@@ -2,7 +2,7 @@
 
 public record StopPlaybackRequest
 {
-    public string PlaybackId { get; set; }
+    public Guid PlaybackId { get; set; }
 
     public StopPlaybackCommand Command { get; set; }
 }

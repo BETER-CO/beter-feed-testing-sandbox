@@ -8,7 +8,7 @@ namespace Beter.Feed.TestingSandbox.Generator.Infrastructure.Repositories;
 
 public sealed class InMemoryPlaybacksRepository : IPlaybackRepository
 {
-    private readonly ConcurrentDictionary<string, Playback> _playbacks;
+    private readonly ConcurrentDictionary<Guid, Playback> _playbacks;
     private readonly ISystemClock _systemClock;
 
     public event EventHandler<PlaybackEventArgs> PlaybackAdded;
@@ -16,7 +16,7 @@ public sealed class InMemoryPlaybacksRepository : IPlaybackRepository
     public InMemoryPlaybacksRepository(ISystemClock systemClock)
     {
         _systemClock = systemClock ?? throw new ArgumentNullException(nameof(systemClock));
-        _playbacks = new ConcurrentDictionary<string, Playback>();
+        _playbacks = new ConcurrentDictionary<Guid, Playback>();
     }
 
     public void Add(Playback playback)
@@ -32,11 +32,8 @@ public sealed class InMemoryPlaybacksRepository : IPlaybackRepository
         PlaybackAdded?.Invoke(this, new PlaybackEventArgs(playback));
     }
 
-    public Playback Remove(string playbackId)
+    public Playback Remove(Guid playbackId)
     {
-        if (playbackId == null)
-            throw new ArgumentNullException(nameof(playbackId));
-
         if (!_playbacks.TryRemove(playbackId, out var playback))
             throw new RequiredEntityNotFoundException($"The playback with the specified ID: '{playbackId}' does not exist.");
 
@@ -54,7 +51,7 @@ public sealed class InMemoryPlaybacksRepository : IPlaybackRepository
         return result;
     }
 
-    public Playback Get(string playbackId)
+    public Playback Get(Guid playbackId)
     {
         _playbacks.TryGetValue(playbackId, out var playback);
 
@@ -69,7 +66,7 @@ public sealed class InMemoryPlaybacksRepository : IPlaybackRepository
             .ToList();
     }
 
-    public Playback RemoveMessageFromPlayback(string playbackId, PlaybackItem messageToRemove)
+    public Playback RemoveMessageFromPlayback(Guid playbackId, PlaybackItem messageToRemove)
     {
         var playback = Get(playbackId);
 
@@ -95,9 +92,9 @@ public sealed class InMemoryPlaybacksRepository : IPlaybackRepository
         return _playbacks[playback.Id] = playback;
     }
 
-    private static Dictionary<string, PlaybackItem> RemoveMessages(
-      IEnumerable<string> messageIdsToRemove,
-      Dictionary<string, PlaybackItem> actualMessages)
+    private static Dictionary<Guid, PlaybackItem> RemoveMessages(
+      IEnumerable<Guid> messageIdsToRemove,
+      Dictionary<Guid, PlaybackItem> actualMessages)
     {
         foreach (var messageId in messageIdsToRemove)
         {

@@ -76,19 +76,11 @@ namespace Beter.Feed.TestingSandbox.Generator.UnitTests.Infrastructure.Repositor
         }
 
         [Fact]
-        public void Remove_ThrowsArgumentNullException_WhenPlaybackIdIsNull()
-        {
-            // Act & Assert
-            Assert.Throws<ArgumentNullException>(
-                () => _repository.Remove(null));
-        }
-
-        [Fact]
         public void Remove_ThrowsRequiredEntityNotFoundException_WhenPlaybackIdDoesNotExist()
         {
             // Act & Assert
             Assert.Throws<RequiredEntityNotFoundException>(
-                () => _repository.Remove("nonexistentId"));
+                () => _repository.Remove(Guid.NewGuid()));
         }
 
         [Fact]
@@ -127,15 +119,16 @@ namespace Beter.Feed.TestingSandbox.Generator.UnitTests.Infrastructure.Repositor
         public void GetActive_ReturnsActivePlaybacks()
         {
             // Arrange
-            _repository.Add(new Playback { Id = "playback1", Messages = Fixture.Create<Dictionary<string, PlaybackItem>>() });
-            _repository.Add(new Playback { Id = "playback2" });
+            var playbackId = Guid.NewGuid();
+            _repository.Add(new Playback { Id = playbackId, Messages = Fixture.Create<Dictionary<Guid, PlaybackItem>>() });
+            _repository.Add(new Playback { Id = Guid.NewGuid() });
 
             // Act
             var activePlaybacks = _repository.GetActive();
 
             // Assert
             Assert.Collection(activePlaybacks,
-                playback => Assert.Equal("playback1", playback.Id));
+                playback => Assert.Equal(playbackId, playback.Id));
         }
 
         [Fact]
@@ -147,7 +140,7 @@ namespace Beter.Feed.TestingSandbox.Generator.UnitTests.Infrastructure.Repositor
                 .Create();
             var playback = Fixture.Build<Playback>()
                 .With(x => x.Id, playbackItem.PlaybackId)
-                .With(x => x.Messages, new Dictionary<string, PlaybackItem> { { playbackItem.InternalId, playbackItem } })
+                .With(x => x.Messages, new Dictionary<Guid, PlaybackItem> { { playbackItem.InternalId, playbackItem } })
                 .Create();
 
             _repository.Add(playback);
@@ -169,16 +162,16 @@ namespace Beter.Feed.TestingSandbox.Generator.UnitTests.Infrastructure.Repositor
 
             var currentTime = utcNow.ToUnixTimeMilliseconds();
             var playback1 = Fixture.Build<Playback>()
-                .With(x => x.Messages, new Dictionary<string, PlaybackItem>
+                .With(x => x.Messages, new Dictionary<Guid, PlaybackItem>
                 {
-                    { "message1", new PlaybackItem { Message = new TestScenarioMessage { ScheduledAt = currentTime } } }
+                    { Guid.NewGuid(), new PlaybackItem { Message = new TestScenarioMessage { ScheduledAt = currentTime } } }
                 })
                 .Create();
 
             var playback2 = Fixture.Build<Playback>()
-                .With(x => x.Messages, new Dictionary<string, PlaybackItem>
+                .With(x => x.Messages, new Dictionary<Guid, PlaybackItem>
                 {
-                    { "message2", new PlaybackItem { Message = new TestScenarioMessage { ScheduledAt = currentTime + 1000 } } }
+                    { Guid.NewGuid(), new PlaybackItem { Message = new TestScenarioMessage { ScheduledAt = currentTime + 1000 } } }
                 })
                 .Create();
 
@@ -202,16 +195,16 @@ namespace Beter.Feed.TestingSandbox.Generator.UnitTests.Infrastructure.Repositor
             var currentTime = utcNow.ToUnixTimeMilliseconds();
             var expected = new PlaybackItem { Message = new TestScenarioMessage { ScheduledAt = currentTime } };
             var playback1 = Fixture.Build<Playback>()
-                .With(x => x.Messages, new Dictionary<string, PlaybackItem>
+                .With(x => x.Messages, new Dictionary<Guid, PlaybackItem>
                 {
-                    { "message1", expected }
+                    { Guid.NewGuid(), expected }
                 })
                 .Create();
 
             var playback2 = Fixture.Build<Playback>()
-                .With(x => x.Messages, new Dictionary<string, PlaybackItem>
+                .With(x => x.Messages, new Dictionary<Guid, PlaybackItem>
                 {
-                    { "message2", new PlaybackItem { Message = new TestScenarioMessage { ScheduledAt = currentTime + 1000 } } }
+                    { Guid.NewGuid(), new PlaybackItem { Message = new TestScenarioMessage { ScheduledAt = currentTime + 1000 } } }
                 })
                 .Create();
 

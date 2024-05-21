@@ -3,7 +3,6 @@ using Beter.Feed.TestingSandbox.Generator.Contracts.Requests;
 using Beter.Feed.TestingSandbox.Generator.Contracts.Responses;
 using Beter.Feed.TestingSandbox.Generator.Host.Common.ApplicationConfiguration.Interfaces;
 using Beter.Feed.TestingSandbox.Generator.Host.Common.Constants;
-using Microsoft.AspNetCore.Mvc;
 
 namespace Beter.Feed.TestingSandbox.Generator.Host.Endpoints.TestScenarios;
 

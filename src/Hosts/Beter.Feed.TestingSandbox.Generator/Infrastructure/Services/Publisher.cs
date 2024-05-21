@@ -90,7 +90,7 @@ public class Publisher : IPublisher
     }
 
 
-    public async Task PublishEmptyAsync(string messageType, string channel, string playbackId, CancellationToken cancellationToken)
+    public async Task PublishEmptyAsync(string messageType, string channel, Guid playbackId, CancellationToken cancellationToken)
     {
         try
         {
@@ -109,7 +109,7 @@ public class Publisher : IPublisher
         _producer?.Dispose();
     }
 
-    private static Message<string, string> CreateFeedMessage(IEnumerable<IDictionary<string, object>> messages, string messageType, string channel, string playbackId)
+    private static Message<string, string> CreateFeedMessage(IEnumerable<IDictionary<string, object>> messages, string messageType, string channel, Guid playbackId)
     {
         return new Message<string, string>
         {
@@ -117,7 +117,7 @@ public class Publisher : IPublisher
             {
                 { HeaderNames.MessageType, Encoding.UTF8.GetBytes(messageType) },
                 { HeaderNames.MessageChannel, Encoding.UTF8.GetBytes(channel) },
-                { HeaderNames.PlaybackId, Encoding.UTF8.GetBytes(playbackId) }
+                { HeaderNames.PlaybackId, Encoding.UTF8.GetBytes(playbackId.ToString()) }
             },
             Value = JsonHubSerializer.Serialize(messages)
         };
@@ -138,7 +138,7 @@ public class Publisher : IPublisher
         };
     }
 
-    public async Task PublishAsync(TestScenarioMessage message, string playbackId, CancellationToken cancellationToken)
+    public async Task PublishAsync(TestScenarioMessage message, Guid playbackId, CancellationToken cancellationToken)
     {
         try
         {
@@ -152,7 +152,7 @@ public class Publisher : IPublisher
         }
     }
 
-    private static Message<string, string> CreateFeedMessage(TestScenarioMessage message, string playbackId)
+    private static Message<string, string> CreateFeedMessage(TestScenarioMessage message, Guid playbackId)
     {
         return new Message<string, string>
         {
@@ -160,7 +160,7 @@ public class Publisher : IPublisher
             {
                 { HeaderNames.MessageType, Encoding.UTF8.GetBytes(message.MessageType) },
                 { HeaderNames.MessageChannel, Encoding.UTF8.GetBytes(message.Channel) },
-                { HeaderNames.PlaybackId, Encoding.UTF8.GetBytes(playbackId) }
+                { HeaderNames.PlaybackId, Encoding.UTF8.GetBytes(playbackId.ToString()) }
             },
             Value = message.Value.ToJsonString()
         };

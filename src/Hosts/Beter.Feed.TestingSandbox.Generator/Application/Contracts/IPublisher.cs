@@ -5,7 +5,7 @@ namespace Beter.Feed.TestingSandbox.Generator.Application.Contracts;
 
 public interface IPublisher
 {
-    Task PublishAsync(TestScenarioMessage message, string playbackId, CancellationToken cancellationToken);
+    Task PublishAsync(TestScenarioMessage message, Guid playbackId, CancellationToken cancellationToken);
     Task PublishAsync(HeartbeatModel heartbeatNotification, CancellationToken cancellationToken);
-    Task PublishEmptyAsync(string messageType, string channel, string playbackId, CancellationToken cancellationToken);
+    Task PublishEmptyAsync(string messageType, string channel, Guid playbackId, CancellationToken cancellationToken);
 }
