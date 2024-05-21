@@ -22,7 +22,6 @@ services:
       - ASPNETCORE_URLS=http://+:80,
       - Messaging__ConsumerConfig__BootstrapServers=kafka:29092
       - Messaging__ConsumerConfig__SecurityProtocol=0
-      - Messaging__ConsumerConfig__AllowAutoCreateTopics=true
       - Messaging__ConsumerConfig__AutoOffsetReset=Earliest
       - Messaging__ConsumerConfig__GroupId=feed-emulator:test
       - Messaging__Topics__TestingTools=feed-testing-sandbox-generator
@@ -30,7 +29,6 @@ services:
       - SignalR__FeedTradingEndpoint=/trading
       - SignalR__FeedScoreboardEndpoint=/scoreboard
       - SignalR__FeedIncidentEndpoint=/incident
-      - SignalR__TtlForHeartbetRecord=00:00:05
     ports:
        - 51858:80
     volumes:
