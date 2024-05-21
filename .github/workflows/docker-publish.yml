@@ -11,7 +11,7 @@ jobs:
     uses: BETER-CO/beter-feed-testing-sandbox/.github/workflows/base-docker-publish.yml@master
     with:
       project_name: emulator
-      image_name: docker.io/beterco/beter-feed-testing-sandbox/emulator
+      image_name: docker.io/beterco/beter-feed-testing-sandbox-emulator
       dockerfile_path: src/Hosts/Beter.Feed.TestingSandbox.Emulator
       unit_tests_path: tests/Beter.Feed.TestingSandbox.Emulator.UnitTests
       code_coverage_threshold: 50
@@ -24,7 +24,7 @@ jobs:
     uses: BETER-CO/beter-feed-testing-sandbox/.github/workflows/base-docker-publish.yml@master
     with:
       project_name: generator
-      image_name: docker.io/beterco/beter-feed-testing-sandbox/generator
+      image_name: docker.io/beterco/beter-feed-testing-sandbox-generator
       dockerfile_path: src/Hosts/Beter.Feed.TestingSandbox.Generator
       unit_tests_path: tests/Beter.Feed.TestingSandbox.Generator.UnitTests
       code_coverage_threshold: 50
