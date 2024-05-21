@@ -10,10 +10,10 @@
     <DockerServiceName>beter.testingtools.emulator</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="docker-compose.override.yml">
-      <DependentUpon>docker-compose.yml</DependentUpon>
+    <None Include="docker-compose.development.override.yml">
+      <DependentUpon>docker-compose.development.yml</DependentUpon>
     </None>
-    <None Include="docker-compose.yml" />
+    <None Include="docker-compose.development.yml" />
     <None Include=".dockerignore" />
   </ItemGroup>
 </Project>

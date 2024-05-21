@@ -79,7 +79,9 @@ services:
       KAFKA_CLUSTERS_0_AUDIT_CONSOLEAUDITENABLED: 'true'
 
   beter.feed.testingsandbox.generator:
-    image: beterco/beter-feed-testing-sandbox-generator:latest
+    build:
+      context: .
+      dockerfile: src/Hosts/Beter.Feed.TestingSandbox.Generator/Dockerfile
     container_name: beter.feed.testing-sandbox.generator
     networks: 
       - feed-testing-sandbox
@@ -96,7 +98,9 @@ services:
             condition: service_completed_successfully
 
   beter.feed.testingsandbox.emulator:
-    image: beterco/beter-feed-testing-sandbox-emulator:latest
+    build:
+      context: .
+      dockerfile: src/Hosts/Beter.Feed.TestingSandbox.Emulator/Dockerfile
     container_name: beter.feed.testing-sandbox.emulator
     networks: 
       - feed-testing-sandbox
