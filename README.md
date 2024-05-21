@@ -31,7 +31,7 @@ To start the feed services, follow these steps:
     docker-compose up --build
     ```
 
-    This command builds the Docker images and starts the services defined in the `docker-compose.yaml` and `docker-compose.override.yaml` files. Each of the feed services (Generator, Emulator, Consumer) is built from local Dockerfiles and runs on specific ports. They all depend on Kafka and Kafka-UI dependencies.
+    This command builds the Docker images and starts the services defined in the `docker-compose.yaml` and `docker-compose.override.yaml` files. Each of the feed services (Generator, Emulator) is built from local Dockerfiles and runs on specific ports. They all depend on Kafka and Kafka-UI dependencies.
 
 Upon running `docker-compose up --build`, the following containers will be created:
 
@@ -40,7 +40,6 @@ Upon running `docker-compose up --build`, the following containers will be creat
 - **kafka-ui**: Provides a user interface for managing Kafka topics, accessible via port 8080.
 - **beter.feed.testingsandbox.generator**: Hosts the Feed Generator service, running on port 51857.
 - **beter.feed.testingsandbox.emulator**: Hosts the Feed Emulator service, running on port 51858.
-- **beter.feed.testingsandbox.consumer**: Hosts the Feed Consumer service, running on port 51859.
 
 These containers are interconnected and rely on each other, with dependencies managed through Docker Compose.
 

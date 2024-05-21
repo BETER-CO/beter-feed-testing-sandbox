@@ -116,27 +116,6 @@ services:
         init-kafka:
             condition: service_completed_successfully
 
-  beter.feed.testingsandbox.consumer:
-    build:
-      context: .
-      dockerfile: src/Hosts/Beter.Feed.TestingSandbox.Consumer/Dockerfile
-    container_name: beter.feed.testing-sandbox.consumer
-    networks: 
-      - feed-testing-sandbox
-    healthcheck:
-      test: curl --fail http://localhost:80/health
-      interval: 10s
-      timeout: 5s
-      retries: 5
-      start_period: 30s
-    depends_on:
-        kafka:
-            condition: service_healthy
-        beter.feed.testingsandbox.emulator:
-            condition: service_started
-        init-kafka:
-            condition: service_completed_successfully
-
 networks: 
   feed-testing-sandbox:
     driver: bridge  
