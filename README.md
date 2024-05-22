@@ -44,7 +44,7 @@ Upon running `docker-compose up --build`, the following containers will be creat
 These containers are interconnected and rely on each other, with dependencies managed through Docker Compose.
 
 ## Documentation
-For comprehensive documentation covering all aspects of the Beter Feed Testing Sandbox, including usage guidelines and API description visit [https://docs.beter.co/public](https://docs.beter.co/public). There you will find detailed documentation to help you make the most of the testing sandbox. 
+For comprehensive documentation covering all aspects of the Beter Feed Testing Sandbox, including usage guidelines and API description visit [https://docs.beter.co/public/beter-feed-testing-sandbox/general](https://docs.beter.co/public/beter-feed-testing-sandbox/general). There you will find detailed documentation to help you make the most of the testing sandbox. 
 
 ## Contributing
 Contributions are welcome! If you encounter any issues or have suggestions for improvement, feel free to open an issue or submit a pull request in the repository.
