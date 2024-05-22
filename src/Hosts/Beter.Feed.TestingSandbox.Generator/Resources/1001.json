@@ -98,7 +98,7 @@
       ],
       "channel": "time_table",
       "messageType": "time_table",
-      "scheduledAt": 1713958071788
+      "scheduledAt": 1713958771788
     },
     {
       "value": [
@@ -133,7 +133,7 @@
       ],
       "channel": "scoreboard",
       "messageType": "scoreboard",
-      "scheduledAt": 1713958071788
+      "scheduledAt": 1713958771788
     },
     {
       "value": [
@@ -1584,7 +1584,7 @@
       ],
       "channel": "trading",
       "messageType": "trading",
-      "scheduledAt": 1713958071793
+      "scheduledAt": 1713958771793
     },
     {
       "value": [
