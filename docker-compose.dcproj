@@ -14,6 +14,14 @@
       <DependentUpon>docker-compose.development.yml</DependentUpon>
     </None>
     <None Include="docker-compose.development.yml" />
-    <None Include=".dockerignore" />
   </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	<DockerComposeBaseFilePath>docker-compose.development</DockerComposeBaseFilePath>
+    <AdditionalComposeFilePaths>docker-compose.development.override.yml</AdditionalComposeFilePaths>
+    <DockerTargetOS>Linux</DockerTargetOS>
+    <DockerLaunchAction>None</DockerLaunchAction>
+    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/{Scheme}://{ServiceHost}:{ServicePort}</DockerServiceUrl>
+    <DockerServiceName>gateway</DockerServiceName>
+    <DockerDevelopmentMode>Fast</DockerDevelopmentMode>
+  </PropertyGroup>
 </Project>

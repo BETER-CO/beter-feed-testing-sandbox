@@ -6,7 +6,6 @@
       "serviceActions": {
         "beter.feed.testingsandbox.emulator": "StartDebugging",
         "beter.feed.testingsandbox.generator": "StartDebugging",
-        "beter.feed.testingsandbox.consumer": "StartDebugging",
         "kafka": "StartWithoutDebugging",
         "kafka-ui": "StartWithoutDebugging",
         "init-kafka": "StartWithoutDebugging"
