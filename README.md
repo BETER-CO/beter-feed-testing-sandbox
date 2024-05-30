@@ -21,19 +21,19 @@ To start the feed services, follow these steps:
 
 2. **Docker Configuration:**
     Make sure you have two Docker Compose files in the root directory:
-    - `docker-compose.yaml`
-    - `docker-compose.override.yaml`
+    - `docker-compose.development.yaml`
+    - `docker-compose.development.override.yaml`
 
 3. **Start the Docker Services:**
     Run the following command:
 
     ```sh
-    docker-compose up --build
+    docker-compose -f .\docker-compose.development.yml -f .\docker-compose.development.override.yml up --build
     ```
 
-    This command builds the Docker images and starts the services defined in the `docker-compose.yaml` and `docker-compose.override.yaml` files. Each of the feed services (Generator, Emulator) is built from local Dockerfiles and runs on specific ports. They all depend on Kafka and Kafka-UI dependencies.
+    This command builds the Docker images and starts the services defined in the `docker-compose.development.yaml` and `docker-compose.development.override.yaml` files. Each of the feed services (Generator, Emulator) is built from local Dockerfiles and runs on specific ports. They all depend on Kafka and Kafka-UI dependencies.
 
-Upon running `docker-compose up --build`, the following containers will be created:
+Upon running `docker-compose`, the following containers will be created:
 
 - **kafka**: Runs Confluent's Kafka server, exposing ports 9092 and 9101 for communication.
 - **init-kafka**: A service used for initializing Kafka topics required by the application.
