@@ -1,5 +1,5 @@
-ARG DOTNET_SDK_IMAGE=mcr.microsoft.com/dotnet/sdk:7.0
-ARG DOTNET_RUNTIME_IMAGE=mcr.microsoft.com/dotnet/aspnet:7.0.14-bullseye-slim
+ARG DOTNET_SDK_IMAGE=mcr.microsoft.com/dotnet/sdk:8.0.203-bookworm-slim
+ARG DOTNET_RUNTIME_IMAGE=mcr.microsoft.com/dotnet/aspnet:8.0.3-bookworm-slim
 
 FROM $DOTNET_RUNTIME_IMAGE AS base
 
@@ -25,7 +25,7 @@ COPY ["src/Common/Beter.Feed.TestingSandbox.Common/Beter.Feed.TestingSandbox.Com
 RUN dotnet restore "./src/Hosts/Beter.Feed.TestingSandbox.Generator/./Beter.Feed.TestingSandbox.Generator.csproj"
 COPY . .
 WORKDIR "/src/src/Hosts/Beter.Feed.TestingSandbox.Generator"
-RUN dotnet build "./Beter.Feed.TestingSandbox.Generator.csproj" -c $BUILD_CONFIGURATION -o /app/build /p:Version=$VERSION /p:AssemblyInformationalVersion=$INFO_VERSION
+RUN dotnet build "./Beter.Feed.TestingSandbox.Generator.csproj" -c $BUILD_CONFIGURATION  --no-restore
 
 FROM build AS publish
 
@@ -33,7 +33,7 @@ ARG VERSION=1.0.0
 ARG INFO_VERSION=1.0.0
 ARG BUILD_CONFIGURATION=Release
 
-RUN dotnet publish "./Beter.Feed.TestingSandbox.Generator.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false /p:Version=$VERSION 
+RUN dotnet publish "./Beter.Feed.TestingSandbox.Generator.csproj" -c $BUILD_CONFIGURATION -o /app/publish --no-build /p:UseAppHost=false /p:Version=$VERSION 
 
 FROM base AS final
 WORKDIR /app
