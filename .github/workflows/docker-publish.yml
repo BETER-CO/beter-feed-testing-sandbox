@@ -8,7 +8,7 @@ on:
 jobs:
   emulator_push_to_docker_hub:
     name: Emulator
-    uses: BETER-CO/beter-feed-testing-sandbox/.github/workflows/base-docker-publish.yml@main
+    uses: BETER-CO/beter-feed-testing-sandbox/.github/workflows/base-docker-publish.yml@${{  github.ref_name }}
     with:
       project_name: emulator
       image_name: docker.io/beterco/beter-feed-testing-sandbox/emulator
@@ -21,7 +21,7 @@ jobs:
           
   generator_push_to_docker_hub:
     name: Generator
-    uses: BETER-CO/beter-feed-testing-sandbox/.github/workflows/base-docker-publish.yml@main
+    uses: BETER-CO/beter-feed-testing-sandbox/.github/workflows/base-docker-publish.yml@${{  github.ref_name }}
     with:
       project_name: generator
       image_name: docker.io/beterco/beter-feed-testing-sandbox/generator
