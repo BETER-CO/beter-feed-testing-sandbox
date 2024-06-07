@@ -87,18 +87,41 @@ You may configure ports used and other options by setting environment variables 
 * `BFTS_GENERATOR_PORT` - sets port used by Feed Generator to receive API commands to run/list/stop test scenarios.
 * `BFTS_EMULATOR_PORT` - sets port used by Feed Emulator to connect by Feed Consumer and also control emulator via
 REST API.
-* `BFTS_GENERATOR_DOCKER_IMAGE_VERSION` - specify exact version of the Feed Generator published to Docker Hub.
-* `BFTS_EMULATOR_DOCKER_IMAGE_VERSION` - specify exact version of the Feed Emulator published to Docker Hub.
+* `BFTS_GENERATOR_DOCKER_IMAGE_VERSION` - specify exact version of the Feed Generator published to Docker Hub (you
+may put `latest` as well).
+* `BFTS_EMULATOR_DOCKER_IMAGE_VERSION` - specify exact version of the Feed Emulator published to Docker Hub (you
+may put `latest` as well).
 
 You may prepend env variables to `docker-compose` command to activate mentioned settings
 ```
 $ BFTS_KAFKA_UI_PORT=8011 \
   BFTS_GENERATOR_PORT=8012 \
   BFTS_EMULATOR_PORT=8013 \
-  BFTS_GENERATOR_DOCKER_IMAGE_VERSION=1.0.0 \
-  BFTS_EMULATOR_DOCKER_IMAGE_VERSION=1.0.0 \
+  BFTS_GENERATOR_DOCKER_IMAGE_VERSION=1.0.1 \
+  BFTS_EMULATOR_DOCKER_IMAGE_VERSION=1.0.1 \
   docker-compose up -d
 ```
+
+Or you may put env variables in `.env` file and run `docker-compose` as usual.
+
+```
+$ cat .env
+BFTS_KAFKA_UI_PORT=8011
+BFTS_GENERATOR_PORT=8012
+BFTS_EMULATOR_PORT=8013
+BFTS_GENERATOR_DOCKER_IMAGE_VERSION=1.0.1
+BFTS_EMULATOR_DOCKER_IMAGE_VERSION=1.0.1
+
+$ docker-compose up -d
+```
+
+### Build Docker images from sources.
+
+TBD
+
+### Other (temporary)
+
+Check
 
 To start the feed services, follow these steps:
 1. **Clone the Repository:**
