@@ -1,0 +1,60 @@
+version: '3.7'
+
+name: "bfts"
+
+services:
+  kafka:
+    extends:
+      file: docker-compose.yml
+      service: kafka
+
+  init-kafka:
+    extends:
+      file: docker-compose.yml
+      service: init-kafka
+    depends_on:
+        kafka:
+            condition: service_healthy
+
+  kafka-ui:
+    extends:
+      file: docker-compose.yml
+      service: kafka-ui
+    depends_on:
+        kafka:
+            condition: service_healthy
+
+  generator:
+    extends:
+      file: docker-compose.yml
+      service: generator
+    image: "beter-feed-testing-sandbox-generator:${BFTS_GENERATOR_DOCKER_IMAGE_VERSION:-latest}"
+    build:
+      context: .
+      dockerfile: src/Hosts/Beter.Feed.TestingSandbox.Generator/Dockerfile
+    depends_on:
+        kafka:
+            condition: service_healthy
+        init-kafka:
+            condition: service_completed_successfully
+
+  emulator:
+    extends:
+      file: docker-compose.yml
+      service: emulator
+    image: "beter-feed-testing-sandbox-emulator:${BFTS_EMULATOR_DOCKER_IMAGE_VERSION:-latest}"
+    build:
+      context: .
+      dockerfile: src/Hosts/Beter.Feed.TestingSandbox.Emulator/Dockerfile
+    depends_on:
+        kafka:
+            condition: service_healthy
+        init-kafka:
+            condition: service_completed_successfully
+
+networks: 
+  feed-testing-sandbox:
+    driver: bridge  
+
+volumes:
+  kafka-broker-data:

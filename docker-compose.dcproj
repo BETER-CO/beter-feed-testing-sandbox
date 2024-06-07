@@ -10,9 +10,6 @@
     <DockerServiceName>beter.testingtools.emulator</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="docker-compose.development.override.yml">
-      <DependentUpon>docker-compose.development.yml</DependentUpon>
-    </None>
     <None Include="docker-compose.development.yml" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
