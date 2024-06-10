@@ -5,16 +5,12 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
-      - FeedEmulator__ApiBaseUrl=http://beter.feed.testing-sandbox.emulator
       - Publisher__BootstrapServers=kafka:29092
       - Publisher__Topic=feed-testing-sandbox-generator
       - Publisher__SecurityProtocol=0
       - Publisher__AllowAutoCreateTopics=true
-      - Heartbeat__IntervalInSeconds=5
     ports:
        - 51857:80
-    volumes:
-      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro 
 
   beter.feed.testingsandbox.emulator:
     environment:
@@ -29,7 +25,6 @@ services:
       - SignalR__FeedTradingEndpoint=/trading
       - SignalR__FeedScoreboardEndpoint=/scoreboard
       - SignalR__FeedIncidentEndpoint=/incident
+      - Heartbeat__IntervalInSeconds=5
     ports:
        - 51858:80
-    volumes:
-      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro 

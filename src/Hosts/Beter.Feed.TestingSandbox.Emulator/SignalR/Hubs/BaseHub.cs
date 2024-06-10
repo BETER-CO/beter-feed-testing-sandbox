@@ -2,7 +2,7 @@
 using Beter.Feed.TestingSandbox.Common.Enums;
 using Beter.Feed.TestingSandbox.Common.Models;
 using Beter.Feed.TestingSandbox.Emulator.Publishers;
-using Beter.Feed.TestingSandbox.Emulator.Services;
+using Beter.Feed.TestingSandbox.Emulator.Services.Connections;
 using Beter.Feed.TestingSandbox.Emulator.SignalR.Helpers;
 using Microsoft.AspNetCore.Connections.Features;
 using Microsoft.AspNetCore.SignalR;

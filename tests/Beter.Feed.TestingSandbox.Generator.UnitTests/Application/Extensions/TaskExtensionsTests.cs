@@ -1,4 +1,4 @@
-﻿using Beter.Feed.TestingSandbox.Generator.Application.Extensions;
+﻿using Beter.Feed.TestingSandbox.Common.Extensions;
 
 namespace Beter.Feed.TestingSandbox.Generator.UnitTests.Application.Extensions
 {

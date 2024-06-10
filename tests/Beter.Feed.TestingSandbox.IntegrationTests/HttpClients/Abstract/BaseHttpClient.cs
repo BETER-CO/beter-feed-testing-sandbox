@@ -1,4 +1,4 @@
-﻿using Beter.Feed.TestingSandbox.Generator.Infrastructure.Services.FeedConnections;
+﻿using Beter.Feed.TestingSandbox.IntegrationTests.HttpClients.Exceptions;
 using Beter.Feed.TestingSandbox.IntegrationTests.HttpClients.Extensions;
 using Polly;
 using Polly.Extensions.Http;

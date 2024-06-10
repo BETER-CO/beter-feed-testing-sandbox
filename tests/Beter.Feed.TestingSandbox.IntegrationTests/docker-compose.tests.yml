@@ -86,12 +86,10 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
-      - FeedEmulator__ApiBaseUrl=http://beter.feed.testing-sandbox.emulator
       - Publisher__BootstrapServers=kafka:29092
       - Publisher__Topic=feed-testing-sandbox-generator
       - Publisher__SecurityProtocol=0
       - Publisher__AllowAutoCreateTopics=true
-      - Heartbeat__IntervalInSeconds=5
     healthcheck:
       test: curl --fail http://localhost:80/health
       interval: 10s
@@ -124,7 +122,7 @@ services:
       - SignalR__FeedTradingEndpoint=/trading
       - SignalR__FeedScoreboardEndpoint=/scoreboard
       - SignalR__FeedIncidentEndpoint=/incident
-      - SignalR__TtlForHeartbetRecord=00:00:05
+      - Heartbeat__IntervalInSeconds=5
     healthcheck:
       test: curl --fail http://localhost:80/health
       interval: 10s

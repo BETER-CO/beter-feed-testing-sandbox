@@ -1,4 +1,4 @@
-﻿using Beter.Feed.TestingSandbox.Generator.Application.Common;
+﻿using Beter.Feed.TestingSandbox.Common;
 
 namespace Beter.Feed.TestingSandbox.Generator.UnitTests.Application.Common
 {

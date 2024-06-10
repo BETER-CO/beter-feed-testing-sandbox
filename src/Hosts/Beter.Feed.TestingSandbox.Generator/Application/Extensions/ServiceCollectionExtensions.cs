@@ -1,9 +1,7 @@
 ﻿using Beter.Feed.TestingSandbox.Generator.Application.Contracts;
-using Beter.Feed.TestingSandbox.Generator.Application.Contracts.Heartbeats;
 using Beter.Feed.TestingSandbox.Generator.Application.Contracts.Playbacks;
 using Beter.Feed.TestingSandbox.Generator.Application.Contracts.TestScenarios;
 using Beter.Feed.TestingSandbox.Generator.Application.Services;
-using Beter.Feed.TestingSandbox.Generator.Application.Services.Heartbeats;
 using Beter.Feed.TestingSandbox.Generator.Application.Services.Playbacks;
 using Beter.Feed.TestingSandbox.Generator.Application.Services.Playbacks.Transformations;
 using Beter.Feed.TestingSandbox.Generator.Application.Services.Playbacks.Transformations.Rules;
@@ -12,7 +10,6 @@ using Beter.Feed.TestingSandbox.Generator.Application.Services.TestScenarios.Mes
 using Beter.Feed.TestingSandbox.Generator.Application.Services.TestScenarios.MessageHandlers.Offsets;
 using Beter.Feed.TestingSandbox.Generator.Domain.TestScenarios;
 using Beter.Feed.TestingSandbox.Generator.Host.HostedServices;
-using Beter.Feed.TestingSandbox.Generator.Host.Options;
 using Beter.Feed.TestingSandbox.Generator.Infrastructure.Repositories;
 
 namespace Beter.Feed.TestingSandbox.Generator.Application.Extensions;
@@ -23,14 +20,12 @@ static internal class ServiceCollectionExtensions
     {
         return services
             .AddPlaybackDependency()
-            .AddTestScenariosDependency()
-            .AddHeartbeatDependency(configuration);
+            .AddTestScenariosDependency();
     }
 
     private static IServiceCollection AddTestScenariosDependency(this IServiceCollection services)
     {
         services.AddSingleton<ITestScenarioMessageHandlerResolver, TestScenarioMessageHandlerResolver>();
-        services.AddSingleton<ITestScenarioMessageHandler, SteeringCommandMessageHandler>();
         services.AddSingleton<ITestScenarioMessageHandler, FeedMessageHandler>();
         services.AddSingleton<ITestScenarioMessageHandler, DefaultMessageHandler>();
         services.AddSingleton<IOffsetStorage, OffsetStorage>();
@@ -49,15 +44,6 @@ static internal class ServiceCollectionExtensions
 
             return new InMemoryTestScenariosRepository(scenarios);
         });
-
-        return services;
-    }
-
-    private static IServiceCollection AddHeartbeatDependency(this IServiceCollection services, IConfiguration configuration)
-    {
-        services.Configure<HeartbeatOptions>(configuration.GetSection(HeartbeatOptions.SectionName));
-        services.AddSingleton<IHeartbeatControlService, HeartbeatControlService>();
-        services.AddHostedService<HeartbeatRunnerHostedService>();
 
         return services;
     }

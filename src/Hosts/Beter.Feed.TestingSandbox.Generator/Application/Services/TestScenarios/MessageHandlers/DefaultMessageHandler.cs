@@ -5,6 +5,11 @@ namespace Beter.Feed.TestingSandbox.Generator.Application.Services.TestScenarios
 
 public class DefaultMessageHandler(IPublisher publisher) : BaseTestScenarioMessageHandler(publisher)
 {
-    public override bool IsApplicable(string messageType) => messageType == MessageTypes.SubscriptionsRemoved || messageType == MessageTypes.SystemEvent;
+    public override bool IsApplicable(string messageType)
+    {
+        return messageType == MessageTypes.SubscriptionsRemoved || 
+            messageType == MessageTypes.SystemEvent ||
+            messageType == MessageTypes.SteeringCommand;
+    }
 }
 

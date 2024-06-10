@@ -26,36 +26,6 @@ namespace Beter.Feed.TestingSandbox.Generator.UnitTests.Infrastructure.Services
         }
 
         [Fact]
-        public async Task PublishAsync_Successfully_Publishes_Heartbeat_Message()
-        {
-            // Arrange
-            var topic = Fixture.Create<string>();
-            var model = Fixture.Create<HeartbeatModel>();
-            var expectedMessage = new Message<string, string>()
-            {
-                Headers = new Headers
-                {
-                    { HeaderNames.MessageType, Encoding.UTF8.GetBytes(MessageTypes.Heartbeat) },
-                    { HeaderNames.PlaybackId, Encoding.UTF8.GetBytes("heartbeat-playback") }
-                },
-                Value = JsonHubSerializer.Serialize(model)
-            };
-
-            var producer = SetupProducer(topic, expectedMessage);
-            var publisher = CreatePublisher(topic, producer.Object);
-
-            // Act
-            await publisher.PublishAsync(model, CancellationToken.None);
-
-            // Assert
-            producer.Verify(
-                p => p.ProduceAsync(
-                    topic,
-                    It.Is<Message<string, string>>(actual => IsEqualsMessage(expectedMessage, actual)), CancellationToken.None),
-                Times.Once);
-        }
-
-        [Fact]
         public async Task PublishEmptyAsync_Successfully_Publishes_Empty_Message()
         {
             // Arrange

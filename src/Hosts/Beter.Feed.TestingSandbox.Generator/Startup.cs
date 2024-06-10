@@ -22,8 +22,7 @@ public class Startup
             .AddEndpointsApiExplorer()
             .AddGeneratorSwagger()
             .AddInfrastructure(Configuration)
-            .AddApplicationServices(Configuration)
-            .AddFeedConnections(Configuration);
+            .AddApplicationServices(Configuration);
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

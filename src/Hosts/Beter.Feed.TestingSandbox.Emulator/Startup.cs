@@ -20,7 +20,7 @@ public class Startup
         services.AddFeedEmulatorSwagger();
         services.AddSignalR(Configuration);
         services.AddPublishers(Configuration);
-        services.AddApplicationServices();
+        services.AddApplicationServices(Configuration);
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

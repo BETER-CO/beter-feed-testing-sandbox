@@ -16,7 +16,6 @@ public class TestingToolsMetadata
     public readonly static MetadataItem Trading = new MetadataItem(MessageTypes.Trading, typeof(TradingInfoModel));
     public readonly static MetadataItem SubscriptionsRemoved = new MetadataItem(MessageTypes.SubscriptionsRemoved, typeof(SubscriptionsRemovedModel));
     public readonly static MetadataItem SystemEvent = new MetadataItem(MessageTypes.SystemEvent, typeof(GlobalMessageModel));
-    public readonly static MetadataItem Heartbeat = new MetadataItem(MessageTypes.Heartbeat, typeof(HeartbeatModel));
 
     public static string ToMessageType<TValue>()
     {
@@ -66,7 +65,6 @@ public class TestingToolsMetadata
         yield return Trading;
         yield return SubscriptionsRemoved;
         yield return SystemEvent;
-        yield return Heartbeat;
     }
 }
 
