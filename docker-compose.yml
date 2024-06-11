@@ -9,13 +9,10 @@ services:
     container_name: "${COMPOSE_PROJECT_NAME}-kafka"
     networks: 
       - feed-testing-sandbox
-    ports:
-      - "9092"
-      - "9101"
     environment:
       KAFKA_NODE_ID: 1
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: 'CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT'
-      KAFKA_ADVERTISED_LISTENERS: 'PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092'
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: 'INTERNAL_DOCKER_HOST:PLAINTEXT,INTERNAL_DOCKER_CONTROLLER_HOST:PLAINTEXT'
+      KAFKA_ADVERTISED_LISTENERS: 'INTERNAL_DOCKER_HOST://kafka:29092'
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
@@ -24,13 +21,13 @@ services:
       KAFKA_JMX_OPTS: "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=kafka-broker -Dcom.sun.management.jmxremote.rmi.port=9101"
       KAFKA_PROCESS_ROLES: 'broker,controller'
       KAFKA_CONTROLLER_QUORUM_VOTERS: '1@kafka:29093'
-      KAFKA_LISTENERS: 'PLAINTEXT://0.0.0.0:29092,CONTROLLER://kafka:29093,PLAINTEXT_HOST://0.0.0.0:9092'
-      KAFKA_INTER_BROKER_LISTENER_NAME: 'PLAINTEXT'
-      KAFKA_CONTROLLER_LISTENER_NAMES: 'CONTROLLER'
+      KAFKA_LISTENERS: 'INTERNAL_DOCKER_HOST://0.0.0.0:29092,INTERNAL_DOCKER_CONTROLLER_HOST://kafka:29093'
+      KAFKA_INTER_BROKER_LISTENER_NAME: 'INTERNAL_DOCKER_HOST'
+      KAFKA_CONTROLLER_LISTENER_NAMES: 'INTERNAL_DOCKER_CONTROLLER_HOST'
       KAFKA_LOG_DIRS: '/var/lib/kafka/data'
       CLUSTER_ID: 'MkU3OEVBNTcwNTJENDM2Qc'
     healthcheck:
-      test: ["CMD-SHELL", "nc -z kafka 9092"]
+      test: ["CMD-SHELL", "nc -z kafka 29092"]
       interval: 2s
       timeout: 5s
       retries: 30
