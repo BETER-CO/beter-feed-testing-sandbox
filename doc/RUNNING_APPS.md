@@ -29,7 +29,7 @@ for developing the applications, for example if you want to improve our tool and
 BETER maintains the following Docker images:
 * [beterco/beter-feed-testing-sandbox-generator](https://hub.docker.com/r/beterco/beter-feed-testing-sandbox-generator)
 - image of the Feed Generator application;
-* * [beterco/beter-feed-testing-sandbox-emulator](https://hub.docker.com/r/beterco/beter-feed-testing-sandbox-emulator)
+* [beterco/beter-feed-testing-sandbox-emulator](https://hub.docker.com/r/beterco/beter-feed-testing-sandbox-emulator)
 - image of the Feed Emulator application;
 
 We have prepared [`docker-compose.yml`](../docker-compose.yml) for you to simplify the launch. By default, without any
@@ -100,6 +100,19 @@ BFTS_EMULATOR_DOCKER_IMAGE_VERSION=1.0.1
 $ docker compose up -d
 ```
 
+4. Use applications
+
+* Kafka UI is available at [http://localhost:8080](http://localhost:8080) or at the port specified in
+`BFTS_KAFKA_UI_PORT` environment variable.
+* Feed Generator listens for REST API requests on [http://localhost:51857](http://localhost:51857). Swagger
+documentation for the API is available at
+[http://localhost:51857/swagger/index.html](http://localhost:51857/swagger/index.html). **Note.**
+Replace port `51857` with the value of `BFTS_GENERATOR_PORT` if it was modified.
+* Feed Emulator listens for REST API requests on [http://localhost:51858](http://localhost:51858). Swagger
+documentation for the API is available at
+[http://localhost:51858/swagger/index.html](http://localhost:51858/swagger/index.html). **Note.**
+Replace port `51858` with the value of `BFTS_EMULATOR_PORT` if it was modified.
+
 ### Build Docker images from sources [#build-docker-images-from-sources]
 
 To build Docker images from source, you need to clone this repository first.
@@ -165,6 +178,19 @@ db2013a2bf6d   confluentinc/cp-kafka:7.4.1                  "/etc/confluent/dock
 > If you need to change ports or other options, please, check
 [Run pre-built docker images](#run-pre-built-docker-images) section.
 
+5. Use applications
+
+* Kafka UI is available at [http://localhost:8080](http://localhost:8080) or at the port specified in
+`BFTS_KAFKA_UI_PORT` environment variable.
+* Feed Generator listens for REST API requests on [http://localhost:51857](http://localhost:51857). Swagger
+documentation for the API is available at
+[http://localhost:51857/swagger/index.html](http://localhost:51857/swagger/index.html). **Note.**
+Replace port `51857` with the value of `BFTS_GENERATOR_PORT` if it was modified.
+* Feed Emulator listens for REST API requests on [http://localhost:51858](http://localhost:51858). Swagger
+documentation for the API is available at
+[http://localhost:51858/swagger/index.html](http://localhost:51858/swagger/index.html). **Note.**
+Replace port `51858` with the value of `BFTS_EMULATOR_PORT` if it was modified.
+
 ### Local development [#local-development]
 
 This method is intended for development purposes only. We assume that you will run Kafka and Kafka UI in Docker, but
@@ -173,7 +199,8 @@ Therefore, [`docker-compose.development.yml`](../docker-compose.development.yml)
 [`docker-compose.yml`](../docker-compose.yml) and [`docker-compose.local-build.yml`](../docker-compose.local-build.yml):
 
 * Kafka exposes port `9092` on the host machine (these can be redefined, see below);
-* You should run the Feed Generator and Feed Emulator locally and configure them to use `localhost:9092`.
+* You should run the Feed Generator and Feed Emulator locally and configure them to use `localhost:9092` (or redefined
+port).
 
 Steps:
 
@@ -203,7 +230,7 @@ $ docker compose -f docker-compose.development.yml up -d
 If ports `8080` or `9092` is busy you may specify the proper port to use by setting environment variables.
 
 ```shell
-$ BFTS_KAFKA_UI_PORT=8011 BFTS_KAFKA_PORT=8014 BFTS_KAFKA_JMX_PORT=8015 docker compose -f docker-compose.development.yml up -d
+$ BFTS_KAFKA_UI_PORT=8011 BFTS_KAFKA_PORT=8014 docker compose -f docker-compose.development.yml up -d
 ```
 
 Verify that everything is running as expected.
@@ -213,7 +240,7 @@ $ docker ps
 
 CONTAINER ID   IMAGE                                    COMMAND                  CREATED          STATUS                    PORTS                                            NAMES
 6f7d6a5ab4b9   provectuslabs/kafka-ui:latest            "/bin/sh -c 'java --…"   28 seconds ago   Up 23 seconds             0.0.0.0:8011->8080/tcp                           bfts-kafka-ui
-a73c517e79f1   confluentinc/cp-kafka:7.4.1              "/etc/confluent/dock…"   28 seconds ago   Up 28 seconds (healthy)   0.0.0.0:8014->9092/tcp, 0.0.0.0:8015->9101/tcp   bfts-kafka
+a73c517e79f1   confluentinc/cp-kafka:7.4.1              "/etc/confluent/dock…"   28 seconds ago   Up 28 seconds (healthy)   0.0.0.0:8014->9092/tcp                           bfts-kafka
 ```
 
 4. Build and run the projects locally.
@@ -266,3 +293,16 @@ $ ASPNETCORE_URLS="http://+:51857" \
   FeedEmulator__ApiBaseUrl="localhost:51858" \
   dotnet bin/Debug/net7.0/Beter.Feed.TestingSandbox.Generator.dll
 ```
+5. Use applications
+
+* Kafka UI is available at [http://localhost:8080](http://localhost:8080) or at the port specified in
+`BFTS_KAFKA_UI_PORT` environment variable.
+* Feed Generator listens for REST API requests on [http://localhost:51857](http://localhost:51857). Swagger
+documentation for the API is available at
+[http://localhost:51857/swagger/index.html](http://localhost:51857/swagger/index.html). **Note.**
+Replace port `51857` with the value of `ASPNETCORE_URLS` if it was modified.
+* Feed Emulator listens for REST API requests on [http://localhost:51858](http://localhost:51858). Swagger
+documentation for the API is available at
+[http://localhost:51858/swagger/index.html](http://localhost:51858/swagger/index.html). **Note.**
+Replace port `51858` with the value of `ASPNETCORE_URLS` if it was modified.
+* Kafka is listening on `9092`, or on `Publisher__BootstrapServers` if the port was redefined.
