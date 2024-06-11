@@ -9,7 +9,7 @@ The following applications must be launched:
 
 The Feed Consumer from this repository connects to the Feed Emulator, consumes messages via SignalR, and stores them
 in Kafka for further analysis or comparison. You may launch your own Kafka instance, or use Kafka from
-[`docker-compose.development.yml`](docker-compose.development.yml).
+[`docker-compose.development.yml`](../docker-compose.development.yml).
 
 > Feed Consumer writes to Kafka, so Kafka's port must be exposed to the host machine if you run Feed Consumer on
 > host machine.

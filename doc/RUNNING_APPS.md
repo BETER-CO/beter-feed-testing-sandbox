@@ -24,7 +24,7 @@ services like Docker Hub or GitHub Packages.
 applications locally as well. Applications connect to local Docker containers and exchange data. This option is best
 for developing the applications, for example if you want to improve our tool and submit a pull request.
 
-### Run pre-built Docker images [#run-pre-built-docker-images]
+### Run pre-built Docker images <a id="run-pre-built-docker-images" />
 
 BETER maintains the following Docker images:
 * [beterco/beter-feed-testing-sandbox-generator](https://hub.docker.com/r/beterco/beter-feed-testing-sandbox-generator)
@@ -113,7 +113,7 @@ documentation for the API is available at
 [http://localhost:51858/swagger/index.html](http://localhost:51858/swagger/index.html). **Note.**
 Replace port `51858` with the value of `BFTS_EMULATOR_PORT` if it was modified.
 
-### Build Docker images from sources [#build-docker-images-from-sources]
+### Build Docker images from sources <a id="build-docker-images-from-sources" />
 
 To build Docker images from source, you need to clone this repository first.
 
@@ -191,7 +191,7 @@ documentation for the API is available at
 [http://localhost:51858/swagger/index.html](http://localhost:51858/swagger/index.html). **Note.**
 Replace port `51858` with the value of `BFTS_EMULATOR_PORT` if it was modified.
 
-### Local development [#local-development]
+### Local development <a id="local-development" />
 
 This method is intended for development purposes only. We assume that you will run Kafka and Kafka UI in Docker, but
 the Feed Generator and Feed Emulator will run on your local machine, not in containers.
