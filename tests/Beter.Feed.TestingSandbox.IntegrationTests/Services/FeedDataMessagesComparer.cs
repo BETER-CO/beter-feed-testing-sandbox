@@ -1,16 +1,16 @@
-﻿using Beter.Feed.TestingSandbox.Common.Serialization;
-using Beter.Feed.TestingSandbox.Models;
-using Beter.Feed.TestingSandbox.Models.GlobalEvents;
+﻿using Beter.Feed.TestingSandbox.Models.GlobalEvents;
 using Beter.Feed.TestingSandbox.Models.Incidents;
 using Beter.Feed.TestingSandbox.Models.Scoreboards;
 using Beter.Feed.TestingSandbox.Models.TimeTableItems;
 using Beter.Feed.TestingSandbox.Models.TradingInfos;
-using KellermanSoftware.CompareNetObjects;
+using Beter.Feed.TestingSandbox.Models;
 using KellermanSoftware.CompareNetObjects.TypeComparers;
+using KellermanSoftware.CompareNetObjects;
+using Beter.Feed.TestingSandbox.Common.Serialization;
 
-namespace Beter.Feed.TestingSandbox.Consumer.Services
+namespace Beter.Feed.TestingSandbox.IntegrationTests.Services
 {
-    public class TestScenarioMessagesComparer
+    public class FeedDataMessagesComparer
     {
         private static readonly CompareLogic Comparer = GetComparer();
 
@@ -19,7 +19,7 @@ namespace Beter.Feed.TestingSandbox.Consumer.Services
             return Comparer.Compare(expected, actual).AreEqual;
         }
 
-        private static CompareLogic GetComparer()
+        public static CompareLogic GetComparer()
         {
             var compare = new CompareLogic();
 

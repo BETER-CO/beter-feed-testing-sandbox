@@ -10,5 +10,5 @@ public class FeedServiceOptions
     public long Offset { get; set; }
     public int SnapshotBatchSize { get; set; }
     public double ReconnectionWaitSeconds { get; set; } = 1;
-    public string DestinationTopicName { get; set; } = "feed-messages-test";
+    public string DestinationTopicName { get; set; } = "feed-testing-sandbox-consumer";
 }

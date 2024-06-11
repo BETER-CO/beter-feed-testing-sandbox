@@ -30,7 +30,6 @@ public static class ServiceCollectionExtensions
 
     public static IServiceCollection AddMessaging(this IServiceCollection services, IConfiguration configuration)
     {
-
         services.Configure<MessagingOptions>(configuration.GetSection(MessagingOptions.SectionName));
 
         services.AddMessageHandlers();

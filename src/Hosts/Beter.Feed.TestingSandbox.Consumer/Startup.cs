@@ -22,10 +22,8 @@ public class Startup
         services.AddKafkaConfiguration(Configuration);
         services.AddHostedServices();
         services.AddEndpointsApiExplorer();
-        services.AddFeedConsumerSwagger();
         services.AddFeedServiceClients();
         services.AddFeedMessageProducers();
-        services.AddApplicationServices(Configuration);
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -36,8 +34,6 @@ public class Startup
         }
 
         app.UseRouting();
-        app.UseFeedConsumerSwagger();
         app.AddHealthCheckEndpoint();
-        app.UseEndpoints<Program>();
     }
 }

@@ -3,8 +3,6 @@ using Beter.Feed.TestingSandbox.Consumer.Consumers;
 using Beter.Feed.TestingSandbox.Consumer.Models;
 using Beter.Feed.TestingSandbox.Consumer.Options;
 using Beter.Feed.TestingSandbox.Consumer.Producers;
-using Beter.Feed.TestingSandbox.Consumer.Services;
-using Beter.Feed.TestingSandbox.Consumer.Services.Abstract;
 using Beter.Feed.TestingSandbox.Models;
 using Beter.Feed.TestingSandbox.Models.GlobalEvents;
 using Beter.Feed.TestingSandbox.Models.Incidents;
@@ -14,20 +12,11 @@ using Beter.Feed.TestingSandbox.Models.TradingInfos;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using Microsoft.FeatureManagement;
 
 namespace Beter.Feed.TestingSandbox.Consumer.Extensions;
 
 public static class ServiceCollectionExtensions
 {
-    public static void AddApplicationServices(this IServiceCollection services, IConfiguration configuration)
-    {
-        services.AddFeatureManagement(configuration.GetSection(FeatureManagementFlags.Section));
-
-        services.AddSingleton<ITestScenarioTemplateService, TestScenarioTemplateService>();
-        services.AddSingleton<ITestScenarioFactory, TestScenarioFactory>();
-    }
-
     public static void AddHostedServices(this IServiceCollection services)
     {
         services.AddHostedService<TradingConsumer>();

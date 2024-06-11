@@ -67,7 +67,8 @@ services:
     ports:
       - "8080:8080"
     depends_on:
-      - kafka
+      kafka:
+        condition: service_healthy
     environment:
       KAFKA_CLUSTERS_0_NAME: feed_testing_tools
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:29092
@@ -99,8 +100,10 @@ services:
     ports:
        - 51857:80
     depends_on:
-      - kafka
-      - init-kafka
+      kafka:
+        condition: service_healthy
+      init-kafka:
+        condition: service_completed_successfully
 
   beter.feed.testingsandbox.emulator:
     build:
@@ -132,8 +135,10 @@ services:
     ports:
        - 51858:80
     depends_on:
-      - kafka
-      - init-kafka
+      kafka:
+        condition: service_healthy
+      init-kafka:
+        condition: service_completed_successfully
 
   beter.feed.testingsandbox.consumer:
     build:
@@ -145,7 +150,6 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
-      - FeatureManagement__ConsumeByTemplate=true
       - Publisher__BootstrapServers=kafka:29092
       - Publisher__SecurityProtocol=0
       - Publisher__AllowAutoCreateTopics=true
@@ -165,9 +169,12 @@ services:
     ports:
        - 51859:80
     depends_on:
-      - kafka
-      - init-kafka
-      - beter.feed.testingsandbox.emulator
+      kafka:
+        condition: service_healthy
+      init-kafka:
+        condition: service_completed_successfully
+      beter.feed.testingsandbox.emulator:
+        condition: service_started
 
 networks: 
   feed-testing-sandbox:
