@@ -126,7 +126,7 @@ public class Publisher : IPublisher
             Headers = new Headers
             {
                 { HeaderNames.MessageType, Encoding.UTF8.GetBytes(message.MessageType) },
-                { HeaderNames.MessageChannel, Encoding.UTF8.GetBytes(message.Channel) },
+                { HeaderNames.MessageChannel, Encoding.UTF8.GetBytes(message.Channel ?? string.Empty) },
                 { HeaderNames.PlaybackId, Encoding.UTF8.GetBytes(playbackId.ToString()) }
             },
             Value = message.Value.ToJsonString()

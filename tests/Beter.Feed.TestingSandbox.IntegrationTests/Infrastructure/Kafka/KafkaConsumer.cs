@@ -30,14 +30,6 @@ namespace Beter.Feed.TestingSandbox.IntegrationTests.Infrastructure.Kafka
                 AutoOffsetReset = consumerSettings.AutoOffsetReset ?? AutoOffsetReset.Earliest
             };
 
-            if (!string.IsNullOrWhiteSpace(consumerSettings.SslCertificateLocation) &&
-                !string.IsNullOrWhiteSpace(consumerSettings.SslKeyLocation))
-            {
-                config.SslCertificateLocation = consumerSettings.SslCertificateLocation;
-                config.SslKeyLocation = consumerSettings.SslKeyLocation;
-                config.SecurityProtocol = SecurityProtocol.Ssl;
-            }
-
             return config;
         }
 
