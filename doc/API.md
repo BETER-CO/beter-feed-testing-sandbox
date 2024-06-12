@@ -5,15 +5,16 @@ This is part of the testing application responsible for replaying sandbox test c
 
 You may use Swagger for managing:
 * Feed Generator: http://localhost:51857/swagger/index.html
-* Feed Emulator: http://localhost:51857/swagger/index.html
+* Feed Emulator: http://localhost:51858/swagger/index.html
 
 > Change ports if you [launched applications](RUNNING_APPS.md) exposing different ports.
 
 ## Using Swagger
 
-1. Visit Swagger page and find the appropriate API method.
+1. Visit Swagger pages and find the appropriate API method.
 
-![swagger-main-page.jpg](img/swagger-main-page.jpg)
+![swagger-main-page-generator.jpg](img/swagger-main-page-generator.jpg)
+![swagger-main-page-emulator.jpg](img/swagger-main-page-emulator.jpg)
 
 2. You may find examples of calls and possible responses with status codes. If you click "Try it out" you may
 make an API call right from Swagger.

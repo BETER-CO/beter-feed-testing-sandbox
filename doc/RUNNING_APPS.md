@@ -260,7 +260,7 @@ If the Kafka port was changed, you need to specify the new port value before run
 
 **For Feed Emulator**:
 
-* change the value of `Messaging.ConsumerConfig.BootstrapServers` in
+* change the value of `Messaging.ConsumerConfig.BootstrapServers` (Kafka broker host and port) in
 `src/Hosts/Beter.Feed.TestingSandbox.Emulator/configs/appsettings.json` and rebuild the project;
 * alternatively, set the environment variable `Messaging__ConsumerConfig__BootstrapServers`.
 * specify the port of the Feed Emulator by setting the environment variable `ASPNETCORE_URLS="http://+:51858"`
@@ -277,10 +277,10 @@ $ ASPNETCORE_URLS="http://+:51858" \
 
 For Feed Generator:
 
-* change the values of `FeedEmulator.ApiBaseUrl` (Kafka broker host and port) in
+* change the values of `Publisher.BootstrapServers` (Kafka broker host and port) in
 `src/Hosts/Beter.Feed.TestingSandbox.Generator/configs/appsettings.json` and rebuild the project;
-* alternatively, set the environment variables `Publisher__BootstrapServers` and `FeedEmulator__ApiBaseUrl`.
-* specify the port of the Feed Emulator by setting the environment variable `ASPNETCORE_URLS="http://+:51857"`
+* alternatively, set the environment variable `Publisher__BootstrapServers`.
+* specify the port of the Feed Generator by setting the environment variable `ASPNETCORE_URLS="http://+:51857"`
  to open port 51857.
 
 Example,
@@ -290,7 +290,6 @@ Example,
 # ... and Feed Emulator oponed port 51858 for incoming connections...
 $ ASPNETCORE_URLS="http://+:51857" \
   Publisher__BootstrapServers="localhost:8014" \
-  FeedEmulator__ApiBaseUrl="localhost:51858" \
   dotnet bin/Debug/net7.0/Beter.Feed.TestingSandbox.Generator.dll
 ```
 5. Use applications
