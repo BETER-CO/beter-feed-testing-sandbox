@@ -1,19 +1,18 @@
 version: '3.7'
 
+name: "bfts"
+
 services:
   kafka:
     image: confluentinc/cp-kafka:7.4.1
     hostname: kafka
-    container_name: kafka
+    container_name: "${COMPOSE_PROJECT_NAME}-kafka"
     networks: 
       - feed-testing-sandbox
-    ports:
-      - "9092:9092"
-      - "9101:9101"
     environment:
       KAFKA_NODE_ID: 1
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: 'CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT'
-      KAFKA_ADVERTISED_LISTENERS: 'PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092'
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: 'INTERNAL_DOCKER_HOST:PLAINTEXT,INTERNAL_DOCKER_CONTROLLER_HOST:PLAINTEXT'
+      KAFKA_ADVERTISED_LISTENERS: 'INTERNAL_DOCKER_HOST://kafka:29092'
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
@@ -22,13 +21,13 @@ services:
       KAFKA_JMX_OPTS: "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=kafka-broker -Dcom.sun.management.jmxremote.rmi.port=9101"
       KAFKA_PROCESS_ROLES: 'broker,controller'
       KAFKA_CONTROLLER_QUORUM_VOTERS: '1@kafka:29093'
-      KAFKA_LISTENERS: 'PLAINTEXT://0.0.0.0:29092,CONTROLLER://kafka:29093,PLAINTEXT_HOST://0.0.0.0:9092'
-      KAFKA_INTER_BROKER_LISTENER_NAME: 'PLAINTEXT'
-      KAFKA_CONTROLLER_LISTENER_NAMES: 'CONTROLLER'
+      KAFKA_LISTENERS: 'INTERNAL_DOCKER_HOST://0.0.0.0:29092,INTERNAL_DOCKER_CONTROLLER_HOST://kafka:29093'
+      KAFKA_INTER_BROKER_LISTENER_NAME: 'INTERNAL_DOCKER_HOST'
+      KAFKA_CONTROLLER_LISTENER_NAMES: 'INTERNAL_DOCKER_CONTROLLER_HOST'
       KAFKA_LOG_DIRS: '/var/lib/kafka/data'
       CLUSTER_ID: 'MkU3OEVBNTcwNTJENDM2Qc'
     healthcheck:
-      test: ["CMD-SHELL", "nc -z kafka 9092"]
+      test: ["CMD-SHELL", "nc -z kafka 29092"]
       interval: 2s
       timeout: 5s
       retries: 30
@@ -39,7 +38,7 @@ services:
   init-kafka:
     image: confluentinc/cp-kafka:7.4.1
     hostname: init-kafka
-    container_name: init-kafka
+    container_name: "${COMPOSE_PROJECT_NAME}-init-kafka"
     depends_on:
         kafka:
             condition: service_healthy
@@ -61,12 +60,12 @@ services:
 
   kafka-ui:
     image: provectuslabs/kafka-ui:latest
-    container_name: kafka-ui
+    container_name: "${COMPOSE_PROJECT_NAME}-kafka-ui"
     hostname: kafka-ui
     networks: 
       - feed-testing-sandbox
     ports:
-      - "8080:8080"
+      - "${BFTS_KAFKA_UI_PORT:-8080}:8080"
     depends_on:
         kafka:
             condition: service_healthy
@@ -78,11 +77,13 @@ services:
       KAFKA_CLUSTERS_0_AUDIT_TOPICAUDITENABLED: 'true'
       KAFKA_CLUSTERS_0_AUDIT_CONSOLEAUDITENABLED: 'true'
 
-  beter.feed.testingsandbox.generator:
-    image: beterco/beter-feed-testing-sandbox-generator:latest
-    container_name: beter.feed.testing-sandbox.generator
+  generator:
+    image: "beterco/beter-feed-testing-sandbox-generator:${BFTS_GENERATOR_DOCKER_IMAGE_VERSION:-latest}"
+    container_name: "${COMPOSE_PROJECT_NAME}-generator"
     networks: 
       - feed-testing-sandbox
+    ports:
+      - "${BFTS_GENERATOR_PORT:-51857}:80"
     healthcheck:
       test: curl --fail http://localhost:80/health
       interval: 10s
@@ -94,12 +95,21 @@ services:
             condition: service_healthy
         init-kafka:
             condition: service_completed_successfully
+    environment:
+      - "ASPNETCORE_ENVIRONMENT=${BFTS_GENERATOR_ASPNETCORE_ENVIRONMENT:-Development}"
+      - "ASPNETCORE_URLS=http://+:80"
+      - "Publisher__BootstrapServers=kafka:29092"
+      - "Publisher__Topic=feed-testing-sandbox-generator"
+      - "Publisher__SecurityProtocol=0"
+      - "Publisher__AllowAutoCreateTopics=true"
 
-  beter.feed.testingsandbox.emulator:
-    image: beterco/beter-feed-testing-sandbox-emulator:latest
-    container_name: beter.feed.testing-sandbox.emulator
+  emulator:
+    image: "beterco/beter-feed-testing-sandbox-emulator:${BFTS_EMULATOR_DOCKER_IMAGE_VERSION:-latest}"
+    container_name: "${COMPOSE_PROJECT_NAME}-emulator"
     networks: 
       - feed-testing-sandbox
+    ports:
+      - "${BFTS_EMULATOR_PORT:-51858}:80"
     healthcheck:
       test: curl --fail http://localhost:80/health
       interval: 10s
@@ -111,6 +121,19 @@ services:
             condition: service_healthy
         init-kafka:
             condition: service_completed_successfully
+    environment:
+      - "ASPNETCORE_ENVIRONMENT=${BFTS_EMULATOR_ASPNETCORE_ENVIRONMENT:-Development}"
+      - "ASPNETCORE_URLS=http://+:80"
+      - "Messaging__ConsumerConfig__BootstrapServers=kafka:29092"
+      - "Messaging__ConsumerConfig__SecurityProtocol=0"
+      - "Messaging__ConsumerConfig__AutoOffsetReset=Earliest"
+      - "Messaging__ConsumerConfig__GroupId=feed-emulator:test"
+      - "Messaging__Topics__TestingTools=feed-testing-sandbox-generator"
+      - "SignalR__FeedTimeTableEndpoint=/time_table"
+      - "SignalR__FeedTradingEndpoint=/trading"
+      - "SignalR__FeedScoreboardEndpoint=/scoreboard"
+      - "SignalR__FeedIncidentEndpoint=/incident"
+      - "Heartbeat__IntervalInSeconds=5"
 
 networks: 
   feed-testing-sandbox:
