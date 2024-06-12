@@ -68,7 +68,7 @@ $ Publisher__BootstrapServers="localhost:8014" \
 
 5. Launch the test case after starting the Feed Emulator
 
-> For more details, read [Running Test Cases](RUNNING_TEST_CASES.md).
+> For more details, read [API document](API.md).
 
 ## Kafka UI basics
 

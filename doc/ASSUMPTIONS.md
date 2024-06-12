@@ -1,4 +1,4 @@
-# Running Test Cases
+# BFTS Assumptions
 
 **Feed Generator** application provides REST API to start and stop test case playback. It supports the following features:
 1. **Parallelizable execution**. You may run the same test case or different test cases in parallel.

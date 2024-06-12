@@ -21,9 +21,11 @@ you can explore and analyze this data. In this mode, the scheme looks like this:
 
 ## Documentation
 
-- [Running Applications](doc/RUNNING_APPS.md)
+- [Building and Running Applications](doc/RUNNING_APPS.md)
 - [Running Test Consumer](doc/TEST_CONSUMER.md) (optional)
-- [Running Test Cases](doc/RUNNING_TEST_CASES.md)
+- [BFTS Assumptions](doc/ASSUMPTIONS.md)
+- [Feed Generator and Feed Emulator API](doc/API.md)
+- [Test Cases](doc/SCENARIOS.md)
 
 ## Contributing
 Contributions are welcome! If you encounter any issues or have suggestions for improvement, feel free to open an issue
