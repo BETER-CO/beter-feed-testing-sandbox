@@ -1,124 +1,38 @@
 version: '3.7'
 
+name: "bfts"
+
 services:
   kafka:
-    image: confluentinc/cp-kafka:7.4.1
-    hostname: kafka
-    container_name: kafka
-    networks: 
-      - feed-testing-sandbox
+    extends:
+      file: docker-compose.yml
+      service: kafka
     ports:
-      - "9092:9092"
-      - "9101:9101"
+      - "${BFTS_KAFKA_PORT:-9092}:9092"
     environment:
-      KAFKA_NODE_ID: 1
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: 'CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT'
-      KAFKA_ADVERTISED_LISTENERS: 'PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092'
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
-      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
-      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
-      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
-      KAFKA_JMX_PORT: 9101
-      KAFKA_JMX_OPTS: "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=kafka-broker -Dcom.sun.management.jmxremote.rmi.port=9101"
-      KAFKA_PROCESS_ROLES: 'broker,controller'
-      KAFKA_CONTROLLER_QUORUM_VOTERS: '1@kafka:29093'
-      KAFKA_LISTENERS: 'PLAINTEXT://0.0.0.0:29092,CONTROLLER://kafka:29093,PLAINTEXT_HOST://0.0.0.0:9092'
-      KAFKA_INTER_BROKER_LISTENER_NAME: 'PLAINTEXT'
-      KAFKA_CONTROLLER_LISTENER_NAMES: 'CONTROLLER'
-      KAFKA_LOG_DIRS: '/var/lib/kafka/data'
-      CLUSTER_ID: 'MkU3OEVBNTcwNTJENDM2Qc'
-    healthcheck:
-      test: ["CMD-SHELL", "nc -z kafka 9092"]
-      interval: 2s
-      timeout: 5s
-      retries: 30
-      start_period: 5s
-    volumes:
-      - "kafka-broker-data:/var/lib/kafka/data"
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: "INTERNAL_DOCKER_HOST:PLAINTEXT,INTERNAL_DOCKER_CONTROLLER_HOST:PLAINTEXT,EXTERNAL_HOST:PLAINTEXT"
+      KAFKA_ADVERTISED_LISTENERS: "INTERNAL_DOCKER_HOST://kafka:29092,EXTERNAL_HOST://localhost:${BFTS_KAFKA_PORT:-9092}"
+      KAFKA_LISTENERS: "INTERNAL_DOCKER_HOST://0.0.0.0:29092,INTERNAL_DOCKER_CONTROLLER_HOST://kafka:29093,EXTERNAL_HOST://0.0.0.0:9092"
 
   init-kafka:
-    image: confluentinc/cp-kafka:7.4.1
-    hostname: init-kafka
-    container_name: init-kafka
+    extends:
+      file: docker-compose.yml
+      service: init-kafka
     depends_on:
-        kafka:
-            condition: service_healthy
-    networks: 
-      - feed-testing-sandbox
-    entrypoint: [ '/bin/sh', '-c' ]
-    command: |
-      "
-      # blocks until kafka is reachable
-      kafka-topics --bootstrap-server kafka:29092 --list
-
-      echo -e 'Creating kafka topics'
-      kafka-topics --bootstrap-server kafka:29092 --create --if-not-exists --topic feed-testing-sandbox-generator --replication-factor 1 --partitions 1
-      kafka-topics --bootstrap-server kafka:29092 --create --if-not-exists --topic feed-testing-sandbox-consumer --replication-factor 1 --partitions 1
-
-      echo -e 'Successfully created the following topics:'
-      kafka-topics --bootstrap-server kafka:29092 --list
-      "
+      kafka:
+        condition: service_healthy
 
   kafka-ui:
-    image: provectuslabs/kafka-ui:latest
-    container_name: kafka-ui
-    hostname: kafka-ui
-    networks: 
-      - feed-testing-sandbox
-    ports:
-      - "8080:8080"
+    extends:
+      file: docker-compose.yml
+      service: kafka-ui
     depends_on:
-        kafka:
-            condition: service_healthy
-    environment:
-      KAFKA_CLUSTERS_0_NAME: feed_testing_tools
-      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:29092
-      KAFKA_CLUSTERS_0_METRICS_PORT: 9101
-      DYNAMIC_CONFIG_ENABLED: 'true'  # not necessary, added for tests
-      KAFKA_CLUSTERS_0_AUDIT_TOPICAUDITENABLED: 'true'
-      KAFKA_CLUSTERS_0_AUDIT_CONSOLEAUDITENABLED: 'true'
+      kafka:
+        condition: service_healthy
 
-  beter.feed.testingsandbox.generator:
-    build:
-      context: .
-      dockerfile: src/Hosts/Beter.Feed.TestingSandbox.Generator/Dockerfile
-    container_name: beter.feed.testing-sandbox.generator
-    networks: 
-      - feed-testing-sandbox
-    healthcheck:
-      test: curl --fail http://localhost:80/health
-      interval: 10s
-      timeout: 5s
-      retries: 5
-      start_period: 30s
-    depends_on:
-        kafka:
-            condition: service_healthy
-        init-kafka:
-            condition: service_completed_successfully
-
-  beter.feed.testingsandbox.emulator:
-    build:
-      context: .
-      dockerfile: src/Hosts/Beter.Feed.TestingSandbox.Emulator/Dockerfile
-    container_name: beter.feed.testing-sandbox.emulator
-    networks: 
-      - feed-testing-sandbox
-    healthcheck:
-      test: curl --fail http://localhost:80/health
-      interval: 10s
-      timeout: 5s
-      retries: 5
-      start_period: 30s
-    depends_on:
-        kafka:
-            condition: service_healthy
-        init-kafka:
-            condition: service_completed_successfully
-
-networks: 
+networks:
   feed-testing-sandbox:
-    driver: bridge  
+    driver: bridge
 
 volumes:
   kafka-broker-data:

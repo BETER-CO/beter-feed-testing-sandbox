@@ -9,11 +9,19 @@ RUN apt-get update && apt-get install -y curl
 WORKDIR /app
 EXPOSE 80
 
-FROM $DOTNET_SDK_IMAGE AS build
+FROM --platform=$BUILDPLATFORM $DOTNET_SDK_IMAGE AS build
 
 ARG VERSION=1.0.0
 ARG INFO_VERSION=1.0.0
 ARG BUILD_CONFIGURATION=Release
+ARG TARGETPLATFORM
+ARG TARGETOS
+ARG TARGETARCH
+ARG TARGETVARIANT
+ARG BUILDPLATFORM
+ARG BUILDOS
+ARG BUILDARCH
+ARG BUILDVARIANT
 
 WORKDIR /src
 COPY ["src/Hosts/Beter.Feed.TestingSandbox.Generator/Beter.Feed.TestingSandbox.Generator.csproj", "src/Hosts/Beter.Feed.TestingSandbox.Generator/"]
@@ -22,18 +30,40 @@ COPY ["src/Common/Beter.Feed.TestingSandbox.Logging.WebApi/Beter.Feed.TestingSan
 COPY ["src/Common/Beter.Feed.TestingSandbox.Logging/Beter.Feed.TestingSandbox.Logging.csproj", "src/Common/Beter.Feed.TestingSandbox.Logging/"]
 COPY ["src/Common/Beter.Feed.TestingSandbox.Models/Beter.Feed.TestingSandbox.Models.csproj", "src/Common/Beter.Feed.TestingSandbox.Models/"]
 COPY ["src/Common/Beter.Feed.TestingSandbox.Common/Beter.Feed.TestingSandbox.Common.csproj", "src/Common/Beter.Feed.TestingSandbox.Common/"]
-RUN dotnet restore "./src/Hosts/Beter.Feed.TestingSandbox.Generator/./Beter.Feed.TestingSandbox.Generator.csproj"
+RUN set -eux; \
+    echo "Building on \$BUILDPLATFORM=\"${BUILDPLATFORM}\", targeting \$TARGETPLATFORM=\"${TARGETPLATFORM}\""; \
+    echo "Building on \$BUILDOS=\"${BUILDOS}\" and \$BUILDARCH=\"${BUILDARCH}\" with optional variant \$BUILDVARIANT=\"${BUILDVARIANT}\""; \
+    echo "Targeting \$TARGETOS=\"${TARGETOS}\" and \$TARGETARCH=\"${TARGETARCH}\" with optional variant \$TARGETVARIANT=\"${TARGETVARIANT}\""; \
+    dotnet restore -a $TARGETARCH "./src/Hosts/Beter.Feed.TestingSandbox.Generator/Beter.Feed.TestingSandbox.Generator.csproj";
 COPY . .
 WORKDIR "/src/src/Hosts/Beter.Feed.TestingSandbox.Generator"
-RUN dotnet build "./Beter.Feed.TestingSandbox.Generator.csproj" -c $BUILD_CONFIGURATION -o /app/build /p:Version=$VERSION /p:AssemblyInformationalVersion=$INFO_VERSION
+RUN dotnet build "./Beter.Feed.TestingSandbox.Generator.csproj" -c $BUILD_CONFIGURATION --no-restore
 
 FROM build AS publish
 
 ARG VERSION=1.0.0
 ARG INFO_VERSION=1.0.0
 ARG BUILD_CONFIGURATION=Release
+ARG TARGETPLATFORM
+ARG TARGETOS
+ARG TARGETARCH
+ARG TARGETVARIANT
+ARG BUILDPLATFORM
+ARG BUILDOS
+ARG BUILDARCH
+ARG BUILDVARIANT
 
-RUN dotnet publish "./Beter.Feed.TestingSandbox.Generator.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false /p:Version=$VERSION 
+RUN set -eux; \
+    echo "Building on \$BUILDPLATFORM=\"${BUILDPLATFORM}\", targeting \$TARGETPLATFORM=\"${TARGETPLATFORM}\""; \
+    echo "Building on \$BUILDOS=\"${BUILDOS}\" and \$BUILDARCH=\"${BUILDARCH}\" with optional variant \$BUILDVARIANT=\"${BUILDVARIANT}\""; \
+    echo "Targeting \$TARGETOS=\"${TARGETOS}\" and \$TARGETARCH=\"${TARGETARCH}\" with optional variant \$TARGETVARIANT=\"${TARGETVARIANT}\""; \
+    dotnet publish "./Beter.Feed.TestingSandbox.Generator.csproj" \
+      -a $TARGETARCH \
+      -c $BUILD_CONFIGURATION \
+      -o /app/publish \
+      /p:UseAppHost=false \
+      /p:SelfContained=false \
+      /p:Version=$VERSION;
 
 FROM base AS final
 WORKDIR /app
