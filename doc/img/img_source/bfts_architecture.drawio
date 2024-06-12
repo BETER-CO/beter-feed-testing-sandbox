@@ -1,0 +1,233 @@
+<mxfile host="app.diagrams.net" modified="2024-06-06T17:17:45.547Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="b61Sh7uWJ5QPHepN3zd3" version="24.4.0" type="google" pages="2">
+  <diagram name="Development Flow" id="K3kLiMhxqYXSTW9UkNP2">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="F_FxToMxMOI9tLohtKqa-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="155" y="10" width="200" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="F_FxToMxMOI9tLohtKqa-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="445" y="10" width="199" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="F_FxToMxMOI9tLohtKqa-5" value="&lt;font size=&quot;1&quot; color=&quot;#cc0066&quot; face=&quot;Roboto Mono&quot;&gt;&lt;b style=&quot;font-size: 14px; background-color: rgb(255, 204, 230);&quot;&gt;API client&lt;/b&gt;&lt;/font&gt;" style="sketch=0;outlineConnect=0;fillColor=#CC0066;strokeColor=#432D57;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.user;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="5" y="60" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="F_FxToMxMOI9tLohtKqa-7" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.external_toolkit;" vertex="1" parent="1">
+          <mxGeometry x="221.5" y="60" width="68" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="F_FxToMxMOI9tLohtKqa-9" value="&lt;font color=&quot;#cc0066&quot; face=&quot;Roboto Mono&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;b style=&quot;background-color: rgb(255, 204, 230);&quot;&gt;Kafka&lt;/b&gt;&lt;/font&gt;" style="sketch=0;outlineConnect=0;fontColor=#ffffff;fillColor=#CC0066;strokeColor=#A50040;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.generic_database;" vertex="1" parent="1">
+          <mxGeometry x="515" y="242" width="59" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="F_FxToMxMOI9tLohtKqa-10" value="&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Roboto+Mono&quot; face=&quot;Roboto Mono&quot; style=&quot;font-size: 18px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Feed Generator&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="156" y="10" width="199" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F_FxToMxMOI9tLohtKqa-11" value="&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Roboto+Mono&quot; face=&quot;Roboto Mono&quot; style=&quot;font-size: 12px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Test Cases&lt;br&gt;local database&lt;/b&gt;&lt;/font&gt;" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.cold_storage;" vertex="1" parent="1">
+          <mxGeometry x="232.24" y="220" width="45.51" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="F_FxToMxMOI9tLohtKqa-13" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#6a00ff;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1" source="F_FxToMxMOI9tLohtKqa-5" target="F_FxToMxMOI9tLohtKqa-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="55" y="120" as="sourcePoint" />
+            <mxPoint x="105" y="70" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F_FxToMxMOI9tLohtKqa-14" value="&lt;font face=&quot;Roboto Mono&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Roboto+Mono&quot; style=&quot;font-size: 12px;&quot;&gt;&lt;b style=&quot;background-color: rgb(230, 208, 222);&quot;&gt;1. API Call:&lt;br&gt;Run/Stop Test Case&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" connectable="0" vertex="1" parent="F_FxToMxMOI9tLohtKqa-13">
+          <mxGeometry x="-0.418" y="1" relative="1" as="geometry">
+            <mxPoint x="25" y="-19" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F_FxToMxMOI9tLohtKqa-15" value="" style="endArrow=classic;html=1;rounded=0;startArrow=classic;startFill=1;strokeWidth=2;" edge="1" parent="1" source="F_FxToMxMOI9tLohtKqa-7" target="F_FxToMxMOI9tLohtKqa-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="55" y="370" as="sourcePoint" />
+            <mxPoint x="105" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F_FxToMxMOI9tLohtKqa-16" value="&lt;font style=&quot;font-size: 12px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Roboto+Mono&quot; face=&quot;Roboto Mono&quot;&gt;&lt;b style=&quot;background-color: rgb(230, 208, 222);&quot;&gt;2. Finds and modifies&lt;br&gt;metadata&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" connectable="0" vertex="1" parent="F_FxToMxMOI9tLohtKqa-15">
+          <mxGeometry x="0.058" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F_FxToMxMOI9tLohtKqa-17" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="F_FxToMxMOI9tLohtKqa-7" target="F_FxToMxMOI9tLohtKqa-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="475" y="460" as="sourcePoint" />
+            <mxPoint x="525" y="410" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="385" y="99" />
+              <mxPoint x="385" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F_FxToMxMOI9tLohtKqa-18" value="&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Roboto+Mono&quot; face=&quot;Roboto Mono&quot; style=&quot;font-size: 12px; background-color: rgb(230, 208, 222);&quot;&gt;&lt;b&gt;3. Sends messages&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" connectable="0" vertex="1" parent="F_FxToMxMOI9tLohtKqa-17">
+          <mxGeometry x="0.5359" y="3" relative="1" as="geometry">
+            <mxPoint x="-55" y="-191" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F_FxToMxMOI9tLohtKqa-19" value="&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Roboto+Mono&quot; face=&quot;Roboto Mono&quot; style=&quot;font-size: 18px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Feed Emulator&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="10" width="199" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F_FxToMxMOI9tLohtKqa-21" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="F_FxToMxMOI9tLohtKqa-9" target="F_FxToMxMOI9tLohtKqa-20">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="605" y="400" as="sourcePoint" />
+            <mxPoint x="655" y="350" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="545" y="210" />
+              <mxPoint x="465" y="210" />
+              <mxPoint x="465" y="99" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F_FxToMxMOI9tLohtKqa-22" value="&lt;font style=&quot;font-size: 12px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Roboto+Mono&quot; face=&quot;Roboto Mono&quot;&gt;&lt;b style=&quot;background-color: rgb(230, 208, 222);&quot;&gt;4. Fetches messages&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" connectable="0" vertex="1" parent="F_FxToMxMOI9tLohtKqa-21">
+          <mxGeometry x="0.4572" y="2" relative="1" as="geometry">
+            <mxPoint x="82" y="73" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F_FxToMxMOI9tLohtKqa-26" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="720.67" y="10" width="200" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="F_FxToMxMOI9tLohtKqa-27" value="&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Roboto+Mono&quot; face=&quot;Roboto Mono&quot; style=&quot;font-size: 18px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Feed Consumer&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="720.67" y="10" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F_FxToMxMOI9tLohtKqa-28" value="&lt;b&gt;&lt;font face=&quot;Roboto Mono&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Roboto+Mono&quot; style=&quot;&quot;&gt;Consumes all&lt;br&gt;Feed Channels&lt;/font&gt;&lt;/b&gt;" style="sketch=0;outlineConnect=0;fontColor=default;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.external_toolkit;labelBackgroundColor=#FFE6CC;spacingTop=0;" vertex="1" parent="1">
+          <mxGeometry x="786.67" y="60" width="68" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="F_FxToMxMOI9tLohtKqa-30" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;fontFamily=Roboto Mono;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRoboto%2BMono;strokeWidth=2;" edge="1" parent="1" source="F_FxToMxMOI9tLohtKqa-28" target="F_FxToMxMOI9tLohtKqa-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1035" y="440" as="sourcePoint" />
+            <mxPoint x="555" y="390" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="905" y="100" />
+              <mxPoint x="905" y="281" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F_FxToMxMOI9tLohtKqa-31" value="&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Roboto+Mono&quot; face=&quot;Roboto Mono&quot; style=&quot;font-size: 12px;&quot;&gt;&lt;b style=&quot;background-color: rgb(230, 208, 222);&quot;&gt;6. Pushes consumed messages to Kafka&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="F_FxToMxMOI9tLohtKqa-30">
+          <mxGeometry x="-0.3757" y="-1" relative="1" as="geometry">
+            <mxPoint x="-104" y="42" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F_FxToMxMOI9tLohtKqa-20" value="&lt;font face=&quot;Roboto Mono&quot;&gt;&lt;b style=&quot;background-color: rgb(255, 230, 204);&quot;&gt;Converts messages to&lt;br&gt;BETER Feed format&lt;/b&gt;&lt;/font&gt;" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.external_toolkit;spacingTop=0;spacing=0;" vertex="1" parent="1">
+          <mxGeometry x="510.5" y="60" width="68" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="F_FxToMxMOI9tLohtKqa-24" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="F_FxToMxMOI9tLohtKqa-20" target="F_FxToMxMOI9tLohtKqa-28">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="955" y="300" as="sourcePoint" />
+            <mxPoint x="1005" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F_FxToMxMOI9tLohtKqa-25" value="&lt;font style=&quot;font-size: 12px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Roboto+Mono&quot; face=&quot;Roboto Mono&quot;&gt;&lt;b style=&quot;background-color: rgb(230, 208, 222);&quot;&gt;5. Consumes SignalR&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" connectable="0" vertex="1" parent="F_FxToMxMOI9tLohtKqa-24">
+          <mxGeometry x="0.5176" y="1" relative="1" as="geometry">
+            <mxPoint x="-48" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Testing Flow" id="XfoPHpi_jetk11SMT5WT">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="uIoxfX3Hwm0ZBIRz__uy-0" />
+        <mxCell id="uIoxfX3Hwm0ZBIRz__uy-1" parent="uIoxfX3Hwm0ZBIRz__uy-0" />
+        <mxCell id="uIoxfX3Hwm0ZBIRz__uy-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="uIoxfX3Hwm0ZBIRz__uy-1" vertex="1">
+          <mxGeometry x="155" y="10" width="200" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="uIoxfX3Hwm0ZBIRz__uy-3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="uIoxfX3Hwm0ZBIRz__uy-1" vertex="1">
+          <mxGeometry x="445" y="10" width="199" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="uIoxfX3Hwm0ZBIRz__uy-4" value="&lt;font size=&quot;1&quot; color=&quot;#cc0066&quot; face=&quot;Roboto Mono&quot;&gt;&lt;b style=&quot;background-color: rgb(255, 204, 230); font-size: 14px;&quot;&gt;API client&lt;/b&gt;&lt;/font&gt;" style="sketch=0;outlineConnect=0;fillColor=#CC0066;strokeColor=#432D57;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.user;fontColor=#ffffff;labelBackgroundColor=#FFFFCC;" parent="uIoxfX3Hwm0ZBIRz__uy-1" vertex="1">
+          <mxGeometry x="5" y="60" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="uIoxfX3Hwm0ZBIRz__uy-5" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.external_toolkit;" parent="uIoxfX3Hwm0ZBIRz__uy-1" vertex="1">
+          <mxGeometry x="221.5" y="60" width="68" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="uIoxfX3Hwm0ZBIRz__uy-6" value="&lt;font size=&quot;1&quot; color=&quot;#cc0066&quot; style=&quot;&quot; face=&quot;Roboto Mono&quot;&gt;&lt;b style=&quot;background-color: rgb(255, 204, 230); font-size: 14px;&quot;&gt;Kafka&lt;/b&gt;&lt;/font&gt;" style="outlineConnect=0;fontColor=#ffffff;fillColor=#CC0066;strokeColor=#A50040;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.generic_database;labelBackgroundColor=default;spacingTop=0;spacingLeft=0;textShadow=0;labelBorderColor=none;spacing=2;shadow=0;" parent="uIoxfX3Hwm0ZBIRz__uy-1" vertex="1">
+          <mxGeometry x="515" y="242" width="59" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="uIoxfX3Hwm0ZBIRz__uy-7" value="&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Roboto+Mono&quot; face=&quot;Roboto Mono&quot; style=&quot;font-size: 18px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Feed Generator&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="uIoxfX3Hwm0ZBIRz__uy-1" vertex="1">
+          <mxGeometry x="156" y="10" width="199" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uIoxfX3Hwm0ZBIRz__uy-8" value="&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Roboto+Mono&quot; face=&quot;Roboto Mono&quot; style=&quot;font-size: 12px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Test Cases&lt;br&gt;local database&lt;/b&gt;&lt;/font&gt;" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.cold_storage;" parent="uIoxfX3Hwm0ZBIRz__uy-1" vertex="1">
+          <mxGeometry x="232.24" y="220" width="45.51" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uIoxfX3Hwm0ZBIRz__uy-9" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#6a00ff;strokeColor=#000000;strokeWidth=2;" parent="uIoxfX3Hwm0ZBIRz__uy-1" source="uIoxfX3Hwm0ZBIRz__uy-4" target="uIoxfX3Hwm0ZBIRz__uy-5" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="55" y="120" as="sourcePoint" />
+            <mxPoint x="105" y="70" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uIoxfX3Hwm0ZBIRz__uy-10" value="&lt;font face=&quot;Roboto Mono&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Roboto+Mono&quot; style=&quot;font-size: 12px;&quot;&gt;&lt;b style=&quot;background-color: rgb(230, 208, 222);&quot;&gt;1. API Call:&lt;br&gt;Run/Stop Test Case&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" parent="uIoxfX3Hwm0ZBIRz__uy-9" vertex="1" connectable="0">
+          <mxGeometry x="-0.418" y="1" relative="1" as="geometry">
+            <mxPoint x="25" y="-19" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uIoxfX3Hwm0ZBIRz__uy-11" value="" style="endArrow=classic;html=1;rounded=0;startArrow=classic;startFill=1;strokeWidth=2;" parent="uIoxfX3Hwm0ZBIRz__uy-1" source="uIoxfX3Hwm0ZBIRz__uy-5" target="uIoxfX3Hwm0ZBIRz__uy-8" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="55" y="370" as="sourcePoint" />
+            <mxPoint x="105" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uIoxfX3Hwm0ZBIRz__uy-12" value="&lt;font style=&quot;font-size: 12px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Roboto+Mono&quot; face=&quot;Roboto Mono&quot;&gt;&lt;b style=&quot;background-color: rgb(230, 208, 222);&quot;&gt;2. Finds and modifies&lt;br&gt;metadata&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" parent="uIoxfX3Hwm0ZBIRz__uy-11" vertex="1" connectable="0">
+          <mxGeometry x="0.058" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uIoxfX3Hwm0ZBIRz__uy-13" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;" parent="uIoxfX3Hwm0ZBIRz__uy-1" source="uIoxfX3Hwm0ZBIRz__uy-5" target="uIoxfX3Hwm0ZBIRz__uy-6" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="475" y="460" as="sourcePoint" />
+            <mxPoint x="525" y="410" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="385" y="99" />
+              <mxPoint x="385" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uIoxfX3Hwm0ZBIRz__uy-14" value="&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Roboto+Mono&quot; face=&quot;Roboto Mono&quot; style=&quot;font-size: 12px; background-color: rgb(230, 208, 222);&quot;&gt;&lt;b&gt;3. Sends messages&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" parent="uIoxfX3Hwm0ZBIRz__uy-13" vertex="1" connectable="0">
+          <mxGeometry x="0.5359" y="3" relative="1" as="geometry">
+            <mxPoint x="-55" y="-191" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uIoxfX3Hwm0ZBIRz__uy-15" value="&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Roboto+Mono&quot; face=&quot;Roboto Mono&quot; style=&quot;font-size: 18px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Feed Emulator&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="uIoxfX3Hwm0ZBIRz__uy-1" vertex="1">
+          <mxGeometry x="445" y="10" width="199" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uIoxfX3Hwm0ZBIRz__uy-16" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;" parent="uIoxfX3Hwm0ZBIRz__uy-1" source="uIoxfX3Hwm0ZBIRz__uy-6" target="uIoxfX3Hwm0ZBIRz__uy-23" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="605" y="400" as="sourcePoint" />
+            <mxPoint x="655" y="350" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="545" y="210" />
+              <mxPoint x="465" y="210" />
+              <mxPoint x="465" y="99" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uIoxfX3Hwm0ZBIRz__uy-17" value="&lt;font style=&quot;font-size: 12px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Roboto+Mono&quot; face=&quot;Roboto Mono&quot;&gt;&lt;b style=&quot;background-color: rgb(230, 208, 222);&quot;&gt;4. Fetches messages&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" parent="uIoxfX3Hwm0ZBIRz__uy-16" vertex="1" connectable="0">
+          <mxGeometry x="0.4572" y="2" relative="1" as="geometry">
+            <mxPoint x="82" y="73" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uIoxfX3Hwm0ZBIRz__uy-18" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="uIoxfX3Hwm0ZBIRz__uy-1" vertex="1">
+          <mxGeometry x="720.67" y="10" width="200" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="uIoxfX3Hwm0ZBIRz__uy-19" value="&lt;font color=&quot;#990000&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Roboto+Mono&quot; face=&quot;Roboto Mono&quot; style=&quot;font-size: 18px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Your Consumer&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="uIoxfX3Hwm0ZBIRz__uy-1" vertex="1">
+          <mxGeometry x="720.67" y="10" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uIoxfX3Hwm0ZBIRz__uy-20" value="&lt;b&gt;&lt;font face=&quot;Roboto Mono&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Roboto+Mono&quot; style=&quot;&quot;&gt;Consumes Feed and&lt;br&gt;processes Data for&lt;br&gt;your own purposes&lt;/font&gt;&lt;/b&gt;" style="sketch=0;outlineConnect=0;fontColor=default;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.external_toolkit;labelBackgroundColor=#D5E8D4;spacingTop=0;" parent="uIoxfX3Hwm0ZBIRz__uy-1" vertex="1">
+          <mxGeometry x="786.67" y="60" width="68" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="uIoxfX3Hwm0ZBIRz__uy-23" value="&lt;font face=&quot;Roboto Mono&quot;&gt;&lt;b style=&quot;background-color: rgb(255, 230, 204);&quot;&gt;Converts messages to&lt;br&gt;BETER Feed format&lt;/b&gt;&lt;/font&gt;" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.external_toolkit;spacingTop=0;spacing=0;" parent="uIoxfX3Hwm0ZBIRz__uy-1" vertex="1">
+          <mxGeometry x="510.5" y="60" width="68" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="uIoxfX3Hwm0ZBIRz__uy-24" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;" parent="uIoxfX3Hwm0ZBIRz__uy-1" source="uIoxfX3Hwm0ZBIRz__uy-23" target="uIoxfX3Hwm0ZBIRz__uy-20" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="955" y="300" as="sourcePoint" />
+            <mxPoint x="1005" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uIoxfX3Hwm0ZBIRz__uy-25" value="&lt;font style=&quot;font-size: 12px;&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Roboto+Mono&quot; face=&quot;Roboto Mono&quot;&gt;&lt;b style=&quot;background-color: rgb(230, 208, 222);&quot;&gt;5. Consumes SignalR&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" parent="uIoxfX3Hwm0ZBIRz__uy-24" vertex="1" connectable="0">
+          <mxGeometry x="0.5176" y="1" relative="1" as="geometry">
+            <mxPoint x="-48" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
