@@ -27,10 +27,10 @@ for developing the applications, for example if you want to improve our tool and
 ### Run pre-built Docker images <a id="run-pre-built-docker-images" />
 
 BETER maintains the following Docker images:
-* [beterco/beter-feed-testing-sandbox-generator](https://hub.docker.com/r/beterco/beter-feed-testing-sandbox-generator)
-- image of the Feed Generator application;
-* [beterco/beter-feed-testing-sandbox-emulator](https://hub.docker.com/r/beterco/beter-feed-testing-sandbox-emulator)
-- image of the Feed Emulator application;
+* [beterco/beter-feed-testing-sandbox-generator](https://hub.docker.com/r/beterco/beter-feed-testing-sandbox-generator) -
+image of the Feed Generator application;
+* [beterco/beter-feed-testing-sandbox-emulator](https://hub.docker.com/r/beterco/beter-feed-testing-sandbox-emulator) -
+image of the Feed Emulator application;
 
 We have prepared [`docker-compose.yml`](../docker-compose.yml) for you to simplify the launch. By default, without any
 additional configuration:
