@@ -4,8 +4,8 @@
       "commandName": "DockerCompose",
       "commandVersion": "1.0",
       "serviceActions": {
-        "beter.feed.testingsandbox.emulator": "StartDebugging",
-        "beter.feed.testingsandbox.generator": "StartDebugging",
+        "emulator": "StartDebugging",
+        "generator": "StartDebugging",
         "kafka": "StartWithoutDebugging",
         "kafka-ui": "StartWithoutDebugging",
         "init-kafka": "StartWithoutDebugging"

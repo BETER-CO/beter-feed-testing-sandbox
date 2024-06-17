@@ -1,11 +1,6 @@
 ﻿using Beter.Feed.TestingSandbox.Common.Constants;
-using Beter.Feed.TestingSandbox.Common.Enums;
-using Beter.Feed.TestingSandbox.Common.Extensions;
-using Beter.Feed.TestingSandbox.Common.Serialization;
 using Beter.Feed.TestingSandbox.Consumer.Options;
 using Beter.Feed.TestingSandbox.Consumer.Producers;
-using Beter.Feed.TestingSandbox.Consumer.Services;
-using Beter.Feed.TestingSandbox.Consumer.Services.Abstract;
 using Beter.Feed.TestingSandbox.Consumer.Utilities;
 using Beter.Feed.TestingSandbox.Models;
 using Beter.Feed.TestingSandbox.Models.GlobalEvents;
@@ -15,7 +10,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.Extensions.Options;
-using Microsoft.FeatureManagement;
 using System.Text.Json.Serialization;
 
 namespace Beter.Feed.TestingSandbox.Consumer.Clients;
@@ -25,28 +19,20 @@ public abstract class FeedServiceClientBase<T> : IFeedClient where T : class, IF
     private readonly string connectionUrl;
     private readonly HubConnection _connection;
 
-    private readonly IFeatureManager _featureManager;
-    private readonly ITestScenarioTemplateService _templateService;
     private readonly IFeedMessageProducer<T> _producer;
     private readonly FeedServiceOptions _feedServiceOptions;
     private readonly ILogger<FeedServiceClientBase<T>> _logger;
-    private readonly SemaphoreSlim _semaphore;
 
     public abstract string Channel { get; }
 
     public FeedServiceClientBase(
-        ITestScenarioTemplateService templateService,
-        IFeatureManager featureManager,
         ILogger<FeedServiceClientBase<T>> logger,
         IOptions<FeedServiceOptions> feedServiceOptions,
         IFeedMessageProducer<T> producer)
     {
-        _semaphore = new SemaphoreSlim(1, 1);
         _logger = logger ?? NullLogger<FeedServiceClientBase<T>>.Instance;
         _producer = producer ?? throw new ArgumentNullException(nameof(producer));
-        _featureManager = featureManager ?? throw new ArgumentNullException(nameof(featureManager));
         _feedServiceOptions = feedServiceOptions.Value ?? throw new ArgumentNullException(nameof(feedServiceOptions));
-        _templateService = templateService ?? throw new ArgumentNullException(nameof(templateService));
 
         connectionUrl = GetConnectionUrl();
         _connection = BuildConnection(connectionUrl);
@@ -131,7 +117,6 @@ public abstract class FeedServiceClientBase<T> : IFeedClient where T : class, IF
     {
         var model = new SubscriptionsRemovedModel { Ids = subscriptions };
 
-        await EnforceThatGotExpectedFeedMessage(model);
         await _producer.ProduceAsync(model, Channel);
 
         _logger.LogInformation(
@@ -156,7 +141,6 @@ public abstract class FeedServiceClientBase<T> : IFeedClient where T : class, IF
     {
         if (messages.Any())
         {
-            await EnforceThatGotExpectedFeedMessage(messages);
             await _producer.ProduceAsync(messages, Channel);
 
             _logger.LogInformation(
@@ -168,63 +152,11 @@ public abstract class FeedServiceClientBase<T> : IFeedClient where T : class, IF
 
     private async Task OnSystemEventHandler(GlobalMessageModel[] messages)
     {
-        await EnforceThatGotExpectedFeedMessage(messages);
         await _producer.ProduceAsync(messages, Channel);
 
         _logger.LogInformation(
            "Channel: {Channel}, System events produced for messages: {MessageIds}",
            Channel,
            string.Join(',', messages.Select(message => message.Id).Distinct()));
-    }
-
-    private async Task EnforceThatGotExpectedFeedMessage<TValue>(TValue actualMessage) where TValue : class
-    {
-        if (await _featureManager.IsEnabledAsync(FeatureManagementFlags.ConsumeByTemplate))
-        {
-            await _semaphore.WaitAsync();
-
-            var hubKind = HubEnumHelper.ToHub(Channel);
-            var nextItem = _templateService.GetNext(hubKind);
-            var expectedMessage = JsonHubSerializer.Deserialize<TValue>(nextItem);
-
-            if (!AreMessagesEqual(expectedMessage, actualMessage))
-            {
-                LogMessageMismatch(expectedMessage, actualMessage, hubKind);
-            }
-
-            LogTemplateProcessedStatus();
-
-            _semaphore.Release();
-        }
-    }
-
-    private static bool AreMessagesEqual<TValue>(TValue expectedMessage, TValue actualMessage) where TValue : class
-    {
-        try
-        {
-            return TestScenarioMessagesComparer.Compare(expectedMessage, actualMessage);
-        }
-        catch
-        {
-            return false;
-        }
-    }
-
-    private void LogMessageMismatch<TValue>(TValue expectedMessage, TValue actualMessage, HubKind hubKind)
-    {
-        var actual = JsonHubSerializer.Serialize(actualMessage);
-        var expected = JsonHubSerializer.Serialize(expectedMessage);
-
-        _templateService.SetMissmatchItem(hubKind, expected, actual);
-
-        _logger.LogError($"It is wrong sequence of messages.");
-    }
-
-    private void LogTemplateProcessedStatus()
-    {
-        if (!_templateService.GetTemplate().IsProcessed)
-        {
-            _logger.LogInformation($"Successfully processed.");
-        }
     }
 }

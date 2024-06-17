@@ -1,6 +1,4 @@
-﻿using Beter.Feed.TestingSandbox.Emulator.Messaging;
-
-namespace Beter.Feed.TestingSandbox.Emulator.Messaging.Handlers.Abstract;
+﻿namespace Beter.Feed.TestingSandbox.Emulator.Messaging.Handlers.Abstract;
 
 public interface IMessageHandler
 {

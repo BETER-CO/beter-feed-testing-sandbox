@@ -67,7 +67,8 @@ services:
     ports:
       - "8080:8080"
     depends_on:
-      - kafka
+      kafka:
+        condition: service_healthy
     environment:
       KAFKA_CLUSTERS_0_NAME: feed_testing_tools
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:29092
@@ -86,12 +87,10 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
-      - FeedEmulator__ApiBaseUrl=http://beter.feed.testing-sandbox.emulator
       - Publisher__BootstrapServers=kafka:29092
       - Publisher__Topic=feed-testing-sandbox-generator
       - Publisher__SecurityProtocol=0
       - Publisher__AllowAutoCreateTopics=true
-      - Heartbeat__IntervalInSeconds=5
     healthcheck:
       test: curl --fail http://localhost:80/health
       interval: 10s
@@ -101,8 +100,10 @@ services:
     ports:
        - 51857:80
     depends_on:
-      - kafka
-      - init-kafka
+      kafka:
+        condition: service_healthy
+      init-kafka:
+        condition: service_completed_successfully
 
   beter.feed.testingsandbox.emulator:
     build:
@@ -124,7 +125,7 @@ services:
       - SignalR__FeedTradingEndpoint=/trading
       - SignalR__FeedScoreboardEndpoint=/scoreboard
       - SignalR__FeedIncidentEndpoint=/incident
-      - SignalR__TtlForHeartbetRecord=00:00:05
+      - Heartbeat__IntervalInSeconds=5
     healthcheck:
       test: curl --fail http://localhost:80/health
       interval: 10s
@@ -134,8 +135,10 @@ services:
     ports:
        - 51858:80
     depends_on:
-      - kafka
-      - init-kafka
+      kafka:
+        condition: service_healthy
+      init-kafka:
+        condition: service_completed_successfully
 
   beter.feed.testingsandbox.consumer:
     build:
@@ -147,7 +150,6 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
-      - FeatureManagement__ConsumeByTemplate=true
       - Publisher__BootstrapServers=kafka:29092
       - Publisher__SecurityProtocol=0
       - Publisher__AllowAutoCreateTopics=true
@@ -167,9 +169,12 @@ services:
     ports:
        - 51859:80
     depends_on:
-      - kafka
-      - init-kafka
-      - beter.feed.testingsandbox.emulator
+      kafka:
+        condition: service_healthy
+      init-kafka:
+        condition: service_completed_successfully
+      beter.feed.testingsandbox.emulator:
+        condition: service_started
 
 networks: 
   feed-testing-sandbox:

@@ -2,11 +2,11 @@
 {
     public static class WaitHelper
     {
-        public static async Task WaitForCondition(Func<Task<bool>> condition, int delayMilliseconds = 3000, int maxRetries = 1000)
+        public static async Task WaitForCondition(Func<bool> condition, int delayMilliseconds = 3000, int maxRetries = 1000)
         {
             for (int i = 0; i < maxRetries; i++)
             {
-                if (await condition())
+                if (condition())
                 {
                     return;
                 }

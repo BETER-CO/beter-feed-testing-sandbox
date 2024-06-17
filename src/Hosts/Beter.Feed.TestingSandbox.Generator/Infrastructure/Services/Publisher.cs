@@ -6,14 +6,11 @@ using Beter.Feed.TestingSandbox.Common.Constants;
 using Beter.Feed.TestingSandbox.Generator.Application.Contracts;
 using Beter.Feed.TestingSandbox.Generator.Infrastructure.Options;
 using Beter.Feed.TestingSandbox.Generator.Domain.TestScenarios;
-using Beter.Feed.TestingSandbox.Models;
 
 namespace Beter.Feed.TestingSandbox.Generator.Infrastructure.Services;
 
 public class Publisher : IPublisher
 {
-    private const string HeartbeatPlaybackId = "heartbeat-playback";
-
     private readonly PublishOptions _options;
     private readonly IProducer<string, string> _producer;
     private readonly ILogger<Publisher> _logger;
@@ -75,21 +72,6 @@ public class Publisher : IPublisher
         };
     }
 
-    public async Task PublishAsync(HeartbeatModel model, CancellationToken cancellationToken)
-    {
-        try
-        {
-            _logger.LogInformation("Publish Heartbeat message to topic {GeneratorTopic} At: {Time}", _options.Topic, DateTimeOffset.UtcNow);
-
-            await _producer.ProduceAsync(_options.Topic, CreateHeartbeatMessage(model), cancellationToken);
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex, "Failed to publish heartbeat to topic {GeneratorTopic}", _options.Topic);
-        }
-    }
-
-
     public async Task PublishEmptyAsync(string messageType, string channel, Guid playbackId, CancellationToken cancellationToken)
     {
         try
@@ -123,21 +105,6 @@ public class Publisher : IPublisher
         };
     }
 
-    private static Message<string, string> CreateHeartbeatMessage(HeartbeatModel model)
-    {
-        var typeAsBytes = Encoding.UTF8.GetBytes(MessageTypes.Heartbeat);
-
-        return new Message<string, string>
-        {
-            Headers = new Headers
-            {
-                { HeaderNames.MessageType, typeAsBytes },
-                { HeaderNames.PlaybackId, Encoding.UTF8.GetBytes(HeartbeatPlaybackId) }
-            },
-            Value = JsonHubSerializer.Serialize(model)
-        };
-    }
-
     public async Task PublishAsync(TestScenarioMessage message, Guid playbackId, CancellationToken cancellationToken)
     {
         try
@@ -159,7 +126,7 @@ public class Publisher : IPublisher
             Headers = new Headers
             {
                 { HeaderNames.MessageType, Encoding.UTF8.GetBytes(message.MessageType) },
-                { HeaderNames.MessageChannel, Encoding.UTF8.GetBytes(message.Channel) },
+                { HeaderNames.MessageChannel, Encoding.UTF8.GetBytes(message.Channel ?? string.Empty) },
                 { HeaderNames.PlaybackId, Encoding.UTF8.GetBytes(playbackId.ToString()) }
             },
             Value = message.Value.ToJsonString()

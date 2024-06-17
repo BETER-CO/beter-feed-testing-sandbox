@@ -33,7 +33,7 @@ public sealed class ConsumeMessageConverter : IConsumeMessageConverter
             { MessageTypes.Incident.ToUpperInvariant(), typeof(IncidentModel[]) },
             { MessageTypes.SubscriptionsRemoved.ToUpperInvariant(), typeof(SubscriptionsRemovedModel) },
             { MessageTypes.SystemEvent.ToUpperInvariant(), typeof(GlobalMessageModel[]) },
-            { MessageTypes.Heartbeat.ToUpperInvariant(), typeof(HeartbeatModel)}
+            { MessageTypes.SteeringCommand.ToUpperInvariant(), typeof(SteeringCommandModel) }
         };
     }
 

@@ -1,6 +1,4 @@
-﻿using System.Text.Json.Serialization;
-
-namespace Beter.Feed.TestingSandbox.Generator.Domain;
+﻿namespace Beter.Feed.TestingSandbox.Generator.Domain;
 
 public sealed class SteeringCommand
 {

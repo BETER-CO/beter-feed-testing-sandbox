@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Beter.Feed.TestingSandbox.Models.Incidents;
-using Beter.Feed.TestingSandbox.Emulator.Services;
 using Beter.Feed.TestingSandbox.Emulator.Publishers;
+using Beter.Feed.TestingSandbox.Emulator.Services.Connections;
 
 namespace Beter.Feed.TestingSandbox.Emulator.SignalR.Hubs.V1;
 

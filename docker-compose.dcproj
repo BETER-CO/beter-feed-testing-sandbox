@@ -7,14 +7,14 @@
     <ProjectGuid>c0f16408-c973-488a-bdfc-9821fcf69d14</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}</DockerServiceUrl>
-    <DockerServiceName>beter.testingtools.emulator</DockerServiceName>
+    <DockerServiceName>emulator</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="docker-compose.development.yml" />
+    <None Include="docker-compose.yml" />
+    <None Include="docker-compose.local-build.yml" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-	<DockerComposeBaseFilePath>docker-compose.development</DockerComposeBaseFilePath>
-    <AdditionalComposeFilePaths>docker-compose.development.override.yml</AdditionalComposeFilePaths>
+	<DockerComposeBaseFilePath>docker-compose.local-build</DockerComposeBaseFilePath>
     <DockerTargetOS>Linux</DockerTargetOS>
     <DockerLaunchAction>None</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/{Scheme}://{ServiceHost}:{ServicePort}</DockerServiceUrl>

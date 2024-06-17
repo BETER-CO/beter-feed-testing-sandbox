@@ -1,6 +1,6 @@
 ﻿using AutoFixture;
 using Beter.Feed.TestingSandbox.Emulator.Publishers;
-using Beter.Feed.TestingSandbox.Emulator.Services;
+using Beter.Feed.TestingSandbox.Emulator.Services.Connections;
 using Beter.Feed.TestingSandbox.Emulator.SignalR.Hubs;
 using Beter.Feed.TestingSandbox.Models.GlobalEvents;
 using Microsoft.AspNetCore.SignalR;

@@ -5,15 +5,21 @@ This is part of the testing application responsible for replaying sandbox test c
 
 You may use Swagger for managing:
 * Feed Generator: http://localhost:51857/swagger/index.html
-* Feed Emulator: http://localhost:51857/swagger/index.html
+* Feed Emulator: http://localhost:51858/swagger/index.html
 
 > Change ports if you [launched applications](RUNNING_APPS.md) exposing different ports.
 
 ## Using Swagger
 
-1. Visit Swagger page and find the appropriate API method.
+1. Visit Swagger pages and find the appropriate API method.
 
-![swagger-main-page.jpg](img/swagger-main-page.jpg)
+**Feed Generator Swagger API screenshot**:
+
+![swagger-main-page-generator.jpg](img/swagger-main-page-generator.jpg)
+
+**Feed Emulator Swagger API screenshot**:
+
+![swagger-main-page-emulator.jpg](img/swagger-main-page-emulator.jpg)
 
 2. You may find examples of calls and possible responses with status codes. If you click "Try it out" you may
 make an API call right from Swagger.
@@ -30,7 +36,9 @@ make an API call right from Swagger.
 
 ## Using REST API programmatically
 
-### Manage Connections
+### Feed Emulator
+
+#### Manage Connections
 
 Using the methods for managing connections,
 you can delete connections by `connectionID` and get a list of currently active connections to the Feed Emulator.
@@ -137,7 +145,9 @@ STATUS 200 - *application/json* The command successfully executed. Returns the n
 STATUS 400 - Incorrect request or incorrect values.
 </details>
 
-### Manage Sandbox Scenarios
+### Feed Generator
+
+#### Manage Sandbox Scenarios
 
 This section describes the methods for managing the playback of sandbox scenarios.
 The built-in sandbox scenarios will automatically load when the application starts.

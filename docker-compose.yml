@@ -98,12 +98,10 @@ services:
     environment:
       - "ASPNETCORE_ENVIRONMENT=${BFTS_GENERATOR_ASPNETCORE_ENVIRONMENT:-Development}"
       - "ASPNETCORE_URLS=http://+:80"
-      - "FeedEmulator__ApiBaseUrl=http://emulator"
       - "Publisher__BootstrapServers=kafka:29092"
       - "Publisher__Topic=feed-testing-sandbox-generator"
       - "Publisher__SecurityProtocol=0"
       - "Publisher__AllowAutoCreateTopics=true"
-      - "Heartbeat__IntervalInSeconds=5"
 
   emulator:
     image: "beterco/beter-feed-testing-sandbox-emulator:${BFTS_EMULATOR_DOCKER_IMAGE_VERSION:-latest}"
@@ -135,6 +133,7 @@ services:
       - "SignalR__FeedTradingEndpoint=/trading"
       - "SignalR__FeedScoreboardEndpoint=/scoreboard"
       - "SignalR__FeedIncidentEndpoint=/incident"
+      - "Heartbeat__IntervalInSeconds=5"
 
 networks: 
   feed-testing-sandbox:
