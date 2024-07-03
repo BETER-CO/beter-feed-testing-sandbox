@@ -29,23 +29,26 @@ If you encounter any issues or unacceptable behavior, please report them by open
 
 ### Fork the Repository
 
-For detailed instructions on how to set up your local development environment and launch services, please refer to the [Local Development](https://github.com/BETER-CO/beter-feed-testing-sandbox/blob/main/doc/RUNNING_APPS.md#local-development) section in the repository documentation.
+For detailed instructions on how to set up your local development environment and launch services, please refer to the [Local Development](doc/RUNNING_APPS.md#local-development) section in the repository documentation.
 
 
 ### Create a Branch
 
-1. Create a new branch for your feature or bug fix following GitHub's recommended flow. Use descriptive names for your branches, such as `feature/your-feature-name` or `bugfix/your-bugfix-description`:
+1. Clone the repository to your local machine:
+
+```bash
+git clone https://github.com/BETER-CO/beter-feed-testing-sandbox.git
+cd beter-feed-testing-sandbox
+```
+2. Create a new branch for your feature or bug fix following GitHub's recommended flow. Use descriptive names for your branches, such as feature/your-feature-name or bugfix/your-bugfix-description:
 
 ```bash
 git checkout -b your-branch-name
 ```
-2. Clone the repository, make your changes, and then provide a pull request (PR) to the main repository.
 
 ### Make Changes
 
-### Make Changes
-
-1. Make your changes to the codebase, following the project's coding standards and guidelines. For detailed information on the coding standards and guidelines, please refer to the [Coding Standards](https://github.com/BETER-CO/beter-feed-testing-sandbox/blob/main/doc/CODING_STANDARDS.md) document.
+1. Make your changes to the codebase, following the project's coding standards and guidelines. For detailed information on the coding standards and guidelines, please refer to the [Coding Standards](doc/CODING_STANDARDS.md) document.
 
 
 ### Test Your Changes
@@ -58,8 +61,9 @@ git checkout -b your-branch-name
 1. Push your branch to your forked repository:
 
 ```bash
-git push origin feature/your-feature-name
+git push origin your-branch-name
 ```
+
 2. Open a pull request (PR) in the main repository:
 * Go to the main repository.
 * Click on the "Pull Requests" tab.
@@ -107,7 +111,7 @@ The version format is: `MAJOR.MINOR.PATCH`
 
 #### Documentation
 
-1. Documentation describing the Emulated Test Cases must be present in the git repository. For detailed descriptions, please refer to the [SCENARIOS.md](https://github.com/BETER-CO/beter-feed-testing-sandbox/blob/main/doc/SCENARIOS.md) document.
+1. Documentation describing the Emulated Test Cases must be present in the git repository. For detailed descriptions, please refer to the [SCENARIOS.md](doc/SCENARIOS.md) document.
 2. The history of changes must be documented for every Emulated Test Case, including both major and minor updates, with every version change implicitly specified.
 3. The documentation must explain any limitations according to current requirements.
 4. Changes to Emulated Test Cases are forbidden without an update of the version and an update of the description and log of changes.
@@ -153,7 +157,7 @@ If you encounter any issues or have suggestions for improvements, please open an
 
 If you need help or have any questions, feel free to reach out via:
 
-* The [Issues](https://github.com/BETER-CO/beter-feed-testing-sandbox/issues) section in GitHub
+* The [Issues](issues) section in GitHub
 * By submitting a pull request (PR) with detailed information regarding your issue or question.
 
 

@@ -28,5 +28,6 @@ you can explore and analyze this data. In this mode, the scheme looks like this:
 - [Test Cases](doc/SCENARIOS.md)
 
 ## Contributing
-Contributions are welcome! If you encounter any issues or have suggestions for improvement, feel free to open an issue
-or submit a pull request in the repository.
+
+We welcome contributions! If you encounter any issues or have suggestions for improvements, please open an issue or submit a pull request in the repository. For detailed guidelines on how to contribute, please refer to our [Contributing Guide](CONTRIBUTING.md).
+
