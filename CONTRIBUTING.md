@@ -157,7 +157,7 @@ If you encounter any issues or have suggestions for improvements, please open an
 
 If you need help or have any questions, feel free to reach out via:
 
-* The [Issues](issues) section in GitHub
+* The [Issues](https://github.com/BETER-CO/beter-feed-testing-sandbox/issues) section in GitHub
 * By submitting a pull request (PR) with detailed information regarding your issue or question.
 
 
