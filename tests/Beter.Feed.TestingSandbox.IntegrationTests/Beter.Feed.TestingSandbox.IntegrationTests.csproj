@@ -43,6 +43,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\Hosts\Beter.Feed.TestingSandbox.Consumer\Beter.Feed.TestingSandbox.Consumer.csproj" />
     <ProjectReference Include="..\..\src\Hosts\Beter.Feed.TestingSandbox.Emulator\Beter.Feed.TestingSandbox.Emulator.csproj" />
+    <ProjectReference Include="..\..\src\Hosts\Beter.Feed.TestingSandbox.Generator\Beter.Feed.TestingSandbox.Generator.csproj" />
   </ItemGroup>
 
   <ItemGroup>

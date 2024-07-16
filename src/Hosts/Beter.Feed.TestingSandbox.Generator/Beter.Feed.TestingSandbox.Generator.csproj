@@ -29,5 +29,4 @@
       <ProjectReference Include="..\..\Common\Beter.Feed.TestingSandbox.Hosting\Beter.Feed.TestingSandbox.Hosting.csproj" />
     </ItemGroup>
 
-    <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
 </Project>
