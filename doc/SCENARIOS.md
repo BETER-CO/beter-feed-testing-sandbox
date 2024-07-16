@@ -19,7 +19,7 @@ Four-digit scenarios are for specific sports disciplines, and one/two-digit ones
 ## Efootball scenarios
 
 ### Case 1001
-<b>Description:</b> standart FIFA match between two players. All tradings are live.
+<b>Description:</b> standart FIFA match between two players. Booked Prematch and Live odds.
 Data transfer for four channels. Odds format - decimal. <br />
 <b>Precondition:</b> Client is connected to feed <br />
 <b>Steps:</b><br />
@@ -28,7 +28,7 @@ Data transfer for four channels. Odds format - decimal. <br />
 3. Match finished;<br />
 
 ### Case 2001
-<b>Description:</b> standart Volta match between two players. All tradings are live.
+<b>Description:</b> standart Volta match between two players. Booked Prematch and Live odds. All tradings are live.
 Data transfer for four channels. Odds format - decimal.<br />
 <b>Precondition:</b> Client is connected to feed <br />
 <b>Steps:</b><br />
@@ -39,6 +39,15 @@ Data transfer for four channels. Odds format - decimal.<br />
 ### Case 1002
 <b>Description:</b> FIFA match between bots. All tradings are live.
 Data transfer for four channels. Odds format - decimal. <br />
+<b>Precondition:</b> Client is connected to feed <br />
+<b>Steps:</b><br />
+1. Match booked before start (default situation using autobooking filter);<br />
+2. Match started;<br />
+3. Match finished;<br />
+
+### Case 2002
+<b>Description:</b> Volta match between two players. Booked only live odds.
+Data transfer for four channels. Odds format - decimal.<br />
 <b>Precondition:</b> Client is connected to feed <br />
 <b>Steps:</b><br />
 1. Match booked before start (default situation using autobooking filter);<br />
@@ -59,6 +68,15 @@ Data transfer for four channels. Odds format - decimal. <br />
 2. Match started;<br />
 3. Client connected to feed channels
 4. The match continued until the end;<br />
+
+### Case 2003
+<b>Description:</b> Volta match between two players. Booked only prematch odds.
+Data transfer for four channels. Odds format - decimal.<br />
+<b>Precondition:</b> Client is connected to feed <br />
+<b>Steps:</b><br />
+1. Match booked before start (default situation using autobooking filter);<br />
+2. Match started;<br />
+3. Match finished;<br />
 
 ### Case 1004
 **Do not run it in parallel**
@@ -281,6 +299,27 @@ and odds parameters in  outcomes.  <br />
 3. During the first half, all values except for "Decimal odds" were turned off; <br />
 4. After start the second time restored "American odds"; <br />
 5. Match finished; <br />
+
+### Case 1022
+<b>Description:</b> standart FIFA match between two players. Booked only Live odds.
+Data transfer for four channels. Odds format - decimal. <br />
+<b>Precondition:</b> Client is connected to feed <br />
+<b>Steps:</b><br />
+1. Match booked before start (default situation using autobooking filter);<br />
+2. Match started;<br />
+3. Match finished;<br />
+
+### Case 1023
+<b>Description:</b> standart FIFA match between two players. Booked only Prematch odds.
+Data transfer for four channels. Odds format - decimal. <br />
+<b>Precondition:</b> Client is connected to feed <br />
+<b>Steps:</b><br />
+1. Match booked before start (default situation using autobooking filter);<br />
+2. Match started;<br />
+3. Match finished;<br />
+
+
+
 
 
 ## System scenarios
