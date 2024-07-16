@@ -1,6 +1,6 @@
 {
   "caseId": 1014,
-  "version": "1.0",
+  "version": "1.1",
   "description": "FIFA_unbooking_match_with_markets",
   "messages": [
     {
@@ -30,7 +30,8 @@
               "name": {
                 "en": "ESportsBattle",
                 "ru": "ESportsBattle"
-              }
+              },
+              "tier": 0
             },
             "id": "3fc669a6-8eb0-4894-9e0c-0a5e352bdc7e",
             "name": {
@@ -124,7 +125,15 @@
             "enabled": false,
             "direction": 0
           },
-          "comment": {},
+           "comment": {},
+ "regulations": {
+   "matchFormat": null,
+   "canBeDrawInMap": null,
+   "maps": null,
+   "realTimeDuration": 6,
+   "extraPeriodRealTimeDuration": null,
+   "roundQty": null
+ },
           "timestamp": 1714384988858,
           "msgType": 3,
           "offset": 12860160

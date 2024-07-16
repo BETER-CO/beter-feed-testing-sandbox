@@ -1,6 +1,6 @@
 {
   "caseId": 1004,
-  "version": "1.0",
+  "version": "1.1",
   "description": "FIFA_connect_after_finish",
   "messages": [
     {
@@ -30,7 +30,8 @@
               "name": {
                 "en": "ESportsBattle",
                 "ru": "ESportsBattle"
-              }
+              },
+              "tier": 0
             },
             "id": "2efdc11f-13cb-47d8-901d-979ff712cb9d",
             "name": {
@@ -2474,7 +2475,15 @@
             "enabled": false,
             "direction": 0
           },
-          "comment": {},
+           "comment": {},
+ "regulations": {
+   "matchFormat": null,
+   "canBeDrawInMap": null,
+   "maps": null,
+   "realTimeDuration": 6,
+   "extraPeriodRealTimeDuration": null,
+   "roundQty": null
+ },
           "timestamp": 1714050827732,
           "msgType": 2,
           "offset": 131679801
@@ -4166,7 +4175,8 @@
               "name": {
                 "en": "ESportsBattle",
                 "ru": "ESportsBattle"
-              }
+              },
+              "tier": 0
             },
             "id": "2efdc11f-13cb-47d8-901d-979ff712cb9d",
             "name": {
@@ -6610,7 +6620,15 @@
             "enabled": false,
             "direction": 0
           },
-          "comment": {},
+           "comment": {},
+ "regulations": {
+   "matchFormat": null,
+   "canBeDrawInMap": null,
+   "maps": null,
+   "realTimeDuration": 6,
+   "extraPeriodRealTimeDuration": null,
+   "roundQty": null
+ },
           "timestamp": 1714050827732,
           "msgType": 2,
           "offset": 131679801

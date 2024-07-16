@@ -1,6 +1,6 @@
 {
   "caseId": 1015,
-  "version": "1.0",
+  "version": "1.1",
   "description": "FIFA_booking_after_event_start",
   "messages": [
     {
@@ -28,7 +28,15 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
+           "comment": {},
+ "regulations": {
+   "matchFormat": null,
+   "canBeDrawInMap": null,
+   "maps": null,
+   "realTimeDuration": 6,
+   "extraPeriodRealTimeDuration": null,
+   "roundQty": null
+ },
           "timestamp": 1714419083798,
           "msgType": 3,
           "offset": 12865163
@@ -65,7 +73,8 @@
               "name": {
                 "en": "ESportsBattle",
                 "ru": "ESportsBattle"
-              }
+              },
+              "tier": 0
             },
             "id": "3fc669a6-8eb0-4894-9e0c-0a5e352bdc7e",
             "name": {
@@ -4585,7 +4594,15 @@
             "enabled": false,
             "direction": 0
           },
-          "comment": {},
+           "comment": {},
+ "regulations": {
+   "matchFormat": null,
+   "canBeDrawInMap": null,
+   "maps": null,
+   "realTimeDuration": 6,
+   "extraPeriodRealTimeDuration": null,
+   "roundQty": null
+ },
           "timestamp": 1714419100605,
           "msgType": 1,
           "offset": 12865169
@@ -8947,7 +8964,15 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
+           "comment": {},
+ "regulations": {
+   "matchFormat": null,
+   "canBeDrawInMap": null,
+   "maps": null,
+   "realTimeDuration": 6,
+   "extraPeriodRealTimeDuration": null,
+   "roundQty": null
+ },
           "timestamp": 1714419112886,
           "msgType": 1,
           "offset": 12865173
@@ -13313,7 +13338,15 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
+           "comment": {},
+ "regulations": {
+   "matchFormat": null,
+   "canBeDrawInMap": null,
+   "maps": null,
+   "realTimeDuration": 6,
+   "extraPeriodRealTimeDuration": null,
+   "roundQty": null
+ },
           "timestamp": 1714419115772,
           "msgType": 1,
           "offset": 12865176
@@ -34951,7 +34984,15 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
+           "comment": {},
+ "regulations": {
+   "matchFormat": null,
+   "canBeDrawInMap": null,
+   "maps": null,
+   "realTimeDuration": 6,
+   "extraPeriodRealTimeDuration": null,
+   "roundQty": null
+ },
           "timestamp": 1714419183877,
           "msgType": 1,
           "offset": 12865187
@@ -54589,7 +54630,15 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
+           "comment": {},
+ "regulations": {
+   "matchFormat": null,
+   "canBeDrawInMap": null,
+   "maps": null,
+   "realTimeDuration": 6,
+   "extraPeriodRealTimeDuration": null,
+   "roundQty": null
+ },
           "timestamp": 1714419221547,
           "msgType": 1,
           "offset": 12865196
@@ -60233,7 +60282,15 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
+           "comment": {},
+ "regulations": {
+   "matchFormat": null,
+   "canBeDrawInMap": null,
+   "maps": null,
+   "realTimeDuration": 6,
+   "extraPeriodRealTimeDuration": null,
+   "roundQty": null
+ },
           "timestamp": 1714419221904,
           "msgType": 1,
           "offset": 12865199
@@ -65843,7 +65900,15 @@
             "enabled": false,
             "direction": 0
           },
-          "comment": {},
+           "comment": {},
+ "regulations": {
+   "matchFormat": null,
+   "canBeDrawInMap": null,
+   "maps": null,
+   "realTimeDuration": 6,
+   "extraPeriodRealTimeDuration": null,
+   "roundQty": null
+ },
           "timestamp": 1714419226819,
           "msgType": 1,
           "offset": 12865201
@@ -65880,7 +65945,8 @@
               "name": {
                 "en": "ESportsBattle",
                 "ru": "ESportsBattle"
-              }
+              },
+              "tier": 0
             },
             "id": "3fc669a6-8eb0-4894-9e0c-0a5e352bdc7e",
             "name": {

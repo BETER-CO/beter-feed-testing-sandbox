@@ -28,4 +28,6 @@
       <ProjectReference Include="..\..\Common\Beter.Feed.TestingSandbox.Common\Beter.Feed.TestingSandbox.Common.csproj" />
       <ProjectReference Include="..\..\Common\Beter.Feed.TestingSandbox.Hosting\Beter.Feed.TestingSandbox.Hosting.csproj" />
     </ItemGroup>
+
+    <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
 </Project>
