@@ -28,15 +28,15 @@
             "enabled": true,
             "direction": 0
           },
-           "comment": {},
- "regulations": {
-   "matchFormat": null,
-   "canBeDrawInMap": null,
-   "maps": null,
-   "realTimeDuration": 6,
-   "extraPeriodRealTimeDuration": null,
-   "roundQty": null
- },
+          "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714419083798,
           "msgType": 3,
           "offset": 12865163
@@ -4593,15 +4593,15 @@
             "enabled": false,
             "direction": 0
           },
-           "comment": {},
- "regulations": {
-   "matchFormat": null,
-   "canBeDrawInMap": null,
-   "maps": null,
-   "realTimeDuration": 6,
-   "extraPeriodRealTimeDuration": null,
-   "roundQty": null
- },
+          "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714419100605,
           "msgType": 1,
           "offset": 12865169
@@ -8963,15 +8963,15 @@
             "enabled": true,
             "direction": 0
           },
-           "comment": {},
- "regulations": {
-   "matchFormat": null,
-   "canBeDrawInMap": null,
-   "maps": null,
-   "realTimeDuration": 6,
-   "extraPeriodRealTimeDuration": null,
-   "roundQty": null
- },
+          "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714419112886,
           "msgType": 1,
           "offset": 12865173
@@ -13337,15 +13337,15 @@
             "enabled": true,
             "direction": 0
           },
-           "comment": {},
- "regulations": {
-   "matchFormat": null,
-   "canBeDrawInMap": null,
-   "maps": null,
-   "realTimeDuration": 6,
-   "extraPeriodRealTimeDuration": null,
-   "roundQty": null
- },
+          "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714419115772,
           "msgType": 1,
           "offset": 12865176
@@ -34983,15 +34983,15 @@
             "enabled": true,
             "direction": 0
           },
-           "comment": {},
- "regulations": {
-   "matchFormat": null,
-   "canBeDrawInMap": null,
-   "maps": null,
-   "realTimeDuration": 6,
-   "extraPeriodRealTimeDuration": null,
-   "roundQty": null
- },
+          "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714419183877,
           "msgType": 1,
           "offset": 12865187
@@ -54629,15 +54629,15 @@
             "enabled": true,
             "direction": 0
           },
-           "comment": {},
- "regulations": {
-   "matchFormat": null,
-   "canBeDrawInMap": null,
-   "maps": null,
-   "realTimeDuration": 6,
-   "extraPeriodRealTimeDuration": null,
-   "roundQty": null
- },
+          "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714419221547,
           "msgType": 1,
           "offset": 12865196
@@ -60281,15 +60281,15 @@
             "enabled": true,
             "direction": 0
           },
-           "comment": {},
- "regulations": {
-   "matchFormat": null,
-   "canBeDrawInMap": null,
-   "maps": null,
-   "realTimeDuration": 6,
-   "extraPeriodRealTimeDuration": null,
-   "roundQty": null
- },
+          "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714419221904,
           "msgType": 1,
           "offset": 12865199
@@ -65899,15 +65899,15 @@
             "enabled": false,
             "direction": 0
           },
-           "comment": {},
- "regulations": {
-   "matchFormat": null,
-   "canBeDrawInMap": null,
-   "maps": null,
-   "realTimeDuration": 6,
-   "extraPeriodRealTimeDuration": null,
-   "roundQty": null
- },
+          "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714419226819,
           "msgType": 1,
           "offset": 12865201

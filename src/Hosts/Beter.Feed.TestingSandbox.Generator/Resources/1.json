@@ -28,15 +28,15 @@
             "enabled": false,
             "direction": 0
           },
-           "comment": {},
- "regulations": {
-   "matchFormat": null,
-   "canBeDrawInMap": null,
-   "maps": null,
-   "realTimeDuration": 6,
-   "extraPeriodRealTimeDuration": null,
-   "roundQty": null
- },
+          "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1715080630573,
           "msgType": 3,
           "offset": 13000041
@@ -6809,15 +6809,15 @@
             "enabled": false,
             "direction": 0
           },
-           "comment": {},
- "regulations": {
-   "matchFormat": null,
-   "canBeDrawInMap": null,
-   "maps": null,
-   "realTimeDuration": 6,
-   "extraPeriodRealTimeDuration": null,
-   "roundQty": null
- },
+          "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1715085313751,
           "msgType": 1,
           "offset": 13001001
@@ -9064,15 +9064,15 @@
             "enabled": false,
             "direction": 0
           },
-           "comment": {},
- "regulations": {
-   "matchFormat": null,
-   "canBeDrawInMap": null,
-   "maps": null,
-   "realTimeDuration": 6,
-   "extraPeriodRealTimeDuration": null,
-   "roundQty": null
- },
+          "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1715085315218,
           "msgType": 1,
           "offset": 13001004
@@ -11319,15 +11319,15 @@
             "enabled": true,
             "direction": 0
           },
-           "comment": {},
- "regulations": {
-   "matchFormat": null,
-   "canBeDrawInMap": null,
-   "maps": null,
-   "realTimeDuration": 6,
-   "extraPeriodRealTimeDuration": null,
-   "roundQty": null
- },
+          "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1715085317476,
           "msgType": 1,
           "offset": 13001007
@@ -13666,15 +13666,15 @@
             "enabled": true,
             "direction": 0
           },
-           "comment": {},
- "regulations": {
-   "matchFormat": null,
-   "canBeDrawInMap": null,
-   "maps": null,
-   "realTimeDuration": 6,
-   "extraPeriodRealTimeDuration": null,
-   "roundQty": null
- },
+          "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1715085318635,
           "msgType": 1,
           "offset": 13001011
@@ -19891,15 +19891,15 @@
             "enabled": true,
             "direction": 0
           },
-           "comment": {},
- "regulations": {
-   "matchFormat": null,
-   "canBeDrawInMap": null,
-   "maps": null,
-   "realTimeDuration": 6,
-   "extraPeriodRealTimeDuration": null,
-   "roundQty": null
- },
+          "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1715085321755,
           "msgType": 1,
           "offset": 13001015
@@ -23766,15 +23766,15 @@
             "enabled": true,
             "direction": 0
           },
-           "comment": {},
- "regulations": {
-   "matchFormat": null,
-   "canBeDrawInMap": null,
-   "maps": null,
-   "realTimeDuration": 6,
-   "extraPeriodRealTimeDuration": null,
-   "roundQty": null
- },
+          "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1715085324803,
           "msgType": 1,
           "offset": 13001018
@@ -27611,15 +27611,15 @@
             "enabled": true,
             "direction": 0
           },
-           "comment": {},
- "regulations": {
-   "matchFormat": null,
-   "canBeDrawInMap": null,
-   "maps": null,
-   "realTimeDuration": 6,
-   "extraPeriodRealTimeDuration": null,
-   "roundQty": null
- },
+          "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1715085329034,
           "msgType": 1,
           "offset": 13001020
@@ -31698,15 +31698,15 @@
             "enabled": true,
             "direction": 0
           },
-           "comment": {},
- "regulations": {
-   "matchFormat": null,
-   "canBeDrawInMap": null,
-   "maps": null,
-   "realTimeDuration": 6,
-   "extraPeriodRealTimeDuration": null,
-   "roundQty": null
- },
+          "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1715085331294,
           "msgType": 1,
           "offset": 13001022
@@ -36357,15 +36357,15 @@
             "enabled": true,
             "direction": 0
           },
-           "comment": {},
- "regulations": {
-   "matchFormat": null,
-   "canBeDrawInMap": null,
-   "maps": null,
-   "realTimeDuration": 6,
-   "extraPeriodRealTimeDuration": null,
-   "roundQty": null
- },
+          "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1715085333565,
           "msgType": 1,
           "offset": 13001025
@@ -52624,15 +52624,15 @@
             "enabled": false,
             "direction": 0
           },
-           "comment": {},
- "regulations": {
-   "matchFormat": null,
-   "canBeDrawInMap": null,
-   "maps": null,
-   "realTimeDuration": 6,
-   "extraPeriodRealTimeDuration": null,
-   "roundQty": null
- },
+          "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1715085358036,
           "msgType": 1,
           "offset": 13001032
@@ -58105,15 +58105,15 @@
             "enabled": false,
             "direction": 0
           },
-           "comment": {},
- "regulations": {
-   "matchFormat": null,
-   "canBeDrawInMap": null,
-   "maps": null,
-   "realTimeDuration": 6,
-   "extraPeriodRealTimeDuration": null,
-   "roundQty": null
- },
+          "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1715085360955,
           "msgType": 1,
           "offset": 13001035
@@ -63595,15 +63595,15 @@
             "enabled": true,
             "direction": 0
           },
-           "comment": {},
- "regulations": {
-   "matchFormat": null,
-   "canBeDrawInMap": null,
-   "maps": null,
-   "realTimeDuration": 6,
-   "extraPeriodRealTimeDuration": null,
-   "roundQty": null
- },
+          "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1715085361723,
           "msgType": 1,
           "offset": 13001038
@@ -69085,15 +69085,15 @@
             "enabled": true,
             "direction": 0
           },
-           "comment": {},
- "regulations": {
-   "matchFormat": null,
-   "canBeDrawInMap": null,
-   "maps": null,
-   "realTimeDuration": 6,
-   "extraPeriodRealTimeDuration": null,
-   "roundQty": null
- },
+          "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1715085363244,
           "msgType": 1,
           "offset": 13001041
@@ -99235,15 +99235,15 @@
             "enabled": true,
             "direction": 0
           },
-           "comment": {},
- "regulations": {
-   "matchFormat": null,
-   "canBeDrawInMap": null,
-   "maps": null,
-   "realTimeDuration": 6,
-   "extraPeriodRealTimeDuration": null,
-   "roundQty": null
- },
+          "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1715085431438,
           "msgType": 1,
           "offset": 13001055
@@ -105345,15 +105345,15 @@
             "enabled": true,
             "direction": 0
           },
-           "comment": {},
- "regulations": {
-   "matchFormat": null,
-   "canBeDrawInMap": null,
-   "maps": null,
-   "realTimeDuration": 6,
-   "extraPeriodRealTimeDuration": null,
-   "roundQty": null
- },
+          "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1715085432643,
           "msgType": 1,
           "offset": 13001057
@@ -111831,15 +111831,15 @@
             "enabled": true,
             "direction": 0
           },
-           "comment": {},
- "regulations": {
-   "matchFormat": null,
-   "canBeDrawInMap": null,
-   "maps": null,
-   "realTimeDuration": 6,
-   "extraPeriodRealTimeDuration": null,
-   "roundQty": null
- },
+          "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1715085433203,
           "msgType": 1,
           "offset": 13001060
@@ -118835,15 +118835,15 @@
             "enabled": false,
             "direction": 0
           },
-           "comment": {},
- "regulations": {
-   "matchFormat": null,
-   "canBeDrawInMap": null,
-   "maps": null,
-   "realTimeDuration": 6,
-   "extraPeriodRealTimeDuration": null,
-   "roundQty": null
- },
+          "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1715085440667,
           "msgType": 1,
           "offset": 13001063
