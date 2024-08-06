@@ -1,6 +1,6 @@
 {
   "caseId": 1005,
-  "version": "1.0",
+  "version": "1.1",
   "description": "FIFA_canceled_match_without_markets",
   "messages": [
     {
@@ -29,6 +29,14 @@
             "direction": 0
           },
           "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714384989080,
           "msgType": 3,
           "offset": 12860168
@@ -256,6 +264,14 @@
             "direction": 0
           },
           "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714385472738,
           "msgType": 1,
           "offset": 12860262

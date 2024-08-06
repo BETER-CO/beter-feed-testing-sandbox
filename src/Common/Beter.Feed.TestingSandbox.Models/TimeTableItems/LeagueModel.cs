@@ -11,5 +11,4 @@ public class LeagueModel : NamedIdentityModelBase
     }
     [Key("competitorType")] public int CompetitorType { get; set; }
     [Key("brand")] public BrandModel Brand { get; set; }
-    [Key("tier")] public int Tier { get; set; }
 }

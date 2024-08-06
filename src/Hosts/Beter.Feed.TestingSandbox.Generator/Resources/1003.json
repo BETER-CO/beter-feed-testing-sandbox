@@ -1,6 +1,6 @@
 {
   "caseId": 1003,
-  "version": "1.0",
+  "version": "1.1",
   "description": "FIFA_connect_after_start",
   "messages": [
     {
@@ -29,6 +29,14 @@
             "direction": 0
           },
           "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714049464231,
           "msgType": 2,
           "offset": 131669637
@@ -11526,6 +11534,14 @@
             "direction": 0
           },
           "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714049547582,
           "msgType": 1,
           "offset": 131670336
@@ -15229,6 +15245,14 @@
             "direction": 0
           },
           "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714049549621,
           "msgType": 1,
           "offset": 131670365
@@ -15302,6 +15326,14 @@
             "direction": 0
           },
           "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714049549653,
           "msgType": 1,
           "offset": 131670367
@@ -32241,6 +32273,14 @@
             "direction": 0
           },
           "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714049563479,
           "msgType": 1,
           "offset": 131670499
@@ -34496,6 +34536,14 @@
             "direction": 0
           },
           "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714049565636,
           "msgType": 1,
           "offset": 131670517
@@ -73263,6 +73311,14 @@
             "direction": 0
           },
           "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714049732179,
           "msgType": 1,
           "offset": 131671891
@@ -75464,6 +75520,14 @@
             "direction": 0
           },
           "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714049735496,
           "msgType": 1,
           "offset": 131671916
@@ -84186,6 +84250,14 @@
             "direction": 0
           },
           "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714049773551,
           "msgType": 1,
           "offset": 131672182
@@ -88559,6 +88631,14 @@
             "direction": 0
           },
           "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714049776184,
           "msgType": 1,
           "offset": 131672223
@@ -88679,6 +88759,14 @@
             "direction": 0
           },
           "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714049776223,
           "msgType": 1,
           "offset": 131672229
@@ -115165,6 +115253,14 @@
             "direction": 0
           },
           "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714049801266,
           "msgType": 1,
           "offset": 131672428
@@ -120119,6 +120215,14 @@
             "direction": 0
           },
           "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714049803401,
           "msgType": 1,
           "offset": 131672451
@@ -122620,6 +122724,14 @@
             "direction": 0
           },
           "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714049803426,
           "msgType": 1,
           "offset": 131672455
@@ -130878,6 +130990,14 @@
             "direction": 0
           },
           "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714049830735,
           "msgType": 1,
           "offset": 131672628

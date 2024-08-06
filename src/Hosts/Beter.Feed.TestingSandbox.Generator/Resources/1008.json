@@ -1,6 +1,6 @@
 {
   "caseId": 1008,
-  "version": "1.0",
+  "version": "1.1",
   "description": "FIFA_technical_lose",
   "messages": [
     {
@@ -125,6 +125,14 @@
             "direction": 0
           },
           "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714384988782,
           "msgType": 3,
           "offset": 12860156
@@ -2438,6 +2446,14 @@
             "direction": 0
           },
           "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714389883321,
           "msgType": 1,
           "offset": 12861080
@@ -6837,6 +6853,14 @@
             "direction": 0
           },
           "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714389967587,
           "msgType": 1,
           "offset": 12861102
@@ -9084,6 +9108,14 @@
             "direction": 0
           },
           "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714389971159,
           "msgType": 1,
           "offset": 12861105

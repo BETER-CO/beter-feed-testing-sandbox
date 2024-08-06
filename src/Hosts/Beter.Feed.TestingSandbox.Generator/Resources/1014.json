@@ -1,6 +1,6 @@
 {
   "caseId": 1014,
-  "version": "1.0",
+  "version": "1.1",
   "description": "FIFA_unbooking_match_with_markets",
   "messages": [
     {
@@ -125,6 +125,14 @@
             "direction": 0
           },
           "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714384988858,
           "msgType": 3,
           "offset": 12860160

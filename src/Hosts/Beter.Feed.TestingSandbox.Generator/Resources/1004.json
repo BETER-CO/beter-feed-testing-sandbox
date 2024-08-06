@@ -1,6 +1,6 @@
 {
   "caseId": 1004,
-  "version": "1.0",
+  "version": "1.1",
   "description": "FIFA_connect_after_finish",
   "messages": [
     {
@@ -2475,6 +2475,14 @@
             "direction": 0
           },
           "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714050827732,
           "msgType": 2,
           "offset": 131679801
@@ -6611,6 +6619,14 @@
             "direction": 0
           },
           "comment": {},
+          "regulations": {
+            "matchFormat": null,
+            "canBeDrawInMap": null,
+            "maps": null,
+            "realTimeDuration": 6,
+            "extraPeriodRealTimeDuration": null,
+            "roundQty": null
+          },
           "timestamp": 1714050827732,
           "msgType": 2,
           "offset": 131679801
