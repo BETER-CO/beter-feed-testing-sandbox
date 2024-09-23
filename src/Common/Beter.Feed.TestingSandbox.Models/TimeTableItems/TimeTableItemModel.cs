@@ -1,5 +1,4 @@
-﻿using Beter.Feed.TestingSandbox.Models;
-using MessagePack;
+﻿using MessagePack;
 
 namespace Beter.Feed.TestingSandbox.Models.TimeTableItems;
 
@@ -27,4 +26,5 @@ public class TimeTableItemModel : NamedIdentityModelBase, IFeedMessage
     [Key("willBePrematch")] public bool WillBePrematch { get; set; }
     [Key("messageType")] public int MsgType { get; set; }
     [Key("offset")] public long Offset { get; set; }
+    [Key("extra")] public Dictionary<string, string> Extra { get; set; }
 }
