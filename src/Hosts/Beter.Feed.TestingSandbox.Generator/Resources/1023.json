@@ -29,7 +29,6 @@
             "enabled": false,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "realTimeDuration": 4
           },
@@ -70,7 +69,7 @@
                 "en": "ESportsBattle",
                 "ru": "ESportsBattle"
               }
-            }
+            },
             "id": "24741e4c-018c-4114-973e-b90896f3d087",
             "name": {
               "en": "FA Cup",
@@ -132,7 +131,8 @@
           "name": {
             "en": "Aston Villa (Glumac) - Newcastle United (Izzy)",
             "ru": "Астон Вилла (Glumac) - Ньюкасл Юнайтед (Izzy)"
-          }
+          },
+          "extra": {}
         }
       ],
       "channel": "time_table",
@@ -9857,7 +9857,7 @@
                 "en": "ESportsBattle",
                 "ru": "ESportsBattle"
               }
-            }
+            },
             "id": "24741e4c-018c-4114-973e-b90896f3d087",
             "name": {
               "en": "FA Cup",
@@ -9919,7 +9919,8 @@
           "name": {
             "en": "Aston Villa (Glumac) - Newcastle United (Izzy)",
             "ru": "Астон Вилла (Glumac) - Ньюкасл Юнайтед (Izzy)"
-          }
+          },
+          "extra": {}
         }
       ],
       "channel": "time_table",
@@ -9951,7 +9952,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "realTimeDuration": 4
           },
@@ -10026,7 +10026,7 @@
                 "en": "ESportsBattle",
                 "ru": "ESportsBattle"
               }
-            }
+            },
             "id": "24741e4c-018c-4114-973e-b90896f3d087",
             "name": {
               "en": "FA Cup",
@@ -10088,7 +10088,8 @@
           "name": {
             "en": "Aston Villa (Glumac) - Newcastle United (Izzy)",
             "ru": "Астон Вилла (Glumac) - Ньюкасл Юнайтед (Izzy)"
-          }
+          },
+          "extra": {}
         }
       ],
       "channel": "time_table",
@@ -10158,7 +10159,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "realTimeDuration": 4
           },
@@ -10310,7 +10310,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "realTimeDuration": 4
           },
@@ -10348,7 +10347,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "realTimeDuration": 4
           },
@@ -10386,7 +10384,6 @@
             "enabled": false,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "realTimeDuration": 4
           },
@@ -11293,7 +11290,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "realTimeDuration": 4
           },
@@ -13818,7 +13814,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "realTimeDuration": 4
           },
@@ -14649,7 +14644,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "realTimeDuration": 4
           },
@@ -17886,7 +17880,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "realTimeDuration": 4
           },
@@ -17967,7 +17960,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "realTimeDuration": 4
           },
@@ -21162,7 +21154,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "realTimeDuration": 4
           },
@@ -22291,7 +22282,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "realTimeDuration": 4
           },
@@ -27700,7 +27690,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "realTimeDuration": 4
           },
@@ -28791,7 +28780,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "realTimeDuration": 4
           },
@@ -35160,7 +35148,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "realTimeDuration": 4
           },
@@ -38347,7 +38334,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "realTimeDuration": 4
           },
@@ -39878,7 +39864,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "realTimeDuration": 4
           },
@@ -46037,7 +46022,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "realTimeDuration": 4
           },
@@ -55050,7 +55034,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "realTimeDuration": 4
           },
@@ -59595,7 +59578,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "realTimeDuration": 4
           },
@@ -62652,7 +62634,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "realTimeDuration": 4
           },
@@ -64665,7 +64646,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "realTimeDuration": 4
           },
@@ -74432,7 +74412,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "realTimeDuration": 4
           },
@@ -91953,7 +91932,6 @@
             "enabled": false,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "realTimeDuration": 4
           },
@@ -91994,7 +91972,7 @@
                 "en": "ESportsBattle",
                 "ru": "ESportsBattle"
               }
-            }
+            },
             "id": "24741e4c-018c-4114-973e-b90896f3d087",
             "name": {
               "en": "FA Cup",
@@ -92056,7 +92034,8 @@
           "name": {
             "en": "Aston Villa (Glumac) - Newcastle United (Izzy)",
             "ru": "Астон Вилла (Glumac) - Ньюкасл Юнайтед (Izzy)"
-          }
+          },
+          "extra": {}
         }
       ],
       "channel": "time_table",
@@ -96465,7 +96444,7 @@
                 "en": "ESportsBattle",
                 "ru": "ESportsBattle"
               }
-            }
+            },
             "id": "24741e4c-018c-4114-973e-b90896f3d087",
             "name": {
               "en": "FA Cup",
@@ -96527,7 +96506,8 @@
           "name": {
             "en": "Aston Villa (Glumac) - Newcastle United (Izzy)",
             "ru": "Астон Вилла (Glumac) - Ньюкасл Юнайтед (Izzy)"
-          }
+          },
+          "extra": {}
         }
       ],
       "channel": "time_table",

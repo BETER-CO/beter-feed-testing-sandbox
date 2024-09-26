@@ -28,7 +28,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -135,7 +134,8 @@
           "name": {
             "en": "Liverpool (33Brut) - Manchester City (Arcos)",
             "ru": "Ливерпуль (33Brut) - Манчестер Сити (Arcos)"
-          }
+          },
+          "extra": {}
         }
       ],
       "channel": "time_table",
@@ -4593,7 +4593,6 @@
             "enabled": false,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -8963,7 +8962,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -13337,7 +13335,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -34983,7 +34980,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -54629,7 +54625,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -60281,7 +60276,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -65899,7 +65893,6 @@
             "enabled": false,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -66006,7 +65999,8 @@
           "name": {
             "en": "Liverpool (33Brut) - Manchester City (Arcos)",
             "ru": "Ливерпуль (33Brut) - Манчестер Сити (Arcos)"
-          }
+          },
+          "extra": {}
         }
       ],
       "channel": "time_table",

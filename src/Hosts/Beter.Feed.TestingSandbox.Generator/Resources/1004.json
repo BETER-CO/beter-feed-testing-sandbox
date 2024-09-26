@@ -93,7 +93,8 @@
           "name": {
             "en": "Milan (dm1trena) - Napoli (d1pseN)",
             "ru": "Милан (dm1trena) - Наполи (d1pseN)"
-          }
+          },
+          "extra": {}
         }
       ],
       "channel": "time_table",
@@ -2474,7 +2475,6 @@
             "enabled": false,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -4237,7 +4237,8 @@
           "name": {
             "en": "Milan (dm1trena) - Napoli (d1pseN)",
             "ru": "Милан (dm1trena) - Наполи (d1pseN)"
-          }
+          },
+          "extra": {}
         }
       ],
       "channel": "time_table",
@@ -6618,7 +6619,6 @@
             "enabled": false,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
