@@ -28,7 +28,6 @@
             "enabled": false,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -135,7 +134,8 @@
           "name": {
             "en": "France (33Brut) - Spain (Andrew)",
             "ru": "Франция (33Brut) - Испания (Andrew)"
-          }
+          },
+          "extra": {}
         }
       ],
       "channel": "time_table",
@@ -231,7 +231,8 @@
           "name": {
             "en": "France (33Brut) - Spain (Andrew)",
             "ru": "Франция (33Brut) - Испания (Andrew)"
-          }
+          },
+          "extra": {}
         }
       ],
       "channel": "time_table",
@@ -6809,7 +6810,6 @@
             "enabled": false,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -9064,7 +9064,6 @@
             "enabled": false,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -11319,7 +11318,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -11426,7 +11424,8 @@
           "name": {
             "en": "France (33Brut) - Spain (Andrew)",
             "ru": "Франция (33Brut) - Испания (Andrew)"
-          }
+          },
+          "extra": {}
         }
       ],
       "channel": "time_table",
@@ -13666,7 +13665,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -19891,7 +19889,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -23766,7 +23763,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -27611,7 +27607,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -31698,7 +31693,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -36357,7 +36351,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -52624,7 +52617,6 @@
             "enabled": false,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -58105,7 +58097,6 @@
             "enabled": false,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -63595,7 +63586,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -69085,7 +69075,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -87142,7 +87131,8 @@
           "name": {
             "en": "France (33Brut) - Spain (Andrew)",
             "ru": "Франция (33Brut) - Испания (Andrew)"
-          }
+          },
+          "extra": {}
         }
       ],
       "channel": "time_table",
@@ -99235,7 +99225,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -105345,7 +105334,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -111831,7 +111819,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -118835,7 +118822,6 @@
             "enabled": false,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -118942,7 +118928,8 @@
           "name": {
             "en": "France (33Brut) - Spain (Andrew)",
             "ru": "Франция (33Brut) - Испания (Andrew)"
-          }
+          },
+          "extra": {}
         }
       ],
       "channel": "time_table",

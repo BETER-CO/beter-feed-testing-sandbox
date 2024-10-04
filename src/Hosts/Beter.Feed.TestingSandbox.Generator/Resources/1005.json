@@ -28,7 +28,6 @@
             "enabled": false,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -135,7 +134,8 @@
           "name": {
             "en": "Tottenham Hotspur (Bane) - Arsenal (Andrew)",
             "ru": "Тоттенхэм (Bane) - Арсенал (Andrew)"
-          }
+          },
+          "extra": {}
         }
       ],
       "channel": "time_table",
@@ -231,7 +231,8 @@
           "name": {
             "en": "Tottenham Hotspur (Bane) - Arsenal (Andrew)",
             "ru": "Тоттенхэм (Bane) - Арсенал (Andrew)"
-          }
+          },
+          "extra": {}
         }
       ],
       "channel": "time_table",
@@ -263,7 +264,6 @@
             "enabled": false,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -370,7 +370,8 @@
           "name": {
             "en": "Tottenham Hotspur (Bane) - Arsenal (Andrew)",
             "ru": "Тоттенхэм (Bane) - Арсенал (Andrew)"
-          }
+          },
+          "extra": {}
         }
       ],
       "channel": "time_table",

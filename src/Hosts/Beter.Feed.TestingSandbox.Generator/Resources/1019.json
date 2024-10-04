@@ -93,7 +93,8 @@
           "name": {
             "en": "Milan (Bomb1to) - Internazionale (dm1trena)",
             "ru": "Милан (Bomb1to) - Интер (dm1trena)"
-          }
+          },
+          "extra": {}
         }
       ],
       "channel": "time_table",
@@ -125,7 +126,6 @@
             "enabled": false,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -3203,7 +3203,8 @@
           "name": {
             "en": "Milan (Bomb1to) - Internazionale (dm1trena)",
             "ru": "Милан (Bomb1to) - Интер (dm1trena)"
-          }
+          },
+          "extra": {}
         }
       ],
       "channel": "time_table",
@@ -3235,7 +3236,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -4794,7 +4794,8 @@
           "name": {
             "en": "Milan (Bomb1to) - Internazionale (dm1trena)",
             "ru": "Милан (Bomb1to) - Интер (dm1trena)"
-          }
+          },
+          "extra": {}
         }
       ],
       "channel": "time_table",
@@ -4826,7 +4827,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -15140,7 +15140,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -25582,7 +25581,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -31591,7 +31589,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -34634,7 +34631,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -34677,7 +34673,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -43065,7 +43060,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -46520,7 +46514,6 @@
             "enabled": false,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -48331,7 +48324,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -53478,7 +53470,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -56976,7 +56967,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -58753,7 +58743,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -70588,7 +70577,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -82452,7 +82440,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -86450,7 +86437,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -94322,7 +94308,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -106186,7 +106171,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -110206,7 +110190,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -112274,7 +112257,6 @@
             "enabled": true,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -126928,7 +126910,8 @@
           "name": {
             "en": "Milan (Bomb1to) - Internazionale (dm1trena)",
             "ru": "Милан (Bomb1to) - Интер (dm1trena)"
-          }
+          },
+          "extra": {}
         }
       ],
       "channel": "time_table",
@@ -126965,7 +126948,6 @@
             "enabled": false,
             "direction": 0
           },
-          "comment": {},
           "regulations": {
             "matchFormat": null,
             "canBeDrawInMap": null,
@@ -129169,7 +129151,8 @@
           "name": {
             "en": "Milan (Bomb1to) - Internazionale (dm1trena)",
             "ru": "Милан (Bomb1to) - Интер (dm1trena)"
-          }
+          },
+          "extra": {}
         }
       ],
       "channel": "time_table",

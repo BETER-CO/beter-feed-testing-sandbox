@@ -7,6 +7,11 @@ and adding new sports - leads to scenario changes. This section will help you fi
 we've made to match product changes.
 
 
+##  Appdates for [Release 17.09.2024](https://docs.beter.co/public)
+* Added object "extra" to time_table channel for all existing scenarios;
+* Removed object "comments" from the scoreboard channel for all existing scenarios;
+
+
 ##  Appdates for [Release 24.07.2024](https://docs.beter.co/public)
 * Added new scenarios that describe interaction with different booking types.
 2002 Regular Volta match between two teams|players. Booked only prematch odds ;
