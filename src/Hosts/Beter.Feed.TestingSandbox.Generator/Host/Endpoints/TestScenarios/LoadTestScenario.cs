@@ -13,6 +13,11 @@ public sealed class LoadTestScenario : IEndpointProvider
         endpoints.MapPost($"{ApiConstant.ApiPrefix}/test-scenarios/load", LoadTestScenarioHandler)
             .WithName("LoadTestScenario")
             .Produces<TestScenarioDto>()
+            // Binding IFormFile adds anti-forgery metadata, which would reject every upload unless
+            // the anti-forgery middleware is registered. This is a machine-to-machine REST API with
+            // no cookie authentication, so there is no request forgery to protect against and no way
+            // for a client to supply a token.
+            .DisableAntiforgery()
             .WithTags(ApiConstant.TestScenarioTag);
     }
 

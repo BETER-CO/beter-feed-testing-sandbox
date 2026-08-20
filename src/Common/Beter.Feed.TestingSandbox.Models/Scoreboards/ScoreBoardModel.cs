@@ -13,6 +13,7 @@ public class ScoreBoardModel : IFeedMessage
     [Key("sportId")] public int? SportId { get; set; }
     [Key("stage")] public int? Stage { get; set; }
     [Key("scores")] public IEnumerable<IntervalScoreModel> Scores { get; set; }
+    [Key("playerProps")] public IEnumerable<PlayerPropsModel> PlayerProps { get; set; }
     [Key("timer")] public TimerModel Timer { get; set; }
     [Key("firstServer")] public string FirstServer { get; set; }
     [Key("server")] public string Server { get; set; }

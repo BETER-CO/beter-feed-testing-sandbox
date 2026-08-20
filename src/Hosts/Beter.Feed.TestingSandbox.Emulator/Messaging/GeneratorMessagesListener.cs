@@ -21,7 +21,7 @@ public class GeneratorMessagesListener : BackgroundService
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "{Error while consuming generator messages");
+            _logger.LogError(ex, "Error while consuming generator messages");
         }
     }
 

@@ -20,6 +20,11 @@ namespace Beter.Feed.TestingSandbox.Generator.UnitTests.Application.Services.Pla
         public TimeTableTransformationRuleTests()
         {
             _fixture.Customizations.Add(new JsonNodeBuilder());
+
+            // ParticipantStructureModel.Composition is recursive, which AutoFixture rejects by default.
+            _fixture.Behaviors.OfType<ThrowingRecursionBehavior>().ToList()
+                .ForEach(behavior => _fixture.Behaviors.Remove(behavior));
+            _fixture.Behaviors.Add(new OmitOnRecursionBehavior());
         }
 
         [Fact]

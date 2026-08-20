@@ -19,6 +19,8 @@ public class TimeTableItemModel : NamedIdentityModelBase, IFeedMessage
     [Key("tournament")] public TournamentModel Tournament { get; set; }
     [Key("venue")] public VenueModel Venue { get; set; }
     [Key("participants")] public ParticipantModel[] Participants { get; set; }
+    [Key("participantStructure")] public ParticipantStructureModel[] ParticipantStructure { get; set; }
+    [Key("excludedParticipants")] public ExcludedParticipantModel[] ExcludedParticipants { get; set; }
     [Key("broadcastUrl")] public string BroadcastUrl { get; set; }
     [Key("deleted")] public DateTime? Deleted { get; set; }
     [Key("timestamp")] public long Timestamp { get; set; }

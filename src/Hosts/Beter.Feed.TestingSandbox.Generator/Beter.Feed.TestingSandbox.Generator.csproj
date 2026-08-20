@@ -1,12 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFramework>net10.0</TargetFramework>
         <Nullable>disable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <LangVersion>latest</LangVersion>
-        <EnablePreviewFeatures>True</EnablePreviewFeatures>
-        <NoWarn>CA2252</NoWarn>
         <UserSecretsId>62f7f28d-d74a-4511-891a-36093b8704d4</UserSecretsId>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
         <DockerfileContext>..\..</DockerfileContext>
@@ -18,7 +16,7 @@
       <PackageReference Include="FluentValidation" Version="11.9.1" />
       <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
       <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="6.0.0" />
-      <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="7.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="10.0.5" />
       <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
       <PackageReference Include="Polly.Extensions.Http" Version="3.0.0" />
       <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />

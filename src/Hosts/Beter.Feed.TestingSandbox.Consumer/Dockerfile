@@ -1,5 +1,5 @@
-ARG DOTNET_SDK_IMAGE=mcr.microsoft.com/dotnet/sdk:7.0
-ARG DOTNET_RUNTIME_IMAGE=mcr.microsoft.com/dotnet/aspnet:7.0.14-bullseye-slim
+ARG DOTNET_SDK_IMAGE=mcr.microsoft.com/dotnet/sdk:10.0
+ARG DOTNET_RUNTIME_IMAGE=mcr.microsoft.com/dotnet/aspnet:10.0
 
 FROM $DOTNET_RUNTIME_IMAGE AS base
 

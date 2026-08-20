@@ -63,7 +63,7 @@ Example,
 ```shell
 $ Publisher__BootstrapServers="localhost:8014" \
   FeedService__Host="http://localhost:51858" \
-  dotnet src/Hosts/Beter.Feed.TestingSandbox.Consumer/bin/Debug/net7.0/Beter.Feed.TestingSandbox.Consumer.dll
+  dotnet src/Hosts/Beter.Feed.TestingSandbox.Consumer/bin/Debug/net10.0/Beter.Feed.TestingSandbox.Consumer.dll
 ```
 
 5. Launch the test case after starting the Feed Emulator
