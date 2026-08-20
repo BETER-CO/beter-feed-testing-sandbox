@@ -13,6 +13,7 @@ Four-digit scenarios are for specific sports disciplines, and one/two-digit ones
 | ----------| -------  | ------------------------------------------------------------------- |
 | 1xxx      | Efootbal | FIFA matches                                                        |
 | 2xxx      | Efootbal | Volta matches                                                       |
+| 3xxx      | CounterStrike 2 | CS2 matches                                                  |
 |    x      |    -     | System scenarios, can based on different sports disciplines         |
 
 
@@ -321,6 +322,33 @@ Data transfer for four channels. Odds format - decimal. <br />
 
 
 
+
+## Counter-Strike 2 scenarios
+
+### Case 3001
+<b>Description:</b> CS2 match between two teams, covering the player-oriented parts of the feed
+contracts: `participantStructure` and `excludedParticipants` in the
+[time_table](https://docs.beter.co/public/feed/timetable-feed/data-contracts-tt) channel, and
+`playerProps` in the
+[scoreboard](https://docs.beter.co/public/feed/scoreboard-feed/data-contracts-sb) channel.
+Data transfer for four channels. Odds format - decimal. <br />
+<b>Precondition:</b> Client is connected to feed <br />
+<b>Steps:</b><br />
+1. Match booked before start, both teams published with a full five-player roster in
+`participantStructure` and an empty `excludedParticipants`;<br />
+2. Match started, `playerProps` delivered for every player of both teams across intervals 11, 12
+and 1;<br />
+3. One player is excluded from the first team and a replacement joins it. The excluded player moves
+to `excludedParticipants`, the replacement appears in the team `composition`;<br />
+4. Subsequent scoreboard messages keep the excluded player's `playerProps` and add `playerProps`
+for the replacement;<br />
+5. Match finished;<br />
+
+<b>Details:</b> every `playerProps.participantId` resolves to a participant of the match - either a
+player in `participantStructure.composition` or an entry in `excludedParticipants`. Resolution is
+performed against the roster from the **latest** `time_table` message, not against a single
+snapshot: the roster changes during the match, so a `participantId` may be unknown when compared
+with an earlier `time_table` message.
 
 ## System scenarios
 ### Case 1

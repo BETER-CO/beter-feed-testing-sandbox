@@ -12,6 +12,14 @@ namespace Beter.Feed.TestingSandbox.Emulator.UnitTests.Messaging.Handlers
     {
         private static readonly Fixture Fixture = new();
 
+        static TimeTableMessageHandlerTests()
+        {
+            // ParticipantStructureModel.Composition is recursive, which AutoFixture rejects by default.
+            Fixture.Behaviors.OfType<ThrowingRecursionBehavior>().ToList()
+                .ForEach(behavior => Fixture.Behaviors.Remove(behavior));
+            Fixture.Behaviors.Add(new OmitOnRecursionBehavior());
+        }
+
         [Fact]
         public void Constructor_NullPublisher_ThrowsArgumentNullException()
         {

@@ -9,7 +9,7 @@ For testing only:
 For development (modifying tools or building and running tools locally):
 - [Docker Engine](https://docs.docker.com/engine/install/);
 - [Docker Compose](https://docs.docker.com/compose/install/), not standalone `docker-compose`;
-- [.NET SDK 7](https://dotnet.microsoft.com/en-us/download) or greater.
+- [.NET SDK 10](https://dotnet.microsoft.com/en-us/download) or greater.
 
 ## Run the applications
 
@@ -251,9 +251,9 @@ If the ports haven't changed, run the projects as usual.
 $ dotnet build src/Hosts/Beter.Feed.TestingSandbox.Emulator/Beter.Feed.TestingSandbox.Emulator.csproj
 $ dotnet build src/Hosts/Beter.Feed.TestingSandbox.Generator/Beter.Feed.TestingSandbox.Generator.csproj
 
-$ dotnet src/Hosts/Beter.Feed.TestingSandbox.Emulator/bin/Debug/net7.0/Beter.Feed.TestingSandbox.Emulator.dll
+$ dotnet src/Hosts/Beter.Feed.TestingSandbox.Emulator/bin/Debug/net10.0/Beter.Feed.TestingSandbox.Emulator.dll
 # and in second terminal window
-$ dotnet src/Hosts/Beter.Feed.TestingSandbox.Generator/bin/Debug/net7.0/Beter.Feed.TestingSandbox.Generator.dll
+$ dotnet src/Hosts/Beter.Feed.TestingSandbox.Generator/bin/Debug/net10.0/Beter.Feed.TestingSandbox.Generator.dll
 ```
 
 If the Kafka port was changed, you need to specify the new port value before running the applications.
@@ -272,7 +272,7 @@ Example,
 # if Kafka's port is exposed to port 8014 on host machine...
 $ ASPNETCORE_URLS="http://+:51858" \
   Messaging__ConsumerConfig__BootstrapServers="localhost:8014" \
-  src/Hosts/Beter.Feed.TestingSandbox.Emulator/bin/Debug/net7.0/Beter.Feed.TestingSandbox.Emulator.dll
+  src/Hosts/Beter.Feed.TestingSandbox.Emulator/bin/Debug/net10.0/Beter.Feed.TestingSandbox.Emulator.dll
 ```
 
 For Feed Generator:
@@ -290,7 +290,7 @@ Example,
 # ... and Feed Emulator oponed port 51858 for incoming connections...
 $ ASPNETCORE_URLS="http://+:51857" \
   Publisher__BootstrapServers="localhost:8014" \
-  dotnet bin/Debug/net7.0/Beter.Feed.TestingSandbox.Generator.dll
+  dotnet bin/Debug/net10.0/Beter.Feed.TestingSandbox.Generator.dll
 ```
 5. Use applications
 

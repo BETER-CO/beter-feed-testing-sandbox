@@ -18,10 +18,10 @@ public class CustomHeadersMiddleware
             throw new ArgumentNullException(nameof(httpContext));
         }
 
-        httpContext.Response.Headers.Add("X-Frame-Options", "DENY");
-        httpContext.Response.Headers.Add("X-Content-Type-Options", "nosniff");
-        httpContext.Response.Headers.Add("X-XSS-Protection", "1; mode=block");
-        httpContext.Response.Headers.Add("Cache-Control", "no-cache");
+        httpContext.Response.Headers["X-Frame-Options"] = "DENY";
+        httpContext.Response.Headers["X-Content-Type-Options"] = "nosniff";
+        httpContext.Response.Headers["X-XSS-Protection"] = "1; mode=block";
+        httpContext.Response.Headers["Cache-Control"] = "no-cache";
 
         await _next(httpContext);
     }

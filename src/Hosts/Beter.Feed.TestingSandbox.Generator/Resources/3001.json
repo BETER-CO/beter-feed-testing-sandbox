@@ -1,0 +1,4824 @@
+{
+  "caseId": 3001,
+  "version": "1.0",
+  "description": "CS2_player_props_and_participant_structure",
+  "additionalInfo": {},
+  "messages": [
+    {
+      "value": [
+        {
+          "sport": "CounterStrike",
+          "sportId": 3,
+          "startDate": "2026-08-12T15:38:00Z",
+          "status": 1,
+          "category": {
+            "id": "0192d76e-7307-7ac0-85d1-0e6d1ca3cdbc",
+            "name": {
+              "en": "Counter Strike 2",
+              "ru": "Counter Strike 2"
+            }
+          },
+          "league": {
+            "competitorType": 0,
+            "brand": {
+              "id": "2d39cc83-9bf8-4fbf-8457-d24fd5041326",
+              "name": {
+                "en": "Global",
+                "ru": "Global"
+              }
+            },
+            "id": "019e6a3e-829c-7ec8-8f21-d1cadf4e1cf8",
+            "name": {
+              "en": "BFTS Sandbox Series",
+              "ru": "BFTS Sandbox Series"
+            }
+          },
+          "participants": [
+            {
+              "id": "019fa2f5-5238-7644-95d6-7c6c1bc91ace",
+              "name": {
+                "en": "NewTeam1",
+                "ru": "NewTeam1"
+              }
+            },
+            {
+              "id": "019fa2f6-2c15-79ae-b1d7-33803f4b9af7",
+              "name": {
+                "en": "NewTeam2",
+                "ru": "NewTeam2"
+              }
+            }
+          ],
+          "participantStructure": [
+            {
+              "id": "019fa2f5-5238-7644-95d6-7c6c1bc91ace",
+              "participantType": 1,
+              "order": 1,
+              "name": "NewTeam1",
+              "attributes": {},
+              "composition": [
+                {
+                  "id": "019dca97-38d8-7030-bfd0-7e276594a5e2",
+                  "participantType": 3,
+                  "order": 1,
+                  "name": "Anlelele",
+                  "attributes": {},
+                  "composition": []
+                },
+                {
+                  "id": "019fa43d-acda-7e13-870c-cc1ca3ee133f",
+                  "participantType": 3,
+                  "order": 2,
+                  "name": "CheckWay",
+                  "attributes": {},
+                  "composition": []
+                },
+                {
+                  "id": "019dd76e-47ab-77f8-947c-e30582f9b947",
+                  "participantType": 3,
+                  "order": 3,
+                  "name": "A0 lameZ",
+                  "attributes": {},
+                  "composition": []
+                },
+                {
+                  "id": "019dd76c-6440-7419-a4a2-68c1286c6d70",
+                  "participantType": 3,
+                  "order": 4,
+                  "name": "A0 m0NESY",
+                  "attributes": {},
+                  "composition": []
+                },
+                {
+                  "id": "019dd76b-5378-77af-bcc0-d61c73d68066",
+                  "participantType": 3,
+                  "order": 5,
+                  "name": "A0 ZywOo",
+                  "attributes": {},
+                  "composition": []
+                }
+              ]
+            },
+            {
+              "id": "019fa2f6-2c15-79ae-b1d7-33803f4b9af7",
+              "participantType": 1,
+              "order": 2,
+              "name": "NewTeam2",
+              "attributes": {},
+              "composition": [
+                {
+                  "id": "019dd76b-c8a7-7cb3-aea4-6f518b8419a9",
+                  "participantType": 3,
+                  "order": 1,
+                  "name": "A0 donk",
+                  "attributes": {},
+                  "composition": []
+                },
+                {
+                  "id": "019dd76f-0708-7499-85bc-67f898334936",
+                  "participantType": 3,
+                  "order": 2,
+                  "name": "A0 frozen",
+                  "attributes": {},
+                  "composition": []
+                },
+                {
+                  "id": "019dd76d-ea3d-74c3-95b9-fa9e328f9bcb",
+                  "participantType": 3,
+                  "order": 3,
+                  "name": "A0 s1mple",
+                  "attributes": {},
+                  "composition": []
+                },
+                {
+                  "id": "019dd76d-3180-71b4-870f-e86af4dfc761",
+                  "participantType": 3,
+                  "order": 4,
+                  "name": "A0 sh1ro",
+                  "attributes": {},
+                  "composition": []
+                },
+                {
+                  "id": "019fad9e-cce7-7f3f-a834-72844cbd865e",
+                  "participantType": 3,
+                  "order": 5,
+                  "name": "A0 slezaIntima",
+                  "attributes": {},
+                  "composition": []
+                }
+              ]
+            }
+          ],
+          "excludedParticipants": [],
+          "timestamp": 1786549114987,
+          "willBeLive": true,
+          "willBePrematch": false,
+          "msgType": 1,
+          "offset": 9162361,
+          "extra": {},
+          "id": "019ff69f-eb7c-7f41-af31-7ed6ec182111",
+          "name": {
+            "en": "NewTeam1  NewTeam2",
+            "ru": "NewTeam1  NewTeam2"
+          }
+        }
+      ],
+      "channel": "time_table",
+      "messageType": "time_table",
+      "scheduledAt": 1786549114987
+    },
+    {
+      "value": [
+        {
+          "id": "019ff69f-eb7c-7f41-af31-7ed6ec182111",
+          "sportId": 3,
+          "tradingStatus": 2,
+          "lineType": 1,
+          "markets": [
+            {
+              "id": "[8,7,1,0,[]]",
+              "interval": 1,
+              "resultType": 7,
+              "marketType": 8,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85
+                  }
+                },
+                {
+                  "id": "[2,[]]",
+                  "outcomeType": 2,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 4.5,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 4.5
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[3,7,1,0,[-1.5]]",
+              "interval": 1,
+              "resultType": 7,
+              "marketType": 3,
+              "marketValue": "-1.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[2,8,1,0,[42.5]]",
+              "interval": 1,
+              "resultType": 8,
+              "marketType": 2,
+              "marketValue": "42.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.9,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.9
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.8,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.8
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[4,7,1,0,[]]",
+              "interval": 1,
+              "resultType": 7,
+              "marketType": 4,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[8,[1-1]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "1-1",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85
+                  }
+                },
+                {
+                  "id": "[8,[2-0]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "2-0",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85
+                  }
+                },
+                {
+                  "id": "[8,[0-2]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "0-2",
+                  "price": 4.5,
+                  "status": 3,
+                  "outcomeResult": 3,
+                  "prices": {
+                    "decimal": 4.5
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[6,8,1,0,[]]",
+              "interval": 1,
+              "resultType": 8,
+              "marketType": 6,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[6,[]]",
+                  "outcomeType": 6,
+                  "outcomeValue": "",
+                  "price": 2.05,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.05
+                  }
+                },
+                {
+                  "id": "[7,[]]",
+                  "outcomeType": 7,
+                  "outcomeValue": "",
+                  "price": 1.7,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.7
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[1,8,11,0,[]]",
+              "interval": 11,
+              "resultType": 8,
+              "marketType": 1,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.55,
+                  "status": 3,
+                  "outcomeResult": 2,
+                  "prices": {
+                    "decimal": 1.55
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 2.35,
+                  "status": 3,
+                  "outcomeResult": 3,
+                  "prices": {
+                    "decimal": 2.35
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[16,9,11,1,[]]",
+              "interval": 11,
+              "resultType": 9,
+              "marketType": 16,
+              "marketValue": "",
+              "subinterval": 1,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 3,
+                  "outcomeResult": 2,
+                  "prices": {
+                    "decimal": 1.85
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 3,
+                  "outcomeResult": 3,
+                  "prices": {
+                    "decimal": 1.85
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[8,8,11,101,[]]",
+              "interval": 11,
+              "resultType": 8,
+              "marketType": 8,
+              "marketValue": "",
+              "subinterval": 101,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.8,
+                  "status": 3,
+                  "outcomeResult": 2,
+                  "prices": {
+                    "decimal": 1.8
+                  }
+                },
+                {
+                  "id": "[2,[]]",
+                  "outcomeType": 2,
+                  "outcomeValue": "",
+                  "price": 5.0,
+                  "status": 3,
+                  "outcomeResult": 3,
+                  "prices": {
+                    "decimal": 5.0
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 2.8,
+                  "status": 3,
+                  "outcomeResult": 3,
+                  "prices": {
+                    "decimal": 2.8
+                  }
+                }
+              ]
+            }
+          ],
+          "timestamp": 1786549119987,
+          "willBeLive": true,
+          "willBePrematch": false,
+          "msgType": 4,
+          "offset": 9162498
+        }
+      ],
+      "channel": "trading",
+      "messageType": "trading",
+      "scheduledAt": 1786549119987
+    },
+    {
+      "value": [
+        {
+          "id": "019ff69f-eb7c-7f41-af31-7ed6ec182111",
+          "sportId": 3,
+          "stage": 10,
+          "scores": [
+            {
+              "interval": 11,
+              "result": 8,
+              "score": "3-2"
+            },
+            {
+              "interval": 1,
+              "result": 7,
+              "score": "0-0"
+            }
+          ],
+          "playerProps": [
+            {
+              "participantId": "019dca97-38d8-7030-bfd0-7e276594a5e2",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 2
+                },
+                {
+                  "result": 40,
+                  "value": 1
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dca97-38d8-7030-bfd0-7e276594a5e2",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 3
+                },
+                {
+                  "result": 40,
+                  "value": 0
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dca97-38d8-7030-bfd0-7e276594a5e2",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 5
+                },
+                {
+                  "result": 40,
+                  "value": 1
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 4
+                }
+              ]
+            },
+            {
+              "participantId": "019fa43d-acda-7e13-870c-cc1ca3ee133f",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 3
+                },
+                {
+                  "result": 40,
+                  "value": 1
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "participantId": "019fa43d-acda-7e13-870c-cc1ca3ee133f",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 4
+                },
+                {
+                  "result": 40,
+                  "value": 1
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019fa43d-acda-7e13-870c-cc1ca3ee133f",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 7
+                },
+                {
+                  "result": 40,
+                  "value": 2
+                },
+                {
+                  "result": 41,
+                  "value": 3
+                },
+                {
+                  "result": 42,
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76e-47ab-77f8-947c-e30582f9b947",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 4
+                },
+                {
+                  "result": 40,
+                  "value": 2
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76e-47ab-77f8-947c-e30582f9b947",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 5
+                },
+                {
+                  "result": 40,
+                  "value": 1
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76e-47ab-77f8-947c-e30582f9b947",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 9
+                },
+                {
+                  "result": 40,
+                  "value": 3
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76c-6440-7419-a4a2-68c1286c6d70",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 5
+                },
+                {
+                  "result": 40,
+                  "value": 2
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76c-6440-7419-a4a2-68c1286c6d70",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 6
+                },
+                {
+                  "result": 40,
+                  "value": 1
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76c-6440-7419-a4a2-68c1286c6d70",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 11
+                },
+                {
+                  "result": 40,
+                  "value": 3
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-5378-77af-bcc0-d61c73d68066",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 6
+                },
+                {
+                  "result": 40,
+                  "value": 3
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-5378-77af-bcc0-d61c73d68066",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 7
+                },
+                {
+                  "result": 40,
+                  "value": 2
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-5378-77af-bcc0-d61c73d68066",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 13
+                },
+                {
+                  "result": 40,
+                  "value": 5
+                },
+                {
+                  "result": 41,
+                  "value": 3
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-c8a7-7cb3-aea4-6f518b8419a9",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 7
+                },
+                {
+                  "result": 40,
+                  "value": 3
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-c8a7-7cb3-aea4-6f518b8419a9",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 8
+                },
+                {
+                  "result": 40,
+                  "value": 2
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-c8a7-7cb3-aea4-6f518b8419a9",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 15
+                },
+                {
+                  "result": 40,
+                  "value": 5
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 4
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76f-0708-7499-85bc-67f898334936",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 8
+                },
+                {
+                  "result": 40,
+                  "value": 4
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76f-0708-7499-85bc-67f898334936",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 9
+                },
+                {
+                  "result": 40,
+                  "value": 2
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76f-0708-7499-85bc-67f898334936",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 17
+                },
+                {
+                  "result": 40,
+                  "value": 6
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-ea3d-74c3-95b9-fa9e328f9bcb",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 9
+                },
+                {
+                  "result": 40,
+                  "value": 4
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-ea3d-74c3-95b9-fa9e328f9bcb",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 10
+                },
+                {
+                  "result": 40,
+                  "value": 3
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-ea3d-74c3-95b9-fa9e328f9bcb",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 19
+                },
+                {
+                  "result": 40,
+                  "value": 7
+                },
+                {
+                  "result": 41,
+                  "value": 3
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-3180-71b4-870f-e86af4dfc761",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 10
+                },
+                {
+                  "result": 40,
+                  "value": 5
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-3180-71b4-870f-e86af4dfc761",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 11
+                },
+                {
+                  "result": 40,
+                  "value": 3
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-3180-71b4-870f-e86af4dfc761",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 21
+                },
+                {
+                  "result": 40,
+                  "value": 8
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "participantId": "019fad9e-cce7-7f3f-a834-72844cbd865e",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 11
+                },
+                {
+                  "result": 40,
+                  "value": 5
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "participantId": "019fad9e-cce7-7f3f-a834-72844cbd865e",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 12
+                },
+                {
+                  "result": 40,
+                  "value": 3
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019fad9e-cce7-7f3f-a834-72844cbd865e",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 23
+                },
+                {
+                  "result": 40,
+                  "value": 8
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 5
+                }
+              ]
+            }
+          ],
+          "regulations": {
+            "matchFormat": 2,
+            "canBeDrawInMap": false,
+            "roundQty": 12
+          },
+          "timestamp": 1786549124987,
+          "msgType": 2,
+          "offset": 9162635
+        }
+      ],
+      "channel": "scoreboard",
+      "messageType": "scoreboard",
+      "scheduledAt": 1786549124987
+    },
+    {
+      "value": [
+        {
+          "id": "019ff69f-eb7c-7f41-af31-7ed6ec182111",
+          "sportId": 3,
+          "index": 1,
+          "type": "8",
+          "date": "2026-08-12T15:38:49.987000000Z",
+          "params": [
+            {
+              "key": "3",
+              "value": "0:0"
+            },
+            {
+              "key": "5",
+              "value": "0:0"
+            }
+          ],
+          "msgType": 1,
+          "offset": 9162772
+        }
+      ],
+      "channel": "incident",
+      "messageType": "incident",
+      "scheduledAt": 1786549129987
+    },
+    {
+      "value": [
+        {
+          "id": "019ff69f-eb7c-7f41-af31-7ed6ec182111",
+          "sportId": 3,
+          "index": 2,
+          "type": "9",
+          "date": "2026-08-12T15:38:54.987000000Z",
+          "params": [
+            {
+              "key": "1",
+              "value": "2"
+            },
+            {
+              "key": "3",
+              "value": "0:1"
+            },
+            {
+              "key": "5",
+              "value": "0:0"
+            }
+          ],
+          "msgType": 1,
+          "offset": 9162909
+        }
+      ],
+      "channel": "incident",
+      "messageType": "incident",
+      "scheduledAt": 1786549134987
+    },
+    {
+      "value": [
+        {
+          "id": "019ff69f-eb7c-7f41-af31-7ed6ec182111",
+          "sportId": 3,
+          "stage": 10,
+          "scores": [
+            {
+              "interval": 11,
+              "result": 8,
+              "score": "9-6"
+            },
+            {
+              "interval": 11,
+              "result": 9,
+              "score": "1-0",
+              "subInterval": 1
+            },
+            {
+              "interval": 1,
+              "result": 7,
+              "score": "0-0"
+            }
+          ],
+          "playerProps": [
+            {
+              "participantId": "019dca97-38d8-7030-bfd0-7e276594a5e2",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 5
+                },
+                {
+                  "result": 40,
+                  "value": 2
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dca97-38d8-7030-bfd0-7e276594a5e2",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 6
+                },
+                {
+                  "result": 40,
+                  "value": 1
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dca97-38d8-7030-bfd0-7e276594a5e2",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 11
+                },
+                {
+                  "result": 40,
+                  "value": 3
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "participantId": "019fa43d-acda-7e13-870c-cc1ca3ee133f",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 6
+                },
+                {
+                  "result": 40,
+                  "value": 3
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019fa43d-acda-7e13-870c-cc1ca3ee133f",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 7
+                },
+                {
+                  "result": 40,
+                  "value": 2
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019fa43d-acda-7e13-870c-cc1ca3ee133f",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 13
+                },
+                {
+                  "result": 40,
+                  "value": 5
+                },
+                {
+                  "result": 41,
+                  "value": 3
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76e-47ab-77f8-947c-e30582f9b947",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 7
+                },
+                {
+                  "result": 40,
+                  "value": 3
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76e-47ab-77f8-947c-e30582f9b947",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 8
+                },
+                {
+                  "result": 40,
+                  "value": 2
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76e-47ab-77f8-947c-e30582f9b947",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 15
+                },
+                {
+                  "result": 40,
+                  "value": 5
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 4
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76c-6440-7419-a4a2-68c1286c6d70",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 8
+                },
+                {
+                  "result": 40,
+                  "value": 4
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76c-6440-7419-a4a2-68c1286c6d70",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 9
+                },
+                {
+                  "result": 40,
+                  "value": 2
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76c-6440-7419-a4a2-68c1286c6d70",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 17
+                },
+                {
+                  "result": 40,
+                  "value": 6
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-5378-77af-bcc0-d61c73d68066",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 9
+                },
+                {
+                  "result": 40,
+                  "value": 4
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-5378-77af-bcc0-d61c73d68066",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 10
+                },
+                {
+                  "result": 40,
+                  "value": 3
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-5378-77af-bcc0-d61c73d68066",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 19
+                },
+                {
+                  "result": 40,
+                  "value": 7
+                },
+                {
+                  "result": 41,
+                  "value": 3
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-c8a7-7cb3-aea4-6f518b8419a9",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 10
+                },
+                {
+                  "result": 40,
+                  "value": 5
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-c8a7-7cb3-aea4-6f518b8419a9",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 11
+                },
+                {
+                  "result": 40,
+                  "value": 3
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-c8a7-7cb3-aea4-6f518b8419a9",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 21
+                },
+                {
+                  "result": 40,
+                  "value": 8
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76f-0708-7499-85bc-67f898334936",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 11
+                },
+                {
+                  "result": 40,
+                  "value": 5
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76f-0708-7499-85bc-67f898334936",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 12
+                },
+                {
+                  "result": 40,
+                  "value": 3
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76f-0708-7499-85bc-67f898334936",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 23
+                },
+                {
+                  "result": 40,
+                  "value": 8
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-ea3d-74c3-95b9-fa9e328f9bcb",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 12
+                },
+                {
+                  "result": 40,
+                  "value": 6
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-ea3d-74c3-95b9-fa9e328f9bcb",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 13
+                },
+                {
+                  "result": 40,
+                  "value": 4
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-ea3d-74c3-95b9-fa9e328f9bcb",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 25
+                },
+                {
+                  "result": 40,
+                  "value": 10
+                },
+                {
+                  "result": 41,
+                  "value": 3
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-3180-71b4-870f-e86af4dfc761",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 13
+                },
+                {
+                  "result": 40,
+                  "value": 6
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-3180-71b4-870f-e86af4dfc761",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 14
+                },
+                {
+                  "result": 40,
+                  "value": 4
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-3180-71b4-870f-e86af4dfc761",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 27
+                },
+                {
+                  "result": 40,
+                  "value": 10
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019fad9e-cce7-7f3f-a834-72844cbd865e",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 14
+                },
+                {
+                  "result": 40,
+                  "value": 7
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019fad9e-cce7-7f3f-a834-72844cbd865e",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 15
+                },
+                {
+                  "result": 40,
+                  "value": 4
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019fad9e-cce7-7f3f-a834-72844cbd865e",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 29
+                },
+                {
+                  "result": 40,
+                  "value": 11
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 4
+                }
+              ]
+            }
+          ],
+          "regulations": {
+            "matchFormat": 2,
+            "canBeDrawInMap": false,
+            "roundQty": 12
+          },
+          "timestamp": 1786549139987,
+          "msgType": 1,
+          "offset": 9163046
+        }
+      ],
+      "channel": "scoreboard",
+      "messageType": "scoreboard",
+      "scheduledAt": 1786549139987
+    },
+    {
+      "value": [
+        {
+          "sport": "CounterStrike",
+          "sportId": 3,
+          "startDate": "2026-08-12T15:38:00Z",
+          "status": 1,
+          "category": {
+            "id": "0192d76e-7307-7ac0-85d1-0e6d1ca3cdbc",
+            "name": {
+              "en": "Counter Strike 2",
+              "ru": "Counter Strike 2"
+            }
+          },
+          "league": {
+            "competitorType": 0,
+            "brand": {
+              "id": "2d39cc83-9bf8-4fbf-8457-d24fd5041326",
+              "name": {
+                "en": "Global",
+                "ru": "Global"
+              }
+            },
+            "id": "019e6a3e-829c-7ec8-8f21-d1cadf4e1cf8",
+            "name": {
+              "en": "BFTS Sandbox Series",
+              "ru": "BFTS Sandbox Series"
+            }
+          },
+          "participants": [
+            {
+              "id": "019fa2f5-5238-7644-95d6-7c6c1bc91ace",
+              "name": {
+                "en": "NewTeam1",
+                "ru": "NewTeam1"
+              }
+            },
+            {
+              "id": "019fa2f6-2c15-79ae-b1d7-33803f4b9af7",
+              "name": {
+                "en": "NewTeam2",
+                "ru": "NewTeam2"
+              }
+            }
+          ],
+          "participantStructure": [
+            {
+              "id": "019fa2f5-5238-7644-95d6-7c6c1bc91ace",
+              "participantType": 1,
+              "order": 1,
+              "name": "NewTeam1",
+              "attributes": {},
+              "composition": [
+                {
+                  "id": "019dca97-38d8-7030-bfd0-7e276594a5e2",
+                  "participantType": 3,
+                  "order": 1,
+                  "name": "Anlelele",
+                  "attributes": {},
+                  "composition": []
+                },
+                {
+                  "id": "019fa43d-acda-7e13-870c-cc1ca3ee133f",
+                  "participantType": 3,
+                  "order": 2,
+                  "name": "CheckWay",
+                  "attributes": {},
+                  "composition": []
+                },
+                {
+                  "id": "019dd76e-47ab-77f8-947c-e30582f9b947",
+                  "participantType": 3,
+                  "order": 3,
+                  "name": "A0 lameZ",
+                  "attributes": {},
+                  "composition": []
+                },
+                {
+                  "id": "019dd76c-6440-7419-a4a2-68c1286c6d70",
+                  "participantType": 3,
+                  "order": 4,
+                  "name": "A0 m0NESY",
+                  "attributes": {},
+                  "composition": []
+                },
+                {
+                  "id": "019dd76d-924e-7acf-a28d-569cda0ddb68",
+                  "participantType": 3,
+                  "order": 5,
+                  "name": "NewPlayer1",
+                  "attributes": {},
+                  "composition": []
+                }
+              ]
+            },
+            {
+              "id": "019fa2f6-2c15-79ae-b1d7-33803f4b9af7",
+              "participantType": 1,
+              "order": 2,
+              "name": "NewTeam2",
+              "attributes": {},
+              "composition": [
+                {
+                  "id": "019dd76b-c8a7-7cb3-aea4-6f518b8419a9",
+                  "participantType": 3,
+                  "order": 1,
+                  "name": "A0 donk",
+                  "attributes": {},
+                  "composition": []
+                },
+                {
+                  "id": "019dd76f-0708-7499-85bc-67f898334936",
+                  "participantType": 3,
+                  "order": 2,
+                  "name": "A0 frozen",
+                  "attributes": {},
+                  "composition": []
+                },
+                {
+                  "id": "019dd76d-ea3d-74c3-95b9-fa9e328f9bcb",
+                  "participantType": 3,
+                  "order": 3,
+                  "name": "A0 s1mple",
+                  "attributes": {},
+                  "composition": []
+                },
+                {
+                  "id": "019dd76d-3180-71b4-870f-e86af4dfc761",
+                  "participantType": 3,
+                  "order": 4,
+                  "name": "A0 sh1ro",
+                  "attributes": {},
+                  "composition": []
+                },
+                {
+                  "id": "019fad9e-cce7-7f3f-a834-72844cbd865e",
+                  "participantType": 3,
+                  "order": 5,
+                  "name": "A0 slezaIntima",
+                  "attributes": {},
+                  "composition": []
+                }
+              ]
+            }
+          ],
+          "excludedParticipants": [
+            {
+              "parentParticipantId": "019fa2f5-5238-7644-95d6-7c6c1bc91ace",
+              "order": 5,
+              "id": "019dd76b-5378-77af-bcc0-d61c73d68066",
+              "participantType": 3,
+              "name": "A0 ZywOo",
+              "attributes": {},
+              "composition": []
+            }
+          ],
+          "timestamp": 1786549144987,
+          "willBeLive": true,
+          "willBePrematch": false,
+          "msgType": 1,
+          "offset": 9163183,
+          "extra": {},
+          "id": "019ff69f-eb7c-7f41-af31-7ed6ec182111",
+          "name": {
+            "en": "NewTeam1  NewTeam2",
+            "ru": "NewTeam1  NewTeam2"
+          }
+        }
+      ],
+      "channel": "time_table",
+      "messageType": "time_table",
+      "scheduledAt": 1786549144987
+    },
+    {
+      "value": [
+        {
+          "id": "019ff69f-eb7c-7f41-af31-7ed6ec182111",
+          "sportId": 3,
+          "stage": 10,
+          "scores": [
+            {
+              "interval": 11,
+              "result": 8,
+              "score": "9-6"
+            },
+            {
+              "interval": 11,
+              "result": 9,
+              "score": "1-0",
+              "subInterval": 1
+            },
+            {
+              "interval": 1,
+              "result": 7,
+              "score": "0-0"
+            }
+          ],
+          "playerProps": [
+            {
+              "participantId": "019dca97-38d8-7030-bfd0-7e276594a5e2",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 7
+                },
+                {
+                  "result": 40,
+                  "value": 3
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "participantId": "019dca97-38d8-7030-bfd0-7e276594a5e2",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 8
+                },
+                {
+                  "result": 40,
+                  "value": 2
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dca97-38d8-7030-bfd0-7e276594a5e2",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 15
+                },
+                {
+                  "result": 40,
+                  "value": 5
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 4
+                }
+              ]
+            },
+            {
+              "participantId": "019fa43d-acda-7e13-870c-cc1ca3ee133f",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 8
+                },
+                {
+                  "result": 40,
+                  "value": 4
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019fa43d-acda-7e13-870c-cc1ca3ee133f",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 9
+                },
+                {
+                  "result": 40,
+                  "value": 2
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019fa43d-acda-7e13-870c-cc1ca3ee133f",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 17
+                },
+                {
+                  "result": 40,
+                  "value": 6
+                },
+                {
+                  "result": 41,
+                  "value": 3
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76e-47ab-77f8-947c-e30582f9b947",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 9
+                },
+                {
+                  "result": 40,
+                  "value": 4
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76e-47ab-77f8-947c-e30582f9b947",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 10
+                },
+                {
+                  "result": 40,
+                  "value": 3
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76e-47ab-77f8-947c-e30582f9b947",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 19
+                },
+                {
+                  "result": 40,
+                  "value": 7
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76c-6440-7419-a4a2-68c1286c6d70",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 10
+                },
+                {
+                  "result": 40,
+                  "value": 5
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76c-6440-7419-a4a2-68c1286c6d70",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 11
+                },
+                {
+                  "result": 40,
+                  "value": 3
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76c-6440-7419-a4a2-68c1286c6d70",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 21
+                },
+                {
+                  "result": 40,
+                  "value": 8
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-5378-77af-bcc0-d61c73d68066",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 11
+                },
+                {
+                  "result": 40,
+                  "value": 5
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-5378-77af-bcc0-d61c73d68066",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 12
+                },
+                {
+                  "result": 40,
+                  "value": 3
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-5378-77af-bcc0-d61c73d68066",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 23
+                },
+                {
+                  "result": 40,
+                  "value": 8
+                },
+                {
+                  "result": 41,
+                  "value": 3
+                },
+                {
+                  "result": 42,
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-c8a7-7cb3-aea4-6f518b8419a9",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 12
+                },
+                {
+                  "result": 40,
+                  "value": 6
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-c8a7-7cb3-aea4-6f518b8419a9",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 13
+                },
+                {
+                  "result": 40,
+                  "value": 4
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-c8a7-7cb3-aea4-6f518b8419a9",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 25
+                },
+                {
+                  "result": 40,
+                  "value": 10
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76f-0708-7499-85bc-67f898334936",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 13
+                },
+                {
+                  "result": 40,
+                  "value": 6
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76f-0708-7499-85bc-67f898334936",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 14
+                },
+                {
+                  "result": 40,
+                  "value": 4
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76f-0708-7499-85bc-67f898334936",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 27
+                },
+                {
+                  "result": 40,
+                  "value": 10
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-ea3d-74c3-95b9-fa9e328f9bcb",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 14
+                },
+                {
+                  "result": 40,
+                  "value": 7
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-ea3d-74c3-95b9-fa9e328f9bcb",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 15
+                },
+                {
+                  "result": 40,
+                  "value": 4
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-ea3d-74c3-95b9-fa9e328f9bcb",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 29
+                },
+                {
+                  "result": 40,
+                  "value": 11
+                },
+                {
+                  "result": 41,
+                  "value": 3
+                },
+                {
+                  "result": 42,
+                  "value": 4
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-3180-71b4-870f-e86af4dfc761",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 15
+                },
+                {
+                  "result": 40,
+                  "value": 7
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-3180-71b4-870f-e86af4dfc761",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 16
+                },
+                {
+                  "result": 40,
+                  "value": 5
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-3180-71b4-870f-e86af4dfc761",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 31
+                },
+                {
+                  "result": 40,
+                  "value": 12
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "participantId": "019fad9e-cce7-7f3f-a834-72844cbd865e",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 16
+                },
+                {
+                  "result": 40,
+                  "value": 8
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019fad9e-cce7-7f3f-a834-72844cbd865e",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 17
+                },
+                {
+                  "result": 40,
+                  "value": 5
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019fad9e-cce7-7f3f-a834-72844cbd865e",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 33
+                },
+                {
+                  "result": 40,
+                  "value": 13
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-924e-7acf-a28d-569cda0ddb68",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 17
+                },
+                {
+                  "result": 40,
+                  "value": 8
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-924e-7acf-a28d-569cda0ddb68",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 18
+                },
+                {
+                  "result": 40,
+                  "value": 5
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-924e-7acf-a28d-569cda0ddb68",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 35
+                },
+                {
+                  "result": 40,
+                  "value": 13
+                },
+                {
+                  "result": 41,
+                  "value": 3
+                },
+                {
+                  "result": 42,
+                  "value": 3
+                }
+              ]
+            }
+          ],
+          "regulations": {
+            "matchFormat": 2,
+            "canBeDrawInMap": false,
+            "roundQty": 12
+          },
+          "timestamp": 1786549149987,
+          "msgType": 1,
+          "offset": 9163320
+        }
+      ],
+      "channel": "scoreboard",
+      "messageType": "scoreboard",
+      "scheduledAt": 1786549149987
+    },
+    {
+      "value": [
+        {
+          "id": "019ff69f-eb7c-7f41-af31-7ed6ec182111",
+          "sportId": 3,
+          "index": 3,
+          "type": "38",
+          "date": "2026-08-12T15:39:14.987000000Z",
+          "params": [
+            {
+              "key": "1",
+              "value": "2"
+            },
+            {
+              "key": "23",
+              "value": "9"
+            },
+            {
+              "key": "24",
+              "value": "0",
+              "variableValue": "019dd76b-5378-77af-bcc0-d61c73d68066"
+            },
+            {
+              "key": "3",
+              "value": "0:0"
+            },
+            {
+              "key": "5",
+              "value": "1:0"
+            },
+            {
+              "key": "6",
+              "value": "1:0"
+            }
+          ],
+          "msgType": 1,
+          "offset": 9163457
+        }
+      ],
+      "channel": "incident",
+      "messageType": "incident",
+      "scheduledAt": 1786549154987
+    },
+    {
+      "value": [
+        {
+          "id": "019ff69f-eb7c-7f41-af31-7ed6ec182111",
+          "sportId": 3,
+          "tradingStatus": 2,
+          "lineType": 1,
+          "markets": [
+            {
+              "id": "[8,7,1,0,[]]",
+              "interval": 1,
+              "resultType": 7,
+              "marketType": 8,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 2.0,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.0
+                  }
+                },
+                {
+                  "id": "[2,[]]",
+                  "outcomeType": 2,
+                  "outcomeValue": "",
+                  "price": 2.0,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.0
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 4.65,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 4.65
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[3,7,1,0,[-1.5]]",
+              "interval": 1,
+              "resultType": 7,
+              "marketType": 3,
+              "marketValue": "-1.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 2.0,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.0
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 2.0,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.0
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[2,8,1,0,[42.5]]",
+              "interval": 1,
+              "resultType": 8,
+              "marketType": 2,
+              "marketValue": "42.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 2.05,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.05
+                  }
+                },
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.95,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.95
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[4,7,1,0,[]]",
+              "interval": 1,
+              "resultType": 7,
+              "marketType": 4,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[8,[1-1]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "1-1",
+                  "price": 2.0,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.0
+                  }
+                },
+                {
+                  "id": "[8,[2-0]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "2-0",
+                  "price": 2.0,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.0
+                  }
+                },
+                {
+                  "id": "[8,[0-2]]",
+                  "outcomeType": 8,
+                  "outcomeValue": "0-2",
+                  "price": 4.65,
+                  "status": 3,
+                  "outcomeResult": 3,
+                  "prices": {
+                    "decimal": 4.65
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[6,8,1,0,[]]",
+              "interval": 1,
+              "resultType": 8,
+              "marketType": 6,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[6,[]]",
+                  "outcomeType": 6,
+                  "outcomeValue": "",
+                  "price": 2.2,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.2
+                  }
+                },
+                {
+                  "id": "[7,[]]",
+                  "outcomeType": 7,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 2,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[1,8,11,0,[]]",
+              "interval": 11,
+              "resultType": 8,
+              "marketType": 1,
+              "marketValue": "",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.7,
+                  "status": 3,
+                  "outcomeResult": 2,
+                  "prices": {
+                    "decimal": 1.7
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 2.5,
+                  "status": 3,
+                  "outcomeResult": 3,
+                  "prices": {
+                    "decimal": 2.5
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[16,9,11,1,[]]",
+              "interval": 11,
+              "resultType": 9,
+              "marketType": 16,
+              "marketValue": "",
+              "subinterval": 1,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 2.0,
+                  "status": 3,
+                  "outcomeResult": 2,
+                  "prices": {
+                    "decimal": 2.0
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 2.0,
+                  "status": 3,
+                  "outcomeResult": 3,
+                  "prices": {
+                    "decimal": 2.0
+                  }
+                }
+              ]
+            },
+            {
+              "id": "[8,8,11,101,[]]",
+              "interval": 11,
+              "resultType": 8,
+              "marketType": 8,
+              "marketValue": "",
+              "subinterval": 101,
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.95,
+                  "status": 3,
+                  "outcomeResult": 2,
+                  "prices": {
+                    "decimal": 1.95
+                  }
+                },
+                {
+                  "id": "[2,[]]",
+                  "outcomeType": 2,
+                  "outcomeValue": "",
+                  "price": 5.15,
+                  "status": 3,
+                  "outcomeResult": 3,
+                  "prices": {
+                    "decimal": 5.15
+                  }
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 2.95,
+                  "status": 3,
+                  "outcomeResult": 3,
+                  "prices": {
+                    "decimal": 2.95
+                  }
+                }
+              ]
+            }
+          ],
+          "timestamp": 1786549159987,
+          "willBeLive": true,
+          "willBePrematch": false,
+          "msgType": 1,
+          "offset": 9163594
+        }
+      ],
+      "channel": "trading",
+      "messageType": "trading",
+      "scheduledAt": 1786549159987
+    },
+    {
+      "value": [
+        {
+          "id": "019ff69f-eb7c-7f41-af31-7ed6ec182111",
+          "sportId": 3,
+          "index": 4,
+          "type": "7",
+          "date": "2026-08-12T15:39:24.987000000Z",
+          "params": [
+            {
+              "key": "11",
+              "value": "16"
+            },
+            {
+              "key": "3",
+              "value": "0:0"
+            },
+            {
+              "key": "5",
+              "value": "1:0"
+            },
+            {
+              "key": "6",
+              "value": "1:0"
+            }
+          ],
+          "msgType": 1,
+          "offset": 9163731
+        }
+      ],
+      "channel": "incident",
+      "messageType": "incident",
+      "scheduledAt": 1786549164987
+    },
+    {
+      "value": [
+        {
+          "id": "019ff69f-eb7c-7f41-af31-7ed6ec182111",
+          "sportId": 3,
+          "stage": 10,
+          "scores": [
+            {
+              "interval": 11,
+              "result": 8,
+              "score": "13-9"
+            },
+            {
+              "interval": 12,
+              "result": 8,
+              "score": "4-2"
+            },
+            {
+              "interval": 1,
+              "result": 7,
+              "score": "1-0"
+            }
+          ],
+          "playerProps": [
+            {
+              "participantId": "019dca97-38d8-7030-bfd0-7e276594a5e2",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 11
+                },
+                {
+                  "result": 40,
+                  "value": 5
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "participantId": "019dca97-38d8-7030-bfd0-7e276594a5e2",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 12
+                },
+                {
+                  "result": 40,
+                  "value": 3
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dca97-38d8-7030-bfd0-7e276594a5e2",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 23
+                },
+                {
+                  "result": 40,
+                  "value": 8
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "participantId": "019fa43d-acda-7e13-870c-cc1ca3ee133f",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 12
+                },
+                {
+                  "result": 40,
+                  "value": 6
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019fa43d-acda-7e13-870c-cc1ca3ee133f",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 13
+                },
+                {
+                  "result": 40,
+                  "value": 4
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019fa43d-acda-7e13-870c-cc1ca3ee133f",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 25
+                },
+                {
+                  "result": 40,
+                  "value": 10
+                },
+                {
+                  "result": 41,
+                  "value": 3
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76e-47ab-77f8-947c-e30582f9b947",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 13
+                },
+                {
+                  "result": 40,
+                  "value": 6
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76e-47ab-77f8-947c-e30582f9b947",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 14
+                },
+                {
+                  "result": 40,
+                  "value": 4
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76e-47ab-77f8-947c-e30582f9b947",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 27
+                },
+                {
+                  "result": 40,
+                  "value": 10
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76c-6440-7419-a4a2-68c1286c6d70",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 14
+                },
+                {
+                  "result": 40,
+                  "value": 7
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76c-6440-7419-a4a2-68c1286c6d70",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 15
+                },
+                {
+                  "result": 40,
+                  "value": 4
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76c-6440-7419-a4a2-68c1286c6d70",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 29
+                },
+                {
+                  "result": 40,
+                  "value": 11
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 4
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-5378-77af-bcc0-d61c73d68066",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 15
+                },
+                {
+                  "result": 40,
+                  "value": 7
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-5378-77af-bcc0-d61c73d68066",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 16
+                },
+                {
+                  "result": 40,
+                  "value": 5
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-5378-77af-bcc0-d61c73d68066",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 31
+                },
+                {
+                  "result": 40,
+                  "value": 12
+                },
+                {
+                  "result": 41,
+                  "value": 3
+                },
+                {
+                  "result": 42,
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-c8a7-7cb3-aea4-6f518b8419a9",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 16
+                },
+                {
+                  "result": 40,
+                  "value": 8
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-c8a7-7cb3-aea4-6f518b8419a9",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 17
+                },
+                {
+                  "result": 40,
+                  "value": 5
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-c8a7-7cb3-aea4-6f518b8419a9",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 33
+                },
+                {
+                  "result": 40,
+                  "value": 13
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76f-0708-7499-85bc-67f898334936",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 17
+                },
+                {
+                  "result": 40,
+                  "value": 8
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76f-0708-7499-85bc-67f898334936",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 18
+                },
+                {
+                  "result": 40,
+                  "value": 5
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76f-0708-7499-85bc-67f898334936",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 35
+                },
+                {
+                  "result": 40,
+                  "value": 13
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-ea3d-74c3-95b9-fa9e328f9bcb",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 18
+                },
+                {
+                  "result": 40,
+                  "value": 9
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-ea3d-74c3-95b9-fa9e328f9bcb",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 19
+                },
+                {
+                  "result": 40,
+                  "value": 6
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-ea3d-74c3-95b9-fa9e328f9bcb",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 37
+                },
+                {
+                  "result": 40,
+                  "value": 15
+                },
+                {
+                  "result": 41,
+                  "value": 3
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-3180-71b4-870f-e86af4dfc761",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 19
+                },
+                {
+                  "result": 40,
+                  "value": 9
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-3180-71b4-870f-e86af4dfc761",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 20
+                },
+                {
+                  "result": 40,
+                  "value": 6
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-3180-71b4-870f-e86af4dfc761",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 39
+                },
+                {
+                  "result": 40,
+                  "value": 15
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 4
+                }
+              ]
+            },
+            {
+              "participantId": "019fad9e-cce7-7f3f-a834-72844cbd865e",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 20
+                },
+                {
+                  "result": 40,
+                  "value": 10
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019fad9e-cce7-7f3f-a834-72844cbd865e",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 21
+                },
+                {
+                  "result": 40,
+                  "value": 6
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019fad9e-cce7-7f3f-a834-72844cbd865e",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 41
+                },
+                {
+                  "result": 40,
+                  "value": 16
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-924e-7acf-a28d-569cda0ddb68",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 21
+                },
+                {
+                  "result": 40,
+                  "value": 10
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-924e-7acf-a28d-569cda0ddb68",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 22
+                },
+                {
+                  "result": 40,
+                  "value": 7
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-924e-7acf-a28d-569cda0ddb68",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 43
+                },
+                {
+                  "result": 40,
+                  "value": 17
+                },
+                {
+                  "result": 41,
+                  "value": 3
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "regulations": {
+            "matchFormat": 2,
+            "canBeDrawInMap": false,
+            "roundQty": 12
+          },
+          "timestamp": 1786549169987,
+          "msgType": 1,
+          "offset": 9163868
+        }
+      ],
+      "channel": "scoreboard",
+      "messageType": "scoreboard",
+      "scheduledAt": 1786549169987
+    },
+    {
+      "value": [
+        {
+          "id": "019ff69f-eb7c-7f41-af31-7ed6ec182111",
+          "sportId": 3,
+          "index": 5,
+          "type": "29",
+          "date": "2026-08-12T15:39:34.987000000Z",
+          "params": [
+            {
+              "key": "1",
+              "value": "2"
+            },
+            {
+              "key": "15",
+              "value": "64"
+            },
+            {
+              "key": "3",
+              "value": "0:0"
+            },
+            {
+              "key": "5",
+              "value": "1:0"
+            }
+          ],
+          "msgType": 1,
+          "offset": 9164005
+        }
+      ],
+      "channel": "incident",
+      "messageType": "incident",
+      "scheduledAt": 1786549174987
+    },
+    {
+      "value": [
+        {
+          "id": "019ff69f-eb7c-7f41-af31-7ed6ec182111",
+          "sportId": 3,
+          "stage": 10,
+          "scores": [
+            {
+              "interval": 11,
+              "result": 8,
+              "score": "13-9"
+            },
+            {
+              "interval": 12,
+              "result": 8,
+              "score": "13-7"
+            },
+            {
+              "interval": 1,
+              "result": 7,
+              "score": "2-0"
+            },
+            {
+              "interval": 1,
+              "result": 8,
+              "score": "26-16"
+            }
+          ],
+          "playerProps": [
+            {
+              "participantId": "019dca97-38d8-7030-bfd0-7e276594a5e2",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 13
+                },
+                {
+                  "result": 40,
+                  "value": 6
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dca97-38d8-7030-bfd0-7e276594a5e2",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 14
+                },
+                {
+                  "result": 40,
+                  "value": 4
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dca97-38d8-7030-bfd0-7e276594a5e2",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 27
+                },
+                {
+                  "result": 40,
+                  "value": 10
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019fa43d-acda-7e13-870c-cc1ca3ee133f",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 14
+                },
+                {
+                  "result": 40,
+                  "value": 7
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019fa43d-acda-7e13-870c-cc1ca3ee133f",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 15
+                },
+                {
+                  "result": 40,
+                  "value": 4
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019fa43d-acda-7e13-870c-cc1ca3ee133f",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 29
+                },
+                {
+                  "result": 40,
+                  "value": 11
+                },
+                {
+                  "result": 41,
+                  "value": 3
+                },
+                {
+                  "result": 42,
+                  "value": 4
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76e-47ab-77f8-947c-e30582f9b947",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 15
+                },
+                {
+                  "result": 40,
+                  "value": 7
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76e-47ab-77f8-947c-e30582f9b947",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 16
+                },
+                {
+                  "result": 40,
+                  "value": 5
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76e-47ab-77f8-947c-e30582f9b947",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 31
+                },
+                {
+                  "result": 40,
+                  "value": 12
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76c-6440-7419-a4a2-68c1286c6d70",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 16
+                },
+                {
+                  "result": 40,
+                  "value": 8
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76c-6440-7419-a4a2-68c1286c6d70",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 17
+                },
+                {
+                  "result": 40,
+                  "value": 5
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76c-6440-7419-a4a2-68c1286c6d70",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 33
+                },
+                {
+                  "result": 40,
+                  "value": 13
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-5378-77af-bcc0-d61c73d68066",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 17
+                },
+                {
+                  "result": 40,
+                  "value": 8
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-5378-77af-bcc0-d61c73d68066",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 18
+                },
+                {
+                  "result": 40,
+                  "value": 5
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-5378-77af-bcc0-d61c73d68066",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 35
+                },
+                {
+                  "result": 40,
+                  "value": 13
+                },
+                {
+                  "result": 41,
+                  "value": 3
+                },
+                {
+                  "result": 42,
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-c8a7-7cb3-aea4-6f518b8419a9",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 18
+                },
+                {
+                  "result": 40,
+                  "value": 9
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-c8a7-7cb3-aea4-6f518b8419a9",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 19
+                },
+                {
+                  "result": 40,
+                  "value": 6
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76b-c8a7-7cb3-aea4-6f518b8419a9",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 37
+                },
+                {
+                  "result": 40,
+                  "value": 15
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76f-0708-7499-85bc-67f898334936",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 19
+                },
+                {
+                  "result": 40,
+                  "value": 9
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76f-0708-7499-85bc-67f898334936",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 20
+                },
+                {
+                  "result": 40,
+                  "value": 6
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76f-0708-7499-85bc-67f898334936",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 39
+                },
+                {
+                  "result": 40,
+                  "value": 15
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 4
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-ea3d-74c3-95b9-fa9e328f9bcb",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 20
+                },
+                {
+                  "result": 40,
+                  "value": 10
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-ea3d-74c3-95b9-fa9e328f9bcb",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 21
+                },
+                {
+                  "result": 40,
+                  "value": 6
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-ea3d-74c3-95b9-fa9e328f9bcb",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 41
+                },
+                {
+                  "result": 40,
+                  "value": 16
+                },
+                {
+                  "result": 41,
+                  "value": 3
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-3180-71b4-870f-e86af4dfc761",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 21
+                },
+                {
+                  "result": 40,
+                  "value": 10
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-3180-71b4-870f-e86af4dfc761",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 22
+                },
+                {
+                  "result": 40,
+                  "value": 7
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-3180-71b4-870f-e86af4dfc761",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 43
+                },
+                {
+                  "result": 40,
+                  "value": 17
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019fad9e-cce7-7f3f-a834-72844cbd865e",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 22
+                },
+                {
+                  "result": 40,
+                  "value": 11
+                },
+                {
+                  "result": 41,
+                  "value": 0
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019fad9e-cce7-7f3f-a834-72844cbd865e",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 23
+                },
+                {
+                  "result": 40,
+                  "value": 7
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "participantId": "019fad9e-cce7-7f3f-a834-72844cbd865e",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 45
+                },
+                {
+                  "result": 40,
+                  "value": 18
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-924e-7acf-a28d-569cda0ddb68",
+              "interval": 11,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 23
+                },
+                {
+                  "result": 40,
+                  "value": 11
+                },
+                {
+                  "result": 41,
+                  "value": 1
+                },
+                {
+                  "result": 42,
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-924e-7acf-a28d-569cda0ddb68",
+              "interval": 12,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 24
+                },
+                {
+                  "result": 40,
+                  "value": 7
+                },
+                {
+                  "result": 41,
+                  "value": 2
+                },
+                {
+                  "result": 42,
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "participantId": "019dd76d-924e-7acf-a28d-569cda0ddb68",
+              "interval": 1,
+              "results": [
+                {
+                  "result": 19,
+                  "value": 47
+                },
+                {
+                  "result": 40,
+                  "value": 18
+                },
+                {
+                  "result": 41,
+                  "value": 3
+                },
+                {
+                  "result": 42,
+                  "value": 5
+                }
+              ]
+            }
+          ],
+          "regulations": {
+            "matchFormat": 2,
+            "canBeDrawInMap": false,
+            "roundQty": 12
+          },
+          "timestamp": 1786549179987,
+          "msgType": 1,
+          "offset": 9164142
+        }
+      ],
+      "channel": "scoreboard",
+      "messageType": "scoreboard",
+      "scheduledAt": 1786549179987
+    }
+  ]
+}
