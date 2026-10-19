@@ -15,5 +15,7 @@ public class MarketModel
     [Key("marketType")] public int? MarketType { get; set; }
     [Key("marketValue")] public string MarketValue { get; set; }
     [Key("subinterval")] public int? Subinterval { get; set; }
+    [Key("category")] public int? Category { get; set; }
+    [Key("specifiers")] public Dictionary<string, string> Specifiers { get; set; }
     [Key("outcomes")] public IEnumerable<OutcomeModel> Outcomes { get; set; }
 }

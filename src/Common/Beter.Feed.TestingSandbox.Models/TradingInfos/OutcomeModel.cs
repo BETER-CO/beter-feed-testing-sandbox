@@ -16,4 +16,5 @@ public class OutcomeModel
     [Key("status")] public int? Status { get; set; }
     [Key("outcomeResult")] public int? OutcomeResult { get; set; }
     [Key("prices")] public Dictionary<string, object> Prices { get; set; }
+    [Key("probability")] public double? Probability { get; set; }
 }

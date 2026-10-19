@@ -1,5 +1,4 @@
-﻿using Beter.Feed.TestingSandbox.Models;
-using MessagePack;
+﻿using MessagePack;
 
 namespace Beter.Feed.TestingSandbox.Models.TradingInfos;
 
@@ -15,6 +14,7 @@ public class TradingInfoModel : IFeedMessage
     [Key("tradingStatus")] public int? TradingStatus { get; set; }
     [Key("lineType")] public int? LineType { get; set; }
     [Key("markets")] public IEnumerable<MarketModel> Markets { get; set; }
+    [Key("playerMapping")] public Dictionary<int, Dictionary<string, object>> PlayerMapping { get; set; }
     [Key("timestamp")] public long Timestamp { get; set; }
     [Key("willBeLive")] public bool? WillBeLive { get; set; }
     [Key("willBePrematch")] public bool? WillBePrematch { get; set; }

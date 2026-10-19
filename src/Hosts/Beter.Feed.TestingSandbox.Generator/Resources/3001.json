@@ -179,11 +179,11 @@
               "result": 8,
               "score": "3-2"
             },
-                {
+            {
               "interval": 1,
               "result": 7,
               "score": "0-0"
-                  }
+            }
           ],
           "playerProps": [
             {
@@ -205,7 +205,6 @@
                 {
                   "result": 42,
                   "value": 0
-                  }
                 }
               ]
             },
@@ -220,15 +219,14 @@
                 {
                   "result": 40,
                   "value": 0
-            },
-            {
+                },
+                {
                   "result": 41,
                   "value": 1
                 },
                 {
                   "result": 42,
                   "value": 0
-                  }
                 }
               ]
             },
@@ -247,22 +245,10 @@
                 {
                   "result": 41,
                   "value": 1
-            },
-            {
-                  "result": 42,
-                  "value": 0
-                  }
                 },
                 {
-                  "id": "[7,[]]",
-                  "outcomeType": 7,
-                  "outcomeValue": "",
-                  "price": 1.7,
-                  "status": 2,
-                  "outcomeResult": 0,
-                  "prices": {
-                    "decimal": 1.7
-                  }
+                  "result": 42,
+                  "value": 0
                 }
               ]
             },
@@ -277,15 +263,14 @@
                 {
                   "result": 40,
                   "value": 0
-            },
-            {
+                },
+                {
                   "result": 41,
                   "value": 1
                 },
                 {
                   "result": 42,
                   "value": 1
-                  }
                 }
               ]
             },
@@ -308,42 +293,29 @@
                 {
                   "result": 42,
                   "value": 1
-                  }
                 }
               ]
-            }
-          ],
-          "timestamp": 1786549119987,
-          "willBeLive": true,
-          "willBePrematch": false,
-          "msgType": 4,
-          "offset": 9162498
-        }
-      ],
-      "channel": "trading",
-      "messageType": "trading",
-      "scheduledAt": 1786549119987
-    },
-    {
+            },
+            {
               "participantId": "019fa43d-acda-7e13-870c-cc1ca3ee133f",
               "interval": 1,
               "results": [
-        {
+                {
                   "result": 19,
                   "value": 3
                 },
-            {
+                {
                   "result": 40,
                   "value": 0
-            },
-            {
+                },
+                {
                   "result": 41,
                   "value": 3
                 },
                 {
                   "result": 42,
                   "value": 2
-            }
+                }
               ]
             },
             {
@@ -879,7 +851,7 @@
             "matchFormat": 2,
             "canBeDrawInMap": false,
             "roundQty": 12
-            },
+          },
           "timestamp": 1786549115034,
           "msgType": 3,
           "offset": 9162498
@@ -889,15 +861,15 @@
       "messageType": "scoreboard",
       "scheduledAt": 1786549115034
     },
-            {
+    {
       "value": [
-                {
+        {
           "id": "019ff69f-eb7c-7f41-af31-7ed6ec182111",
           "sportId": 3,
           "tradingStatus": 2,
           "lineType": 1,
           "markets": [
-                {
+            {
               "id": "[8,7,1,0,[]]",
               "interval": 1,
               "resultType": 7,
@@ -914,7 +886,8 @@
                   "outcomeResult": 0,
                   "prices": {
                     "decimal": 1.85
-                  }
+                  },
+                  "probability": 0.4147
                 },
                 {
                   "id": "[2,[]]",
@@ -925,7 +898,8 @@
                   "outcomeResult": 0,
                   "prices": {
                     "decimal": 1.85
-                  }
+                  },
+                  "probability": 0.4147
                 },
                 {
                   "id": "[3,[]]",
@@ -936,7 +910,8 @@
                   "outcomeResult": 0,
                   "prices": {
                     "decimal": 4.5
-                }
+                  },
+                  "probability": 0.1706
                 }
               ]
             },
@@ -957,7 +932,8 @@
                   "outcomeResult": 0,
                   "prices": {
                     "decimal": 1.85
-                  }
+                  },
+                  "probability": 0.5000
                 },
                 {
                   "id": "[3,[]]",
@@ -968,11 +944,12 @@
                   "outcomeResult": 0,
                   "prices": {
                     "decimal": 1.85
-                  }
+                  },
+                  "probability": 0.5000
                 }
               ]
-                },
-                {
+            },
+            {
               "id": "[2,8,1,0,[42.5]]",
               "interval": 1,
               "resultType": 8,
@@ -989,7 +966,8 @@
                   "outcomeResult": 0,
                   "prices": {
                     "decimal": 1.9
-                  }
+                  },
+                  "probability": 0.4865
                 },
                 {
                   "id": "[4,[]]",
@@ -1000,7 +978,8 @@
                   "outcomeResult": 0,
                   "prices": {
                     "decimal": 1.8
-                }
+                  },
+                  "probability": 0.5135
                 }
               ]
             },
@@ -1021,7 +1000,8 @@
                   "outcomeResult": 0,
                   "prices": {
                     "decimal": 1.85
-                  }
+                  },
+                  "probability": 0.4147
                 },
                 {
                   "id": "[8,[2-0]]",
@@ -1032,7 +1012,8 @@
                   "outcomeResult": 0,
                   "prices": {
                     "decimal": 1.85
-                  }
+                  },
+                  "probability": 0.4147
                 },
                 {
                   "id": "[8,[0-2]]",
@@ -1043,7 +1024,8 @@
                   "outcomeResult": 3,
                   "prices": {
                     "decimal": 4.5
-                }
+                  },
+                  "probability": 0.1706
                 }
               ]
             },
@@ -1064,7 +1046,8 @@
                   "outcomeResult": 0,
                   "prices": {
                     "decimal": 2.05
-                  }
+                  },
+                  "probability": 0.4533
                 },
                 {
                   "id": "[7,[]]",
@@ -1075,11 +1058,12 @@
                   "outcomeResult": 0,
                   "prices": {
                     "decimal": 1.7
-                  }
+                  },
+                  "probability": 0.5467
                 }
               ]
-                },
-                {
+            },
+            {
               "id": "[1,8,11,0,[]]",
               "interval": 11,
               "resultType": 8,
@@ -1096,7 +1080,8 @@
                   "outcomeResult": 2,
                   "prices": {
                     "decimal": 1.55
-                  }
+                  },
+                  "probability": 0.6026
                 },
                 {
                   "id": "[3,[]]",
@@ -1107,7 +1092,8 @@
                   "outcomeResult": 3,
                   "prices": {
                     "decimal": 2.35
-                }
+                  },
+                  "probability": 0.3974
                 }
               ]
             },
@@ -1128,7 +1114,8 @@
                   "outcomeResult": 2,
                   "prices": {
                     "decimal": 1.85
-                  }
+                  },
+                  "probability": 0.5000
                 },
                 {
                   "id": "[3,[]]",
@@ -1139,7 +1126,8 @@
                   "outcomeResult": 3,
                   "prices": {
                     "decimal": 1.85
-                }
+                  },
+                  "probability": 0.5000
                 }
               ]
             },
@@ -1160,7 +1148,8 @@
                   "outcomeResult": 2,
                   "prices": {
                     "decimal": 1.8
-                  }
+                  },
+                  "probability": 0.4993
                 },
                 {
                   "id": "[2,[]]",
@@ -1171,7 +1160,8 @@
                   "outcomeResult": 3,
                   "prices": {
                     "decimal": 5.0
-                  }
+                  },
+                  "probability": 0.1797
                 },
                 {
                   "id": "[3,[]]",
@@ -1182,11 +1172,1025 @@
                   "outcomeResult": 3,
                   "prices": {
                     "decimal": 2.8
-                  }
+                  },
+                  "probability": 0.3210
+                }
+              ]
+            },
+            {
+              "id": "[2,19,11,0,[12.5]]",
+              "interval": 11,
+              "resultType": 19,
+              "marketType": 2,
+              "marketValue": "12.5",
+              "subinterval": 0,
+              "outcomes": [
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 2.05,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.05
+                  },
+                  "probability": 0.4605
+                },
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.75,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.75
+                  },
+                  "probability": 0.5395
+                }
+              ]
+            },
+            {
+              "id": "[2,19,11,0,[27.5],1,[1,3]]",
+              "interval": 11,
+              "resultType": 19,
+              "marketType": 2,
+              "marketValue": "27.5",
+              "subinterval": 0,
+              "category": 1,
+              "specifiers": {
+                "p1": "1",
+                "p2": "3"
+              },
+              "outcomes": [
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.80,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.80
+                  },
+                  "probability": 0.5263
+                },
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 2.00,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.00
+                  },
+                  "probability": 0.4737
+                }
+              ]
+            },
+            {
+              "id": "[3,19,11,0,[-1.5],1,[1,3]]",
+              "interval": 11,
+              "resultType": 19,
+              "marketType": 3,
+              "marketValue": "-1.5",
+              "subinterval": 0,
+              "category": 1,
+              "specifiers": {
+                "p1": "1",
+                "p2": "3"
+              },
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.90,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.90
+                  },
+                  "probability": 0.5000
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.90,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.90
+                  },
+                  "probability": 0.5000
+                }
+              ]
+            },
+            {
+              "id": "[8,19,11,0,[],1,[1,3]]",
+              "interval": 11,
+              "resultType": 19,
+              "marketType": 8,
+              "marketValue": "",
+              "subinterval": 0,
+              "category": 1,
+              "specifiers": {
+                "p1": "1",
+                "p2": "3"
+              },
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.80,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.80
+                  },
+                  "probability": 0.4447
+                },
+                {
+                  "id": "[2,[]]",
+                  "outcomeType": 2,
+                  "outcomeValue": "",
+                  "price": 3.48,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.48
+                  },
+                  "probability": 0.2300
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 2.46,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.46
+                  },
+                  "probability": 0.3253
+                }
+              ]
+            },
+            {
+              "id": "[2,19,11,0,[27.5],1,[2,4]]",
+              "interval": 11,
+              "resultType": 19,
+              "marketType": 2,
+              "marketValue": "27.5",
+              "subinterval": 0,
+              "category": 1,
+              "specifiers": {
+                "p1": "2",
+                "p2": "4"
+              },
+              "outcomes": [
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.86,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.86
+                  },
+                  "probability": 0.5105
+                },
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.94,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.94
+                  },
+                  "probability": 0.4895
+                }
+              ]
+            },
+            {
+              "id": "[3,19,11,0,[-1.5],1,[2,4]]",
+              "interval": 11,
+              "resultType": 19,
+              "marketType": 3,
+              "marketValue": "-1.5",
+              "subinterval": 0,
+              "category": 1,
+              "specifiers": {
+                "p1": "2",
+                "p2": "4"
+              },
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.96,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.96
+                  },
+                  "probability": 0.4842
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.84,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.84
+                  },
+                  "probability": 0.5158
+                }
+              ]
+            },
+            {
+              "id": "[8,19,11,0,[],1,[2,4]]",
+              "interval": 11,
+              "resultType": 19,
+              "marketType": 8,
+              "marketValue": "",
+              "subinterval": 0,
+              "category": 1,
+              "specifiers": {
+                "p1": "2",
+                "p2": "4"
+              },
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.86,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.86
+                  },
+                  "probability": 0.4366
+                },
+                {
+                  "id": "[2,[]]",
+                  "outcomeType": 2,
+                  "outcomeValue": "",
+                  "price": 3.48,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.48
+                  },
+                  "probability": 0.2333
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 2.46,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.46
+                  },
+                  "probability": 0.3301
+                }
+              ]
+            },
+            {
+              "id": "[2,19,11,0,[27.5],1,[1,5]]",
+              "interval": 11,
+              "resultType": 19,
+              "marketType": 2,
+              "marketValue": "27.5",
+              "subinterval": 0,
+              "category": 1,
+              "specifiers": {
+                "p1": "1",
+                "p2": "5"
+              },
+              "outcomes": [
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.84,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.84
+                  },
+                  "probability": 0.5158
+                },
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.96,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.96
+                  },
+                  "probability": 0.4842
+                }
+              ]
+            },
+            {
+              "id": "[3,19,11,0,[-1.5],1,[1,5]]",
+              "interval": 11,
+              "resultType": 19,
+              "marketType": 3,
+              "marketValue": "-1.5",
+              "subinterval": 0,
+              "category": 1,
+              "specifiers": {
+                "p1": "1",
+                "p2": "5"
+              },
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.94,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.94
+                  },
+                  "probability": 0.4895
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 1.86,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.86
+                  },
+                  "probability": 0.5105
+                }
+              ]
+            },
+            {
+              "id": "[8,19,11,0,[],1,[1,5]]",
+              "interval": 11,
+              "resultType": 19,
+              "marketType": 8,
+              "marketValue": "",
+              "subinterval": 0,
+              "category": 1,
+              "specifiers": {
+                "p1": "1",
+                "p2": "5"
+              },
+              "outcomes": [
+                {
+                  "id": "[1,[]]",
+                  "outcomeType": 1,
+                  "outcomeValue": "",
+                  "price": 1.84,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.84
+                  },
+                  "probability": 0.4392
+                },
+                {
+                  "id": "[2,[]]",
+                  "outcomeType": 2,
+                  "outcomeValue": "",
+                  "price": 3.48,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 3.48
+                  },
+                  "probability": 0.2322
+                },
+                {
+                  "id": "[3,[]]",
+                  "outcomeType": 3,
+                  "outcomeValue": "",
+                  "price": 2.46,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.46
+                  },
+                  "probability": 0.3286
+                }
+              ]
+            },
+            {
+              "id": "[2,19,11,0,[16.5],2,[1]]",
+              "interval": 11,
+              "resultType": 19,
+              "marketType": 2,
+              "marketValue": "16.5",
+              "subinterval": 0,
+              "category": 2,
+              "specifiers": {
+                "p1": "1"
+              },
+              "outcomes": [
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.97,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.97
+                  },
+                  "probability": 0.4816
+                },
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.83,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.83
+                  },
+                  "probability": 0.5184
+                }
+              ]
+            },
+            {
+              "id": "[2,42,11,0,[9.5],2,[1]]",
+              "interval": 11,
+              "resultType": 42,
+              "marketType": 2,
+              "marketValue": "9.5",
+              "subinterval": 0,
+              "category": 2,
+              "specifiers": {
+                "p1": "1"
+              },
+              "outcomes": [
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.92,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.92
+                  },
+                  "probability": 0.4934
+                },
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.87,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.87
+                  },
+                  "probability": 0.5066
+                }
+              ]
+            },
+            {
+              "id": "[2,40,11,0,[12.5],2,[1]]",
+              "interval": 11,
+              "resultType": 40,
+              "marketType": 2,
+              "marketValue": "12.5",
+              "subinterval": 0,
+              "category": 2,
+              "specifiers": {
+                "p1": "1"
+              },
+              "outcomes": [
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.78,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.78
+                  },
+                  "probability": 0.5316
+                },
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 2.02,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.02
+                  },
+                  "probability": 0.4684
+                }
+              ]
+            },
+            {
+              "id": "[2,19,11,0,[17.5],2,[2]]",
+              "interval": 11,
+              "resultType": 19,
+              "marketType": 2,
+              "marketValue": "17.5",
+              "subinterval": 0,
+              "category": 2,
+              "specifiers": {
+                "p1": "2"
+              },
+              "outcomes": [
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.95,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.95
+                  },
+                  "probability": 0.4868
+                },
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85
+                  },
+                  "probability": 0.5132
+                }
+              ]
+            },
+            {
+              "id": "[2,42,11,0,[10.5],2,[2]]",
+              "interval": 11,
+              "resultType": 42,
+              "marketType": 2,
+              "marketValue": "10.5",
+              "subinterval": 0,
+              "category": 2,
+              "specifiers": {
+                "p1": "2"
+              },
+              "outcomes": [
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.92,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.92
+                  },
+                  "probability": 0.4934
+                },
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.87,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.87
+                  },
+                  "probability": 0.5066
+                }
+              ]
+            },
+            {
+              "id": "[2,40,11,0,[13.5],2,[2]]",
+              "interval": 11,
+              "resultType": 40,
+              "marketType": 2,
+              "marketValue": "13.5",
+              "subinterval": 0,
+              "category": 2,
+              "specifiers": {
+                "p1": "2"
+              },
+              "outcomes": [
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.81,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.81
+                  },
+                  "probability": 0.5237
+                },
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.99,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.99
+                  },
+                  "probability": 0.4763
+                }
+              ]
+            },
+            {
+              "id": "[2,19,11,0,[18.5],2,[3]]",
+              "interval": 11,
+              "resultType": 19,
+              "marketType": 2,
+              "marketValue": "18.5",
+              "subinterval": 0,
+              "category": 2,
+              "specifiers": {
+                "p1": "3"
+              },
+              "outcomes": [
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.93,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.93
+                  },
+                  "probability": 0.4921
+                },
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.87,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.87
+                  },
+                  "probability": 0.5079
+                }
+              ]
+            },
+            {
+              "id": "[2,42,11,0,[11.5],2,[3]]",
+              "interval": 11,
+              "resultType": 42,
+              "marketType": 2,
+              "marketValue": "11.5",
+              "subinterval": 0,
+              "category": 2,
+              "specifiers": {
+                "p1": "3"
+              },
+              "outcomes": [
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.92,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.92
+                  },
+                  "probability": 0.4934
+                },
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.87,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.87
+                  },
+                  "probability": 0.5066
+                }
+              ]
+            },
+            {
+              "id": "[2,40,11,0,[14.5],2,[3]]",
+              "interval": 11,
+              "resultType": 40,
+              "marketType": 2,
+              "marketValue": "14.5",
+              "subinterval": 0,
+              "category": 2,
+              "specifiers": {
+                "p1": "3"
+              },
+              "outcomes": [
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.84,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.84
+                  },
+                  "probability": 0.5158
+                },
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.96,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.96
+                  },
+                  "probability": 0.4842
+                }
+              ]
+            },
+            {
+              "id": "[2,19,11,0,[19.5],2,[4]]",
+              "interval": 11,
+              "resultType": 19,
+              "marketType": 2,
+              "marketValue": "19.5",
+              "subinterval": 0,
+              "category": 2,
+              "specifiers": {
+                "p1": "4"
+              },
+              "outcomes": [
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.91,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.91
+                  },
+                  "probability": 0.4974
+                },
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.89,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.89
+                  },
+                  "probability": 0.5026
+                }
+              ]
+            },
+            {
+              "id": "[2,42,11,0,[12.5],2,[4]]",
+              "interval": 11,
+              "resultType": 42,
+              "marketType": 2,
+              "marketValue": "12.5",
+              "subinterval": 0,
+              "category": 2,
+              "specifiers": {
+                "p1": "4"
+              },
+              "outcomes": [
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.92,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.92
+                  },
+                  "probability": 0.4934
+                },
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.87,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.87
+                  },
+                  "probability": 0.5066
+                }
+              ]
+            },
+            {
+              "id": "[2,40,11,0,[15.5],2,[4]]",
+              "interval": 11,
+              "resultType": 40,
+              "marketType": 2,
+              "marketValue": "15.5",
+              "subinterval": 0,
+              "category": 2,
+              "specifiers": {
+                "p1": "4"
+              },
+              "outcomes": [
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.87,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.87
+                  },
+                  "probability": 0.5079
+                },
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.93,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.93
+                  },
+                  "probability": 0.4921
+                }
+              ]
+            },
+            {
+              "id": "[2,19,11,0,[20.5],2,[5]]",
+              "interval": 11,
+              "resultType": 19,
+              "marketType": 2,
+              "marketValue": "20.5",
+              "subinterval": 0,
+              "category": 2,
+              "specifiers": {
+                "p1": "5"
+              },
+              "outcomes": [
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.89,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.89
+                  },
+                  "probability": 0.5026
+                },
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.91,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.91
+                  },
+                  "probability": 0.4974
+                }
+              ]
+            },
+            {
+              "id": "[2,42,11,0,[13.5],2,[5]]",
+              "interval": 11,
+              "resultType": 42,
+              "marketType": 2,
+              "marketValue": "13.5",
+              "subinterval": 0,
+              "category": 2,
+              "specifiers": {
+                "p1": "5"
+              },
+              "outcomes": [
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.92,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.92
+                  },
+                  "probability": 0.4934
+                },
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.87,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.87
+                  },
+                  "probability": 0.5066
+                }
+              ]
+            },
+            {
+              "id": "[2,40,11,0,[16.5],2,[5]]",
+              "interval": 11,
+              "resultType": 40,
+              "marketType": 2,
+              "marketValue": "16.5",
+              "subinterval": 0,
+              "category": 2,
+              "specifiers": {
+                "p1": "5"
+              },
+              "outcomes": [
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.90,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.90
+                  },
+                  "probability": 0.5000
+                },
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.90,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.90
+                  },
+                  "probability": 0.5000
                 }
               ]
             }
           ],
+          "playerMapping": {
+            "1": {
+              "id": "019dd76b-5378-77af-bcc0-d61c73d68066",
+              "name": "A0 ZywOo"
+            },
+            "2": {
+              "id": "019dd76c-6440-7419-a4a2-68c1286c6d70",
+              "name": "A0 m0NESY"
+            },
+            "3": {
+              "id": "019dd76d-ea3d-74c3-95b9-fa9e328f9bcb",
+              "name": "A0 s1mple"
+            },
+            "4": {
+              "id": "019dd76b-c8a7-7cb3-aea4-6f518b8419a9",
+              "name": "A0 donk"
+            },
+            "5": {
+              "id": "019dd76d-3180-71b4-870f-e86af4dfc761",
+              "name": "A0 sh1ro"
+            }
+          },
           "timestamp": 1786549119987,
           "willBeLive": true,
           "willBePrematch": false,
@@ -2961,7 +3965,8 @@
                   "outcomeResult": 0,
                   "prices": {
                     "decimal": 2.0
-                  }
+                  },
+                  "probability": 0.4115
                 },
                 {
                   "id": "[2,[]]",
@@ -2972,7 +3977,8 @@
                   "outcomeResult": 0,
                   "prices": {
                     "decimal": 2.0
-                  }
+                  },
+                  "probability": 0.4115
                 },
                 {
                   "id": "[3,[]]",
@@ -2983,7 +3989,8 @@
                   "outcomeResult": 0,
                   "prices": {
                     "decimal": 4.65
-                  }
+                  },
+                  "probability": 0.1770
                 }
               ]
             },
@@ -3004,7 +4011,8 @@
                   "outcomeResult": 0,
                   "prices": {
                     "decimal": 2.0
-                  }
+                  },
+                  "probability": 0.5000
                 },
                 {
                   "id": "[3,[]]",
@@ -3015,7 +4023,8 @@
                   "outcomeResult": 0,
                   "prices": {
                     "decimal": 2.0
-                  }
+                  },
+                  "probability": 0.5000
                 }
               ]
             },
@@ -3036,7 +4045,8 @@
                   "outcomeResult": 0,
                   "prices": {
                     "decimal": 2.05
-                  }
+                  },
+                  "probability": 0.4875
                 },
                 {
                   "id": "[4,[]]",
@@ -3047,7 +4057,8 @@
                   "outcomeResult": 0,
                   "prices": {
                     "decimal": 1.95
-                  }
+                  },
+                  "probability": 0.5125
                 }
               ]
             },
@@ -3068,7 +4079,8 @@
                   "outcomeResult": 0,
                   "prices": {
                     "decimal": 2.0
-                  }
+                  },
+                  "probability": 0.4115
                 },
                 {
                   "id": "[8,[2-0]]",
@@ -3079,7 +4091,8 @@
                   "outcomeResult": 0,
                   "prices": {
                     "decimal": 2.0
-                  }
+                  },
+                  "probability": 0.4115
                 },
                 {
                   "id": "[8,[0-2]]",
@@ -3090,7 +4103,8 @@
                   "outcomeResult": 3,
                   "prices": {
                     "decimal": 4.65
-                  }
+                  },
+                  "probability": 0.1770
                 }
               ]
             },
@@ -3111,7 +4125,8 @@
                   "outcomeResult": 0,
                   "prices": {
                     "decimal": 2.2
-                  }
+                  },
+                  "probability": 0.4568
                 },
                 {
                   "id": "[7,[]]",
@@ -3122,7 +4137,8 @@
                   "outcomeResult": 0,
                   "prices": {
                     "decimal": 1.85
-                  }
+                  },
+                  "probability": 0.5432
                 }
               ]
             },
@@ -3143,7 +4159,8 @@
                   "outcomeResult": 2,
                   "prices": {
                     "decimal": 1.7
-                  }
+                  },
+                  "probability": 0.5952
                 },
                 {
                   "id": "[3,[]]",
@@ -3154,7 +4171,8 @@
                   "outcomeResult": 3,
                   "prices": {
                     "decimal": 2.5
-                  }
+                  },
+                  "probability": 0.4048
                 }
               ]
             },
@@ -3175,7 +4193,8 @@
                   "outcomeResult": 2,
                   "prices": {
                     "decimal": 2.0
-                  }
+                  },
+                  "probability": 0.5000
                 },
                 {
                   "id": "[3,[]]",
@@ -3186,7 +4205,8 @@
                   "outcomeResult": 3,
                   "prices": {
                     "decimal": 2.0
-                  }
+                  },
+                  "probability": 0.5000
                 }
               ]
             },
@@ -3207,7 +4227,8 @@
                   "outcomeResult": 2,
                   "prices": {
                     "decimal": 1.95
-                  }
+                  },
+                  "probability": 0.4903
                 },
                 {
                   "id": "[2,[]]",
@@ -3218,7 +4239,8 @@
                   "outcomeResult": 3,
                   "prices": {
                     "decimal": 5.15
-                  }
+                  },
+                  "probability": 0.1856
                 },
                 {
                   "id": "[3,[]]",
@@ -3229,11 +4251,305 @@
                   "outcomeResult": 3,
                   "prices": {
                     "decimal": 2.95
-                  }
+                  },
+                  "probability": 0.3241
+                }
+              ]
+            },
+            {
+              "id": "[2,19,11,0,[25.5],1,[1,3]]",
+              "interval": 11,
+              "resultType": 19,
+              "marketType": 2,
+              "marketValue": "25.5",
+              "subinterval": 0,
+              "category": 1,
+              "specifiers": {
+                "p1": "1",
+                "p2": "3"
+              },
+              "outcomes": [
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.82,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.82
+                  },
+                  "probability": 0.5211
+                },
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.98,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.98
+                  },
+                  "probability": 0.4789
+                }
+              ]
+            },
+            {
+              "id": "[2,19,11,0,[14.5],2,[1]]",
+              "interval": 11,
+              "resultType": 19,
+              "marketType": 2,
+              "marketValue": "14.5",
+              "subinterval": 0,
+              "category": 2,
+              "specifiers": {
+                "p1": "1"
+              },
+              "outcomes": [
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.95,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.95
+                  },
+                  "probability": 0.4868
+                },
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85
+                  },
+                  "probability": 0.5132
+                }
+              ]
+            },
+            {
+              "id": "[2,42,11,0,[8.5],2,[1]]",
+              "interval": 11,
+              "resultType": 42,
+              "marketType": 2,
+              "marketValue": "8.5",
+              "subinterval": 0,
+              "category": 2,
+              "specifiers": {
+                "p1": "1"
+              },
+              "outcomes": [
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.88,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.88
+                  },
+                  "probability": 0.5053
+                },
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.92,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.92
+                  },
+                  "probability": 0.4947
+                }
+              ]
+            },
+            {
+              "id": "[2,40,11,0,[11.5],2,[1]]",
+              "interval": 11,
+              "resultType": 40,
+              "marketType": 2,
+              "marketValue": "11.5",
+              "subinterval": 0,
+              "category": 2,
+              "specifiers": {
+                "p1": "1"
+              },
+              "outcomes": [
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.78,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.78
+                  },
+                  "probability": 0.5316
+                },
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 2.02,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.02
+                  },
+                  "probability": 0.4684
+                }
+              ]
+            },
+            {
+              "id": "[2,19,11,0,[19.5],2,[6]]",
+              "interval": 11,
+              "resultType": 19,
+              "marketType": 2,
+              "marketValue": "19.5",
+              "subinterval": 0,
+              "category": 2,
+              "specifiers": {
+                "p1": "6"
+              },
+              "outcomes": [
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.95,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.95
+                  },
+                  "probability": 0.4868
+                },
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.85,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.85
+                  },
+                  "probability": 0.5132
+                }
+              ]
+            },
+            {
+              "id": "[2,42,11,0,[13.5],2,[6]]",
+              "interval": 11,
+              "resultType": 42,
+              "marketType": 2,
+              "marketValue": "13.5",
+              "subinterval": 0,
+              "category": 2,
+              "specifiers": {
+                "p1": "6"
+              },
+              "outcomes": [
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.88,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.88
+                  },
+                  "probability": 0.5053
+                },
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 1.92,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.92
+                  },
+                  "probability": 0.4947
+                }
+              ]
+            },
+            {
+              "id": "[2,40,11,0,[16.5],2,[6]]",
+              "interval": 11,
+              "resultType": 40,
+              "marketType": 2,
+              "marketValue": "16.5",
+              "subinterval": 0,
+              "category": 2,
+              "specifiers": {
+                "p1": "6"
+              },
+              "outcomes": [
+                {
+                  "id": "[4,[]]",
+                  "outcomeType": 4,
+                  "outcomeValue": "",
+                  "price": 1.78,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 1.78
+                  },
+                  "probability": 0.5316
+                },
+                {
+                  "id": "[5,[]]",
+                  "outcomeType": 5,
+                  "outcomeValue": "",
+                  "price": 2.02,
+                  "status": 1,
+                  "outcomeResult": 0,
+                  "prices": {
+                    "decimal": 2.02
+                  },
+                  "probability": 0.4684
                 }
               ]
             }
           ],
+          "playerMapping": {
+            "1": {
+              "id": "019dd76b-5378-77af-bcc0-d61c73d68066",
+              "name": "A0 ZywOo"
+            },
+            "2": {
+              "id": "019dd76c-6440-7419-a4a2-68c1286c6d70",
+              "name": "A0 m0NESY"
+            },
+            "3": {
+              "id": "019dd76d-ea3d-74c3-95b9-fa9e328f9bcb",
+              "name": "A0 s1mple"
+            },
+            "4": {
+              "id": "019dd76b-c8a7-7cb3-aea4-6f518b8419a9",
+              "name": "A0 donk"
+            },
+            "5": {
+              "id": "019dd76d-3180-71b4-870f-e86af4dfc761",
+              "name": "A0 sh1ro"
+            },
+            "6": {
+              "id": "019dd76d-924e-7acf-a28d-569cda0ddb68",
+              "name": "NewPlayer1"
+            }
+          },
           "timestamp": 1786549154987,
           "willBeLive": true,
           "willBePrematch": false,
