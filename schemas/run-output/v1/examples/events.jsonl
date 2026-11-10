@@ -1,0 +1,7 @@
+{"seq": 1, "at": "2026-11-07T09:31:04.870Z", "kind": "runStarted"}
+{"seq": 2, "at": "2026-11-07T09:31:04.870Z", "kind": "connected", "connectionId": "c-01", "channel": "trading", "protocol": "messagepack", "snapshotBatchSize": 50, "offset": null}
+{"seq": 3, "at": "2026-11-07T09:31:05.102Z", "kind": "snapshotServed", "connectionId": "c-01", "snapshot": "ConnectionSnapshot", "batches": 3, "messages": 128}
+{"seq": 40, "at": "2026-11-07T09:34:10.004Z", "kind": "directiveFired", "directive": "connectionDrop", "scriptIndex": 118, "channels": ["trading", "scoreboard"]}
+{"seq": 41, "at": "2026-11-07T09:34:10.006Z", "kind": "disconnected", "connectionId": "c-01", "by": "server"}
+{"seq": 42, "at": "2026-11-07T09:34:13.300Z", "kind": "connected", "connectionId": "c-02", "channel": "trading", "protocol": "messagepack", "snapshotBatchSize": 50, "offset": 117}
+{"seq": 97, "at": "2026-11-07T09:38:41.022Z", "kind": "runCompleted"}

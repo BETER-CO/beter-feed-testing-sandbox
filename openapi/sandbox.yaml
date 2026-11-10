@@ -1,0 +1,512 @@
+openapi: 3.1.0
+info:
+  title: BETER Feed Testing Sandbox
+  version: 3.0.0
+  summary: The run half of the sandbox's client-facing contract.
+  description: |
+    What a client's tests call to start a case and read its output. The feed
+    half of the contract, the four hubs `/time_table`, `/trading`,
+    `/scoreboard` and `/incident`, is the public feed contract itself, played
+    unchanged, and is described at https://docs.beter.co, not here.
+
+    A run plays one case to every hub connection that presents the run's
+    `apiKey` value as the feed `ApiKey`. A test starts a run, keeps its own
+    consumer connected with that value, polls the run until `completed` and
+    reads the messages and events the sandbox sent. The sandbox judges
+    nothing: `status` says whether the case played to its end, and the verdict
+    is the test's own.
+
+    `info.version` is the sandbox version: the same string as the git tag, the
+    image tag, `sandboxVersion` in every `run.json` and the answer of
+    `GET /api/version`.
+servers:
+  - url: http://localhost:51858
+    description: The container started by the quickstart command.
+security: []
+tags:
+  - name: Sandbox
+    description: The sandbox itself.
+  - name: Cases
+    description: The catalogue and the case files.
+  - name: Runs
+    description: Runs and their output.
+  - name: Description
+    description: This document, as the container serves it.
+paths:
+  /api/version:
+    get:
+      operationId: getVersion
+      tags: [Sandbox]
+      summary: The version of the sandbox, of its output and of the feed contract.
+      responses:
+        '200':
+          description: The versions.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Version'
+  /api/health:
+    get:
+      operationId: getHealth
+      tags: [Sandbox]
+      summary: Whether the case set is loaded.
+      responses:
+        '200':
+          description: The case set is loaded.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Health'
+        '503':
+          description: The case set is not loaded yet.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /api/cases:
+    get:
+      operationId: listCases
+      tags: [Cases]
+      summary: The catalogue.
+      description: One row per promoted or loaded case.
+      parameters:
+        - name: tag
+          in: query
+          description: A tag a case must carry. Repeatable; all tags must match.
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: array
+            items:
+              type: string
+        - name: status
+          in: query
+          required: false
+          schema:
+            type: string
+            enum: [active, retired, all]
+            default: active
+      responses:
+        '200':
+          description: The catalogue rows.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CatalogueRow'
+    post:
+      operationId: loadCase
+      tags: [Cases]
+      summary: Load a custom case.
+      description: |
+        A custom case lives for the container's life, is never persisted and
+        is never promoted from the client side. `caseId` is absent or from
+        100000 up, the range reserved for runtime cases.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RuntimeCase'
+      responses:
+        '201':
+          description: The catalogue row of the loaded case, with the assigned id.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CatalogueRow'
+        '422':
+          description: The case fails the case schema, or its id is in use or outside the runtime range.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationError'
+  /api/cases/{caseId}:
+    parameters:
+      - $ref: '#/components/parameters/caseId'
+    get:
+      operationId: getCase
+      tags: [Cases]
+      summary: The case file.
+      description: |
+        The case file with `expected` and `exposes`, so a test reads its
+        reference without the repository. A retired id still resolves, with
+        `status: retired`.
+      responses:
+        '200':
+          description: The case.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CaseDetail'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/runs:
+    post:
+      operationId: startRun
+      tags: [Runs]
+      summary: Start a run of one case.
+      description: |
+        A test that wants a tag's cases lists them with
+        `GET /api/cases?tag=` and starts one run per case, in parallel under
+        one `apiKey` value (the runs play as distinct matches to the same
+        consumer) or in sequence.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RunRequest'
+      responses:
+        '201':
+          description: The run manifest.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RunManifest'
+        '400':
+          description: >-
+            `acceleration` outside 0.25 to the case's `maxAcceleration`, an
+            unknown `start`, or `waitTimeoutSeconds` under 1.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Unknown `caseId`.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '410':
+          description: The case is retired; the body names its replacement.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RetiredError'
+    get:
+      operationId: listRuns
+      tags: [Runs]
+      summary: The manifests of every run the container holds.
+      parameters:
+        - name: status
+          in: query
+          required: false
+          schema:
+            $ref: '../schemas/run-output/v1/run.schema.json#/$defs/status'
+      responses:
+        '200':
+          description: The run manifests.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RunManifest'
+  /api/runs/{runId}:
+    parameters:
+      - $ref: '#/components/parameters/runId'
+    get:
+      operationId: getRun
+      tags: [Runs]
+      summary: The manifest of a run, `run.json`.
+      responses:
+        '200':
+          description: The run manifest.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RunManifest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    delete:
+      operationId: deleteRun
+      tags: [Runs]
+      summary: Remove a run and its output directory.
+      responses:
+        '204':
+          description: The run and its output directory are removed.
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '409':
+          description: The run is `waiting` or `playing`; stop it first.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /api/runs/{runId}/messages:
+    parameters:
+      - $ref: '#/components/parameters/runId'
+    get:
+      operationId: getRunMessages
+      tags: [Runs]
+      summary: The transcript of a run, `messages.jsonl`, as a stream.
+      description: |
+        JSON Lines: one message per line as sent to one connection, in send
+        order. While the run is `waiting` or `playing` the stream holds the
+        lines written so far and ends; the full transcript is read after a
+        terminal status.
+      responses:
+        '200':
+          description: The transcript; every line is one object of the schema.
+          content:
+            application/x-ndjson:
+              schema:
+                $ref: '#/components/schemas/MessageLine'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/runs/{runId}/events:
+    parameters:
+      - $ref: '#/components/parameters/runId'
+    get:
+      operationId: getRunEvents
+      tags: [Runs]
+      summary: The connection and directive timeline of a run, `events.jsonl`, as a stream.
+      description: |
+        JSON Lines: one event per line. While the run is `waiting` or
+        `playing` the stream holds the lines written so far and ends; the
+        full timeline is read after a terminal status.
+      responses:
+        '200':
+          description: The timeline; every line is one object of the schema.
+          content:
+            application/x-ndjson:
+              schema:
+                $ref: '#/components/schemas/EventLine'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/runs/{runId}/stop:
+    parameters:
+      - $ref: '#/components/parameters/runId'
+    post:
+      operationId: stopRun
+      tags: [Runs]
+      summary: Stop a run.
+      responses:
+        '200':
+          description: 'The run manifest, with `status: stopped`.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RunManifest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '409':
+          description: The run is already in a terminal status.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /openapi.json:
+    get:
+      operationId: getOpenApiDocument
+      tags: [Description]
+      summary: This document, as JSON.
+      description: The same document the repository commits as `openapi/sandbox.yaml`.
+      responses:
+        '200':
+          description: The OpenAPI document.
+          content:
+            application/json:
+              schema:
+                type: object
+  /swagger:
+    get:
+      operationId: getSwaggerUi
+      tags: [Description]
+      summary: This document, rendered.
+      responses:
+        '200':
+          description: The rendered description.
+          content:
+            text/html:
+              schema:
+                type: string
+components:
+  parameters:
+    caseId:
+      name: caseId
+      in: path
+      required: true
+      schema:
+        type: integer
+        minimum: 1
+    runId:
+      name: runId
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    NotFound:
+      description: Unknown id.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+  schemas:
+    RunManifest:
+      $ref: '../schemas/run-output/v1/run.schema.json'
+    MessageLine:
+      $ref: '../schemas/run-output/v1/message.schema.json'
+    EventLine:
+      $ref: '../schemas/run-output/v1/event.schema.json'
+    ContractPin:
+      $ref: '../schemas/case/case.schema.json#/$defs/contractPin'
+    RuntimeCase:
+      description: >-
+        A case file posted at runtime: the case format, with `caseId` absent
+        or from 100000 up.
+      allOf:
+        - $ref: '../schemas/case/case.schema.json#/$defs/caseBody'
+        - properties:
+            caseId:
+              minimum: 100000
+      unevaluatedProperties: false
+    CaseDetail:
+      description: The case file as the sandbox serves it, with its catalogue status.
+      allOf:
+        - $ref: '../schemas/case/case.schema.json#/$defs/caseBody'
+        - type: object
+          required: [caseId, status]
+          properties:
+            status:
+              $ref: '#/components/schemas/CaseStatus'
+            replacedBy:
+              description: The id of the case that replaces a retired one.
+              type: integer
+    CaseStatus:
+      type: string
+      enum: [active, retired]
+    CatalogueRow:
+      description: One case as the catalogue lists it.
+      type: object
+      required: [caseId, version, status, class, sport, tags, description, terminal, covers, duration]
+      properties:
+        caseId:
+          $ref: '../schemas/case/case.schema.json#/$defs/caseBody/properties/caseId'
+        version:
+          $ref: '../schemas/case/case.schema.json#/$defs/caseBody/properties/version'
+        status:
+          $ref: '#/components/schemas/CaseStatus'
+        class:
+          $ref: '../schemas/case/case.schema.json#/$defs/caseClass'
+        sport:
+          $ref: '../schemas/case/case.schema.json#/$defs/caseBody/properties/sport'
+        tags:
+          $ref: '../schemas/case/case.schema.json#/$defs/caseBody/properties/tags'
+        description:
+          $ref: '../schemas/case/case.schema.json#/$defs/caseBody/properties/description'
+        terminal:
+          $ref: '../schemas/case/case.schema.json#/$defs/terminal'
+        covers:
+          description: What the case covers in the public feed documentation.
+          type: object
+          required: [count, sections]
+          properties:
+            count:
+              description: The number of documentation statements the case covers.
+              type: integer
+              minimum: 0
+            sections:
+              type: array
+              items:
+                $ref: '../schemas/case/case.schema.json#/$defs/documentationSection'
+        duration:
+          $ref: '../schemas/case/case.schema.json#/$defs/caseBody/properties/duration'
+        replacedBy:
+          description: The id of the case that replaces a retired one.
+          type: integer
+    RunRequest:
+      type: object
+      required: [caseId, apiKey]
+      properties:
+        caseId:
+          $ref: '../schemas/case/case.schema.json#/$defs/caseBody/properties/caseId'
+        apiKey:
+          description: >-
+            The binding value: every hub connection presenting it as the feed
+            `ApiKey` receives the run's content.
+          type: string
+          minLength: 1
+        acceleration:
+          description: From 0.25 to the case's `maxAcceleration`. Scales the script clock only.
+          type: number
+          minimum: 0.25
+          default: 1
+        start:
+          description: Default, the case's `start`.
+          type: string
+          enum: [onConnect, now]
+        waitTimeoutSeconds:
+          description: >-
+            How long a run started `onConnect` waits for a first connection
+            before it ends `failed`.
+          type: integer
+          minimum: 1
+          default: 60
+      additionalProperties: false
+    Version:
+      type: object
+      required: [sandboxVersion, outputVersion, contract]
+      properties:
+        sandboxVersion:
+          description: The same string as `info.version` and the image tag.
+          type: string
+        outputVersion:
+          description: The version of the run output schemas the sandbox writes.
+          type: integer
+          minimum: 1
+        contract:
+          description: >-
+            The newest contract pin among the promoted cases, runtime cases
+            excluded; null while no promoted case carries one.
+          anyOf:
+            - type: 'null'
+            - $ref: '#/components/schemas/ContractPin'
+    Health:
+      type: object
+      required: [status]
+      properties:
+        status:
+          type: string
+          const: ok
+    Error:
+      type: object
+      required: [error, detail]
+      properties:
+        error:
+          type: string
+        detail:
+          type: string
+    RetiredError:
+      allOf:
+        - $ref: '#/components/schemas/Error'
+        - type: object
+          required: [replacedBy]
+          properties:
+            replacedBy:
+              description: The id of the case that replaces the retired one.
+              type: integer
+    ValidationError:
+      allOf:
+        - $ref: '#/components/schemas/Error'
+        - type: object
+          properties:
+            errors:
+              description: The JSON Schema errors, one per failed keyword.
+              type: array
+              items:
+                type: object
+                required: [instanceLocation, keywordLocation, error]
+                properties:
+                  instanceLocation:
+                    description: A JSON Pointer into the posted case.
+                    type: string
+                  keywordLocation:
+                    description: A JSON Pointer into the case schema.
+                    type: string
+                  error:
+                    type: string

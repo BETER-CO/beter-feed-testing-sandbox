@@ -1,0 +1,1 @@
+{"seq": 1419, "at": "2026-11-07T09:34:13.912Z", "connectionId": "c-02", "channel": "trading", "msgType": 5, "offset": 118, "matchId": "a1f0…", "scriptIndex": 119, "payload": { "msgType": 5, "offset": 118, "timestamp": 1794483253912, "…": "the message as sent, after the playback rewrite of ids, offsets and timestamps" }}
