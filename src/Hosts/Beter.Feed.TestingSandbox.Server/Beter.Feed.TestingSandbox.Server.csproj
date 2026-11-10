@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <!-- The informational version is the sandbox version as GET /api/version returns it. -->
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- The committed contract, served at /openapi.json with its schemas inlined. -->
+    <EmbeddedResource Include="..\..\..\openapi\sandbox.yaml" LogicalName="contract/openapi/sandbox.yaml" />
+    <EmbeddedResource Include="..\..\..\schemas\**\*.schema.json" LogicalName="contract/schemas/%(RecursiveDir)%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MessagePack" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Protocols.MessagePack" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" />
+    <PackageReference Include="YamlDotNet" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Beter.Feed.TestingSandbox.Common\Beter.Feed.TestingSandbox.Common.csproj" />
+    <ProjectReference Include="..\..\Common\Beter.Feed.TestingSandbox.Hosting\Beter.Feed.TestingSandbox.Hosting.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,43 @@
+<Project>
+  <PropertyGroup>
+    <Product>BETER Feed Testing Sandbox</Product>
+    <Company>BETER</Company>
+    <Authors>$(Company)</Authors>
+    <Description>$(Product)</Description>
+    <NeutralLanguage>en</NeutralLanguage>
+  </PropertyGroup>
+
+  <!-- The sandbox version. A tag build passes the tag as -p:Version; any other build is
+       <info.version of openapi/sandbox.yaml>-dev. A test holds VersionPrefix to that file. -->
+  <PropertyGroup>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <VersionSuffix>dev</VersionSuffix>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);NU3018;SA1633</NoWarn>
+    <IsPackable>false</IsPackable>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <!-- Analyzers -->
+  <PropertyGroup>
+    <RunStyleCop Condition="'$(RunStyleCop)' == ''">true</RunStyleCop>
+    <RunNetAnalyzers Condition="'$(RunNetAnalyzers)' == ''">true</RunNetAnalyzers>
+    <SolutionDir Condition="'$(SolutionDir)' == ''">$(MSBuildThisFileDirectory)</SolutionDir>
+  </PropertyGroup>
+
+  <!-- NET Analyzers -->
+  <PropertyGroup>
+    <EnableNETAnalyzers>$(RunNetAnalyzers)</EnableNETAnalyzers>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+  </PropertyGroup>
+
+  <!-- StyleCop Analyzers configuration -->
+  <ItemGroup Condition="'$(RunStyleCop)' == 'true'">
+    <AdditionalFiles Include="$(SolutionDir)stylecop.json" Link="stylecop.json" />
+  </ItemGroup>
+</Project>

@@ -1,6 +1,6 @@
 ﻿using Beter.Feed.TestingSandbox.Common.Constants;
 using Beter.Feed.TestingSandbox.Consumer.Options;
-using Beter.Feed.TestingSandbox.Consumer.Producers;
+using Beter.Feed.TestingSandbox.Consumer.Sinks;
 using Beter.Feed.TestingSandbox.Models.TradingInfos;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -14,8 +14,8 @@ public class TradingFeedServiceClient : FeedServiceClientBase<TradingInfoModel>
     public TradingFeedServiceClient(
         ILogger<FeedServiceClientBase<TradingInfoModel>> logger,
         IOptions<FeedServiceOptions> feedServiceOptions,
-        IFeedMessageProducer<TradingInfoModel> producer)
-        : base(logger, feedServiceOptions, producer)
+        IFeedMessageSink sink)
+        : base(logger, feedServiceOptions, sink)
     {
     }
 }
