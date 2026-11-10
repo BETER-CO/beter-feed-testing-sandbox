@@ -1,0 +1,38 @@
+{
+  "caseId": 100000,
+  "version": "1.0.0",
+  "description": "Sample of the case format: the three fault directives, one of them fired after a snapshot batch. Not a playable case.",
+  "class": "transport-faults",
+  "sport": 6,
+  "tags": ["resilience", "transport-faults"],
+  "source": {
+    "kind": "authored",
+    "authoredSteps": [
+      "connectionDrop after the second snapshot batch",
+      "heartbeatStop on trading",
+      "heartbeatResume on trading"
+    ]
+  },
+  "terminal": "Finished",
+  "start": "onConnect",
+  "maxAcceleration": 1,
+  "script": [
+    { "at": 0, "channel": "trading", "messageType": "trading", "value": [] },
+    {
+      "after": { "event": "snapshotServed", "batch": 2 },
+      "directive": "connectionDrop",
+      "channels": ["trading", "scoreboard"]
+    },
+    { "at": 5000, "directive": "heartbeatStop", "channels": ["trading"] },
+    { "at": 20000, "directive": "heartbeatResume", "channels": ["trading"] }
+  ],
+  "exposes": {
+    "terminal": "Finished",
+    "directives": [
+      { "scriptIndex": 1, "directive": "connectionDrop", "channels": ["trading", "scoreboard"] },
+      { "scriptIndex": 2, "directive": "heartbeatStop", "channels": ["trading"] },
+      { "scriptIndex": 3, "directive": "heartbeatResume", "channels": ["trading"] }
+    ],
+    "observed": ["connections", "snapshots"]
+  }
+}

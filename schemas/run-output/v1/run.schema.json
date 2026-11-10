@@ -1,0 +1,193 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "run.json",
+  "description": "The manifest of one run, outputVersion 1: written at creation and rewritten on every status change. Keys are additive within a major version of the sandbox, so a reader ignores a key it does not know.",
+  "type": "object",
+  "required": [
+    "outputVersion",
+    "runId",
+    "apiKey",
+    "sandboxVersion",
+    "contract",
+    "case",
+    "acceleration",
+    "start",
+    "status",
+    "error",
+    "createdAt",
+    "startedAt",
+    "finishedAt",
+    "summary",
+    "expected"
+  ],
+  "properties": {
+    "outputVersion": { "const": 1 },
+    "runId": { "type": "string", "minLength": 1 },
+    "apiKey": {
+      "description": "The value that binds the run: every connection presenting it as the feed ApiKey receives the run's content.",
+      "type": "string",
+      "minLength": 1
+    },
+    "sandboxVersion": {
+      "description": "The version of the image, the same string as its tag.",
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(-[0-9A-Za-z.-]+)?$"
+    },
+    "contract": {
+      "description": "The contract pin of the run's case; null for a case that carries none.",
+      "type": ["object", "null"],
+      "required": ["fetchedAt", "newestChange"],
+      "properties": {
+        "fetchedAt": {
+          "type": "string",
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+        },
+        "newestChange": { "type": "string", "minLength": 1 }
+      }
+    },
+    "case": {
+      "type": "object",
+      "required": ["caseId", "version", "class", "tags", "terminal"],
+      "properties": {
+        "caseId": { "type": "integer", "minimum": 1 },
+        "version": {
+          "description": "The case's own version.",
+          "type": "string"
+        },
+        "class": { "type": "string" },
+        "sport": { "type": "integer" },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "terminal": { "type": "string", "enum": ["Finished", "Canceled", "abandoned"] }
+      }
+    },
+    "acceleration": { "type": "number", "minimum": 0.25 },
+    "start": { "type": "string", "enum": ["onConnect", "now"] },
+    "status": { "$ref": "#/$defs/status" },
+    "error": {
+      "description": "What stopped the sandbox from playing, for a failed run; null otherwise.",
+      "type": ["string", "null"]
+    },
+    "createdAt": { "$ref": "#/$defs/timestamp" },
+    "startedAt": {
+      "anyOf": [{ "type": "null" }, { "$ref": "#/$defs/timestamp" }]
+    },
+    "finishedAt": {
+      "anyOf": [{ "type": "null" }, { "$ref": "#/$defs/timestamp" }]
+    },
+    "summary": { "$ref": "#/$defs/summary" },
+    "expected": {
+      "description": "The ids of the case's expected entries.",
+      "type": "array",
+      "items": { "type": "string", "pattern": "^EX-[0-9]+-[0-9]+$" }
+    }
+  },
+  "$defs": {
+    "status": {
+      "description": "Whether the sandbox played the case to its end. It says nothing about the client's system.",
+      "type": "string",
+      "enum": ["waiting", "playing", "completed", "stopped", "failed"]
+    },
+    "timestamp": {
+      "description": "ISO 8601, UTC, millisecond precision.",
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+    },
+    "channel": {
+      "type": "string",
+      "enum": ["time_table", "trading", "scoreboard", "incident"]
+    },
+    "summary": {
+      "description": "One block per run over every connection bound to it.",
+      "type": "object",
+      "required": ["messages", "offsets", "matches", "directives", "connections", "snapshots"],
+      "properties": {
+        "messages": {
+          "description": "Messages per channel and msgType; each message counts once per connection it was sent to.",
+          "type": "object",
+          "propertyNames": { "$ref": "#/$defs/channel" },
+          "additionalProperties": {
+            "type": "object",
+            "required": ["sent", "byMsgType"],
+            "properties": {
+              "sent": { "type": "integer", "minimum": 0 },
+              "byMsgType": {
+                "type": "object",
+                "additionalProperties": { "type": "integer", "minimum": 0 }
+              }
+            }
+          }
+        },
+        "offsets": {
+          "description": "The offset range of every channel that carries offsets, with the count of offsets sent again.",
+          "type": "object",
+          "propertyNames": { "$ref": "#/$defs/channel" },
+          "additionalProperties": {
+            "type": "object",
+            "required": ["first", "last", "resent"],
+            "properties": {
+              "first": { "type": ["integer", "null"] },
+              "last": { "type": ["integer", "null"] },
+              "resent": { "type": "integer", "minimum": 0 }
+            }
+          }
+        },
+        "matches": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["matchId", "finalState", "marketsByStatus", "incidentsByType"],
+            "properties": {
+              "matchId": {
+                "description": "The match id as sent, assigned at playback and unique within the container.",
+                "type": "string"
+              },
+              "finalState": { "type": "string" },
+              "marketsByStatus": {
+                "type": "object",
+                "additionalProperties": { "type": "integer", "minimum": 0 }
+              },
+              "incidentsByType": {
+                "type": "object",
+                "additionalProperties": { "type": "integer", "minimum": 0 }
+              }
+            }
+          }
+        },
+        "directives": {
+          "description": "Every directive fired, with its time.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["scriptIndex", "directive", "channels", "at"],
+            "properties": {
+              "scriptIndex": { "type": "integer", "minimum": 0 },
+              "directive": { "type": "string", "enum": ["connectionDrop", "heartbeatStop", "heartbeatResume"] },
+              "channels": {
+                "type": "array",
+                "items": { "$ref": "#/$defs/channel" }
+              },
+              "at": { "$ref": "#/$defs/timestamp" }
+            }
+          }
+        },
+        "connections": {
+          "description": "Hub connections bound to the run; one consumer on four hubs counts 4.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "snapshots": {
+          "description": "Snapshots served, by kind.",
+          "type": "object",
+          "required": ["connection", "recovery", "booking"],
+          "properties": {
+            "connection": { "type": "integer", "minimum": 0 },
+            "recovery": { "type": "integer", "minimum": 0 },
+            "booking": { "type": "integer", "minimum": 0 }
+          }
+        }
+      }
+    }
+  }
+}

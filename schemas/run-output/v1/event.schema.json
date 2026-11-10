@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "events.jsonl line",
+  "description": "One line of the connection and directive timeline of a run, outputVersion 1. Keys are additive within a major version of the sandbox, so a reader ignores a key it does not know.",
+  "type": "object",
+  "required": ["seq", "at", "kind"],
+  "properties": {
+    "seq": {
+      "description": "The position of the line in the timeline.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "at": {
+      "description": "ISO 8601, UTC, millisecond precision.",
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "runStarted",
+        "runCompleted",
+        "runStopped",
+        "runFailed",
+        "connected",
+        "disconnected",
+        "rateLimited",
+        "snapshotServed",
+        "heartbeatStopped",
+        "heartbeatResumed",
+        "directiveFired"
+      ]
+    },
+    "connectionId": { "type": "string", "minLength": 1 },
+    "channel": { "$ref": "#/$defs/channel" },
+    "channels": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/channel" }
+    },
+    "protocol": {
+      "description": "The hub protocol the connection used.",
+      "type": "string",
+      "enum": ["json", "messagepack"]
+    },
+    "snapshotBatchSize": { "type": "integer", "minimum": 1 },
+    "offset": {
+      "description": "The offset the connection presented; null for none.",
+      "type": ["integer", "null"]
+    },
+    "by": {
+      "description": "Who ended the connection.",
+      "type": "string",
+      "enum": ["client", "server", "shutdown"]
+    },
+    "status": {
+      "description": "The HTTP status a refused connection attempt received.",
+      "type": "integer"
+    },
+    "snapshot": {
+      "type": "string",
+      "enum": ["ConnectionSnapshot", "RecoverySnapshot", "BookingSnapshot"]
+    },
+    "batches": { "type": "integer", "minimum": 0 },
+    "messages": { "type": "integer", "minimum": 0 },
+    "directive": { "type": "string", "enum": ["connectionDrop", "heartbeatStop", "heartbeatResume"] },
+    "scriptIndex": { "type": "integer", "minimum": 0 }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "kind": { "const": "connected" } } },
+      "then": { "required": ["connectionId", "channel", "protocol", "snapshotBatchSize", "offset"] }
+    },
+    {
+      "if": { "properties": { "kind": { "const": "disconnected" } } },
+      "then": { "required": ["connectionId", "by"] }
+    },
+    {
+      "if": { "properties": { "kind": { "const": "rateLimited" } } },
+      "then": {
+        "required": ["channel", "status"],
+        "properties": { "status": { "const": 429 }, "connectionId": false }
+      }
+    },
+    {
+      "if": { "properties": { "kind": { "const": "snapshotServed" } } },
+      "then": { "required": ["connectionId", "snapshot", "batches", "messages"] }
+    },
+    {
+      "if": { "properties": { "kind": { "const": "directiveFired" } } },
+      "then": { "required": ["directive", "scriptIndex", "channels"] }
+    }
+  ],
+  "$defs": {
+    "channel": {
+      "type": "string",
+      "enum": ["time_table", "trading", "scoreboard", "incident"]
+    }
+  }
+}
