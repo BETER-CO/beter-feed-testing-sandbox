@@ -1,6 +1,6 @@
 ﻿using Beter.Feed.TestingSandbox.Common.Constants;
 using Beter.Feed.TestingSandbox.Consumer.Options;
-using Beter.Feed.TestingSandbox.Consumer.Producers;
+using Beter.Feed.TestingSandbox.Consumer.Sinks;
 using Beter.Feed.TestingSandbox.Models.Scoreboards;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -14,8 +14,8 @@ public class ScoreboardFeedServiceClient : FeedServiceClientBase<ScoreBoardModel
     public ScoreboardFeedServiceClient(
         ILogger<FeedServiceClientBase<ScoreBoardModel>> logger,
         IOptions<FeedServiceOptions> feedServiceOptions,
-        IFeedMessageProducer<ScoreBoardModel> producer)
-        : base(logger, feedServiceOptions, producer)
+        IFeedMessageSink sink)
+        : base(logger, feedServiceOptions, sink)
     {
     }
 }

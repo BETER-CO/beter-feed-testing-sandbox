@@ -19,11 +19,9 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
-        services.AddKafkaConfiguration(Configuration);
         services.AddHostedServices();
         services.AddEndpointsApiExplorer();
-        services.AddFeedServiceClients();
-        services.AddFeedMessageProducers();
+        services.AddFeedServiceClients(Configuration);
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

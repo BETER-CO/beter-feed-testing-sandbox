@@ -1,8 +1,9 @@
 # Sandbox contract
 
-The machine-readable contract of the sandbox, version 3.0.0. It is written
-ahead of the code: the sandbox on this branch does not serve these operations
-yet, and `doc/API.md` describes what it serves today.
+The machine-readable contract of the sandbox, version 3.0.0. The sandbox on
+this branch serves `GET /api/version` and `GET /api/health`. The other
+operations (`/api/cases...` and `/api/runs...`) are mapped and answer `501`
+until they are built.
 
 | File | Describes |
 | --- | --- |

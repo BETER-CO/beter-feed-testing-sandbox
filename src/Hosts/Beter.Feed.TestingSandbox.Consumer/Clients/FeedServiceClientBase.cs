@@ -1,9 +1,11 @@
 ﻿using Beter.Feed.TestingSandbox.Common.Constants;
 using Beter.Feed.TestingSandbox.Consumer.Options;
-using Beter.Feed.TestingSandbox.Consumer.Producers;
+using Beter.Feed.TestingSandbox.Consumer.Sinks;
 using Beter.Feed.TestingSandbox.Consumer.Utilities;
 using Beter.Feed.TestingSandbox.Models;
 using Beter.Feed.TestingSandbox.Models.GlobalEvents;
+using MessagePack;
+using MessagePack.Resolvers;
 using Microsoft.AspNetCore.Http.Connections;
 using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,7 +21,7 @@ public abstract class FeedServiceClientBase<T> : IFeedClient where T : class, IF
     private readonly string connectionUrl;
     private readonly HubConnection _connection;
 
-    private readonly IFeedMessageProducer<T> _producer;
+    private readonly IFeedMessageSink _sink;
     private readonly FeedServiceOptions _feedServiceOptions;
     private readonly ILogger<FeedServiceClientBase<T>> _logger;
 
@@ -28,33 +30,59 @@ public abstract class FeedServiceClientBase<T> : IFeedClient where T : class, IF
     public FeedServiceClientBase(
         ILogger<FeedServiceClientBase<T>> logger,
         IOptions<FeedServiceOptions> feedServiceOptions,
-        IFeedMessageProducer<T> producer)
+        IFeedMessageSink sink)
     {
         _logger = logger ?? NullLogger<FeedServiceClientBase<T>>.Instance;
-        _producer = producer ?? throw new ArgumentNullException(nameof(producer));
+        _sink = sink ?? throw new ArgumentNullException(nameof(sink));
         _feedServiceOptions = feedServiceOptions.Value ?? throw new ArgumentNullException(nameof(feedServiceOptions));
 
         connectionUrl = GetConnectionUrl();
         _connection = BuildConnection(connectionUrl);
-
-        _logger.LogInformation("Destination topic name: '{DestinationTopicName}'", _feedServiceOptions.DestinationTopicName);
     }
 
+    /// <summary>
+    /// Connects to the hub, retrying every <see cref="FeedServiceOptions.ReconnectionWaitSeconds"/>
+    /// until the connection starts or <paramref name="cancellationToken"/> is cancelled.
+    /// </summary>
     public async Task ConnectAsync(CancellationToken cancellationToken)
     {
-        try
-        {
-            await _connection.StartAsync(cancellationToken);
+        var url = MaskApiKey(connectionUrl);
+        var delay = TimeSpan.FromSeconds(_feedServiceOptions.ReconnectionWaitSeconds);
+        var attempt = 0;
 
-            var apiKeyLength = _feedServiceOptions.ApiKey.Length;
-            var replacement = new string('X', apiKeyLength - 4);
-            var url = connectionUrl.Replace(_feedServiceOptions.ApiKey[4..], replacement);
-
-            _logger.LogInformation($"Connected to URL {url} with connection ID {_connection.ConnectionId}.");
-        }
-        catch (Exception ex)
+        while (!cancellationToken.IsCancellationRequested)
         {
-            _logger.LogError(ex, "Error occurred executing task work item.");
+            attempt++;
+
+            try
+            {
+                await _connection.StartAsync(cancellationToken);
+
+                _logger.LogInformation($"Connected to URL {url} with connection ID {_connection.ConnectionId}.");
+                return;
+            }
+            catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
+            {
+                return;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning(
+                    "Connection attempt {Attempt} to {Url} failed: {Error}. Retrying in {Delay} s.",
+                    attempt,
+                    url,
+                    ex.Message,
+                    delay.TotalSeconds);
+            }
+
+            try
+            {
+                await Task.Delay(delay, cancellationToken);
+            }
+            catch (OperationCanceledException)
+            {
+                return;
+            }
         }
     }
 
@@ -71,8 +99,9 @@ public abstract class FeedServiceClientBase<T> : IFeedClient where T : class, IF
                 options.Transports = HttpTransportType.WebSockets;
                 options.SkipNegotiation = _feedServiceOptions.SkipNegotiation;
             })
-            .AddJsonProtocol(x => x.PayloadSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull)
             .WithAutomaticReconnect(new RetryPolicyLoop(_feedServiceOptions.ReconnectionWaitSeconds));
+
+        AddProtocol(connectionBuilder);
 
         var connection = connectionBuilder.Build();
         connection.Reconnected += ConnectionReconnected;
@@ -84,6 +113,27 @@ public abstract class FeedServiceClientBase<T> : IFeedClient where T : class, IF
         connection.On<string[]>(HubMethods.OnSubscriptionsRemove, OnSubscriptionsRemoveHandler);
 
         return connection;
+    }
+
+    private void AddProtocol(IHubConnectionBuilder connectionBuilder)
+    {
+        var protocol = _feedServiceOptions.Protocol ?? FeedServiceOptions.JsonProtocol;
+
+        if (string.Equals(protocol, FeedServiceOptions.JsonProtocol, StringComparison.OrdinalIgnoreCase))
+        {
+            connectionBuilder.AddJsonProtocol(x => x.PayloadSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull);
+        }
+        else if (string.Equals(protocol, FeedServiceOptions.MessagePackProtocol, StringComparison.OrdinalIgnoreCase))
+        {
+            // Configured the same way as the server.
+            connectionBuilder.AddMessagePackProtocol(options =>
+                options.SerializerOptions = MessagePackSerializerOptions.Standard.WithResolver(ContractlessStandardResolver.Instance));
+        }
+        else
+        {
+            throw new ArgumentException(
+                $"Unknown protocol '{protocol}'. Use '{FeedServiceOptions.JsonProtocol}' or '{FeedServiceOptions.MessagePackProtocol}'.");
+        }
     }
 
     public async Task DisconnectAsync(CancellationToken cancellationToken)
@@ -101,28 +151,32 @@ public abstract class FeedServiceClientBase<T> : IFeedClient where T : class, IF
             : result;
     }
 
+    private string MaskApiKey(string url)
+    {
+        var apiKey = _feedServiceOptions.ApiKey;
+        if (string.IsNullOrEmpty(apiKey) || apiKey.Length <= 4)
+        {
+            return url;
+        }
+
+        var replacement = new string('X', apiKey.Length - 4);
+        return url.Replace(apiKey[4..], replacement);
+    }
+
     private Task ConnectionReconnected(string arg)
     {
         _logger.LogWarning($"Reconnected with arguments {arg}.");
         return Task.CompletedTask;
     }
 
-    private void OnHeartbeatHandler(long heartbeat)
+    private Task OnHeartbeatHandler(long heartbeat)
     {
-        _logger.LogInformation("Heartbeat");
-        _logger.LogInformation(heartbeat.ToString());
+        return _sink.HandleAsync(Channel, HubMethods.OnHeartbeat, heartbeat);
     }
 
-    private async Task OnSubscriptionsRemoveHandler(string[] subscriptions)
+    private Task OnSubscriptionsRemoveHandler(string[] subscriptions)
     {
-        var model = new SubscriptionsRemovedModel { Ids = subscriptions };
-
-        await _producer.ProduceAsync(model, Channel);
-
-        _logger.LogInformation(
-             "Channel: {Channel}, SubscriptionRemoved produced for messages: {MessageIds}",
-             Channel,
-             subscriptions.Aggregate((x, y) => $"{x}, {y}"));
+        return _sink.HandleAsync(Channel, HubMethods.OnSubscriptionsRemove, subscriptions);
     }
 
     private Task ConnectionClosed(Exception exception)
@@ -137,26 +191,14 @@ public abstract class FeedServiceClientBase<T> : IFeedClient where T : class, IF
         return Task.CompletedTask;
     }
 
-    private async Task OnUpdateHandler(T[] messages)
+    private Task OnUpdateHandler(T[] messages)
     {
-        if (messages.Any())
-        {
-            await _producer.ProduceAsync(messages, Channel);
-
-            _logger.LogInformation(
-                "Channel: {Channel}, Messages produced: {MessageIds}",
-                Channel,
-                string.Join(',', messages.Select(message => message.Id).Distinct()));
-        }
+        // Empty arrays are passed on too, so an empty snapshot reaches the sink.
+        return _sink.HandleAsync(Channel, HubMethods.OnUpdate, messages);
     }
 
-    private async Task OnSystemEventHandler(GlobalMessageModel[] messages)
+    private Task OnSystemEventHandler(GlobalMessageModel[] messages)
     {
-        await _producer.ProduceAsync(messages, Channel);
-
-        _logger.LogInformation(
-           "Channel: {Channel}, System events produced for messages: {MessageIds}",
-           Channel,
-           string.Join(',', messages.Select(message => message.Id).Distinct()));
+        return _sink.HandleAsync(Channel, HubMethods.OnSystemEvent, messages);
     }
 }

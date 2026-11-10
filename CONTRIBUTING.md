@@ -14,8 +14,6 @@ Thank you for considering contributing to the BETER Feed Testing Sandbox (BFTS) 
    - [Test Your Changes](#test-your-changes)
    - [Submit a Pull Request](#submit-a-pull-request)
 3. [Guidelines for Development](#guidelines-for-development)
-   - [Resource Requirements](#resource-requirements)
-   - [Load testing resources requirements](#load-testing-resources-requirements)
    - [Versioning Process](#versioning-process)
 4. [Reporting Issues](#reporting-issues)
 5. [Getting Help](#getting-help)
@@ -53,7 +51,7 @@ git checkout -b your-branch-name
 
 ### Test Your Changes
 
-1. Ensure that your changes do not break existing functionality by running tests.
+1. Ensure that your changes do not break existing functionality by running tests. The commands are in the [Build and test](doc/RUNNING_APPS.md#build-and-test) section.
 2. Build and run the project locally to verify your changes.
 
 ### Submit a Pull Request
@@ -73,80 +71,21 @@ git push origin your-branch-name
 
 ## Guidelines for Development
 
-### Resource Requirements
-
-- Total RAM allocated: 2.5 GB
-- Total CPU cores allocated: 1 core
-
-
-### Load testing resources requirements
-
-- Total RAM allocated: 8 GB
-- Total CPU cores allocated: 8 cores
-
 ### Versioning Process
 
-The BETER Feed Testing Sandbox (BFTS) project uses the latest Semantic Version (SemVer) to manage releases. This ensures that version numbers provide meaningful information about the changes in each release.
+The BETER Feed Testing Sandbox (BFTS) project uses Semantic Versioning (SemVer) to manage releases.
 
 #### Version Format
 
-The version format is: `MAJOR.MINOR.PATCH`
+The version format is: `MAJOR.MINOR.PATCH`, with an optional pre-release suffix `-rc.N`.
 
 - **MAJOR**: Incremented when there are incompatible API changes or significant new features that break backward compatibility.
 - **MINOR**: Incremented when new, backwards-compatible functionality is introduced.
 - **PATCH**: Incremented when backwards-compatible bug fixes are made.
 
-#### Scenarios for Version Updates
+#### Release tags
 
-1. **Major Version Updates:**
-   - When data contracts of the Feed change completely, all Emulated Test Cases must be updated.
-   - The major version must be incremented (+1) and the minor version must be reset to 0.
-     - Example: Version `1.2` -> Version `2.0`
-   - Every major change of version must be reflected in the update of git tags and Docker image versions respectively.
-
-2. **Minor Version Updates:**
-   - When specific Emulated Test Cases are updated as a reaction to a bug, the minor version must be incremented.
-     - Example: Version `1.2` -> Version `1.3`
-   - Every minor change of version must be reflected in the update of git tags and Docker image versions respectively.
-
-#### Documentation
-
-1. Documentation describing the Emulated Test Cases must be present in the git repository. For detailed descriptions, please refer to the [SCENARIOS.md](doc/SCENARIOS.md) document.
-2. The history of changes must be documented for every Emulated Test Case, including both major and minor updates, with every version change implicitly specified.
-3. The documentation must explain any limitations according to current requirements.
-4. Changes to Emulated Test Cases are forbidden without an update of the version and an update of the description and log of changes.
-5. There is no need to keep all versions of the test cases in the repository. If a client needs an old version, it can be obtained from the git repository or Docker image.
-6. Emulated Test Cases may be deleted if they are no longer required. However, the ID cannot be reused by another Emulated Test Case. Documentation must be updated to keep a record of deprecated/removed Emulated Test Cases, with a special mark/status indicating that the Emulated Test Case was removed.
-
-#### Example Version Update
-
-Let's say we ship an initial and very first version of the Feed Emulator.
-- **Emulated Test Case 1 version:** 1.0
-- **Emulated Test Case 2 version:** 1.0
-- **Version of Feed Emulator:** 1.0
-
-After that, Emulated Test Case 2 was updated (not a major change). This affects versions and the new versions may be found below:
-- **Emulated Test Case 1 version:** 1.0
-- **Emulated Test Case 2 version:** 1.1
-- **Version of Feed Emulator:** 1.1
-
-After that, Emulated Test Case 3 was added. This affects versions and the new versions may be found below:
-- **Emulated Test Case 1 version:** 1.0
-- **Emulated Test Case 2 version:** 1.1
-- **Emulated Test Case 3 version:** 1.0
-- **Version of Feed Emulator:** 1.2
-
-After that, data contracts of the Feed changed. This requires an update of every test case. This affects versions and the new versions may be found below:
-- **Emulated Test Case 1 version:** 2.0
-- **Emulated Test Case 2 version:** 2.0
-- **Emulated Test Case 3 version:** 2.0
-- **Version of Feed Emulator:** 2.0
-
-After that, Emulated Test Case 2 was updated (not a major change). This affects versions and the new versions may be found below:
-- **Emulated Test Case 1 version:** 2.0
-- **Emulated Test Case 2 version:** 2.1
-- **Emulated Test Case 3 version:** 2.0
-- **Version of Feed Emulator:** 2.1
+The git tag, the Docker image tag, `info.version` of the served API description and `GET /api/version` carry one version string. A release is a git tag `vMAJOR.MINOR.PATCH` or `vMAJOR.MINOR.PATCH-rc.N`; the image tag is the tag without the leading `v`. A build that does not start from a tag reports `3.0.0-dev`.
 
 
 ## Reporting Issues

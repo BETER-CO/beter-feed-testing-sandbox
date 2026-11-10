@@ -1,0 +1,9 @@
+# Text files are LF in the repository and in the working tree.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.drawio binary
