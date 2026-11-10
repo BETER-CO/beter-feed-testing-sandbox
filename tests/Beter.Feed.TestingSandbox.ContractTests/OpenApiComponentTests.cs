@@ -89,5 +89,31 @@ public class OpenApiComponentTests
         Assert.NotNull(version.Failure(Json("""{"sandboxVersion": "3.0.0", "outputVersion": 1, "contract": {}}""")));
     }
 
+    [Fact]
+    public void Retired_case_names_its_replacement_or_null()
+    {
+        var catalogueRow = ContractFiles.ComponentValidatorOf("CatalogueRow");
+        var retiredError = ContractFiles.ComponentValidatorOf("RetiredError");
+        var retired = Json(
+            """
+            {
+              "caseId": 1014, "version": "1.0.0", "status": "retired", "class": "baseline", "sport": 6,
+              "tags": [], "description": "Retired", "terminal": "Finished",
+              "covers": { "count": 0, "sections": [] }, "duration": 0
+            }
+            """);
+        var replaced = retired.DeepClone();
+        replaced["replacedBy"] = 1024;
+        var withoutReplacement = retired.DeepClone();
+        withoutReplacement["replacedBy"] = null;
+
+        Assert.NotNull(catalogueRow.Failure(retired));
+        Assert.Null(catalogueRow.Failure(replaced));
+        Assert.Null(catalogueRow.Failure(withoutReplacement));
+        Assert.Null(retiredError.Failure(Json("""{"error": "gone", "detail": "Case 1014 is retired.", "replacedBy": null}""")));
+        Assert.Null(retiredError.Failure(Json("""{"error": "gone", "detail": "Case 1003 is retired.", "replacedBy": 1024}""")));
+        Assert.NotNull(retiredError.Failure(Json("""{"error": "gone", "detail": "Case 1014 is retired."}""")));
+    }
+
     private static JsonNode Json(string text) => JsonNode.Parse(text)!;
 }
