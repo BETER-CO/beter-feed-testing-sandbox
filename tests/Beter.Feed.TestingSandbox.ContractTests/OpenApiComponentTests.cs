@@ -67,8 +67,11 @@ public class OpenApiComponentTests
         withUnknownClass["class"] = "regular";
         var withoutDuration = row.DeepClone();
         withoutDuration.AsObject().Remove("duration");
+        var withoutSport = row.DeepClone();
+        withoutSport.AsObject().Remove("sport");
 
         Assert.Null(catalogueRow.Failure(row));
+        Assert.Null(catalogueRow.Failure(withoutSport));
         Assert.NotNull(catalogueRow.Failure(withUnknownClass));
         Assert.NotNull(catalogueRow.Failure(withoutDuration));
     }

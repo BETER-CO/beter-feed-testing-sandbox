@@ -48,7 +48,7 @@
     },
     "case": {
       "type": "object",
-      "required": ["caseId", "version", "class", "sport", "tags", "terminal"],
+      "required": ["caseId", "version", "class", "tags", "terminal"],
       "properties": {
         "caseId": { "type": "integer", "minimum": 1 },
         "version": {

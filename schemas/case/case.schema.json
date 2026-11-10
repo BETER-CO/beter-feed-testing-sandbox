@@ -8,7 +8,7 @@
   "$defs": {
     "caseBody": {
       "type": "object",
-      "required": ["version", "description", "class", "sport", "tags", "terminal", "script"],
+      "required": ["version", "description", "class", "tags", "terminal", "script"],
       "properties": {
         "caseId": {
           "description": "The case id. It carries no meaning and is never reused. A case posted at runtime omits it or takes an id from 100000 up.",
@@ -26,7 +26,7 @@
         },
         "class": { "$ref": "#/$defs/caseClass" },
         "sport": {
-          "description": "The sportId value of the feed.",
+          "description": "The sportId value of the feed. Absent for a case that belongs to no sport.",
           "type": "integer"
         },
         "tags": {

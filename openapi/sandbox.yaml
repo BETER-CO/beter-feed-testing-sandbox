@@ -383,7 +383,7 @@ components:
     CatalogueRow:
       description: One case as the catalogue lists it.
       type: object
-      required: [caseId, version, status, class, sport, tags, description, terminal, covers, duration]
+      required: [caseId, version, status, class, tags, description, terminal, covers, duration]
       properties:
         caseId:
           $ref: '../schemas/case/case.schema.json#/$defs/caseBody/properties/caseId'

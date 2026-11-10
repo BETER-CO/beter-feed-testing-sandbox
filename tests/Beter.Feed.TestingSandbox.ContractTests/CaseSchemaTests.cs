@@ -36,6 +36,15 @@ public class CaseSchemaTests
     }
 
     [Fact]
+    public void Case_without_a_sport_validates()
+    {
+        var sample = ContractFiles.Load(FaultDirectivesCase);
+        sample.AsObject().Remove("sport");
+
+        Assert.Null(CaseSchema.Failure(sample));
+    }
+
+    [Fact]
     public void Case_with_an_unknown_directive_is_rejected()
     {
         var sample = ContractFiles.Load(FaultDirectivesCase);

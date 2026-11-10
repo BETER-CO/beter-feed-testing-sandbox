@@ -36,6 +36,15 @@ public class RunOutputSchemaTests
     }
 
     [Fact]
+    public void Run_manifest_of_a_case_without_a_sport_validates()
+    {
+        var manifest = ContractFiles.Load(Examples + "run.json");
+        manifest["case"]!.AsObject().Remove("sport");
+
+        Assert.Null(RunSchema.Failure(manifest));
+    }
+
+    [Fact]
     public void Run_manifest_with_an_unknown_status_is_rejected()
     {
         var manifest = ContractFiles.Load(Examples + "run.json");
