@@ -37,7 +37,7 @@ public class OpenApiComponentTests
         Assert.NotNull(runRequest.Failure(Json("""{"caseId": 1003, "apiKey": "3f2b8c1e-5d4a-4e7b-9a60-2c8f1d7e4b19", "start": "later"}""")));
         Assert.NotNull(runRequest.Failure(Json("""{"caseId": 1003, "apiKey": "3f2b8c1e-5d4a-4e7b-9a60-2c8f1d7e4b19", "waitTimeoutSeconds": 0}""")));
         Assert.NotNull(runRequest.Failure(Json("""{"caseId": 1003, "apiKey": "3f2b8c1e-5d4a-4e7b-9a60-2c8f1d7e4b19", "timeOffsetInMinutes": 5}""")));
-        Assert.NotNull(runRequest.Failure(Json("""{"caseId": 1003, "apiKey": "ci-run-42"}""")));
+        Assert.NotNull(runRequest.Failure(Json("""{"caseId": 1003, "apiKey": "not-a-guid"}""")));
     }
 
     [Fact]

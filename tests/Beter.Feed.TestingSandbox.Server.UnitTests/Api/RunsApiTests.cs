@@ -43,7 +43,7 @@ public partial class RunsApiTests : IClassFixture<SandboxHost>
         { "no apiKey", """{"caseId":7001}""", "invalid_api_key" },
         { "apiKey a number", """{"caseId":7001,"apiKey":5}""", "invalid_api_key" },
         { "unknown property", $$"""{"caseId":7001,"apiKey":"{{Key}}","speed":2}""", "unknown_property" },
-        { "apiKey not a GUID", """{"caseId":7001,"apiKey":"ci-run-42"}""", "invalid_api_key" },
+        { "apiKey not a GUID", """{"caseId":7001,"apiKey":"not-a-guid"}""", "invalid_api_key" },
         { "apiKey in braces", """{"caseId":7001,"apiKey":"{6f1c2a3b-4d5e-4f60-8a7b-9c0d1e2f3a4b}"}""", "invalid_api_key" },
         { "apiKey as 32 digits", """{"caseId":7001,"apiKey":"6f1c2a3b4d5e4f608a7b9c0d1e2f3a4b"}""", "invalid_api_key" },
         { "apiKey the empty GUID", """{"caseId":7001,"apiKey":"00000000-0000-0000-0000-000000000000"}""", "invalid_api_key" },
