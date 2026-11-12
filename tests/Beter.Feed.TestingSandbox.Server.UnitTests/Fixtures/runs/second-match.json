@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "description": "Test fixture: a second match, one entry per channel within one second, without a sport.",
+  "class": "baseline",
+  "tags": ["fixture"],
+  "terminal": "Finished",
+  "script": [
+    { "at": 0, "channel": "time_table", "messageType": "time_table", "value": [ { "id": "match-b", "sportId": 0, "startDate": "2024-07-12T16:00:00Z", "status": 1, "timestamp": 1720800000000, "msgType": 1, "offset": 1 } ] },
+    { "at": 300, "channel": "trading", "messageType": "trading", "value": [ { "id": "match-b", "sportId": 1, "markets": [], "timestamp": 1720800000300, "msgType": 1, "offset": 2 } ] },
+    { "at": 600, "channel": "scoreboard", "messageType": "scoreboard", "value": [ { "id": "match-b", "sportId": 2, "timestamp": 1720800000600, "msgType": 1, "offset": 3 } ] },
+    { "at": 900, "channel": "incident", "messageType": "incident", "value": [ { "id": "match-b", "sportId": 3, "index": 1, "type": "1", "date": "2024-07-12T16:00:00.900Z", "msgType": 1, "offset": 4 } ] }
+  ]
+}

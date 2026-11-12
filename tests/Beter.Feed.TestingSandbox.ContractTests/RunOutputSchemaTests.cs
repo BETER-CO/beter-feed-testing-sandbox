@@ -45,6 +45,15 @@ public class RunOutputSchemaTests
     }
 
     [Fact]
+    public void Run_manifest_with_an_apiKey_that_is_not_a_GUID_is_rejected()
+    {
+        var manifest = ContractFiles.Load(Examples + "run.json");
+        manifest["apiKey"] = "not-a-guid";
+
+        Assert.NotNull(RunSchema.Failure(manifest));
+    }
+
+    [Fact]
     public void Run_manifest_with_an_unknown_status_is_rejected()
     {
         var manifest = ContractFiles.Load(Examples + "run.json");

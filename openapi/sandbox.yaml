@@ -177,8 +177,11 @@ paths:
                 $ref: '#/components/schemas/RunManifest'
         '400':
           description: >-
-            `acceleration` outside 0.25 to the case's `maxAcceleration`, an
-            unknown `start`, or `waitTimeoutSeconds` under 1.
+            A body that is not a `RunRequest`: not a JSON object, a missing
+            `caseId` or `apiKey`, an unknown property, an `apiKey` that is not a
+            non-empty GUID, an unknown `start`, `waitTimeoutSeconds` under 1, or
+            an `acceleration` that is not a number or lies outside 0.25 to the
+            case's `maxAcceleration`.
           content:
             application/json:
               schema:
@@ -214,6 +217,12 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/RunManifest'
+        '400':
+          description: An unknown `status`.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
   /api/runs/{runId}:
     parameters:
       - $ref: '#/components/parameters/runId'
@@ -480,8 +489,12 @@ components:
         apiKey:
           description: >-
             The binding value: every hub connection presenting it as the feed
-            `ApiKey` receives the run's content.
+            `ApiKey` receives the run's content. A GUID, as the hubs require of
+            the feed `ApiKey`, in the hyphenated 8-4-4-4-12 form, in any letter
+            case; any other value, or the empty GUID, is refused with `400`.
+            Keys are compared as GUIDs.
           type: string
+          format: uuid
           minLength: 1
         acceleration:
           description: From 0.25 to the case's `maxAcceleration`. Scales the script clock only.

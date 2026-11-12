@@ -24,8 +24,9 @@
     "outputVersion": { "const": 1 },
     "runId": { "type": "string", "minLength": 1 },
     "apiKey": {
-      "description": "The value that binds the run: every connection presenting it as the feed ApiKey receives the run's content.",
+      "description": "The value that binds the run: every connection presenting it as the feed ApiKey receives the run's content. A GUID, written in lowercase with hyphens.",
       "type": "string",
+      "format": "uuid",
       "minLength": 1
     },
     "sandboxVersion": {

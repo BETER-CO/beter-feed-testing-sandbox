@@ -38,6 +38,7 @@ public class OpenApiDocumentTests
         ["GET /api/cases/{caseId}"] = ["404"],
         ["POST /api/cases"] = ["422"],
         ["POST /api/runs"] = ["400", "404", "410"],
+        ["GET /api/runs"] = ["400"],
         ["GET /api/runs/{runId}"] = ["404"],
         ["GET /api/runs/{runId}/messages"] = ["404"],
         ["GET /api/runs/{runId}/events"] = ["404"],

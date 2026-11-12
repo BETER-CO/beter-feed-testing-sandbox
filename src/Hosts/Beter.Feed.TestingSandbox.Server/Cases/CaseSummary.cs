@@ -19,4 +19,23 @@ public sealed record CaseSummary(
     string Description,
     string Terminal,
     IReadOnlyList<DocumentationSection> Covers,
-    long Duration);
+    long Duration)
+{
+    /// <summary>The acceleration a case accepts at most when it names none.</summary>
+    public const double DefaultMaxAcceleration = 20;
+
+    /// <summary>Gets the <c>fetchedAt</c> of the contract pin of the case; null for a case that carries none.</summary>
+    public string? ContractFetchedAt { get; init; }
+
+    /// <summary>Gets the <c>newestChange</c> of the contract pin of the case; null for a case that carries none.</summary>
+    public string? ContractNewestChange { get; init; }
+
+    /// <summary>Gets the highest acceleration a run of the case accepts.</summary>
+    public double MaxAcceleration { get; init; } = DefaultMaxAcceleration;
+
+    /// <summary>Gets the <c>start</c> of the case; null for a case that names none.</summary>
+    public string? Start { get; init; }
+
+    /// <summary>Gets the <c>id</c> of every <c>expected</c> entry of the case, in file order.</summary>
+    public IReadOnlyList<string> Expected { get; init; } = [];
+}

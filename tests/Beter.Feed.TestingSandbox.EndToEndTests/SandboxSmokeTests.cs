@@ -19,6 +19,9 @@ namespace Beter.Feed.TestingSandbox.EndToEndTests;
 public partial class SandboxSmokeTests : IClassFixture<SandboxContainer>
 {
     private static readonly TimeSpan Patience = TimeSpan.FromSeconds(30);
+
+    // Case 1001 spans 1681 s of feed time: about 84 s at acceleration 20.
+    private static readonly TimeSpan RunPatience = TimeSpan.FromMinutes(4);
     private static readonly string[] Channels =
         [ChannelNames.Timetable, ChannelNames.Trading, ChannelNames.Scoreboard, ChannelNames.Incident];
 
@@ -86,8 +89,8 @@ public partial class SandboxSmokeTests : IClassFixture<SandboxContainer>
     }
 
     [Theory]
-    [InlineData("POST", "/api/runs")]
     [InlineData("GET", "/api/runs/run-1/messages")]
+    [InlineData("GET", "/api/runs/run-1/events")]
     public async Task OperationNotBuiltYet_Returns501(string method, string path)
     {
         using var request = new HttpRequestMessage(new HttpMethod(method), path);
@@ -144,11 +147,125 @@ public partial class SandboxSmokeTests : IClassFixture<SandboxContainer>
         }
     }
 
+    [Fact]
+    public async Task SampleConsumer_ReceivesEveryMessageOfCase1001InOrder_AndAConsumerOfAnotherKeyNone()
+    {
+        var expected = await ItemCountsOfCaseAsync(1001);
+        var apiKey = Guid.NewGuid();
+        var sink = new RecordingSink();
+        var otherSink = new RecordingSink();
+        await using var services = ConsumerServices(sink, apiKey);
+        await using var otherServices = ConsumerServices(otherSink, Guid.NewGuid());
+        var clients = ClientsOf(services).Concat(ClientsOf(otherServices)).ToArray();
+        using var timeout = new CancellationTokenSource(Patience);
+
+        try
+        {
+            await Task.WhenAll(clients.Select(client => client.ConnectAsync(timeout.Token)));
+            foreach (var channel in Channels)
+            {
+                await sink.First(channel, HubMethods.OnUpdate, Patience);
+                await otherSink.First(channel, HubMethods.OnUpdate, Patience);
+            }
+
+            using var created = await PostJson("/api/runs", $$"""{"caseId":1001,"apiKey":"{{apiKey}}","acceleration":20}""");
+            await WaitForCompletedAsync(created.RootElement.GetProperty("runId").GetString()!, RunPatience);
+            foreach (var channel in Channels)
+            {
+                await WaitUntilAsync(() => sink.UpdateCounts(channel).Count >= expected[channel].Length, Patience);
+            }
+
+            foreach (var channel in Channels)
+            {
+                Assert.Equal(expected[channel], sink.UpdateCounts(channel));
+                Assert.Empty(otherSink.UpdateCounts(channel));
+            }
+        }
+        finally
+        {
+            await Task.WhenAll(clients.Select(client => client.DisconnectAsync(CancellationToken.None)));
+        }
+    }
+
     [GeneratedRegex(@"^\d+\.\d+\.\d+(-[0-9A-Za-z.]+)?$")]
     private static partial Regex SemVer();
 
     [GeneratedRegex("\"\\$ref\"\\s*:\\s*\"[^#]")]
     private static partial Regex ExternalReference();
+
+    private static IFeedClient[] ClientsOf(ServiceProvider services) =>
+    [
+        services.GetRequiredService<TimeTableFeedServiceClient>(),
+        services.GetRequiredService<TradingFeedServiceClient>(),
+        services.GetRequiredService<ScoreboardFeedServiceClient>(),
+        services.GetRequiredService<IncidentFeedServiceClient>(),
+    ];
+
+    private static async Task WaitUntilAsync(Func<bool> condition, TimeSpan patience)
+    {
+        var watch = System.Diagnostics.Stopwatch.StartNew();
+        while (!condition())
+        {
+            Assert.True(watch.Elapsed < patience, $"The consumer did not receive every message within {patience}.");
+            await Task.Delay(TimeSpan.FromMilliseconds(100));
+        }
+    }
+
+    private ServiceProvider ConsumerServices(RecordingSink sink, Guid apiKey) => new ServiceCollection()
+        .AddSingleton<IFeedMessageSink>(sink)
+        .AddFeedServiceClients(new ConfigurationBuilder()
+            .AddInMemoryCollection(new Dictionary<string, string?>
+            {
+                ["FeedService:Host"] = _sandbox.BaseAddress.ToString().TrimEnd('/'),
+                ["FeedService:ApiKey"] = apiKey.ToString(),
+                ["FeedService:ReconnectionWaitSeconds"] = "0.5",
+                ["FeedService:Protocol"] = FeedServiceOptions.JsonProtocol,
+            })
+            .Build())
+        .BuildServiceProvider();
+
+    /// <summary>The item count of every message entry of a case, per channel, in <c>at</c> order.</summary>
+    private async Task<Dictionary<string, int[]>> ItemCountsOfCaseAsync(int caseId)
+    {
+        await using var body = await _sandbox.Client.GetStreamAsync(new Uri($"/api/cases/{caseId}", UriKind.Relative));
+        using var file = await JsonDocument.ParseAsync(body);
+        var entries = file.RootElement.GetProperty("script").EnumerateArray()
+            .Where(entry => entry.TryGetProperty("messageType", out var type) && Channels.Contains(type.GetString()))
+            .OrderBy(entry => entry.GetProperty("at").GetInt64())
+            .ToArray();
+        return Channels.ToDictionary(
+            channel => channel,
+            channel => entries
+                .Where(entry => entry.GetProperty("messageType").GetString() == channel)
+                .Select(entry => entry.GetProperty("value").GetArrayLength())
+                .ToArray());
+    }
+
+    private async Task WaitForCompletedAsync(string runId, TimeSpan patience)
+    {
+        var watch = System.Diagnostics.Stopwatch.StartNew();
+        while (true)
+        {
+            using var run = await GetJson($"/api/runs/{runId}");
+            var status = run.RootElement.GetProperty("status").GetString();
+            if (status is "completed" or "stopped" or "failed" || watch.Elapsed > patience)
+            {
+                Assert.True(status == "completed", $"Run {runId} is {status}: {run.RootElement}");
+                return;
+            }
+
+            await Task.Delay(TimeSpan.FromSeconds(1));
+        }
+    }
+
+    private async Task<JsonDocument> PostJson(string path, string body)
+    {
+        using var content = new StringContent(body, System.Text.Encoding.UTF8, "application/json");
+        using var response = await _sandbox.Client.PostAsync(new Uri(path, UriKind.Relative), content);
+        var text = await response.Content.ReadAsStringAsync();
+        Assert.True(response.StatusCode == HttpStatusCode.Created, $"POST {path} answered {(int)response.StatusCode}: {text}");
+        return JsonDocument.Parse(text);
+    }
 
     private async Task<JsonDocument> GetJson(string path)
     {

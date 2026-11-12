@@ -29,14 +29,15 @@ public class OpenApiComponentTests
     {
         var runRequest = ContractFiles.ComponentValidatorOf("RunRequest");
 
-        Assert.Null(runRequest.Failure(Json("""{"caseId": 1003, "apiKey": "ci-run-42"}""")));
+        Assert.Null(runRequest.Failure(Json("""{"caseId": 1003, "apiKey": "3f2b8c1e-5d4a-4e7b-9a60-2c8f1d7e4b19"}""")));
         Assert.Null(runRequest.Failure(Json(
-            """{"caseId": 1003, "apiKey": "ci-run-42", "acceleration": 10, "start": "now", "waitTimeoutSeconds": 30}""")));
+            """{"caseId": 1003, "apiKey": "3f2b8c1e-5d4a-4e7b-9a60-2c8f1d7e4b19", "acceleration": 10, "start": "now", "waitTimeoutSeconds": 30}""")));
         Assert.NotNull(runRequest.Failure(Json("""{"caseId": 1003}""")));
-        Assert.NotNull(runRequest.Failure(Json("""{"caseId": 1003, "apiKey": "ci-run-42", "acceleration": 0.1}""")));
-        Assert.NotNull(runRequest.Failure(Json("""{"caseId": 1003, "apiKey": "ci-run-42", "start": "later"}""")));
-        Assert.NotNull(runRequest.Failure(Json("""{"caseId": 1003, "apiKey": "ci-run-42", "waitTimeoutSeconds": 0}""")));
-        Assert.NotNull(runRequest.Failure(Json("""{"caseId": 1003, "apiKey": "ci-run-42", "timeOffsetInMinutes": 5}""")));
+        Assert.NotNull(runRequest.Failure(Json("""{"caseId": 1003, "apiKey": "3f2b8c1e-5d4a-4e7b-9a60-2c8f1d7e4b19", "acceleration": 0.1}""")));
+        Assert.NotNull(runRequest.Failure(Json("""{"caseId": 1003, "apiKey": "3f2b8c1e-5d4a-4e7b-9a60-2c8f1d7e4b19", "start": "later"}""")));
+        Assert.NotNull(runRequest.Failure(Json("""{"caseId": 1003, "apiKey": "3f2b8c1e-5d4a-4e7b-9a60-2c8f1d7e4b19", "waitTimeoutSeconds": 0}""")));
+        Assert.NotNull(runRequest.Failure(Json("""{"caseId": 1003, "apiKey": "3f2b8c1e-5d4a-4e7b-9a60-2c8f1d7e4b19", "timeOffsetInMinutes": 5}""")));
+        Assert.NotNull(runRequest.Failure(Json("""{"caseId": 1003, "apiKey": "not-a-guid"}""")));
     }
 
     [Fact]

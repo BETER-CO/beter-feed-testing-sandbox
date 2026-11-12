@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "description": "Test fixture: three trading entries over forty seconds of feed time.",
+  "class": "baseline",
+  "tags": ["fixture"],
+  "terminal": "Finished",
+  "script": [
+    { "at": 0, "channel": "trading", "messageType": "trading", "value": [ { "id": "match-d", "sportId": 0, "markets": [], "timestamp": 1720800000000, "msgType": 1, "offset": 1 } ] },
+    { "at": 20000, "channel": "trading", "messageType": "trading", "value": [ { "id": "match-d", "sportId": 1, "markets": [], "timestamp": 1720800020000, "msgType": 1, "offset": 2 } ] },
+    { "at": 40000, "channel": "trading", "messageType": "trading", "value": [ { "id": "match-d", "sportId": 2, "markets": [], "timestamp": 1720800040000, "msgType": 1, "offset": 3 } ] }
+  ]
+}

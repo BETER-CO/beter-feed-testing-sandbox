@@ -1,7 +1,7 @@
 {
   "outputVersion": 1,
   "runId": "r-20261107-0931-7f3a",
-  "apiKey": "ci-run-42",
+  "apiKey": "3f2b8c1e-5d4a-4e7b-9a60-2c8f1d7e4b19",
   "sandboxVersion": "3.0.0",
   "contract": { "fetchedAt": "2026-10-31", "newestChange": "2026-10-30 Added new sport Mobile Legends BB" },
   "case": { "caseId": 1003, "version": "1.2.0", "class": "connect-state", "sport": 11, "tags": ["resilience", "connect-state", "efootball"], "terminal": "Finished" },
