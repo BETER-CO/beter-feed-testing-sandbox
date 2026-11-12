@@ -24,12 +24,18 @@ namespace Beter.Feed.TestingSandbox.Common.Serialization
             DictionaryKeyPolicy = null,
             DefaultBufferSize = 16 * 1024,
             Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
-            Converters = { new AdditionInfoConverter() }
+            Converters = { new AdditionInfoConverter(), new PlainObjectConverter() }
         };
 
         public static string Serialize<TValue>(TValue value) => JsonSerializer.Serialize(value, _serializerOptions);
         public static TValue Deserialize<TValue>(string json) => JsonSerializer.Deserialize<TValue>(json, _serializerOptions);
         public static TValue Deserialize<TValue>(JsonNode json) => json.Deserialize<TValue>(_serializerOptions);
+
+        /// <summary>Deserializes a parsed JSON value, as a case file carries it.</summary>
+        /// <typeparam name="TValue">The model type.</typeparam>
+        /// <param name="json">The value.</param>
+        /// <returns>The model.</returns>
+        public static TValue Deserialize<TValue>(JsonElement json) => json.Deserialize<TValue>(_serializerOptions);
         public static object Deserialize(string json, Type type) => JsonSerializer.Deserialize(json, type, _serializerOptions);
     }
 }

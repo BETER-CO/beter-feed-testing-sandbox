@@ -18,7 +18,7 @@ The consumer reads the section `FeedService` of `src/Hosts/Beter.Feed.TestingSan
 | Key                       | Description                                              |
 | ------------------------- | -------------------------------------------------------- |
 | `Host`                    | Address of the sandbox, default `http://localhost:51858` |
-| `ApiKey`                  | API key sent to the hubs                                 |
+| `ApiKey`                  | API key sent to the hubs, a GUID. The consumer receives the runs started with the same value as `apiKey` ([Sandbox API](API.md#runs)) |
 | `SnapshotBatchSize`       | Value of the `snapshotBatchSize` query parameter, sent when greater than 0 |
 | `ReconnectionWaitSeconds` | Wait between connection attempts, in seconds             |
 | `Protocol`                | `json` (default) or `messagepack`                        |

@@ -21,6 +21,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <InternalsVisibleTo Include="Beter.Feed.TestingSandbox.Server.UnitTests" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="LateApexEarlySpeed.Json.Schema" />
     <PackageReference Include="MessagePack" />
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Protocols.MessagePack" />

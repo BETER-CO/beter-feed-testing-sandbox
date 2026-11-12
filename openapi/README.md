@@ -1,9 +1,11 @@
 # Sandbox contract
 
 The machine-readable contract of the sandbox, version 3.0.0. The sandbox on
-this branch serves `GET /api/version`, `GET /api/health` and the case
-operations (`/api/cases...`). The run operations (`/api/runs...`) are mapped
-and answer `501` until they are built.
+this branch serves `GET /api/version`, `GET /api/health`, the case
+operations (`/api/cases...`) and the run operations (`/api/runs...`) except
+`GET /api/runs/{runId}/messages` and `GET /api/runs/{runId}/events`. Those two
+are mapped and answer `501` until the run output is built; until then the
+`summary` of every run manifest is empty.
 
 | File | Describes |
 | --- | --- |

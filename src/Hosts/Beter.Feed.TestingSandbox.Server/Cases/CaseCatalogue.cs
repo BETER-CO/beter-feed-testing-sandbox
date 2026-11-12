@@ -194,7 +194,18 @@ public sealed class CaseCatalogue
         caseFile.GetProperty("description").GetString()!,
         caseFile.GetProperty("terminal").GetString()!,
         caseFile.TryGetProperty("covers", out var covers) ? covers.EnumerateArray().Select(SectionOf).ToArray() : [],
-        caseFile.TryGetProperty("duration", out var duration) ? WholeNumber(duration) : SpanOf(caseFile.GetProperty("script")));
+        caseFile.TryGetProperty("duration", out var duration) ? WholeNumber(duration) : SpanOf(caseFile.GetProperty("script")))
+    {
+        ContractFetchedAt = caseFile.TryGetProperty("contract", out var contract) ? contract.GetProperty("fetchedAt").GetString() : null,
+        ContractNewestChange = caseFile.TryGetProperty("contract", out var pin) ? pin.GetProperty("newestChange").GetString() : null,
+        MaxAcceleration = caseFile.TryGetProperty("maxAcceleration", out var maxAcceleration)
+            ? maxAcceleration.GetDouble()
+            : CaseSummary.DefaultMaxAcceleration,
+        Start = caseFile.TryGetProperty("start", out var start) ? start.GetString() : null,
+        Expected = caseFile.TryGetProperty("expected", out var expected)
+            ? expected.EnumerateArray().Select(entry => entry.GetProperty("id").GetString()!).ToArray()
+            : [],
+    };
 
     private static DocumentationSection SectionOf(JsonElement section) =>
         new(section.GetProperty("page").GetString()!, section.GetProperty("section").GetString()!);

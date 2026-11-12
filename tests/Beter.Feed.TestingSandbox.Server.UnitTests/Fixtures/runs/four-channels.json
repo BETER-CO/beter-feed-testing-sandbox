@@ -1,0 +1,70 @@
+{
+  "version": "1.0.0",
+  "description": "Test fixture: one match on the four channels over two seconds, with a directive and a system event. The sportId of every item is the script index of its entry.",
+  "class": "baseline",
+  "sport": 6,
+  "tags": ["fixture", "baseline"],
+  "contract": { "fetchedAt": "2026-10-31", "newestChange": "Fixture pin" },
+  "terminal": "Finished",
+  "script": [
+    {
+      "at": 0,
+      "channel": "time_table",
+      "messageType": "time_table",
+      "value": [
+        { "id": "match-a", "sportId": 0, "startDate": "2024-07-12T15:50:00Z", "status": 1, "timestamp": 1720797955000, "msgType": 3, "offset": 900, "name": { "en": "A vs B" } }
+      ]
+    },
+    {
+      "at": 0,
+      "channel": "trading",
+      "messageType": "trading",
+      "value": [
+        { "id": "match-a", "sportId": 1, "tradingStatus": 1, "lineType": 2, "markets": [ { "id": "market-1", "outcomes": [ { "id": "outcome-1", "price": 1.53, "prices": { "decimal": 1.53, "american": "-188" } } ] } ], "timestamp": 1720797955100, "msgType": 3, "offset": 901 }
+      ]
+    },
+    {
+      "at": 500,
+      "channel": "scoreboard",
+      "messageType": "scoreboard",
+      "value": [
+        { "id": "match-a", "sportId": 2, "stage": 1, "timer": { "timeStamp": 1, "timerValue": 0, "accelerationFactor": 1.0, "enabled": true, "direction": 1 }, "timestamp": 1720797955500, "msgType": 1, "offset": 902 }
+      ]
+    },
+    { "at": 1000, "directive": "heartbeatStop", "channels": ["trading"] },
+    {
+      "at": 1000,
+      "channel": "incident",
+      "messageType": "incident",
+      "value": [
+        { "id": "match-a", "sportId": 4, "index": 1, "type": "1029", "date": "2024-07-12T15:50:10.693Z", "params": [], "msgType": 1, "offset": 903 }
+      ]
+    },
+    {
+      "at": 1500,
+      "channel": "incident",
+      "messageType": "system_event",
+      "value": [ { "id": "match-a", "eventType": 1, "eventValue": 1 } ]
+    },
+    {
+      "at": 2000,
+      "channel": "trading",
+      "messageType": "trading",
+      "value": [
+        { "id": "match-a", "sportId": 6, "tradingStatus": 1, "lineType": 2, "markets": [], "timestamp": 1720797957100, "msgType": 1, "offset": 904 },
+        { "id": "match-a", "sportId": 6, "tradingStatus": 1, "lineType": 2, "markets": [], "timestamp": 1720797957200, "msgType": 1, "offset": 905 }
+      ]
+    },
+    {
+      "at": 2000,
+      "channel": "time_table",
+      "messageType": "time_table",
+      "value": [
+        { "id": "match-a", "sportId": 7, "startDate": "2024-07-12T15:50:00Z", "status": 2, "timestamp": 1720797957000, "msgType": 1, "offset": 906, "name": { "en": "A vs B" } }
+      ]
+    }
+  ],
+  "expected": [
+    { "id": "EX-100-1", "when": 6, "behaviour": "The trading update is applied.", "cites": [], "basis": "recorded" }
+  ]
+}

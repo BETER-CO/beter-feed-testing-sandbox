@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "description": "Test fixture: a trading entry at the start and one a minute later.",
+  "class": "baseline",
+  "tags": ["fixture"],
+  "terminal": "Finished",
+  "script": [
+    { "at": 0, "channel": "trading", "messageType": "trading", "value": [ { "id": "match-e", "sportId": 0, "markets": [], "timestamp": 1720800000000, "msgType": 1, "offset": 1 } ] },
+    { "at": 60000, "channel": "trading", "messageType": "trading", "value": [ { "id": "match-e", "sportId": 1, "markets": [], "timestamp": 1720800060000, "msgType": 1, "offset": 2 } ] }
+  ]
+}

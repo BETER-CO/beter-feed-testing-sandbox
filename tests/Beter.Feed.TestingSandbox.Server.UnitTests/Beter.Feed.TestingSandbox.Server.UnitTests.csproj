@@ -28,6 +28,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" />
     <PackageReference Include="Microsoft.AspNetCore.TestHost" />
+    <PackageReference Include="Microsoft.Extensions.TimeProvider.Testing" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
     <PackageReference Include="Moq" />
     <PackageReference Include="xunit" />
@@ -39,7 +40,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <!-- The small case set the tests of the case operations read. -->
+    <!-- The small case set the tests of the case operations read, and the cases the run tests load at runtime. -->
     <None Include="Fixtures\**\*.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 

@@ -7,7 +7,10 @@ using System.Text.Json;
 using System.Text.Json.Nodes;
 using Beter.Feed.TestingSandbox.Server.Cases;
 using Beter.Feed.TestingSandbox.Server.Description;
+using Beter.Feed.TestingSandbox.Server.Runs;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace Beter.Feed.TestingSandbox.Server.Api;
 
@@ -41,6 +44,26 @@ public static class SandboxApi
         services.AddSingleton<CaseSchema>();
         services.AddSingleton<CaseCatalogue>();
         services.AddHostedService<CaseSetLoader>();
+        services.TryAddSingleton(TimeProvider.System);
+        services.AddSingleton(_ => new OffsetSequence());
+        services.AddSingleton<IPlaybackSender>(provider => new HubPlaybackSender(
+            provider.GetRequiredService<Publishers.IMessagePublisher<Models.TimeTableItems.TimeTableItemModel>>(),
+            provider.GetRequiredService<Publishers.IMessagePublisher<Models.TradingInfos.TradingInfoModel>>(),
+            provider.GetRequiredService<Publishers.IMessagePublisher<Models.Scoreboards.ScoreBoardModel>>(),
+            provider.GetRequiredService<Publishers.IMessagePublisher<Models.Incidents.IncidentModel>>(),
+            provider.GetRequiredService<Publishers.IFeedMessagePublisherResolver>()));
+        services.AddSingleton(provider => new RunPlayer(
+            provider.GetRequiredService<TimeProvider>(),
+            provider.GetRequiredService<IPlaybackSender>(),
+            provider.GetRequiredService<OffsetSequence>(),
+            provider.GetRequiredService<ILoggerFactory>().CreateLogger<RunPlayer>()));
+        services.AddSingleton(provider => new RunRegistry(
+            provider.GetRequiredService<TimeProvider>(),
+            provider.GetRequiredService<RunPlayer>(),
+            provider.GetRequiredService<SandboxVersion>().Value));
+        services.AddHostedService(provider => provider.GetRequiredService<RunRegistry>());
+        services.AddOptions<HubOptions>()
+            .Configure<RunRegistry>((options, runs) => options.AddFilter(new RunBindingFilter(runs)));
         return services;
     }
 
@@ -251,7 +274,7 @@ public static class SandboxApi
 
     private static void MapRuns(RouteGroupBuilder api)
     {
-        api.MapPost("/runs", NotImplemented)
+        api.MapPost("/runs", StartRun)
             .WithName("startRun")
             .Accepts<JsonElement>(Json)
             .Produces<JsonElement>(StatusCodes.Status201Created, Json)
@@ -259,16 +282,17 @@ public static class SandboxApi
             .Produces<JsonElement>(StatusCodes.Status404NotFound, Json)
             .Produces<JsonElement>(StatusCodes.Status410Gone, Json);
 
-        api.MapGet("/runs", ([FromQuery] string? status) => NotImplemented())
+        api.MapGet("/runs", ListRuns)
             .WithName("listRuns")
-            .Produces<JsonElement>(StatusCodes.Status200OK, Json);
+            .Produces<JsonElement>(StatusCodes.Status200OK, Json)
+            .Produces<JsonElement>(StatusCodes.Status400BadRequest, Json);
 
-        api.MapGet("/runs/{runId}", (string runId) => NotImplemented())
+        api.MapGet("/runs/{runId}", GetRun)
             .WithName("getRun")
             .Produces<JsonElement>(StatusCodes.Status200OK, Json)
             .Produces<JsonElement>(StatusCodes.Status404NotFound, Json);
 
-        api.MapDelete("/runs/{runId}", (string runId) => NotImplemented())
+        api.MapDelete("/runs/{runId}", DeleteRun)
             .WithName("deleteRun")
             .Produces(StatusCodes.Status204NoContent)
             .Produces<JsonElement>(StatusCodes.Status404NotFound, Json)
@@ -284,12 +308,107 @@ public static class SandboxApi
             .Produces<JsonElement>(StatusCodes.Status200OK, JsonLines)
             .Produces<JsonElement>(StatusCodes.Status404NotFound, Json);
 
-        api.MapPost("/runs/{runId}/stop", (string runId) => NotImplemented())
+        api.MapPost("/runs/{runId}/stop", StopRun)
             .WithName("stopRun")
             .Produces<JsonElement>(StatusCodes.Status200OK, Json)
             .Produces<JsonElement>(StatusCodes.Status404NotFound, Json)
             .Produces<JsonElement>(StatusCodes.Status409Conflict, Json);
     }
+
+    private static async Task<IResult> StartRun(HttpRequest request, CaseCatalogue catalogue, RunRegistry runs)
+    {
+        await catalogue.Loaded;
+
+        RunRequest? posted;
+        ErrorResponse? refused;
+        try
+        {
+            using var body = await JsonDocument.ParseAsync(request.Body, cancellationToken: request.HttpContext.RequestAborted);
+            posted = RunRequest.Read(body.RootElement, out refused);
+        }
+        catch (JsonException exception)
+        {
+            posted = null;
+            refused = new ErrorResponse("invalid_body", $"The body is not JSON: {exception.Message}");
+        }
+
+        if (posted is null)
+        {
+            return Results.Json(refused, statusCode: StatusCodes.Status400BadRequest);
+        }
+
+        var entry = catalogue.Find(posted.CaseId);
+        if (entry is null)
+        {
+            return Results.Json(
+                new ErrorResponse("not_found", $"No case has the id {posted.CaseId}."),
+                statusCode: StatusCodes.Status404NotFound);
+        }
+
+        if (entry.Retired || entry.Summary is null)
+        {
+            return Results.Json(
+                new RetiredErrorResponse("retired", $"Case {posted.CaseId} is retired.", entry.ReplacedBy),
+                statusCode: StatusCodes.Status410Gone);
+        }
+
+        var acceleration = posted.Acceleration ?? RunRequest.DefaultAcceleration;
+        if (acceleration < RunRequest.MinAcceleration || acceleration > entry.Summary.MaxAcceleration)
+        {
+            return Results.Json(
+                new ErrorResponse(
+                    "invalid_acceleration",
+                    string.Create(
+                        CultureInfo.InvariantCulture,
+                        $"acceleration is from {RunRequest.MinAcceleration} to {entry.Summary.MaxAcceleration}, the maxAcceleration of case {posted.CaseId}.")),
+                statusCode: StatusCodes.Status400BadRequest);
+        }
+
+        var run = runs.Create(
+            entry,
+            posted.ApiKey,
+            acceleration,
+            posted.Start ?? entry.Summary.Start ?? RunStart.OnConnect,
+            TimeSpan.FromSeconds(posted.WaitTimeoutSeconds));
+        return Results.Json(run.ToManifest(), statusCode: StatusCodes.Status201Created);
+    }
+
+    private static IResult ListRuns([FromQuery] string? status, RunRegistry runs)
+    {
+        if (status is not null && !RunStatus.IsKnown(status))
+        {
+            return Results.Json(
+                new ErrorResponse("invalid_status", $"status is one of {string.Join(", ", RunStatus.All)}."),
+                statusCode: StatusCodes.Status400BadRequest);
+        }
+
+        return Results.Json(new JsonArray(runs.List(status).Select(run => (JsonNode?)run.ToManifest()).ToArray()));
+    }
+
+    private static IResult GetRun(string runId, RunRegistry runs) =>
+        runs.Find(runId) is { } run ? Results.Json(run.ToManifest()) : UnknownRun(runId);
+
+    private static IResult StopRun(string runId, RunRegistry runs) => runs.Stop(runId, out var run) switch
+    {
+        RunOutcome.Done => Results.Json(run!.ToManifest()),
+        RunOutcome.Conflict => Results.Json(
+            new ErrorResponse("run_finished", $"Run {runId} is {run!.Status} already."),
+            statusCode: StatusCodes.Status409Conflict),
+        _ => UnknownRun(runId),
+    };
+
+    private static IResult DeleteRun(string runId, RunRegistry runs) => runs.Delete(runId) switch
+    {
+        RunOutcome.Done => Results.NoContent(),
+        RunOutcome.Conflict => Results.Json(
+            new ErrorResponse("run_live", $"Run {runId} is waiting or playing; stop it first."),
+            statusCode: StatusCodes.Status409Conflict),
+        _ => UnknownRun(runId),
+    };
+
+    private static IResult UnknownRun(string runId) => Results.Json(
+        new ErrorResponse("not_found", $"No run has the id {runId}."),
+        statusCode: StatusCodes.Status404NotFound);
 
     private static IResult NotImplemented() => Results.Json(
         new ErrorResponse("not_implemented", "This version of the sandbox does not implement the operation yet."),

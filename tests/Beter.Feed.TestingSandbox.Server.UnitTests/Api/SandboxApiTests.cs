@@ -16,13 +16,8 @@ public class SandboxApiTests : IClassFixture<SandboxHost>
 
     public static TheoryData<string, string> OperationsNotBuiltYet => new()
     {
-        { "POST", "/api/runs" },
-        { "GET", "/api/runs" },
-        { "GET", "/api/runs/run-1" },
-        { "DELETE", "/api/runs/run-1" },
         { "GET", "/api/runs/run-1/messages" },
         { "GET", "/api/runs/run-1/events" },
-        { "POST", "/api/runs/run-1/stop" },
     };
 
     [Fact]
