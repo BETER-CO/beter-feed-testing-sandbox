@@ -13,7 +13,7 @@ namespace Beter.Feed.TestingSandbox.EndToEndTests;
 
 /// <summary>
 /// The end-to-end test through the one container: the version and health operations, the
-/// served description, and the sample consumer on the four hubs.
+/// case set of the image, the served description, and the sample consumer on the four hubs.
 /// </summary>
 [Trait("Category", "smoke")]
 public partial class SandboxSmokeTests : IClassFixture<SandboxContainer>
@@ -53,6 +53,23 @@ public partial class SandboxSmokeTests : IClassFixture<SandboxContainer>
     }
 
     [Fact]
+    public async Task Cases_TheImageCarriesItsCaseSet()
+    {
+        using var smoke = await GetJson("/api/cases?tag=smoke&status=all");
+        using var retired = await GetJson("/api/cases?status=retired");
+        using var first = await GetJson($"/api/cases/{smoke.RootElement[0].GetProperty("caseId").GetInt32()}");
+        var fields = new[] { "caseId", "version", "status", "class", "sport", "tags", "description", "terminal", "covers", "duration" };
+
+        Assert.NotEqual(0, smoke.RootElement.GetArrayLength());
+        Assert.All(smoke.RootElement.EnumerateArray(), row =>
+            Assert.All(fields, field => Assert.True(row.TryGetProperty(field, out _), $"A smoke row has no {field}.")));
+        Assert.NotEqual(0, retired.RootElement.GetArrayLength());
+        Assert.All(retired.RootElement.EnumerateArray(), row => Assert.True(row.TryGetProperty("replacedBy", out _)));
+        Assert.Equal("active", first.RootElement.GetProperty("status").GetString());
+        Assert.NotEqual(0, first.RootElement.GetProperty("script").GetArrayLength());
+    }
+
+    [Fact]
     public async Task Description_IsServedSelfContainedWithTheSandboxVersion()
     {
         using var version = await GetJson("/api/version");
@@ -69,7 +86,6 @@ public partial class SandboxSmokeTests : IClassFixture<SandboxContainer>
     }
 
     [Theory]
-    [InlineData("GET", "/api/cases")]
     [InlineData("POST", "/api/runs")]
     [InlineData("GET", "/api/runs/run-1/messages")]
     public async Task OperationNotBuiltYet_Returns501(string method, string path)

@@ -1,0 +1,12 @@
+{
+  "caseId": 7003,
+  "version": "1.0.0",
+  "description": "Test fixture: a retired case whose file is kept. Not a playable case.",
+  "class": "baseline",
+  "sport": 6,
+  "tags": ["smoke", "baseline", "efootball"],
+  "terminal": "Finished",
+  "script": [
+    { "at": 0, "channel": "time_table", "messageType": "time_table", "value": [] }
+  ]
+}

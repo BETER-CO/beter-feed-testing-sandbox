@@ -16,3 +16,9 @@ public sealed record HealthResponse(string Status);
 /// <param name="Error">A short code of the error.</param>
 /// <param name="Detail">What went wrong.</param>
 public sealed record ErrorResponse(string Error, string Detail);
+
+/// <summary>The body of a <c>422</c>: an error with the failed keywords of the case schema.</summary>
+/// <param name="Error">A short code of the error.</param>
+/// <param name="Detail">What went wrong.</param>
+/// <param name="Errors">The JSON Schema errors, one per failed keyword.</param>
+public sealed record ValidationErrorResponse(string Error, string Detail, IReadOnlyList<Cases.SchemaError> Errors);

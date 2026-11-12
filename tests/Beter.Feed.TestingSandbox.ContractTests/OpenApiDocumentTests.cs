@@ -34,6 +34,7 @@ public class OpenApiDocumentTests
     private static readonly Dictionary<string, string[]> ErrorResponses = new()
     {
         ["GET /api/health"] = ["503"],
+        ["GET /api/cases"] = ["400"],
         ["GET /api/cases/{caseId}"] = ["404"],
         ["POST /api/cases"] = ["422"],
         ["POST /api/runs"] = ["400", "404", "410"],
@@ -156,8 +157,11 @@ public class OpenApiDocumentTests
         Assert.StartsWith(
             "{\"$ref\":\"../schemas/case/case.schema.json#/$defs/caseBody\"}",
             schemas["RuntimeCase"]!["allOf"]![0]!.ToJsonString());
-        Assert.StartsWith(
+        Assert.Equal(
             "{\"$ref\":\"../schemas/case/case.schema.json#/$defs/caseBody\"}",
+            schemas["ActiveCarriesTheCaseFile"]!["then"]!.ToJsonString());
+        Assert.Equal(
+            "{\"$ref\":\"#/components/schemas/ActiveCarriesTheCaseFile\"}",
             schemas["CaseDetail"]!["allOf"]![0]!.ToJsonString());
         Assert.Equal("""{"$ref":"../schemas/run-output/v1/run.schema.json"}""", schemas["RunManifest"]!.ToJsonString());
         Assert.Equal("""{"$ref":"../schemas/run-output/v1/message.schema.json"}""", schemas["MessageLine"]!.ToJsonString());

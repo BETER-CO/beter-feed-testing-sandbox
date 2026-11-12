@@ -118,5 +118,38 @@ public class OpenApiComponentTests
         Assert.NotNull(retiredError.Failure(Json("""{"error": "gone", "detail": "Case 1014 is retired."}""")));
     }
 
+    [Fact]
+    public void Retired_id_without_a_case_file_resolves_with_its_id_status_and_replacement_alone()
+    {
+        var caseDetail = ContractFiles.ComponentValidatorOf("CaseDetail");
+        var catalogueRow = ContractFiles.ComponentValidatorOf("CatalogueRow");
+        var retired = Json("""{"caseId": 1014, "status": "retired", "replacedBy": null}""");
+        var active = Json("""{"caseId": 1014, "status": "active"}""");
+        var withoutReplacement = Json("""{"caseId": 1014, "status": "retired"}""");
+        var withoutStatus = Json("""{"caseId": 1014, "replacedBy": null}""");
+
+        Assert.Null(caseDetail.Failure(retired));
+        Assert.Null(catalogueRow.Failure(retired));
+        Assert.NotNull(caseDetail.Failure(active));
+        Assert.NotNull(catalogueRow.Failure(active));
+        Assert.NotNull(caseDetail.Failure(withoutReplacement));
+        Assert.NotNull(catalogueRow.Failure(withoutReplacement));
+        Assert.NotNull(caseDetail.Failure(withoutStatus));
+        Assert.NotNull(catalogueRow.Failure(withoutStatus));
+    }
+
+    [Fact]
+    public void Active_case_detail_is_the_whole_case_file()
+    {
+        var caseDetail = ContractFiles.ComponentValidatorOf("CaseDetail");
+        var served = ContractFiles.Load(ReshapedCase1001);
+        served["status"] = "active";
+        var withoutScript = served.DeepClone();
+        withoutScript.AsObject().Remove("script");
+
+        Assert.Null(caseDetail.Failure(served));
+        Assert.NotNull(caseDetail.Failure(withoutScript));
+    }
+
     private static JsonNode Json(string text) => JsonNode.Parse(text)!;
 }

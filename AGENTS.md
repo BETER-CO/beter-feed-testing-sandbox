@@ -18,6 +18,7 @@ without contacting BETER. It is public. A client reads this repository, pulls th
 | `src/Common/*` | Feed models, constants, hosting and logging shared by both |
 | `openapi/sandbox.yaml` | The description of the REST operations, hand-written, the master copy |
 | `schemas/` | JSON Schemas of the case file and the run output, referenced by the description |
+| `cases/` | The case set of the image: one `<caseId>.json` per case, and `retired.json` with the retired ids |
 | `tests/*.Server.UnitTests` | Host tests, the OpenAPI drift check, the coverage threshold |
 | `tests/*.ContractTests` | Tests of `openapi/` and `schemas/` on their own |
 | `tests/*.EndToEndTests` | The test through one container with the sample consumer |
@@ -72,6 +73,7 @@ What the tests enforce, and where:
 | The mapped operations equal `openapi/sandbox.yaml`: method, path, `operationId`, parameters, request body, response codes and content types, in both directions | `OpenApiDriftTests` |
 | The served description has no reference outside itself and embeds the schema files, changed only in `$schema` (dropped) and in their references (made local) | `OpenApiDocumentBundlerTests` |
 | The build version has `info.version` of `openapi/sandbox.yaml` as its `major.minor.patch` | `BuildVersion_HasTheCommittedDocumentVersionAsItsCore` |
+| Every file of `cases/` validates against the case schema, is named by its id and stays below `100000`; `retired.json` is well-formed | `CaseSetTests` (the host refuses any other case set at start) |
 | Line coverage of the host stays at or above 50 % | the `Threshold` of `tests/*.Server.UnitTests` |
 | No package, direct or transitive, has a known advisory | the vulnerability step of both workflows |
 
