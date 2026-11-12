@@ -68,7 +68,9 @@ paths:
       operationId: listCases
       tags: [Cases]
       summary: The catalogue.
-      description: One row per promoted or loaded case.
+      description: >-
+        One row per promoted or loaded case, and one per retired id. A retired
+        id carries no tags unless the repository still keeps its case file.
       parameters:
         - name: tag
           in: query
@@ -96,6 +98,12 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/CatalogueRow'
+        '400':
+          description: An unknown `status`.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
     post:
       operationId: loadCase
       tags: [Cases]
@@ -133,7 +141,8 @@ paths:
       description: |
         The case file with `expected` and `exposes`, so a test reads its
         reference without the repository. A retired id still resolves, with
-        `status: retired`.
+        `status: retired` and `replacedBy`; it carries the case file only
+        while the repository keeps one.
       responses:
         '200':
           description: The case.
@@ -366,24 +375,41 @@ components:
               minimum: 100000
       unevaluatedProperties: false
     CaseDetail:
-      description: The case file as the sandbox serves it, with its catalogue status.
+      description: >-
+        The case file as the sandbox serves it, with its catalogue status. A
+        retired id whose case file the repository no longer keeps answers its
+        id, `status` and `replacedBy` alone.
+      type: object
+      required: [caseId, status]
+      properties:
+        caseId:
+          $ref: '../schemas/case/case.schema.json#/$defs/caseBody/properties/caseId'
+        status:
+          $ref: '#/components/schemas/CaseStatus'
+        replacedBy:
+          $ref: '#/components/schemas/ReplacedBy'
       allOf:
-        - $ref: '../schemas/case/case.schema.json#/$defs/caseBody'
-        - type: object
-          required: [caseId, status]
-          properties:
-            status:
-              $ref: '#/components/schemas/CaseStatus'
-            replacedBy:
-              $ref: '#/components/schemas/ReplacedBy'
+        - $ref: '#/components/schemas/ActiveCarriesTheCaseFile'
         - $ref: '#/components/schemas/RetiredNamesItsReplacement'
+    ActiveCarriesTheCaseFile:
+      description: An active case carries its case file.
+      if:
+        properties:
+          status:
+            const: active
+        required: [status]
+      then:
+        $ref: '../schemas/case/case.schema.json#/$defs/caseBody'
     CaseStatus:
       type: string
       enum: [active, retired]
     CatalogueRow:
-      description: One case as the catalogue lists it.
+      description: >-
+        One case as the catalogue lists it. A retired id whose case file the
+        repository no longer keeps lists its id, `status` and `replacedBy`
+        alone.
       type: object
-      required: [caseId, version, status, class, tags, description, terminal, covers, duration]
+      required: [caseId, status]
       properties:
         caseId:
           $ref: '../schemas/case/case.schema.json#/$defs/caseBody/properties/caseId'
@@ -419,7 +445,17 @@ components:
         replacedBy:
           $ref: '#/components/schemas/ReplacedBy'
       allOf:
+        - $ref: '#/components/schemas/ActiveListsTheCaseFields'
         - $ref: '#/components/schemas/RetiredNamesItsReplacement'
+    ActiveListsTheCaseFields:
+      description: The row of an active case carries the catalogue fields of its case file.
+      if:
+        properties:
+          status:
+            const: active
+        required: [status]
+      then:
+        required: [version, class, tags, description, terminal, covers, duration]
     ReplacedBy:
       description: >-
         The id of the case that replaces a retired one; null for a retired
@@ -521,7 +557,11 @@ components:
                     description: A JSON Pointer into the posted case.
                     type: string
                   keywordLocation:
-                    description: A JSON Pointer into the case schema.
+                    description: >-
+                      The path of the failed keyword through the case schema,
+                      its references included: the `keywordLocation` of the
+                      JSON Schema output format. Empty where the body is not
+                      JSON.
                     type: string
                   error:
                     type: string

@@ -16,10 +16,6 @@ public class SandboxApiTests : IClassFixture<SandboxHost>
 
     public static TheoryData<string, string> OperationsNotBuiltYet => new()
     {
-        { "GET", "/api/cases" },
-        { "GET", "/api/cases?tag=football&tag=live&status=all" },
-        { "POST", "/api/cases" },
-        { "GET", "/api/cases/1001" },
         { "POST", "/api/runs" },
         { "GET", "/api/runs" },
         { "GET", "/api/runs/run-1" },
@@ -42,7 +38,7 @@ public class SandboxApiTests : IClassFixture<SandboxHost>
     }
 
     [Fact]
-    public async Task GetHealth_ReturnsOk()
+    public async Task GetHealth_ReturnsOkOnceTheCaseSetIsLoaded()
     {
         using var response = await _host.Client.GetAsync("/api/health");
 

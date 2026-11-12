@@ -1,0 +1,31 @@
+{
+  "caseId": 7001,
+  "version": "1.2.0",
+  "description": "Test fixture: a baseline case with covers, expected and exposes. Not a playable case.",
+  "class": "baseline",
+  "sport": 6,
+  "tags": ["smoke", "baseline", "efootball"],
+  "covers": [
+    { "page": "feed/time-table-feed/data-contracts-tt", "section": "Status" },
+    { "page": "feed/trading-feed/data-contracts", "section": "Market" },
+    { "page": "feed/time-table-feed/data-contracts-tt", "section": "Status" }
+  ],
+  "terminal": "Finished",
+  "script": [
+    { "at": 0, "channel": "time_table", "messageType": "time_table", "value": [] },
+    { "at": 61500, "channel": "trading", "messageType": "trading", "value": [] }
+  ],
+  "expected": [
+    {
+      "id": "EX-7001-1",
+      "when": 1,
+      "behaviour": "Markets of the match are closed.",
+      "cites": [{ "page": "feed/trading-feed/data-contracts", "section": "Market" }],
+      "basis": "documented"
+    }
+  ],
+  "exposes": {
+    "terminal": "Finished",
+    "observed": ["connections", "snapshots"]
+  }
+}

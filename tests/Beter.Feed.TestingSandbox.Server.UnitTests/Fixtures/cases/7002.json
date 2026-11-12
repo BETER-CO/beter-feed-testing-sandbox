@@ -1,0 +1,14 @@
+{
+  "caseId": 7002,
+  "version": "1.0.0",
+  "description": "Test fixture: a transport-faults case without a sport. Not a playable case.",
+  "class": "transport-faults",
+  "tags": ["resilience", "transport-faults", "smoke"],
+  "terminal": "Canceled",
+  "duration": 20,
+  "script": [
+    { "at": 0, "channel": "trading", "messageType": "trading", "value": [] },
+    { "at": 5000, "directive": "heartbeatStop", "channels": ["trading"] },
+    { "at": 20000, "directive": "heartbeatResume", "channels": ["trading"] }
+  ]
+}

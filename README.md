@@ -9,9 +9,9 @@ REST API described in [`openapi/sandbox.yaml`](openapi/sandbox.yaml). It is publ
 four hubs and logs every message it receives. It is a testing client for development, not for production usage.
 
 State of this branch: the server accepts hub connections, sends an empty snapshot and heartbeats, and answers the
-version, health and API description operations. It plays no feed data. Case loading and runs are not built yet, and
-their operations answer `501`. The former Generator host, its recorded test scenarios, Kafka, Kafka UI and the
-docker-compose files are removed.
+version, health and API description operations. It loads the case files of [`cases/`](cases) and serves the case
+catalogue, and takes a custom case at runtime. It plays no feed data: runs are not built yet, and their operations
+answer `501`. The former Generator host, Kafka, Kafka UI and the docker-compose files are removed.
 
 ## Documentation
 
